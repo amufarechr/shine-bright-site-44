@@ -61,7 +61,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="lg:col-span-3 bg-card border border-border rounded-lg p-8 space-y-5"
+            className="lg:col-span-3 bg-background border border-border rounded-lg p-8 space-y-5"
           >
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
@@ -69,7 +69,7 @@ const ContactSection = () => {
                 <input
                   required
                   type="text"
-                  className="w-full bg-secondary border border-border rounded-md px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  className="w-full bg-card border border-border rounded-md px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                   placeholder="Tu nombre"
                 />
               </div>
@@ -78,7 +78,7 @@ const ContactSection = () => {
                 <input
                   required
                   type="email"
-                  className="w-full bg-secondary border border-border rounded-md px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  className="w-full bg-card border border-border rounded-md px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                   placeholder="tu@email.com"
                 />
               </div>
@@ -87,7 +87,7 @@ const ContactSection = () => {
               <label className="text-sm font-medium text-foreground mb-1.5 block">Empresa</label>
               <input
                 type="text"
-                className="w-full bg-secondary border border-border rounded-md px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="w-full bg-card border border-border rounded-md px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                 placeholder="Nombre de tu empresa"
               />
             </div>
@@ -96,7 +96,7 @@ const ContactSection = () => {
               <textarea
                 required
                 rows={4}
-                className="w-full bg-secondary border border-border rounded-md px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
+                className="w-full bg-card border border-border rounded-md px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
                 placeholder="Describe tu proyecto o necesidad..."
               />
             </div>

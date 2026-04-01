@@ -17,7 +17,7 @@ const HeroSection = () => {
           height={1080}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/40" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-24 pt-24">
@@ -39,27 +39,27 @@ const HeroSection = () => {
             </span>
           </motion.div>
 
-          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6">
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 text-white">
             Transformamos espacios industriales con{" "}
-            <span className="text-gradient">soluciones integrales</span>{" "}
+            <span className="text-primary">soluciones integrales</span>{" "}
             en eficiencia operativa
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-4 max-w-2xl">
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-4 max-w-2xl">
             Enfriamiento, ventilación, calefacción, energía y consultoría para optimizar tu operación industrial.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
             <button
               onClick={() => scrollTo("soluciones")}
-              className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:brightness-110 transition inline-flex items-center gap-2 glow-box"
+              className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:brightness-110 transition inline-flex items-center gap-2"
             >
               Descubre nuestras soluciones
               <ArrowRight size={18} />
             </button>
             <button
               onClick={() => scrollTo("contacto")}
-              className="border border-border text-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:bg-secondary transition inline-flex items-center gap-2"
+              className="border border-white/30 text-white px-8 py-3.5 rounded-md font-semibold text-base hover:bg-white/10 transition inline-flex items-center gap-2"
             >
               <Calendar size={18} />
               Agenda una llamada
