@@ -39,13 +39,13 @@ const HeroSection = () => {
             </span>
           </motion.div>
 
-          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6">
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 text-white">
             Transformamos espacios industriales con{" "}
-            <span className="text-gradient">soluciones integrales</span>{" "}
+            <span className="text-primary">soluciones integrales</span>{" "}
             en eficiencia operativa
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-4 max-w-2xl">
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-4 max-w-2xl">
             Enfriamiento, ventilación, calefacción, energía y consultoría para optimizar tu operación industrial.
           </p>
 
