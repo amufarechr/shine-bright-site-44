@@ -1,14 +1,68 @@
+import { Mail, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const Footer = () => (
-  <footer className="border-t border-border px-6 py-10 md:px-12 lg:px-24">
-    <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <img src={logo} alt="SW Ingeniería" className="h-10" />
-      <p className="text-muted-foreground text-sm">
-        © {new Date().getFullYear()} SW Ingeniería. Todos los derechos reservados.
-      </p>
-    </div>
-  </footer>
-);
+const footerLinks = [
+  { label: "Soluciones", id: "soluciones" },
+  { label: "Consultoría", id: "consultoria" },
+  { label: "Sectores", id: "sectores" },
+  { label: "Casos de éxito", id: "casos" },
+  { label: "Contacto", id: "contacto" },
+];
+
+const Footer = () => {
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <footer className="border-t border-border px-6 py-12 md:px-12 lg:px-24">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+        <div>
+          <img src={logo} alt="SW Ingeniería" className="h-10 mb-4" />
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            Soluciones integrales en eficiencia operativa para la industria.
+          </p>
+        </div>
+
+        <div>
+          <h4 className="font-heading font-semibold mb-4 text-sm">Navegación</h4>
+          <div className="flex flex-col gap-2">
+            {footerLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollTo(link.id)}
+                className="text-muted-foreground text-sm hover:text-primary transition-colors text-left"
+              >
+                {link.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-heading font-semibold mb-4 text-sm">Contacto</h4>
+          <div className="space-y-3">
+            {[
+              { icon: Mail, text: "contacto@swingenieria.com" },
+              { icon: Phone, text: "+52 (81) 1234-5678" },
+              { icon: MapPin, text: "Monterrey, N.L., México" },
+            ].map((item) => (
+              <div key={item.text} className="flex items-center gap-3">
+                <item.icon className="text-primary shrink-0" size={16} />
+                <span className="text-muted-foreground text-sm">{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto border-t border-border mt-10 pt-6">
+        <p className="text-muted-foreground text-xs text-center">
+          © {new Date().getFullYear()} SW Ingeniería. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;
