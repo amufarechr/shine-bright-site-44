@@ -3,7 +3,13 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.png";
 
-const navItems = ["Servicios", "Nosotros", "Contacto"];
+const navItems = [
+  { label: "Soluciones", id: "soluciones" },
+  { label: "Consultoría", id: "consultoria" },
+  { label: "Sectores", id: "sectores" },
+  { label: "Casos de éxito", id: "casos" },
+  { label: "Contacto", id: "contacto" },
+];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -20,25 +26,25 @@ const Navbar = () => {
           <img src={logo} alt="SW Ingeniería" className="h-10" />
         </button>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <button
-              key={item}
-              onClick={() => scrollTo(item.toLowerCase())}
+              key={item.id}
+              onClick={() => scrollTo(item.id)}
               className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium"
             >
-              {item}
+              {item.label}
             </button>
           ))}
           <button
             onClick={() => scrollTo("contacto")}
-            className="bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold hover:brightness-110 transition"
+            className="bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold hover:brightness-110 transition glow-box"
           >
-            Cotizar
+            Solicita diagnóstico gratuito
           </button>
         </div>
 
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -49,23 +55,23 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden bg-card border-b border-border"
+            className="lg:hidden overflow-hidden bg-card border-b border-border"
           >
             <div className="flex flex-col gap-4 p-6">
               {navItems.map((item) => (
                 <button
-                  key={item}
-                  onClick={() => scrollTo(item.toLowerCase())}
+                  key={item.id}
+                  onClick={() => scrollTo(item.id)}
                   className="text-muted-foreground hover:text-primary transition-colors text-left font-medium"
                 >
-                  {item}
+                  {item.label}
                 </button>
               ))}
               <button
                 onClick={() => scrollTo("contacto")}
-                className="bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold w-fit"
+                className="bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold w-fit glow-box"
               >
-                Cotizar
+                Solicita diagnóstico gratuito
               </button>
             </div>
           </motion.div>
