@@ -7,7 +7,7 @@ const CTASection = () => {
   };
 
   return (
-    <section className="section-padding">
+    <section className="section-padding dark-banner">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -16,10 +16,10 @@ const CTASection = () => {
         >
           <h2 className="font-heading text-3xl md:text-5xl font-bold mb-6">
             ¿Listo para{" "}
-            <span className="text-gradient">optimizar</span>{" "}
+            <span className="text-primary">optimizar</span>{" "}
             tu operación?
           </h2>
-          <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
+          <p className="text-white/60 text-lg mb-10 max-w-2xl mx-auto">
             Agenda un diagnóstico gratuito y descubre cómo podemos mejorar la eficiencia de tu planta industrial.
           </p>
           <button

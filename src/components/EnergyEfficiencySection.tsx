@@ -51,7 +51,7 @@ const EnergyEfficiencySection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-card border border-border rounded-lg p-6 text-center"
+                className="bg-background border border-border rounded-lg p-6 text-center"
               >
                 <stat.icon className="text-primary mx-auto mb-3" size={24} />
                 <div className="font-heading text-2xl md:text-3xl font-bold text-primary mb-1">{stat.value}</div>

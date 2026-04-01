@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Quote, ShieldCheck, Award } from "lucide-react";
 
 const TestimonialsSection = () => (
-  <section className="section-padding bg-card/50">
+  <section className="section-padding bg-card">
     <div className="max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}

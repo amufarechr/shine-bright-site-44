@@ -15,11 +15,11 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-border px-6 py-12 md:px-12 lg:px-24">
+    <footer className="dark-banner px-6 py-12 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
         <div>
           <img src={logo} alt="SW Ingeniería" className="h-10 mb-4" />
-          <p className="text-muted-foreground text-sm leading-relaxed">
+          <p className="text-white/60 text-sm leading-relaxed">
             Soluciones integrales en eficiencia operativa para la industria.
           </p>
         </div>
@@ -31,7 +31,7 @@ const Footer = () => {
               <button
                 key={link.id}
                 onClick={() => scrollTo(link.id)}
-                className="text-muted-foreground text-sm hover:text-primary transition-colors text-left"
+                className="text-white/60 text-sm hover:text-primary transition-colors text-left"
               >
                 {link.label}
               </button>
@@ -49,15 +49,15 @@ const Footer = () => {
             ].map((item) => (
               <div key={item.text} className="flex items-center gap-3">
                 <item.icon className="text-primary shrink-0" size={16} />
-                <span className="text-muted-foreground text-sm">{item.text}</span>
+                <span className="text-white/60 text-sm">{item.text}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto border-t border-border mt-10 pt-6">
-        <p className="text-muted-foreground text-xs text-center">
+      <div className="max-w-7xl mx-auto border-t border-white/10 mt-10 pt-6">
+        <p className="text-white/40 text-xs text-center">
           © {new Date().getFullYear()} SW Ingeniería. Todos los derechos reservados.
         </p>
       </div>
