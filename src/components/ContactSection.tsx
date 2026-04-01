@@ -61,7 +61,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="lg:col-span-3 bg-card border border-border rounded-lg p-8 space-y-5"
+            className="lg:col-span-3 bg-background border border-border rounded-lg p-8 space-y-5"
           >
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
