@@ -52,7 +52,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
             <button
               onClick={() => scrollTo("soluciones")}
-              className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:brightness-110 transition inline-flex items-center gap-2 glow-box"
+              className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:brightness-110 transition inline-flex items-center gap-2"
             >
               Descubre nuestras soluciones
               <ArrowRight size={18} />
