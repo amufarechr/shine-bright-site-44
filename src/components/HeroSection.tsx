@@ -59,7 +59,7 @@ const HeroSection = () => {
             </button>
             <button
               onClick={() => scrollTo("contacto")}
-              className="border border-border text-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:bg-secondary transition inline-flex items-center gap-2"
+              className="border border-white/30 text-white px-8 py-3.5 rounded-md font-semibold text-base hover:bg-white/10 transition inline-flex items-center gap-2"
             >
               <Calendar size={18} />
               Agenda una llamada
