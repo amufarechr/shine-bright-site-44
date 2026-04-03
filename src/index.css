@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 12%;
 
-    --primary: 38 92% 50%;
+    --primary: 152 70% 38%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 10% 94%;
@@ -24,7 +24,7 @@
     --muted: 220 10% 94%;
     --muted-foreground: 220 10% 42%;
 
-    --accent: 38 92% 50%;
+    --accent: 152 70% 38%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,27 +32,27 @@
 
     --border: 220 10% 88%;
     --input: 220 10% 88%;
-    --ring: 38 92% 50%;
+    --ring: 152 70% 38%;
 
     --radius: 0.5rem;
 
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Inter', sans-serif;
 
-    --glow-primary: 0 0 40px hsl(38 92% 50% / 0.12);
-    --glow-strong: 0 0 80px hsl(38 92% 50% / 0.2);
+    --glow-primary: 0 0 40px hsl(152 70% 38% / 0.12);
+    --glow-strong: 0 0 80px hsl(152 70% 38% / 0.2);
 
     --dark-surface: 220 20% 12%;
     --dark-surface-foreground: 40 10% 92%;
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 220 20% 12%;
-    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary: 152 70% 38%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 10% 94%;
     --sidebar-accent-foreground: 220 20% 12%;
     --sidebar-border: 220 10% 88%;
-    --sidebar-ring: 38 92% 50%;
+    --sidebar-ring: 152 70% 38%;
   }
 }
 
@@ -74,7 +74,7 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(38 92% 50%), hsl(28 95% 40%));
+    background-image: linear-gradient(135deg, hsl(152 70% 38%), hsl(152 60% 28%));
   }
 
   .glow-box {
