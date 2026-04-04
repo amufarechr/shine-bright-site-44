@@ -50,23 +50,29 @@ const CaseStudiesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="bg-card border border-border rounded-lg p-8 flex flex-col hover:border-primary/40 transition-all duration-300"
+              className="bg-card border border-border rounded-lg overflow-hidden flex flex-col hover:border-primary/40 transition-all duration-300"
             >
-              <span className="text-xs font-medium text-primary bg-primary/10 rounded-full px-3 py-1 w-fit mb-4">
-                {c.sector}
-              </span>
-              <h3 className="font-heading text-lg font-semibold mb-2">{c.client}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{c.description}</p>
-              <div className="border-t border-border pt-4 mt-auto">
-                <p className="text-primary font-semibold text-sm">{c.result}</p>
+              {/* Image placeholder */}
+              <div className="aspect-video bg-muted flex items-center justify-center">
+                <span className="text-muted-foreground text-sm">Foto {c.sector.toLowerCase()}</span>
               </div>
-              <button
-                onClick={() => scrollTo("contacto")}
-                className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all mt-4"
-              >
-                Ver caso completo
-                <ArrowRight size={16} />
-              </button>
+              <div className="p-8 flex flex-col flex-1">
+                <span className="text-xs font-medium text-primary bg-primary/10 rounded-full px-3 py-1 w-fit mb-4">
+                  {c.sector}
+                </span>
+                <h3 className="font-heading text-lg font-semibold mb-2">{c.client}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{c.description}</p>
+                <div className="border-t border-border pt-4 mt-auto">
+                  <p className="text-primary font-semibold text-sm">{c.result}</p>
+                </div>
+                <button
+                  onClick={() => scrollTo("contacto")}
+                  className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all mt-4"
+                >
+                  Ver caso completo
+                  <ArrowRight size={16} />
+                </button>
+              </div>
             </motion.div>
           ))}
         </div>
