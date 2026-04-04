@@ -14,6 +14,7 @@ const EnergyEfficiencySection = () => {
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="text-center"
           >
             <span className="text-primary text-sm font-semibold tracking-widest uppercase">Eficiencia energética</span>
             <h2 className="font-heading text-3xl md:text-5xl font-bold mt-3 mb-6">
