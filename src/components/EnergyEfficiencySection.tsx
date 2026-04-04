@@ -25,7 +25,15 @@ const EnergyEfficiencySection = () => {
               Nuestro equipo experto implementa soluciones que reducen el consumo energético de tu planta industrial hasta un 25%. 
               Desde auditorías energéticas hasta la integración de tecnologías de última generación para maximizar el rendimiento y minimizar el impacto ambiental.
             </p>
-...
+            <button
+              onClick={() => scrollTo("contacto")}
+              className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:brightness-110 transition inline-flex items-center gap-2 glow-box"
+            >
+              Solicitar auditoría energética
+              <ArrowRight size={18} />
+            </button>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
