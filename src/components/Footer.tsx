@@ -43,9 +43,9 @@ const Footer = () => {
           <h4 className="font-heading font-semibold mb-4 text-sm">Contacto</h4>
           <div className="space-y-3">
             {[
-              { icon: Mail, text: "contacto@swingenieria.com" },
-              { icon: Phone, text: "+52 (81) 1234-5678" },
-              { icon: MapPin, text: "Monterrey, N.L., México" },
+              { icon: Mail, text: "aplicaciones@swingenieria.com" },
+              { icon: Phone, text: "+51 922330784" },
+              { icon: MapPin, text: "Perú" },
             ].map((item) => (
               <div key={item.text} className="flex items-center gap-3">
                 <item.icon className="text-primary shrink-0" size={16} />

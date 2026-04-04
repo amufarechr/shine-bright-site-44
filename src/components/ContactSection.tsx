@@ -42,9 +42,9 @@ const ContactSection = () => {
 
             <div className="space-y-5">
               {[
-                { icon: Mail, label: "contacto@swingenieria.com" },
-                { icon: Phone, label: "+52 (81) 1234-5678" },
-                { icon: MapPin, label: "Monterrey, Nuevo León, México" },
+                { icon: Mail, label: "aplicaciones@swingenieria.com" },
+                { icon: Phone, label: "+51 922330784" },
+                { icon: MapPin, label: "Perú" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
