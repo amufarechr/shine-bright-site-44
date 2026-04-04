@@ -39,7 +39,7 @@ const TechnicalSolutionsSection = () => {
         >
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition">
-              <HouseHeart className="text-primary" size={24} />
+              <House className="text-primary" size={24} />
             </div>
             <div className="flex items-center gap-2 text-muted-foreground text-sm">
               
