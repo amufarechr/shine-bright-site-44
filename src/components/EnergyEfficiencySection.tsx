@@ -34,33 +34,40 @@ const EnergyEfficiencySection = () => {
             </button>
           </motion.div>
 
+          {/* Image placeholder replacing stats grid */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
+            className="rounded-xl overflow-hidden aspect-[4/3] bg-muted flex items-center justify-center"
           >
-            {[
-              { icon: TrendingDown, value: "25%", label: "Reducción de consumo" },
-              { icon: Zap, value: "De 6 a 9 meses", label: "Retorno de inversión" },
-              { icon: BarChart3, value: "30+", label: "Auditorías realizadas" },
-              { icon: BarChart3, value: "24/7", label: "Monitoreo continuo" },
-            ].map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-background border border-border rounded-lg p-6 text-center"
-              >
-                <stat.icon className="text-primary mx-auto mb-3" size={24} />
-                <div className="font-heading text-2xl md:text-3xl font-bold text-primary mb-1">{stat.value}</div>
-                <div className="text-xs text-muted-foreground">{stat.label}</div>
-              </motion.div>
-            ))}
+            <span className="text-muted-foreground text-sm">Foto eficiencia energética</span>
           </motion.div>
         </div>
+
+        {/* Stats row below */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12"
+        >
+          {[
+            { icon: TrendingDown, value: "25%", label: "Reducción de consumo" },
+            { icon: Zap, value: "De 6 a 9 meses", label: "Retorno de inversión" },
+            { icon: BarChart3, value: "30+", label: "Auditorías realizadas" },
+            { icon: BarChart3, value: "24/7", label: "Monitoreo continuo" },
+          ].map((stat, i) => (
+            <div
+              key={stat.label}
+              className="bg-background border border-border rounded-lg p-6 text-center"
+            >
+              <stat.icon className="text-primary mx-auto mb-3" size={24} />
+              <div className="font-heading text-2xl md:text-3xl font-bold text-primary mb-1">{stat.value}</div>
+              <div className="text-xs text-muted-foreground">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

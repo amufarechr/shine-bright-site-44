@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { House, Wind, Flame, Zap, Droplets, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const TechnicalSolutionsSection = () => {
   const scrollTo = (id: string) => {
@@ -30,80 +30,85 @@ const TechnicalSolutionsSection = () => {
           </p>
         </motion.div>
 
-        {/* Block 1 — Climatización (full width) */}
+        {/* Block 1 — Climatización (full width with image) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="group bg-card border border-border rounded-xl p-8 md:p-10 mb-6 hover:border-primary/40 hover:glow-box transition-all duration-300"
+          className="group bg-card border border-border rounded-xl overflow-hidden mb-6 hover:border-primary/40 hover:glow-box transition-all duration-300"
         >
-          <div className="flex flex-wrap items-center gap-3 mb-4">
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition">
-              <House className="text-primary" size={24} />
+          <div className="grid md:grid-cols-2">
+            {/* Image placeholder */}
+            <div className="aspect-[4/3] md:aspect-auto bg-muted flex items-center justify-center min-h-[250px]">
+              <span className="text-muted-foreground text-sm">Foto climatización industrial</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground text-sm">
-              
-              <span>Enfriamiento evaporativo</span>
-              <span className="text-border">·</span>
-              <span>Ventilación</span>
-              <span className="text-border">·</span>
-              
-              <span>Calefacción</span>
+            {/* Content */}
+            <div className="p-8 md:p-10 flex flex-col justify-center">
+              <div className="flex flex-wrap items-center gap-2 text-muted-foreground text-sm mb-4">
+                <span>Enfriamiento evaporativo</span>
+                <span className="text-border">·</span>
+                <span>Ventilación</span>
+                <span className="text-border">·</span>
+                <span>Calefacción</span>
+              </div>
+              <h3 className="font-heading text-2xl md:text-3xl font-bold mb-1">
+                Climatización Industrial
+              </h3>
+              <p className="text-primary text-sm font-semibold mb-4">
+                Control térmico inteligente
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Diseñamos ambientes térmicos eficientes que impactan directamente en
+                la productividad, el confort del personal y el consumo energético de
+                la operación.
+              </p>
+              <button
+                onClick={() => scrollTo("contacto")}
+                className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
+              >
+                Explorar soluciones de climatización
+                <ArrowRight size={16} />
+              </button>
             </div>
           </div>
-          <h3 className="font-heading text-2xl md:text-3xl font-bold mb-1">
-            Climatización Industrial
-          </h3>
-          <p className="text-primary text-sm font-semibold mb-4">
-            Control térmico inteligente
-          </p>
-          <p className="text-muted-foreground leading-relaxed max-w-2xl mb-6">
-            Diseñamos ambientes térmicos eficientes que impactan directamente en
-            la productividad, el confort del personal y el consumo energético de
-            la operación.
-          </p>
-          <button
-            onClick={() => scrollTo("contacto")}
-            className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
-          >
-            Explorar soluciones de climatización
-            <ArrowRight size={16} />
-          </button>
         </motion.div>
 
-        {/* Block 2 & 3 — Two columns */}
+        {/* Block 2 & 3 — Two columns with images */}
         <div className="grid md:grid-cols-2 gap-6 mb-6">
-          {/* Eficiencia Energética */}
+          {/* Gestión Energética */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="group bg-card border border-border rounded-xl p-8 hover:border-primary/40 hover:glow-box transition-all duration-300 flex flex-col"
+            className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 hover:glow-box transition-all duration-300 flex flex-col"
           >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition">
-              <Zap className="text-primary" size={24} />
+            {/* Image placeholder */}
+            <div className="aspect-video bg-muted flex items-center justify-center">
+              <span className="text-muted-foreground text-sm">Foto gestión energética</span>
             </div>
-            <h3 className="font-heading text-xl md:text-2xl font-bold mb-1">
-              Gestión Energética
-            </h3>
-            <p className="text-primary text-sm font-semibold mb-4">
-              Energía bajo control
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-2">
-              EMS (Energy Management) · Monitoreo y control
-            </p>
-            <p className="text-muted-foreground leading-relaxed flex-1 mb-6">
-              Instalamos sistemas de medición, análisis y control de consumo energético para
-              convertirlo en una variable controlada y optimizable.
-            </p>
-            <button
-              onClick={() => scrollTo("contacto")}
-              className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
-            >
-              Explorar energía
-              <ArrowRight size={16} />
-            </button>
+            <div className="p-8 flex flex-col flex-1">
+              <h3 className="font-heading text-xl md:text-2xl font-bold mb-1">
+                Gestión Energética
+              </h3>
+              <p className="text-primary text-sm font-semibold mb-4">
+                Energía bajo control
+              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-2">
+                EMS (Energy Management) · Monitoreo y control
+              </p>
+              <p className="text-muted-foreground leading-relaxed flex-1 mb-6">
+                Instalamos sistemas de medición, análisis y control de consumo energético para
+                convertirlo en una variable controlada y optimizable.
+              </p>
+              <button
+                onClick={() => scrollTo("contacto")}
+                className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
+              >
+                Explorar energía
+                <ArrowRight size={16} />
+              </button>
+            </div>
           </motion.div>
 
           {/* Gestión de Agua */}
@@ -112,32 +117,35 @@ const TechnicalSolutionsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="group bg-card border border-border rounded-xl p-8 hover:border-primary/40 hover:glow-box transition-all duration-300 flex flex-col"
+            className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 hover:glow-box transition-all duration-300 flex flex-col"
           >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition">
-              <Droplets className="text-primary" size={24} />
+            {/* Image placeholder */}
+            <div className="aspect-video bg-muted flex items-center justify-center">
+              <span className="text-muted-foreground text-sm">Foto gestión de agua</span>
             </div>
-            <h3 className="font-heading text-xl md:text-2xl font-bold mb-1">
-              Gestión de Agua
-            </h3>
-            <p className="text-primary text-sm font-semibold mb-4">
-              Uso eficiente de recursos
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-2">
-              Tratamiento, gestión y generación de disponibilidad de agua
-            </p>
-            <p className="text-muted-foreground leading-relaxed flex-1 mb-6">
-              Aseguramos la disponibilidad y el uso eficiente del agua como
-              recurso crítico en operaciones industriales, comerciales y
-              desarrollos residenciales.
-            </p>
-            <button
-              onClick={() => scrollTo("contacto")}
-              className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
-            >
-              Explorar agua
-              <ArrowRight size={16} />
-            </button>
+            <div className="p-8 flex flex-col flex-1">
+              <h3 className="font-heading text-xl md:text-2xl font-bold mb-1">
+                Gestión de Agua
+              </h3>
+              <p className="text-primary text-sm font-semibold mb-4">
+                Uso eficiente de recursos
+              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-2">
+                Tratamiento, gestión y generación de disponibilidad de agua
+              </p>
+              <p className="text-muted-foreground leading-relaxed flex-1 mb-6">
+                Aseguramos la disponibilidad y el uso eficiente del agua como
+                recurso crítico en operaciones industriales, comerciales y
+                desarrollos residenciales.
+              </p>
+              <button
+                onClick={() => scrollTo("contacto")}
+                className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
+              >
+                Explorar agua
+                <ArrowRight size={16} />
+              </button>
+            </div>
           </motion.div>
         </div>
 
