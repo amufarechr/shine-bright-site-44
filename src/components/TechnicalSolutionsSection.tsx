@@ -85,16 +85,16 @@ const TechnicalSolutionsSection = () => {
               <Zap className="text-primary" size={24} />
             </div>
             <h3 className="font-heading text-xl md:text-2xl font-bold mb-1">
-              Eficiencia Energética
+              Gestión Energética
             </h3>
             <p className="text-primary text-sm font-semibold mb-4">
               Energía bajo control
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-2">
-              Sistemas EMS · Monitoreo y control
+              EMS (Energy Management) · Monitoreo y control
             </p>
             <p className="text-muted-foreground leading-relaxed flex-1 mb-6">
-              Medimos, analizamos y optimizamos el consumo energético para
+              Instalamos sistemas de medición, análisis y control de consumo energético para
               convertirlo en una variable controlada y optimizable.
             </p>
             <button

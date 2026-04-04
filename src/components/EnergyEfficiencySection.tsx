@@ -22,7 +22,7 @@ const EnergyEfficiencySection = () => {
               <span className="text-gradient">eficiencia energética</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Implementamos soluciones que reducen el consumo energético de tu planta industrial hasta un 40%. 
+              Nuestro equipo experto implementa soluciones que reducen el consumo energético de tu planta industrial hasta un 25%. 
               Desde auditorías energéticas hasta la integración de tecnologías de última generación para maximizar el rendimiento y minimizar el impacto ambiental.
             </p>
             <button
@@ -41,9 +41,9 @@ const EnergyEfficiencySection = () => {
             className="grid grid-cols-2 gap-4"
           >
             {[
-              { icon: TrendingDown, value: "40%", label: "Reducción de consumo" },
-              { icon: Zap, value: "2.5x", label: "ROI promedio" },
-              { icon: BarChart3, value: "100+", label: "Auditorías realizadas" },
+              { icon: TrendingDown, value: "25%", label: "Reducción de consumo" },
+              { icon: Zap, value: "De 6 a 9 meses", label: "Retorno de inversión" },
+              { icon: BarChart3, value: "30+", label: "Auditorías realizadas" },
               { icon: BarChart3, value: "24/7", label: "Monitoreo continuo" },
             ].map((stat, i) => (
               <motion.div
