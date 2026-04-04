@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Snowflake, Wind, Flame, Zap, Droplets, ArrowRight } from "lucide-react";
+import { HouseHeart, Wind, Flame, Zap, Droplets, ArrowRight } from "lucide-react";
 
 const TechnicalSolutionsSection = () => {
   const scrollTo = (id: string) => {
