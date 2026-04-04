@@ -47,7 +47,7 @@ const TechnicalSolutionsSection = () => {
               <span className="text-border">·</span>
               <span>Ventilación</span>
               <span className="text-border">·</span>
-              <Flame size={16} className="text-primary/60" />
+              
               <span>Calefacción</span>
             </div>
           </div>
