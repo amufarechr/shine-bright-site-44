@@ -42,7 +42,7 @@ const TechnicalSolutionsSection = () => {
               <Snowflake className="text-primary" size={24} />
             </div>
             <div className="flex items-center gap-2 text-muted-foreground text-sm">
-              <Wind size={16} className="text-primary/60" />
+              
               <span>Enfriamiento evaporativo</span>
               <span className="text-border">·</span>
               <span>Ventilación</span>
