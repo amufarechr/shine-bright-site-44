@@ -35,11 +35,13 @@ const EfectosSistema = () => (
               <div className="w-36 py-4 rounded-lg border border-border bg-card text-center font-heading font-semibold text-sm text-foreground">
                 {step.label}
               </div>
-              {step.effect && (
-                <div className="flex items-center gap-1.5 text-xs text-destructive">
+                {step.effect.trim() ? (
+                  <div className="flex items-center gap-1.5 text-xs text-destructive">
                   <AlertCircle size={13} />
                   <span>{step.effect}</span>
-                </div>
+                  </div>
+              ) : (
+                <div className="h-5" />
               )}
             </div>
             {i < steps.length - 1 && (
