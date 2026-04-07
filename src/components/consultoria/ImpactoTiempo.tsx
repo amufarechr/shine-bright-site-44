@@ -9,7 +9,7 @@ const ImpactoTiempo = () => (
         viewport={{ once: true }}
         className="font-heading text-2xl md:text-4xl font-bold mb-16"
       >
-        El resultado real no se ve en la instalación.
+        Los resultados reales permanecen, más allá de la instalación.
       </motion.h2>
 
       {/* Conceptual chart */}
@@ -66,7 +66,7 @@ const ImpactoTiempo = () => (
         viewport={{ once: true }}
         className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed"
       >
-        Buscamos operaciones que se estabilizan, no mejoras que desaparecen.
+        Nuestro objetivo son mejoras que se sostienen, no ilusiones que se desvanecen.
       </motion.p>
     </div>
   </section>
