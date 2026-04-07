@@ -45,10 +45,20 @@ const EfectosSistema = () => (
               )}
             </div>
             {i < steps.length - 1 && (
-              <div className="hidden md:block w-8 h-px bg-border mx-1 mt-[-20px]" />
+            <svg className="hidden md:block mx-1 mt-[-20px]"
+            width="32"
+            height="12"
+            viewBox="0 0 32 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <line x1="0" y1="6" x2="26" y2="6" stroke="hsl(var(--border))" strokeWidth="1.5" />
+            <polyline points="22,2 28,6 22,10" stroke="hsl(var(--border))" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            </svg>
             )}
+            
             {i < steps.length - 1 && (
-              <div className="md:hidden h-6 w-px bg-border" />
+            <div className="md:hidden h-6 w-px bg-border" />
             )}
           </div>
         ))}
