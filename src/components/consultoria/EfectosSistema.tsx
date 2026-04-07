@@ -35,7 +35,7 @@ const EfectosSistema = () => (
               <div className="w-36 py-4 rounded-lg border border-border bg-card text-center font-heading font-semibold text-sm text-foreground">
                 {step.label}
               </div>
-              {step.effect && (
+              {step.effect.trim() ? (
                 <div className="flex items-center gap-1.5 text-xs text-destructive">
                   <AlertCircle size={13} />
                   <span>{step.effect}</span>
@@ -58,7 +58,7 @@ const EfectosSistema = () => (
         viewport={{ once: true }}
         className="text-center text-muted-foreground text-lg max-w-xl mx-auto"
       >
-        Diseñamos mejoras que funcionan de punta a punta.
+        Diseñamos mejoras que optimizan de extremo a extremo.
       </motion.p>
     </div>
   </section>
