@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import consultoriaImg from "@/assets/consultoria.png";
 
 const ConsultingSection = () => {
   const scrollTo = (id: string) => {
@@ -10,14 +11,14 @@ const ConsultingSection = () => {
     <section id="consultoria" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image placeholder */}
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="rounded-xl overflow-hidden aspect-[4/3] bg-muted flex items-center justify-center"
+            className="rounded-xl overflow-hidden aspect-[4/3]"
           >
-            <span className="text-muted-foreground text-sm">Foto consultoría</span>
+            <img src={consultoriaImg} alt="Consultoría industrial" className="w-full h-full object-cover" />
           </motion.div>
 
           {/* Content */}
