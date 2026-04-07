@@ -17,8 +17,9 @@ const EfectosSistema = () => (
         viewport={{ once: true }}
         className="font-heading text-2xl md:text-4xl font-bold text-center mb-16"
       >
-        Optimizar una parte puede{" "}
-        <span className="text-gradient">empeorar el todo.</span>
+        La optimización local puede{" "}
+
+        <span className="text-gradient">causar ineficiencias generales.</span>
       </motion.h2>
 
       {/* Flow diagram */}
