@@ -5,7 +5,7 @@ const steps = [
   { label: "Recepción", effect: "Energía" },
   { label: "Proceso", effect: "Cuello de botella" },
   { label: "Empaque", effect: "Retrabajo / espera" },
-  { label: "Despacho", effect: null },
+  { label: "Despacho", effect: " " },
 ];
 
 const EfectosSistema = () => (
