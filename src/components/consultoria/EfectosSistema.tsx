@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { AlertCircle } from "lucide-react";
 
 const steps = [
-  { label: "Recepción", effect: "Energía" },
-  { label: "Proceso", effect: "Cuello de botella" },
-  { label: "Empaque", effect: "Retrabajo / espera" },
+  { label: "Recepción", effect: "Retrabajo / espera" },
+  { label: "Proceso", effect: "Sobreconsumo de energía" },
+  { label: "Empaque", effect: "Cuello de botella" },
   { label: "Despacho", effect: " " },
 ];
 
