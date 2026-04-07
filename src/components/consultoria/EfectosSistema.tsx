@@ -144,7 +144,7 @@ const EfectosSistema = () => (
 
 export default EfectosSistema;
 
-/*import { motion } from "framer-motion";
+/* import { motion } from "framer-motion";
 import { AlertCircle } from "lucide-react";
 
 const steps = [
@@ -165,10 +165,10 @@ const EfectosSistema = () => (
       >
         Optimizar una parte puede{" "}
         <span className="text-gradient">empeorar el todo.</span>
-      </motion.h2>
+      </motion.h2> /*
 
       {/* Flow diagram */}
-      <motion.div
+     /*  <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
