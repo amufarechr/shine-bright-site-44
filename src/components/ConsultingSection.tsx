@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import consultoriaImg from "@/assets/consultoria.png";
 
 const ConsultingSection = () => {
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
+  const navigate = useNavigate();
 
   return (
     <section id="consultoria" className="section-padding">
@@ -37,7 +36,7 @@ const ConsultingSection = () => {
               Te acompañamos desde el diagnóstico hasta la implementación con resultados medibles.
             </p>
             <button
-              onClick={() => scrollTo("contacto")}
+              onClick={() => navigate("/consultoria")}
               className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:brightness-110 transition inline-flex items-center gap-2 glow-box"
             >
               Explorar consultoría
