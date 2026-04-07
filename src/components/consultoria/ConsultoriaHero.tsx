@@ -16,10 +16,10 @@ const ConsultoriaHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <h1 className="font-heading text-3xl md:text-5xl lg:text-[3.4rem] font-bold leading-[1.1] mb-6 text-foreground">
+            <h1 className="font-heading text-3xl md:text-5xl lg:text-[3.4rem] font-bold leading-[1.1] text-foreground my-[30px] mb-0">
               La operación no mejora por tener mejores equipos.
             </h1>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 max-w-lg my-0">
               Mejora cuando todo el sistema trabaja mejor: personas, procesos e infraestructura.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
