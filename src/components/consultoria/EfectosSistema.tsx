@@ -1,0 +1,66 @@
+import { motion } from "framer-motion";
+import { AlertCircle } from "lucide-react";
+
+const steps = [
+  { label: "Recepción", effect: "Energía" },
+  { label: "Proceso", effect: "Cuello de botella" },
+  { label: "Empaque", effect: "Retrabajo / espera" },
+  { label: "Despacho", effect: null },
+];
+
+const EfectosSistema = () => (
+  <section className="section-padding">
+    <div className="max-w-5xl mx-auto">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="font-heading text-2xl md:text-4xl font-bold text-center mb-16"
+      >
+        Optimizar una parte puede{" "}
+        <span className="text-gradient">empeorar el todo.</span>
+      </motion.h2>
+
+      {/* Flow diagram */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="flex flex-col md:flex-row items-center justify-center gap-0 mb-14"
+      >
+        {steps.map((step, i) => (
+          <div key={step.label} className="flex flex-col md:flex-row items-center">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-36 py-4 rounded-lg border border-border bg-card text-center font-heading font-semibold text-sm text-foreground">
+                {step.label}
+              </div>
+              {step.effect && (
+                <div className="flex items-center gap-1.5 text-xs text-destructive">
+                  <AlertCircle size={13} />
+                  <span>{step.effect}</span>
+                </div>
+              )}
+            </div>
+            {i < steps.length - 1 && (
+              <div className="hidden md:block w-8 h-px bg-border mx-1 mt-[-20px]" />
+            )}
+            {i < steps.length - 1 && (
+              <div className="md:hidden h-6 w-px bg-border" />
+            )}
+          </div>
+        ))}
+      </motion.div>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="text-center text-muted-foreground text-lg max-w-xl mx-auto"
+      >
+        Diseñamos mejoras que funcionan de punta a punta.
+      </motion.p>
+    </div>
+  </section>
+);
+
+export default EfectosSistema;
