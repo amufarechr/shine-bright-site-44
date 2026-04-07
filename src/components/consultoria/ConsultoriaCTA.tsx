@@ -14,11 +14,11 @@ const ConsultoriaCTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
-            No optimizamos equipos.
+          <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">
+            Mucho más que suministro de equipos.
           </h2>
-          <p className="font-heading text-2xl md:text-3xl font-bold text-primary mb-10">
-            Corregimos cómo opera el sistema.
+          <p className="font-heading text-3xl md:text-5xl font-bold text-primary mb-10">
+            Optimizamos la operación del sistema.
           </p>
           <button
             onClick={() => scrollTo("contacto")}
