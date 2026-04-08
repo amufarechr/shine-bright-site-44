@@ -9,7 +9,7 @@ const SistemaOperativo = () => (
         viewport={{ once: true }}
         className="font-heading text-2xl md:text-4xl font-bold mb-16"
       >
-        El problema no está en un equipo.
+        El problema no tiene una causa única
       </motion.h2>
 
       {/* Triángulo SVG */}
