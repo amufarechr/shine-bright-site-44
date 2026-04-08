@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ConsultoriaHero from "@/components/consultoria/ConsultoriaHero";
@@ -11,8 +12,13 @@ import ResultadosOperativos from "@/components/consultoria/ResultadosOperativos"
 import CasosReales from "@/components/consultoria/CasosReales";
 import ConsultoriaCTA from "@/components/consultoria/ConsultoriaCTA";
 
-const Consultoria = () => (
-  <div className="min-h-screen bg-background">
+const Consultoria = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-background">
     <Navbar />
     <ConsultoriaHero />
     <ContrasteSection />
@@ -26,6 +32,7 @@ const Consultoria = () => (
     <ConsultoriaCTA />
     <Footer />
   </div>
-);
+  );
+};
 
 export default Consultoria;
