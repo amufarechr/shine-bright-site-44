@@ -16,7 +16,7 @@ const ResultadosOperativos = () => (
         viewport={{ once: true }}
         className="font-heading text-2xl md:text-4xl font-bold text-center mb-14"
       >
-        Resultados en la operación
+        Resultados comprobados
       </motion.h2>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
