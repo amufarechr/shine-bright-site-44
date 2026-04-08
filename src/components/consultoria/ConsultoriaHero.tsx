@@ -26,10 +26,10 @@ const ConsultoriaHero = () => {
           className="max-w-xl"
         >
           <h1 className="font-heading text-3xl md:text-5xl lg:text-[3.4rem] font-bold leading-[1.1] text-foreground my-[30px] mb-0">
-            La operación no mejora por tener mejores equipos.
+            Las ineficiencias<br />de operación<br />no se resuelven con<br />más gasto
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-lg my-0 mb-[10px]">
-            Mejora cuando todo el sistema trabaja mejor: personas, procesos e infraestructura.
+            La solución es un sistema que integra y alinea personas, procesos e infraestructura.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button
