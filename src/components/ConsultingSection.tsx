@@ -25,6 +25,7 @@ const ConsultingSection = () => {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="text-center"
           >
             <span className="text-primary text-sm font-semibold tracking-widest uppercase">Consultoría</span>
             <h2 className="font-heading text-3xl md:text-5xl font-bold mt-3 mb-6">
@@ -32,8 +33,7 @@ const ConsultingSection = () => {
               <span className="text-gradient">eficiencia</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Analizamos tu operación para identificar oportunidades de ahorro energético y mejora de procesos. 
-              Te acompañamos desde el diagnóstico hasta la implementación con resultados medibles.
+              Analizamos tu operación para identificar oportunidades de ahorro de recursos (labores, materiales, maquinaria y energía), acompañando desde el diagnóstico hasta la implementación con resultados medibles.
             </p>
             <button
               onClick={() => navigate("/consultoria")}
