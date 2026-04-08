@@ -51,9 +51,9 @@ const ComoIntervenimos = () => (
             className={`relative ${i < pasos.length - 1 ? "pb-12" : ""}`}
           >
             {/* Dot on the line */}
-            <div className="absolute -left-[calc(0.5rem+1.5px)] top-1 w-3 h-3 rounded-full bg-primary border-2 border-background" />
+            <div className="absolute -left-[calc(0.5rem+1.5px)] top-3 w-3 h-3 rounded-full bg-primary border-2 border-background" />
 
-            <span className="text-xs font-semibold text-primary tracking-widest">{paso.num}</span>
+            <span className="absolute -left-12 top-0 text-2xl font-bold text-primary tracking-widest">{paso.num}</span>
             <h3 className="font-heading text-lg font-semibold text-foreground mt-1 mb-1">{paso.title}</h3>
             <p className="text-muted-foreground text-sm">{paso.desc}</p>
           </motion.div>
