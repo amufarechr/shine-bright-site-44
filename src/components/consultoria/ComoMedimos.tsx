@@ -4,7 +4,7 @@ const rows = [
   { traditional: "Capacidad del equipo", sw: "Throughput real" },
   { traditional: "Consumo puntual", sw: "Energía por proceso" },
   { traditional: "Cumplimiento técnico", sw: "Estabilidad operativa" },
-  { traditional: "Resultado inmediato", sw: "Desempeño sostenido" },
+  { traditional: "Resultado inmediato", sw: "Performance sostenido" },
   { traditional: "Optimización local", sw: "Coordinación del sistema" },
 ];
 

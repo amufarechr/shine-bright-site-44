@@ -9,9 +9,9 @@ const left = [
 
 const right = [
   "Acumulación en proceso",
-  "Paros intermitentes",
-  "Desbalance entre áreas",
-  "Decisiones tardías",
+  "Paros no programados",
+  "Desbalance de procesos",
+  "Decisiones no planeadas",
 ];
 
 const ContrasteSection = () => (
@@ -23,8 +23,8 @@ const ContrasteSection = () => (
         viewport={{ once: true }}
         className="font-heading text-2xl md:text-4xl font-bold text-center mb-14"
       >
-        Todo parece estar bien.{" "}
-        <span className="text-gradient">La operación dice otra cosa.</span>
+        Todo parece estar bien...{" "}
+        <span className="text-gradient">pero los indicadores de operación dicen otra cosa</span>
       </motion.h2>
 
       <div className="grid md:grid-cols-2 gap-6">
