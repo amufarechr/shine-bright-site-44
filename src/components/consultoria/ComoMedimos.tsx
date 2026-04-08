@@ -17,7 +17,7 @@ const ComoMedimos = () => (
         viewport={{ once: true }}
         className="font-heading text-2xl md:text-4xl font-bold text-center mb-14"
       >
-        No medimos equipos. <span className="text-gradient">Medimos operación.</span>
+        No medimos la maquinaria. <span className="text-gradient">Medimos resultados integrales de operación.</span>
       </motion.h2>
 
       <motion.div
@@ -54,7 +54,7 @@ const ComoMedimos = () => (
         viewport={{ once: true }}
         className="text-center mt-10 text-lg font-heading font-semibold text-foreground"
       >
-        Si la operación no cambia, no hay mejora.
+        Si la operación no busca resultados integrales, no hay mejora.
       </motion.p>
     </div>
   </section>

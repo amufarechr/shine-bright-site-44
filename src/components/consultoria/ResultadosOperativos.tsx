@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const results = [
   { metric: "+20% throughput", desc: "Menor acumulación en proceso crítico" },
-  { metric: "Menos paros", desc: "Operación más estable" },
+  { metric: "-35% paradas no planeadas", desc: "Operación más estable y constante" },
   { metric: "Menos retrabajo", desc: "Mejor coordinación entre áreas" },
   { metric: "Menor consumo total", desc: "No solo en un equipo" },
 ];
