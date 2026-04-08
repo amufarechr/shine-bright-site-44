@@ -38,7 +38,7 @@ const NuestraExperiencia = () => (
         viewport={{ once: true }}
         className="font-heading text-2xl md:text-4xl font-bold text-center mb-4"
       >
-        Nuestra experiencia detrás de cada proyecto
+        <span className="text-gradient">Nuestra experiencia</span> detrás de cada proyecto
       </motion.h2>
 
       <motion.p
