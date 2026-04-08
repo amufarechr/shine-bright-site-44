@@ -12,8 +12,13 @@ import ResultadosOperativos from "@/components/consultoria/ResultadosOperativos"
 import CasosReales from "@/components/consultoria/CasosReales";
 import ConsultoriaCTA from "@/components/consultoria/ConsultoriaCTA";
 
-const Consultoria = () => (
-  <div className="min-h-screen bg-background">
+const Consultoria = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-background">
     <Navbar />
     <ConsultoriaHero />
     <ContrasteSection />
