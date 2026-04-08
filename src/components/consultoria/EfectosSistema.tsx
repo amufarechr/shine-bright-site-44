@@ -68,7 +68,7 @@ const EfectosSistema = () => (
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="text-center text-muted-foreground text-lg max-w-xl mx-auto"
+        className="text-center text-muted-foreground text-lg max-w-xl mx-auto font-semibold"
       >
         Diseñamos mejoras que optimizan de extremo a extremo.
       </motion.p>

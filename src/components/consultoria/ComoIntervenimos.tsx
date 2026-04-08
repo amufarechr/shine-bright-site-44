@@ -3,28 +3,28 @@ import { motion } from "framer-motion";
 const pasos = [
   {
     num: "01",
-    title: "Entendemos cómo fluye realmente",
-    desc: "En campo, con datos reales.",
+    title: "Entendemos cómo funciona realmente la operación",
+    desc: "Inmersión completa en campo, con datos reales.",
   },
   {
     num: "02",
-    title: "Identificamos dónde se pierde capacidad",
-    desc: "Cuellos de botella, paros, descoordinación.",
+    title: "Identificamos las oportunidades y causas raíces",
+    desc: "Cuellos de botella, paradas no programadas, descoordinación, mermas, reprocesos, etc.",
   },
   {
     num: "03",
     title: "Rediseñamos la operación",
-    desc: "Procesos, decisiones y uso de infraestructura.",
+    desc: "Decisiones que involucran procesos, personas y uso de infraestructura.",
   },
   {
     num: "04",
     title: "Implementamos en sitio",
-    desc: "Ajustando con equipos reales.",
+    desc: "Ajustando con tecnología, expertise y gestión de cambio sobre la operación real.",
   },
   {
     num: "05",
-    title: "Estabilizamos",
-    desc: "Seguimiento hasta lograr consistencia.",
+    title: "Sostenibilidad en el tiempo",
+    desc: "Asegurando consistencia, repetibilidad y transferencia efectiva de capacidades",
   },
 ];
 
@@ -37,7 +37,7 @@ const ComoIntervenimos = () => (
         viewport={{ once: true }}
         className="font-heading text-2xl md:text-4xl font-bold mb-16"
       >
-        Cómo intervenimos la operación
+        Nuestra metodología garantiza resultados
       </motion.h2>
 
       <div className="relative pl-8 border-l-2 border-border">
