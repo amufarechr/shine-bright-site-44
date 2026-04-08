@@ -47,7 +47,8 @@ const NuestraExperiencia = () => (
         viewport={{ once: true }}
         className="text-muted-foreground text-lg text-center max-w-2xl mx-auto mb-14 leading-relaxed"
       >
-        Las mejoras operativas no se sostienen desde el escritorio. Requieren experiencia real operando, implementando y corrigiendo sistemas en planta.
+        Las mejoras operativas no se sostienen desde el escritorio.<br />
+        Requieren experiencia real operando e implementando sistemas en planta.
       </motion.p>
 
       <div className="grid md:grid-cols-2 gap-8">
