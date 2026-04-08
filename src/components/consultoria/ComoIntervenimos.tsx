@@ -40,7 +40,7 @@ const ComoIntervenimos = () => (
         Nuestra metodología garantiza resultados
       </motion.h2>
 
-      <div className="relative pl-8 border-l-2 border-border">
+      <div className="relative">
         {pasos.map((paso, i) => (
           <motion.div
             key={paso.num}
@@ -48,14 +48,13 @@ const ComoIntervenimos = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className={`relative ${i < pasos.length - 1 ? "pb-12" : ""}`}
+            className={`relative flex gap-8 ${i < pasos.length - 1 ? "pb-12" : ""}`}
           >
-            {/* Dot on the line */}
-            <div className="absolute -left-[calc(0.5rem+1.5px)] top-3 w-3 h-3 rounded-full bg-primary border-2 border-background" />
-
-            <span className="absolute -left-12 top-0 text-2xl font-bold text-primary tracking-widest">{paso.num}</span>
-            <h3 className="font-heading text-lg font-semibold text-foreground mt-1 mb-1">{paso.title}</h3>
-            <p className="text-muted-foreground text-sm">{paso.desc}</p>
+            <span className="text-2xl font-bold text-primary tracking-widest shrink-0 w-12">{paso.num}</span>
+            <div className="border-l-2 border-border pl-8">
+              <h3 className="font-heading text-lg font-semibold text-foreground mb-1">{paso.title}</h3>
+              <p className="text-muted-foreground text-sm">{paso.desc}</p>
+            </div>
           </motion.div>
         ))}
       </div>
