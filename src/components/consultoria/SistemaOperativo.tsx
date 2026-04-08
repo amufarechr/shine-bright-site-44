@@ -45,7 +45,6 @@ const SistemaOperativo = () => (
           {/* Nodo: Personas (arriba, centro) */}
           <foreignObject x="160" y="12" width="160" height="56">
             <div
-              xmlns="http://www.w3.org/1999/xhtml"
               className="flex items-center justify-center w-full h-full rounded-lg border border-border bg-background font-heading font-semibold text-sm text-foreground"
             >
               Personas
@@ -55,7 +54,6 @@ const SistemaOperativo = () => (
           {/* Nodo: Procesos (abajo izquierda) — activo */}
           <foreignObject x="0" y="212" width="160" height="56">
             <div
-              xmlns="http://www.w3.org/1999/xhtml"
               className="flex items-center justify-center w-full h-full rounded-lg border border-primary bg-primary/5 font-heading font-semibold text-sm text-primary"
             >
               Procesos
@@ -65,7 +63,6 @@ const SistemaOperativo = () => (
           {/* Nodo: Infraestructura (abajo derecha) */}
           <foreignObject x="320" y="212" width="160" height="56">
             <div
-              xmlns="http://www.w3.org/1999/xhtml"
               className="flex items-center justify-center w-full h-full rounded-lg border border-border bg-background font-heading font-semibold text-sm text-foreground"
             >
               Infraestructura
