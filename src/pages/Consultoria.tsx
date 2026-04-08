@@ -32,6 +32,7 @@ const Consultoria = () => {
     <ConsultoriaCTA />
     <Footer />
   </div>
-);
+  );
+};
 
 export default Consultoria;
