@@ -5,7 +5,7 @@ import ContrasteSection from "@/components/consultoria/ContrasteSection";
 import SistemaOperativo from "@/components/consultoria/SistemaOperativo";
 import ComoMedimos from "@/components/consultoria/ComoMedimos";
 import ImpactoTiempo from "@/components/consultoria/ImpactoTiempo";
-import EfectosSistema from "@/components/consultoria/EfectosSistema";
+import NuestraExperiencia from "@/components/consultoria/NuestraExperiencia";
 import ComoIntervenimos from "@/components/consultoria/ComoIntervenimos";
 import ResultadosOperativos from "@/components/consultoria/ResultadosOperativos";
 import CasosReales from "@/components/consultoria/CasosReales";
@@ -19,7 +19,7 @@ const Consultoria = () => (
     <SistemaOperativo />
     <ComoMedimos />
     <ImpactoTiempo />
-    <EfectosSistema />
+    <NuestraExperiencia />
     <ComoIntervenimos />
     <ResultadosOperativos />
     <CasosReales />
