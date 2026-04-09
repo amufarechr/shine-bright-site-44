@@ -98,6 +98,17 @@ export default function SolucionesSection({}: SolucionesSectionProps) {
           </div>
         ))}
       </div>
+
+      {/* Marcas estratégicas */}
+      <div className="text-center mt-20 px-16">
+        <p className="text-lg font-semibold text-gray-700 mb-8">
+          Somos distribuidores estratégicos de reconocidas marcas de climatización industrial
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-10">
+          {/* Placeholder — logos y links se agregarán después */}
+          <span className="text-sm text-gray-400 italic">Logos de marcas próximamente</span>
+        </div>
+      </div>
     </section>
   );
 }

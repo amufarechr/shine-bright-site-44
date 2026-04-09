@@ -19,7 +19,7 @@ const Consultoria = () => {
 
   return (
     <div className="min-h-screen bg-background">
-    <Navbar />
+    <Navbar activePage="consultoria" />
     <ConsultoriaHero />
     <ContrasteSection />
     <SistemaOperativo />

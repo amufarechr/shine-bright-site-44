@@ -1,45 +1,11 @@
-/* ── DiagnosticoSection ──────────────────────────────────────────────────── */
-
-const IconTrend = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#2ebd6b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-    <polyline points="16 7 22 7 22 13" />
-  </svg>
-);
-
-const IconClock = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#2ebd6b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-    <circle cx="12" cy="12" r="10" />
-    <polyline points="12 6 12 12 16 14" />
-  </svg>
-);
-
-const IconZap = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#2ebd6b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-  </svg>
-);
-
-const IconLeaf = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#2ebd6b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-    <path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z" />
-    <circle cx="12" cy="9" r="2.5" />
-  </svg>
-);
-
-const IconWind = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#2ebd6b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-    <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" />
-  </svg>
-);
-
-const IconLayers = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="#2ebd6b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-    <path d="M2 17l10 5 10-5" />
-    <path d="M2 12l10 5 10-5" />
-  </svg>
-);
+import {
+  TrendingDown,
+  Activity,
+  Zap,
+  ThermometerSnowflake,
+  Wind,
+  Unplug,
+} from "lucide-react";
 
 const PlantaSVG = () => (
   <svg width="220" height="320" viewBox="0 0 220 320" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,8 +40,6 @@ const PlantaSVG = () => (
   </svg>
 );
 
-/* ── Item component ─────────────────────────────────────────────────────── */
-
 interface InfItemProps {
   icon: React.ReactNode;
   title: string;
@@ -99,11 +63,7 @@ function InfItem({ icon, title, description, reverse = false }: InfItemProps) {
   );
 }
 
-/* ── Section ────────────────────────────────────────────────────────────── */
-
-interface DiagnosticoSectionProps {}
-
-export default function DiagnosticoSection({}: DiagnosticoSectionProps) {
+export default function DiagnosticoSection() {
   return (
     <section className="bg-white py-[88px] px-16">
       {/* Header */}
@@ -122,17 +82,17 @@ export default function DiagnosticoSection({}: DiagnosticoSectionProps) {
         {/* Izquierda */}
         <div className="flex flex-col gap-8 pr-12">
           <InfItem
-            icon={<IconTrend />}
+            icon={<TrendingDown className="w-6 h-6 text-[#2ebd6b]" />}
             title="Caídas de productividad"
             description="Throughput reducido por condiciones térmicas inadecuadas"
           />
           <InfItem
-            icon={<IconClock />}
+            icon={<Activity className="w-6 h-6 text-[#2ebd6b]" />}
             title="Variabilidad en procesos"
             description="Control ambiental inestable afecta la consistencia productiva"
           />
           <InfItem
-            icon={<IconZap />}
+            icon={<Zap className="w-6 h-6 text-[#2ebd6b]" />}
             title="Consumo energético elevado"
             description="Sistemas mal dimensionados operan con ineficiencia energética crónica"
           />
@@ -147,19 +107,19 @@ export default function DiagnosticoSection({}: DiagnosticoSectionProps) {
         <div className="flex flex-col gap-8 pl-12">
           <InfItem
             reverse
-            icon={<IconLeaf />}
+            icon={<ThermometerSnowflake className="w-6 h-6 text-[#2ebd6b]" />}
             title="Pérdida de calidad de producto"
             description="Frescos y perecederos afectados por temperatura no controlada"
           />
           <InfItem
             reverse
-            icon={<IconWind />}
+            icon={<Wind className="w-6 h-6 text-[#2ebd6b]" />}
             title="Distribución ineficiente de aire"
             description="Bolsillos térmicos que crean zonas con temperatura desigual"
           />
           <InfItem
             reverse
-            icon={<IconLayers />}
+            icon={<Unplug className="w-6 h-6 text-[#2ebd6b]" />}
             title="Desalineación con el proceso"
             description="La climatización no está integrada al sistema productivo"
           />

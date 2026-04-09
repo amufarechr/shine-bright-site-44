@@ -1,4 +1,4 @@
-import NavBar from "./NavBar";
+import Navbar from "@/components/Navbar";
 import Hero from "./Hero";
 import DiagnosticoSection from "./DiagnosticoSection";
 import MetodologiaSection from "./MetodologiaSection";
@@ -6,12 +6,10 @@ import SolucionesSection from "./SolucionesSection";
 import ImpactoSection from "./ImpactoSection";
 import CtaFinalSection from "./CtaFinalSection";
 
-interface ClimatizacionPageProps {}
-
-export default function ClimatizacionPage({}: ClimatizacionPageProps) {
+export default function ClimatizacionPage() {
   return (
     <>
-      <NavBar activeSection="soluciones" />
+      <Navbar activePage="soluciones" />
       <main>
         <Hero />
         <DiagnosticoSection />
