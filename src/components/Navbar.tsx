@@ -1,16 +1,8 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.png";
-
-const navItems = [
-  { label: "Soluciones", id: "soluciones" },
-  { label: "Consultoría", id: "consultoria" },
-  { label: "Sectores", id: "sectores" },
-  { label: "Casos de éxito", id: "casos" },
-  { label: "Contacto", id: "contacto" },
-];
 
 const solucionesItems = [
   { label: "Climatización Industrial", href: "/soluciones/climatizacion" },
@@ -18,10 +10,23 @@ const solucionesItems = [
   { label: "Gestión de Agua", href: "/soluciones/agua" },
 ];
 
-const Navbar = () => {
+const navItems = [
+  { label: "Consultoría", id: "consultoria", href: "/consultoria" },
+  { label: "Sectores", id: "sectores" },
+  { label: "Casos de éxito", id: "casos" },
+  { label: "Contacto", id: "contacto" },
+];
+
+interface NavbarProps {
+  activePage?: "home" | "soluciones" | "consultoria";
+}
+
+const Navbar = ({ activePage }: NavbarProps) => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -29,9 +34,20 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const handleNavClick = (item: { id: string; href?: string }) => {
     setOpen(false);
+    // If item has a dedicated route (like Consultoría), navigate there
+    if (item.href) {
+      navigate(item.href);
+      return;
+    }
+    // If on home, scroll to section
+    if (isHome) {
+      document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Navigate to home with hash
+      navigate(`/#${item.id}`);
+    }
   };
 
   const navBg = scrolled
@@ -40,57 +56,72 @@ const Navbar = () => {
 
   const textColor = scrolled ? "text-foreground" : "text-white";
   const mutedTextColor = scrolled ? "text-muted-foreground" : "text-white/70";
+  const activeColor = "text-primary font-semibold";
+
+  const isSolucionesActive = activePage === "soluciones";
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <button onClick={() => scrollTo("hero")} className="flex items-center gap-2">
+        <button onClick={() => { navigate("/"); setOpen(false); }} className="flex items-center gap-2">
           <img src={logo} alt="SW Ingeniería" className="h-[120px]" />
         </button>
 
+        {/* Desktop */}
         <div className="hidden lg:flex items-center gap-8">
-  {/* Soluciones — dropdown */}
-  <div className="relative group">
-    <button className={`text-sm ${mutedTextColor} hover:text-primary transition-colors font-medium flex items-center gap-1`}>
-      Soluciones <span className="text-[9px] opacity-60">▾</span>
-    </button>
-    <div className="absolute top-[calc(100%+12px)] left-0 hidden group-hover:block bg-white border border-gray-200 rounded-xl p-1.5 min-w-[210px] shadow-lg z-50">
-      {solucionesItems.map((item) => (
-        <button
-          key={item.href}
-          onClick={() => { navigate(item.href); setOpen(false); }}
-          className="block w-full text-left px-3.5 py-2.5 text-[13px] font-medium text-gray-800 rounded-lg whitespace-nowrap hover:bg-gray-100 hover:text-primary transition-colors"
-        >
-          {item.label}
-        </button>
-      ))}
-    </div>
-  </div>
+          {/* Soluciones dropdown */}
+          <div className="relative group">
+            <button
+              className={`text-sm transition-colors font-medium flex items-center gap-1 ${
+                isSolucionesActive ? activeColor : `${mutedTextColor} hover:text-primary`
+              }`}
+            >
+              Soluciones <span className="text-[9px] opacity-60">▾</span>
+            </button>
+            <div className="absolute top-[calc(100%+12px)] left-0 hidden group-hover:block bg-white border border-gray-200 rounded-xl p-1.5 min-w-[210px] shadow-lg z-50">
+              {solucionesItems.map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => { navigate(item.href); setOpen(false); }}
+                  className="block w-full text-left px-3.5 py-2.5 text-[13px] font-medium text-gray-800 rounded-lg whitespace-nowrap hover:bg-gray-100 hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+          </div>
 
-  {/* Resto de navItems (sin Soluciones) */}
-  {navItems.filter(item => item.id !== "soluciones").map((item) => (
-    <button
-      key={item.id}
-      onClick={() => scrollTo(item.id)}
-      className={`text-sm ${mutedTextColor} hover:text-primary transition-colors font-medium`}
-    >
-      {item.label}
-    </button>
-  ))}
+          {/* Other nav items */}
+          {navItems.map((item) => {
+            const isActive = activePage === item.id;
+            return (
+              <button
+                key={item.id}
+                onClick={() => handleNavClick(item)}
+                className={`text-sm transition-colors font-medium ${
+                  isActive ? activeColor : `${mutedTextColor} hover:text-primary`
+                }`}
+              >
+                {item.label}
+              </button>
+            );
+          })}
 
-  <button
-    onClick={() => scrollTo("contacto")}
-    className="bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold hover:brightness-110 transition glow-box"
-  >
-    Solicita diagnóstico gratuito
-  </button>
-</div>
+          <button
+            onClick={() => handleNavClick({ id: "contacto" })}
+            className="bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold hover:brightness-110 transition glow-box"
+          >
+            Solicita diagnóstico gratuito
+          </button>
+        </div>
 
+        {/* Mobile toggle */}
         <button className={`lg:hidden ${textColor}`} onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
+      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -100,36 +131,38 @@ const Navbar = () => {
             className="lg:hidden overflow-hidden bg-background border-b border-border"
           >
             <div className="flex flex-col gap-4 p-6">
-            {/* Soluciones expandido en mobile */}
+              {/* Soluciones section */}
               <p className="text-xs font-bold tracking-widest text-primary uppercase">Soluciones</p>
               {solucionesItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => { navigate(item.href); setOpen(false); }}
-                className="text-muted-foreground hover:text-primary transition-colors text-left font-medium pl-3"
+                <button
+                  key={item.href}
+                  onClick={() => { navigate(item.href); setOpen(false); }}
+                  className="text-muted-foreground hover:text-primary transition-colors text-left font-medium pl-3"
                 >
-                {item.label}
+                  {item.label}
                 </button>
-            ))}
+              ))}
 
-            {/* Resto de items (sin Soluciones) */}
-            {navItems.filter(item => item.id !== "soluciones").map((item) => (
+              {/* Other items */}
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item)}
+                  className={`text-left font-medium transition-colors ${
+                    activePage === item.id ? "text-primary" : "text-muted-foreground hover:text-primary"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+
               <button
-                key={item.id}
-                onClick={() => scrollTo(item.id)}
-                className="text-muted-foreground hover:text-primary transition-colors text-left font-medium"
+                onClick={() => handleNavClick({ id: "contacto" })}
+                className="bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold w-fit glow-box"
               >
-                {item.label}
+                Solicita diagnóstico gratuito
               </button>
-            ))}
-
-          <button
-              onClick={() => scrollTo("contacto")}
-              className="bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold w-fit glow-box"
-            >
-              Solicita diagnóstico gratuito
-            </button>
-          </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
