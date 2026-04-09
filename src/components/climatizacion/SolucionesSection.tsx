@@ -1,0 +1,103 @@
+import evapImg from "../../assets/climatizacion/evaporativo.jpg";
+import fanImg from "../../assets/climatizacion/ventilacion.jpg";
+import heatImg from "../../assets/climatizacion/calefaccion.jpg";
+import ctrlImg from "../../assets/climatizacion/control.jpg";
+
+interface Solucion {
+  title: string;
+  description: string;
+  brand?: string;
+  imageSrc: string;
+  imageAlt: string;
+  imageLeft: boolean;
+}
+
+const soluciones: Solucion[] = [
+  {
+    title: "Enfriamiento evaporativo",
+    description: "Control térmico eficiente para grandes volúmenes industriales.",
+    brand:
+      "Representantes y distribuidores exclusivos de Big Ass Fans, PortaCool, BioCool y otras marcas líderes globales.",
+    imageSrc: evapImg,
+    imageAlt: "Enfriamiento evaporativo en planta industrial",
+    imageLeft: true,
+  },
+  {
+    title: "Ventilación industrial de gran volumen",
+    description: "Distribución de aire para estabilidad operativa en planta.",
+    brand: "Representantes exclusivos de los ventiladores industriales Big Ass Fans.",
+    imageSrc: fanImg,
+    imageAlt: "Ventiladores industriales de techo en nave industrial",
+    imageLeft: false,
+  },
+  {
+    title: "Sistemas de calefacción radiante",
+    description: "Control térmico eficiente en ambientes industriales de baja temperatura.",
+    brand:
+      "Distribuidores regionales de sistemas de calefacción industrial Superior Radiant Products (SRP) y Big Ass Fans.",
+    imageSrc: heatImg,
+    imageAlt: "Sistemas de calefacción radiante infrarroja en nave industrial",
+    imageLeft: true,
+  },
+  {
+    title: "Control ambiental y automatización",
+    description: "Ajuste dinámico según condiciones reales de operación en planta.",
+    imageSrc: ctrlImg,
+    imageAlt: "Panel de control ambiental industrial",
+    imageLeft: false,
+  },
+];
+
+interface SolucionesSectionProps {}
+
+export default function SolucionesSection({}: SolucionesSectionProps) {
+  return (
+    <section className="bg-[#f7f7f4] py-20">
+      {/* Header */}
+      <div className="text-center px-16 mb-14">
+        <p className="text-[11px] font-bold tracking-[0.14em] text-[#2ebd6b] uppercase mb-3.5">
+          Soluciones
+        </p>
+        <h2 className="text-[32px] font-bold leading-[1.2] text-gray-900">
+          Tecnologías que implementamos
+        </h2>
+      </div>
+
+      {/* Cards al 75%, centradas */}
+      <div className="flex flex-col gap-5 items-center px-16">
+        {soluciones.map((sol) => (
+          <div
+            key={sol.title}
+            className="w-3/4 grid grid-cols-2 rounded-xl overflow-hidden border border-gray-200 shadow-sm"
+            style={{ direction: sol.imageLeft ? "ltr" : "rtl" }}
+          >
+            {/* Imagen */}
+            <div className="relative min-h-[280px] overflow-hidden" style={{ direction: "ltr" }}>
+              <img
+                src={sol.imageSrc}
+                alt={sol.imageAlt}
+                className="w-full h-full object-cover absolute inset-0"
+              />
+            </div>
+
+            {/* Texto */}
+            <div
+              className="bg-white flex flex-col justify-center px-12 py-11"
+              style={{ direction: "ltr" }}
+            >
+              <h3 className="text-[28px] font-bold text-gray-900 leading-[1.2] mb-4">
+                {sol.title}
+              </h3>
+              <p className="text-base leading-[1.7] text-gray-500">{sol.description}</p>
+              {sol.brand && (
+                <p className="text-[13px] leading-relaxed text-[#2ebd6b] font-medium mt-3.5 pt-3.5 border-t border-gray-200">
+                  {sol.brand}
+                </p>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
