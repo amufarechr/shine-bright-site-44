@@ -68,7 +68,7 @@ const Navbar = ({ activePage }: NavbarProps) => {
         </button>
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {/* Soluciones dropdown */}
           <div className="relative group">
             <button
@@ -116,7 +116,7 @@ const Navbar = ({ activePage }: NavbarProps) => {
         </div>
 
         {/* Mobile toggle */}
-        <button className={`lg:hidden ${textColor}`} onClick={() => setOpen(!open)}>
+        <button className={`md:hidden ${textColor}`} onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -128,7 +128,7 @@ const Navbar = ({ activePage }: NavbarProps) => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden overflow-hidden bg-background border-b border-border"
+            className="md:hidden overflow-hidden bg-background border-b border-border"
           >
             <div className="flex flex-col gap-4 p-6">
               {/* Soluciones section */}
