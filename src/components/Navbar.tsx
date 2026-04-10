@@ -90,6 +90,7 @@ const Navbar = ({ activePage }: NavbarProps) => {
                 </button>
               ))}
             </div>
+            </div>
           </div>
 
           {/* Other nav items */}
