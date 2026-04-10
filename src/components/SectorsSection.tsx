@@ -10,7 +10,7 @@ const sectors = [
 ];
 
 const SectorsSection = () => (
-  <section id="sectores" className="section-padding">
+  <section id="sectores" className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16">
     <div className="max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}

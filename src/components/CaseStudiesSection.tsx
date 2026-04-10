@@ -28,7 +28,7 @@ const CaseStudiesSection = () => {
   };
 
   return (
-    <section id="casos" className="section-padding bg-card">
+    <section id="casos" className="section-padding pt-10 lg:pt-16 bg-card">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
