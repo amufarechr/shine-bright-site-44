@@ -17,8 +17,8 @@ const Index = () => (
     <TechnicalSolutionsSection />
     <ConsultingSection />
     <EnergyEfficiencySection />
-    <CaseStudiesSection />
     <SectorsSection />
+    <CaseStudiesSection />
     <TestimonialsSection />
     <CTASection />
     <ContactSection />
