@@ -7,7 +7,7 @@ const ConsultingSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="consultoria" className="section-padding pt-10 lg:pt-16">
+    <section id="consultoria" className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}

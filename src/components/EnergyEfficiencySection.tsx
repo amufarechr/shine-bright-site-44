@@ -7,7 +7,7 @@ const EnergyEfficiencySection = () => {
   };
 
   return (
-    <section className="section-padding">
+    <section className="section-padding pt-10 lg:pt-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
