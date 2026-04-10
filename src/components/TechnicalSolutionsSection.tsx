@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import climatizacionHero from "@/assets/climatizacion/hero.jpg";
 import energiaImg from "@/assets/climatizacion/energia.jpeg";
 import aguaImg from "@/assets/climatizacion/agua.jpeg";
 
 const TechnicalSolutionsSection = () => {
+  const navigate = useNavigate();
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -37,12 +39,13 @@ const TechnicalSolutionsSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="group bg-card border border-border rounded-xl overflow-hidden mb-6 hover:border-primary/40 hover:glow-box transition-all duration-300"
+          onClick={() => navigate("/soluciones/climatizacion")}
+          className="group bg-card border border-border rounded-xl overflow-hidden mb-6 hover:border-primary/40 hover:glow-box transition-all duration-300 cursor-pointer"
         >
           <div className="grid md:grid-cols-2">
             {/* Image */}
             <div className="aspect-[4/3] md:aspect-auto min-h-[250px] overflow-hidden">
-              <img src={climatizacionHero} alt="Climatización industrial" className="w-full h-full object-cover" />
+              <img src={climatizacionHero} alt="Climatización industrial" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             {/* Content */}
             <div className="p-8 md:p-10 flex flex-col justify-center">
@@ -64,13 +67,10 @@ const TechnicalSolutionsSection = () => {
                 la productividad, el confort del personal y el consumo energético de
                 la operación.
               </p>
-              <button
-                onClick={() => scrollTo("contacto")}
-                className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
-              >
+              <span className="text-primary text-sm font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
                 Explorar soluciones de climatización
                 <ArrowRight size={16} />
-              </button>
+              </span>
             </div>
           </div>
         </motion.div>
@@ -83,11 +83,12 @@ const TechnicalSolutionsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 hover:glow-box transition-all duration-300 flex flex-col"
+            onClick={() => navigate("/soluciones/energia")}
+            className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 hover:glow-box transition-all duration-300 flex flex-col cursor-pointer"
           >
             {/* Image */}
             <div className="aspect-video overflow-hidden">
-              <img src={energiaImg} alt="Gestión energética industrial" className="w-full h-full object-cover" />
+              <img src={energiaImg} alt="Gestión energética industrial" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="p-8 flex flex-col flex-1">
               <h3 className="font-heading text-xl md:text-2xl font-bold mb-1">
@@ -103,13 +104,10 @@ const TechnicalSolutionsSection = () => {
                 Instalamos sistemas de medición, análisis y control de consumo energético para
                 convertirlo en una variable controlada y optimizable.
               </p>
-              <button
-                onClick={() => scrollTo("contacto")}
-                className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
-              >
+              <span className="text-primary text-sm font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
                 Explorar energía
                 <ArrowRight size={16} />
-              </button>
+              </span>
             </div>
           </motion.div>
 
@@ -119,11 +117,12 @@ const TechnicalSolutionsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 hover:glow-box transition-all duration-300 flex flex-col"
+            onClick={() => navigate("/soluciones/agua")}
+            className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 hover:glow-box transition-all duration-300 flex flex-col cursor-pointer"
           >
             {/* Image */}
             <div className="aspect-video overflow-hidden">
-              <img src={aguaImg} alt="Gestión de agua industrial" className="w-full h-full object-cover" />
+              <img src={aguaImg} alt="Gestión de agua industrial" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="p-8 flex flex-col flex-1">
               <h3 className="font-heading text-xl md:text-2xl font-bold mb-1">
@@ -140,13 +139,10 @@ const TechnicalSolutionsSection = () => {
                 recurso crítico en operaciones industriales, comerciales y
                 desarrollos residenciales.
               </p>
-              <button
-                onClick={() => scrollTo("contacto")}
-                className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
-              >
+              <span className="text-primary text-sm font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
                 Explorar agua
                 <ArrowRight size={16} />
-              </button>
+              </span>
             </div>
           </motion.div>
         </div>
