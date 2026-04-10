@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import climatizacionHero from "@/assets/climatizacion/hero.jpg";
 
 const TechnicalSolutionsSection = () => {
   const scrollTo = (id: string) => {
@@ -37,9 +38,9 @@ const TechnicalSolutionsSection = () => {
           className="group bg-card border border-border rounded-xl overflow-hidden mb-6 hover:border-primary/40 hover:glow-box transition-all duration-300"
         >
           <div className="grid md:grid-cols-2">
-            {/* Image placeholder */}
-            <div className="aspect-[4/3] md:aspect-auto bg-muted flex items-center justify-center min-h-[250px]">
-              <span className="text-muted-foreground text-sm">Foto climatización industrial</span>
+            {/* Image */}
+            <div className="aspect-[4/3] md:aspect-auto min-h-[250px] overflow-hidden">
+              <img src={climatizacionHero} alt="Climatización industrial" className="w-full h-full object-cover" />
             </div>
             {/* Content */}
             <div className="p-8 md:p-10 flex flex-col justify-center">
