@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound.tsx";
 import Climatizacion from "./pages/Climatizacion.tsx";
 import Energia from "./pages/Energia.tsx";
 import Agua from "./pages/Agua.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/consultoria" element={<Consultoria />} />
