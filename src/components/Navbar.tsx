@@ -12,7 +12,6 @@ const solucionesItems = [
 
 const navItems = [
   { label: "Consultoría", id: "consultoria", href: "/consultoria" },
-  { label: "Sectores", id: "sectores" },
   { label: "Casos de éxito", id: "casos" },
   { label: "Contacto", id: "contacto" },
 ];
