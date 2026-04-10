@@ -4,7 +4,6 @@ import logo from "@/assets/logo.png";
 const footerLinks = [
   { label: "Soluciones", id: "soluciones" },
   { label: "Consultoría", id: "consultoria" },
-  { label: "Sectores", id: "sectores" },
   { label: "Casos de éxito", id: "casos" },
   { label: "Contacto", id: "contacto" },
 ];
