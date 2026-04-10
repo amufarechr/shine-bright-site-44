@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
+import wahaImg from "@/assets/climatizacion/waha.jpg";
 
 const segmentosOsmosis = [
   {
@@ -165,28 +166,18 @@ export default function SolucionesSection() {
               </button>
             </motion.div>
 
-            {/* Visual right — placeholder para foto Waha */}
+            {/* Waha image */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="rounded-xl overflow-hidden bg-muted aspect-[4/3] flex flex-col items-center justify-center gap-4 border border-border"
+              className="rounded-xl overflow-hidden aspect-[4/3] bg-white flex items-center justify-center p-8"
             >
-              {/* Waha brand block */}
-              <div className="text-center px-8">
-                <p className="text-primary text-xs font-bold tracking-widest uppercase mb-3">
-                  Representantes exclusivos
-                </p>
-                <p className="font-heading text-4xl font-bold text-foreground mb-2">
-                  Waha
-                </p>
-                <p className="text-muted-foreground text-sm">
-                  WaHa Vaporator® — Generación atmosférica de agua
-                </p>
-              </div>
-              <div className="text-muted-foreground text-xs text-center px-8">
-                [Foto Waha Vaporator® — próximamente]
-              </div>
+              <img
+                src={wahaImg}
+                alt="WaHa Vaporator Oasis-5000"
+                className="w-full h-full object-contain"
+              />
             </motion.div>
           </div>
         </div>
