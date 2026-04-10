@@ -7,7 +7,7 @@ const TechnicalSolutionsSection = () => {
   };
 
   return (
-    <section id="soluciones" className="section-padding bg-background">
+    <section id="soluciones" className="section-padding pb-10 lg:pb-16 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
