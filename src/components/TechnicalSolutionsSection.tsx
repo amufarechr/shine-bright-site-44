@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import climatizacionHero from "@/assets/climatizacion/hero.jpg";
+import energiaImg from "@/assets/climatizacion/energia.jpeg";
+import aguaImg from "@/assets/climatizacion/agua.jpeg";
 
 const TechnicalSolutionsSection = () => {
   const scrollTo = (id: string) => {
@@ -83,9 +85,9 @@ const TechnicalSolutionsSection = () => {
             transition={{ delay: 0.1 }}
             className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 hover:glow-box transition-all duration-300 flex flex-col"
           >
-            {/* Image placeholder */}
-            <div className="aspect-video bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Foto gestión energética</span>
+            {/* Image */}
+            <div className="aspect-video overflow-hidden">
+              <img src={energiaImg} alt="Gestión energética industrial" className="w-full h-full object-cover" />
             </div>
             <div className="p-8 flex flex-col flex-1">
               <h3 className="font-heading text-xl md:text-2xl font-bold mb-1">
@@ -119,9 +121,9 @@ const TechnicalSolutionsSection = () => {
             transition={{ delay: 0.2 }}
             className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 hover:glow-box transition-all duration-300 flex flex-col"
           >
-            {/* Image placeholder */}
-            <div className="aspect-video bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Foto gestión de agua</span>
+            {/* Image */}
+            <div className="aspect-video overflow-hidden">
+              <img src={aguaImg} alt="Gestión de agua industrial" className="w-full h-full object-cover" />
             </div>
             <div className="p-8 flex flex-col flex-1">
               <h3 className="font-heading text-xl md:text-2xl font-bold mb-1">
