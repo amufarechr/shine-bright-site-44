@@ -76,7 +76,7 @@ const Navbar = ({ activePage }: NavbarProps) => {
                 isSolucionesActive ? activeColor : `${mutedTextColor} hover:text-primary`
               }`}
             >
-              Soluciones <span className="text-[9px] opacity-60">▾</span>
+              Soluciones técnicas <span className="text-[9px] opacity-60">▾</span>
             </button>
             <div className="absolute top-[calc(100%+12px)] left-0 hidden group-hover:block bg-white border border-gray-200 rounded-xl p-1.5 min-w-[210px] shadow-lg z-50">
               {solucionesItems.map((item) => (
@@ -132,7 +132,7 @@ const Navbar = ({ activePage }: NavbarProps) => {
           >
             <div className="flex flex-col gap-4 p-6">
               {/* Soluciones section */}
-              <p className="text-xs font-bold tracking-widest text-primary uppercase">Soluciones</p>
+              <p className="text-xs font-bold tracking-widest text-primary uppercase">Soluciones técnicas</p>
               {solucionesItems.map((item) => (
                 <button
                   key={item.href}

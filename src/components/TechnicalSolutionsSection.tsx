@@ -24,9 +24,8 @@ const TechnicalSolutionsSection = () => {
             <span className="text-gradient">maximiza el uso de recursos</span>
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto mt-5 text-base md:text-lg leading-relaxed">
-            Integramos sistemas de climatización, energía y gestión de recursos
-            para mejorar productividad, reducir costos y aumentar el control de
-            tu operación.
+            Integramos sistemas de climatización, energía y agua para mejorar
+            productividad, reducir costos y aumentar el control de tu operación.
           </p>
         </motion.div>
 

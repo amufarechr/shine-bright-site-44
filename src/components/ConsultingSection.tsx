@@ -30,7 +30,7 @@ const ConsultingSection = () => {
             <span className="text-primary text-sm font-semibold tracking-widest uppercase">Consultoría</span>
             <h2 className="font-heading text-3xl md:text-5xl font-bold mt-3 mb-6">
               Consultoría estratégica en{" "}
-              <span className="text-gradient">eficiencia</span>
+              <span className="text-gradient">eficiencia operativa</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Analizamos tu operación para identificar oportunidades de ahorro de recursos (labores, materiales, maquinaria y energía), acompañando desde el diagnóstico hasta la implementación con resultados medibles.
