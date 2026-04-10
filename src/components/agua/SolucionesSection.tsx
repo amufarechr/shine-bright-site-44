@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import aguaImg from "@/assets/climatizacion/agua.jpeg";
+import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
 
 const segmentosOsmosis = [
   {
@@ -58,7 +58,7 @@ export default function SolucionesSection() {
               className="rounded-xl overflow-hidden aspect-[4/3]"
             >
               <img
-                src={aguaImg}
+                src={osmosisImg}
                 alt="Sistema de ósmosis inversa industrial"
                 className="w-full h-full object-cover"
               />
