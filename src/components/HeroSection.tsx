@@ -46,7 +46,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-4 max-w-2xl">
-            Enfriamiento, ventilación, calefacción, energía y consultoría para optimizar tu operación industrial.
+            Consultoría estratégica para optimizar tu operación industrial. Soluciones técnicas en climatización, energía y agua.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
