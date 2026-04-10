@@ -6,7 +6,7 @@ const segmentosOsmosis = [
   {
     nombre: "Residencial de gran volumen",
     descripcion:
-      "Condominios y conjuntos habitacionales con alta demanda de agua potable. Sistemas centralizados de ósmosis inversa que eliminan la dependencia de cisternas y camiones.",
+      "Condominios y conjuntos habitacionales con alta demanda de agua potable. Sistemas centralizados que toman agua de mar y eliminan la dependencia de camiones cisterna.",
   },
   {
     nombre: "Comercial",
@@ -45,8 +45,8 @@ export default function SolucionesSection() {
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl">
               Somos representantes de fabricantes líderes en sistemas de ósmosis
-              inversa para desalinización. Agua pura desde fuentes salobres o
-              de red, para cualquier escala de operación.
+              inversa para desalinización. Agua pura desde fuentes salobres (agua de mar y otras fuentes)
+              o de red, para cualquier escala de operación.
             </p>
           </motion.div>
 
