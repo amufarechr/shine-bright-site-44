@@ -78,7 +78,8 @@ const Navbar = ({ activePage }: NavbarProps) => {
             >
               Soluciones técnicas <span className="text-[9px] opacity-60">▾</span>
             </button>
-            <div className="absolute top-[calc(100%+12px)] left-0 hidden group-hover:block bg-white border border-gray-200 rounded-xl p-1.5 min-w-[210px] shadow-lg z-50">
+            <div className="absolute top-full left-0 hidden group-hover:block pt-2 z-50">
+            <div className="bg-white border border-gray-200 rounded-xl p-1.5 min-w-[210px] shadow-lg">
               {solucionesItems.map((item) => (
                 <button
                   key={item.href}
@@ -88,6 +89,7 @@ const Navbar = ({ activePage }: NavbarProps) => {
                   {item.label}
                 </button>
               ))}
+            </div>
             </div>
           </div>
 
