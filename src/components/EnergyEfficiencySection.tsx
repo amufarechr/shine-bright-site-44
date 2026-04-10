@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { BarChart3, TrendingDown, Zap, ArrowRight } from "lucide-react";
+import consultoriaEnergiaImg from "@/assets/consultoria_energia.jpeg";
 
 const EnergyEfficiencySection = () => {
   const scrollTo = (id: string) => {
@@ -34,14 +35,14 @@ const EnergyEfficiencySection = () => {
             </button>
           </motion.div>
 
-          {/* Image placeholder replacing stats grid */}
+          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="rounded-xl overflow-hidden aspect-[4/3] bg-muted flex items-center justify-center"
+            className="rounded-xl overflow-hidden aspect-[4/3]"
           >
-            <span className="text-muted-foreground text-sm">Foto eficiencia energética</span>
+            <img src={consultoriaEnergiaImg} alt="Consultoría de eficiencia energética" className="w-full h-full object-cover" />
           </motion.div>
         </div>
 
