@@ -1,12 +1,18 @@
 import { motion } from "framer-motion";
-import { Wheat, Truck, Factory, ShoppingBag, Egg } from "lucide-react";
+import agricolaImg from "@/assets/sectores/agricola.jpeg";
+import logisticaImg from "@/assets/sectores/logistica.jpeg";
+import industrialImg from "@/assets/sectores/industrial.jpeg";
+import retailImg from "@/assets/sectores/retail.jpeg";
+import avicolaImg from "@/assets/sectores/avicola.jpeg";
+import mineriaImg from "@/assets/sectores/mineria.jpeg";
 
 const sectors = [
-  { icon: Wheat, name: "Agro" },
-  { icon: Truck, name: "Logística" },
-  { icon: Factory, name: "Manufactura" },
-  { icon: ShoppingBag, name: "Retail" },
-  { icon: Egg, name: "Avícola" },
+  { name: "Agro", img: agricolaImg },
+  { name: "Logística", img: logisticaImg },
+  { name: "Manufactura", img: industrialImg },
+  { name: "Retail", img: retailImg },
+  { name: "Avícola", img: avicolaImg },
+  { name: "Minería", img: mineriaImg },
 ];
 
 const SectorsSection = () => (
@@ -28,20 +34,30 @@ const SectorsSection = () => (
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
         {sectors.map((sector, i) => (
           <motion.div
             key={sector.name}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="bg-card border border-border rounded-lg p-6 text-center hover:border-primary/40 hover:glow-box transition-all duration-300 group"
+            transition={{ delay: i * 0.08 }}
+            className="group relative rounded-xl overflow-hidden aspect-square border border-border hover:border-primary/40 hover:glow-box transition-all duration-300"
           >
-            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition">
-              <sector.icon className="text-primary" size={28} />
+            {/* Photo */}
+            <img
+              src={sector.img}
+              alt={sector.name}
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
+            {/* Label */}
+            <div className="absolute bottom-0 left-0 right-0 p-3">
+              <span className="font-heading font-semibold text-sm text-white drop-shadow">
+                {sector.name}
+              </span>
             </div>
-            <span className="font-heading font-semibold text-sm">{sector.name}</span>
           </motion.div>
         ))}
       </div>
