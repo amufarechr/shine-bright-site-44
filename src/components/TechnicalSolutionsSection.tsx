@@ -91,14 +91,16 @@ const TechnicalSolutionsSection = () => {
               <img src={energiaImg} alt="Gestión energética industrial" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="p-8 flex flex-col flex-1">
+              <div className="flex flex-wrap items-center gap-2 text-muted-foreground text-sm mb-4">
+                <span>EMS (Energy Management)</span>
+                <span className="text-border">·</span>
+                <span>Monitoreo y control</span>
+              </div>
               <h3 className="font-heading text-xl md:text-2xl font-bold mb-1">
                 Gestión Energética
               </h3>
               <p className="text-primary text-sm font-semibold mb-4">
                 Energía bajo control
-              </p>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-2">
-                EMS (Energy Management) · Monitoreo y control
               </p>
               <p className="text-muted-foreground leading-relaxed flex-1 mb-6">
                 Instalamos sistemas de medición, análisis y control de consumo energético para
@@ -125,14 +127,14 @@ const TechnicalSolutionsSection = () => {
               <img src={aguaImg} alt="Gestión de agua industrial" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="p-8 flex flex-col flex-1">
+              <div className="flex flex-wrap items-center gap-2 text-muted-foreground text-sm mb-4">
+                <span>Tratamiento, gestión y generación de disponibilidad de agua</span>
+              </div>
               <h3 className="font-heading text-xl md:text-2xl font-bold mb-1">
                 Gestión de Agua
               </h3>
               <p className="text-primary text-sm font-semibold mb-4">
                 Uso eficiente de recursos
-              </p>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-2">
-                Tratamiento, gestión y generación de disponibilidad de agua
               </p>
               <p className="text-muted-foreground leading-relaxed flex-1 mb-6">
                 Aseguramos la disponibilidad y el uso eficiente del agua como
