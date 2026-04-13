@@ -33,19 +33,31 @@ const Navbar = ({ activePage }: NavbarProps) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleLogoClick = () => {
+    setOpen(false);
+    if (isHome) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+    }
+  };
+
   const handleNavClick = (item: { id: string; href?: string }) => {
     setOpen(false);
-    // If item has a dedicated route (like Consultoría), navigate there
+    // Dedicated route (Consultoría)
     if (item.href) {
       navigate(item.href);
       return;
     }
-    // If on home, scroll to section
+    // Scroll-to-section items
     if (isHome) {
       document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Navigate to home with hash
-      navigate(`/#${item.id}`);
+      // Navigate home, then scroll after page renders
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
     }
   };
 
@@ -62,7 +74,7 @@ const Navbar = ({ activePage }: NavbarProps) => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <button onClick={() => { navigate("/"); setOpen(false); }} className="flex items-center gap-2">
+        <button onClick={handleLogoClick} className="flex items-center gap-2">
           <img src={logo} alt="SW Ingeniería" className="h-[120px]" />
         </button>
 
