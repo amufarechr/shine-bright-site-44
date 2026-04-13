@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const footerLinks = [
-  { label: "Soluciones", id: "soluciones" },
+  { label: "Soluciones técnicas", id: "soluciones" },
   { label: "Consultoría", id: "consultoria" },
   { label: "Casos de éxito", id: "casos" },
   { label: "Contacto", id: "contacto" },
