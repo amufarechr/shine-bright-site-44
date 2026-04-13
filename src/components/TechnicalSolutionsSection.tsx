@@ -137,9 +137,7 @@ const TechnicalSolutionsSection = () => {
                 Uso eficiente de recursos
               </p>
               <p className="text-muted-foreground leading-relaxed flex-1 mb-6">
-                Aseguramos la disponibilidad y el uso eficiente del agua como
-                recurso crítico en operaciones industriales, comerciales y
-                desarrollos residenciales.
+                Sistemas de desalinización por ósmosis inversa y generación de agua desde el aire — para usos residenciales, comerciales, industriales, y locaciones remotas
               </p>
               <span className="text-primary text-sm font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
                 Explorar agua
