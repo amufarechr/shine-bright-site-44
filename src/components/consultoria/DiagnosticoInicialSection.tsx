@@ -43,7 +43,7 @@ const DiagnosticoInicialSection = () => (
           Diagnóstico inicial
         </span>
         <h2 className="font-heading text-3xl md:text-5xl font-bold mt-3 max-w-2xl">
-          Cuando entramos a una operación, buscamos tres cosas
+          El desempeño operativo es un problema de sistema, no de partes
         </h2>
       </motion.div>
 
