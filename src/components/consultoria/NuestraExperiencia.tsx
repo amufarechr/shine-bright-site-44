@@ -30,7 +30,7 @@ const socios = [
 ];
 
 const NuestraExperiencia = () => (
-  <section className="section-padding bg-background">
+  <section className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16 bg-background">
     <div className="max-w-5xl mx-auto">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}

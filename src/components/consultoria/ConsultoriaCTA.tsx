@@ -7,7 +7,7 @@ const ConsultoriaCTA = () => {
   };
 
   return (
-    <section className="section-padding dark-banner">
+    <section className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16 dark-banner">
       <div className="max-w-3xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
