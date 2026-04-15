@@ -13,10 +13,12 @@ const ConsultoriaHero = () => {
       <img
         src={consultoriaImg}
         alt="Consultoría industrial estratégica"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover brightness-75 contrast-110"
       />
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
+      {/* Base overlay — reduce brightness and add contrast */}
+      <div className="absolute inset-0 bg-black/40" />
+      {/* Directional overlay — heavier on left for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-24 w-full">
         <motion.div
