@@ -82,9 +82,9 @@ const DiagnosticoInicialSection = () => (
         className="dark-banner rounded-xl px-8 py-6 md:px-12 md:py-8"
       >
         <p className="font-heading text-lg md:text-xl font-semibold text-center max-w-2xl mx-auto">
-          Casi siempre encontramos las tres.{" "}
+          Nuestro trabajo se enfoca en las tres partes de forma integral.{" "}
           <span className="text-primary">
-            La mejora real requiere trabajar en las tres — y en el orden correcto.
+            La mejora real requiere un enfoque de sistema.
           </span>
         </p>
       </motion.div>
