@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 const dimensiones = [
   {
     nombre: "Personas",
-    pregunta: "¿Están tomando las decisiones correctas, con la información correcta, en el momento correcto?",
+    pregunta: "Toma de decisiones con información correcta, en el momento correcto",
     sintomas: [
-      "Falta de información integral, fácilmente disponible, para la toma de decisiones diarias de operación",
+      "Falta de información integral para toma de decisiones diarias de operación",
       "Decisiones no planeadas que se vuelven rutina",
       "Coordinación entre áreas que funciona por excepción, no por diseño",
     ],
   },
   {
     nombre: "Procesos",
-    pregunta: "¿El sistema fluye, o se acumula en algún punto?",
+    pregunta: "Un sistema que fluye, y que está en control",
     sintomas: [
       "Cuellos de botella que todos conocen pero nadie ha resuelto",
       "Falta de predictibilidad por variabilidad descontrolada y segmentación innecesaria",
@@ -21,7 +21,7 @@ const dimensiones = [
   },
   {
     nombre: "Infraestructura",
-    pregunta: "¿Los equipos están al servicio de la operación, o la operación se adapta a los equipos?",
+    pregunta: "Equipos al servicio de la operación",
     sintomas: [
       "Sobreconsumo energético por uso fuera de condiciones óptimas",
       "Capacidad mal distribuida entre etapas del proceso",
@@ -61,7 +61,7 @@ const DiagnosticoInicialSection = () => (
               {d.nombre}
             </p>
             <p className="font-heading font-semibold text-base text-foreground mb-6 leading-snug">
-              "{d.pregunta}"
+              {d.pregunta}
             </p>
             <ul className="space-y-3">
               {d.sintomas.map((s) => (
