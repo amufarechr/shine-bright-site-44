@@ -23,8 +23,8 @@ const pasos = [
   },
   {
     num: "05",
-    title: "Sostenibilidad en el tiempo",
-    desc: "Asegurando consistencia, repetibilidad y transferencia efectiva de capacidades",
+    title: "Resultados que permanecen",
+    desc: "Aseguramos consistencia, repetibilidad y transferencia efectiva de capacidades. El objetivo no es una mejora puntual — es un nuevo nivel de operación que se sostiene sin nuestra presencia.",
   },
 ];
 

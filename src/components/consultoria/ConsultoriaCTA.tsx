@@ -17,8 +17,11 @@ const ConsultoriaCTA = () => {
           <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4">
             Mucho más que suministro de equipos.
           </h2>
-          <p className="font-heading text-3xl md:text-5xl font-bold text-primary mb-10">
+          <p className="font-heading text-3xl md:text-5xl font-bold text-primary mb-6">
             Optimizamos la operación del sistema.
+          </p>
+          <p className="text-white/70 text-lg max-w-xl mx-auto mb-10">
+            Y nos aseguramos de que los resultados permanezcan — no como una mejora puntual, sino como un nuevo estándar de operación.
           </p>
           <button
             onClick={() => scrollTo("contacto")}
