@@ -24,7 +24,7 @@ const pasos = [
   {
     num: "05",
     title: "Resultados que permanecen",
-    desc: "Aseguramos consistencia, repetibilidad y transferencia efectiva de capacidades. El objetivo no es una mejora puntual — es un nuevo nivel de operación que se sostiene sin nuestra presencia.",
+    desc: "Aseguramos consistencia, repetibilidad y transferencia efectiva de capacidades. El objetivo no es una mejora puntual — es un nuevo nivel de operación autosostenido que perdura en el tiempo.",
   },
 ];
 
