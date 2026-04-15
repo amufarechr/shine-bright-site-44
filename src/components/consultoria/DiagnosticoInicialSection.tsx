@@ -43,7 +43,7 @@ const DiagnosticoInicialSection = () => (
           Diagnóstico inicial
         </span>
         <h2 className="font-heading text-3xl md:text-5xl font-bold mt-3 max-w-2xl">
-          El desempeño operativo es un problema de sistema, no de partes
+          El desempeño operativo depende del sistema completo, no de cada parte
         </h2>
       </motion.div>
 
