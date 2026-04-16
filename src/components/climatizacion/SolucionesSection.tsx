@@ -2,6 +2,17 @@ import evapImg from "../../assets/climatizacion/evaporativo.jpg";
 import fanImg from "../../assets/climatizacion/ventilacion.jpg";
 import heatImg from "../../assets/climatizacion/calefaccion.jpg";
 import ctrlImg from "../../assets/climatizacion/control.jpg";
+import logoBigAssFans from "../../assets/marcas/bigassfans.jpeg";
+import logoPortacool from "../../assets/marcas/portacool.jpeg";
+import logoBiocool from "../../assets/marcas/biocool.jpeg";
+import logoSrp from "../../assets/marcas/srp.jpeg";
+
+const marcas = [
+  { nombre: "Big Ass Fans", logo: logoBigAssFans, url: "https://www.bigassfans.com", bg: "bg-white" },
+  { nombre: "Portacool", logo: logoPortacool, url: "https://www.portacool.com", bg: "bg-white" },
+  { nombre: "BioCool", logo: logoBiocool, url: "https://www.biocool.es", bg: "bg-[#4a4a4a]" },
+  { nombre: "SRP", logo: logoSrp, url: "https://www.srp-radiant.com", bg: "bg-white" },
+];
 
 interface Solucion {
   title: string;
@@ -104,9 +115,23 @@ export default function SolucionesSection({}: SolucionesSectionProps) {
         <p className="text-lg font-semibold text-gray-700 mb-8">
           Somos distribuidores estratégicos de reconocidas marcas de climatización industrial
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-10">
-          {/* Placeholder — logos y links se agregarán después */}
-          <span className="text-sm text-gray-400 italic">Logos de marcas próximamente</span>
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          {marcas.map((marca) => (
+            <a
+              key={marca.nombre}
+              href={marca.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={marca.nombre}
+              className={`${marca.bg} rounded-lg px-5 py-3 flex items-center justify-center h-16 w-36 hover:opacity-80 transition-opacity duration-200 border border-border`}
+            >
+              <img
+                src={marca.logo}
+                alt={marca.nombre}
+                className="max-h-10 max-w-full object-contain"
+              />
+            </a>
+          ))}
         </div>
       </div>
     </section>
