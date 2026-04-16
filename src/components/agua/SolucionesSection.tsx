@@ -1,6 +1,22 @@
 import { motion } from "framer-motion";
 import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
 import wahaImg from "@/assets/climatizacion/waha.jpg";
+import logoWaha from "@/assets/marcas/waha.jpeg";
+import logoPortacool from "@/assets/marcas/portacool.jpeg";
+import logoBiocool from "@/assets/marcas/biocool.jpeg";
+import logoBigAssFans from "@/assets/marcas/bigassfans.jpeg";
+import logoSrp from "@/assets/marcas/srp.jpeg";
+
+const marcasOsmosis = [
+  { nombre: "Portacool", logo: logoPortacool, url: "https://www.portacool.com", bg: "bg-white" },
+  { nombre: "BioCool", logo: logoBiocool, url: "https://www.biocool.es", bg: "bg-[#4a4a4a]" },
+  { nombre: "Big Ass Fans", logo: logoBigAssFans, url: "https://www.bigassfans.com", bg: "bg-white" },
+  { nombre: "SRP", logo: logoSrp, url: "https://www.srp-radiant.com", bg: "bg-white" },
+];
+
+const marcasWaha = [
+  { nombre: "Waha", logo: logoWaha, url: "https://www.wahainc.com", bg: "bg-[#1a1a2e]" },
+];
 
 const segmentosOsmosis = [
   {
@@ -89,6 +105,27 @@ export default function SolucionesSection() {
                   </p>
                 </div>
               ))}
+
+              {/* Marcas de ósmosis */}
+              <div>
+                <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
+                  Marcas que representamos
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {marcasOsmosis.map((marca) => (
+                    <a
+                      key={marca.nombre}
+                      href={marca.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={marca.nombre}
+                      className={`${marca.bg} rounded-lg px-4 py-2 flex items-center justify-center h-14 w-32 hover:opacity-80 transition-opacity border border-border`}
+                    >
+                      <img src={marca.logo} alt={marca.nombre} className="max-h-9 max-w-full object-contain" />
+                    </a>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -164,6 +201,27 @@ export default function SolucionesSection() {
               >
                 Consultar disponibilidad de Waha →
               </button>
+
+              {/* Logo Waha */}
+              <div className="mt-4">
+                <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
+                  Representantes exclusivos
+                </p>
+                <div className="flex gap-3">
+                  {marcasWaha.map((marca) => (
+                    <a
+                      key={marca.nombre}
+                      href={marca.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={marca.nombre}
+                      className={`${marca.bg} rounded-lg px-4 py-2 flex items-center justify-center h-14 w-32 hover:opacity-80 transition-opacity border border-border`}
+                    >
+                      <img src={marca.logo} alt={marca.nombre} className="max-h-9 max-w-full object-contain" />
+                    </a>
+                  ))}
+                </div>
+              </div>
             </motion.div>
 
             {/* Waha image */}
