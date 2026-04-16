@@ -4,6 +4,19 @@ import { useNavigate } from "react-router-dom";
 import climatizacionHero from "@/assets/climatizacion/hero.jpg";
 import energiaImg from "@/assets/climatizacion/energia.jpeg";
 import aguaImg from "@/assets/climatizacion/agua.jpeg";
+import logoBigAssFans from "@/assets/marcas/bigassfans.jpeg";
+import logoPortacool from "@/assets/marcas/portacool.jpeg";
+import logoBiocool from "@/assets/marcas/biocool.jpeg";
+import logoSrp from "@/assets/marcas/srp.jpeg";
+import logoWaha from "@/assets/marcas/waha.jpeg";
+
+const marcas = [
+  { nombre: "Big Ass Fans", logo: logoBigAssFans, url: "https://www.bigassfans.com", bg: "bg-white" },
+  { nombre: "Portacool", logo: logoPortacool, url: "https://www.portacool.com", bg: "bg-white" },
+  { nombre: "BioCool", logo: logoBiocool, url: "https://www.biocool.es", bg: "bg-[#4a4a4a]" },
+  { nombre: "SRP", logo: logoSrp, url: "https://www.srp-radiant.com", bg: "bg-white" },
+  { nombre: "Waha", logo: logoWaha, url: "https://www.wahainc.com", bg: "bg-[#1a1a2e]" },
+];
 
 const TechnicalSolutionsSection = () => {
   const navigate = useNavigate();
@@ -146,6 +159,36 @@ const TechnicalSolutionsSection = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Marcas que representamos */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-6"
+        >
+          <p className="text-center text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-6">
+            Marcas que representamos
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            {marcas.map((marca) => (
+              <a
+                key={marca.nombre}
+                href={marca.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={marca.nombre}
+                className={`${marca.bg} rounded-lg px-5 py-3 flex items-center justify-center h-16 w-36 hover:opacity-80 transition-opacity duration-200 border border-border`}
+              >
+                <img
+                  src={marca.logo}
+                  alt={marca.nombre}
+                  className="max-h-10 max-w-full object-contain"
+                />
+              </a>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Bloque diferencial */}
         <motion.div
