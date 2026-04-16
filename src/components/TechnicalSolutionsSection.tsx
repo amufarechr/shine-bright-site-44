@@ -14,7 +14,7 @@ const marcas = [
   { nombre: "Big Ass Fans", logo: logoBigAssFans, url: "https://www.bigassfans.com", bg: "bg-white" },
   { nombre: "Portacool", logo: logoPortacool, url: "https://www.portacool.com", bg: "bg-white" },
   { nombre: "BioCool", logo: logoBiocool, url: "https://biocool.info/", bg: "bg-[#4a4a4a]" },
-  { nombre: "SRP", logo: logoSrp, url: "https://www.srp-radiant.com", bg: "bg-white" },
+  { nombre: "SRP", logo: logoSrp, url: "https://www.superiorradiant.com/", bg: "bg-white" },
   { nombre: "Waha", logo: logoWaha, url: "https://www.wahainc.com", bg: "bg-[#1a1a2e]" },
 ];
 
