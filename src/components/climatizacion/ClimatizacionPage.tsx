@@ -4,6 +4,7 @@ import DiagnosticoSection from "./DiagnosticoSection";
 import MetodologiaSection from "./MetodologiaSection";
 import SolucionesSection from "./SolucionesSection";
 import ImpactoSection from "./ImpactoSection";
+import CasosRealesSection from "./CasosRealesSection";
 import CtaFinalSection from "./CtaFinalSection";
 
 export default function ClimatizacionPage() {
@@ -16,6 +17,7 @@ export default function ClimatizacionPage() {
         <MetodologiaSection />
         <SolucionesSection />
         <ImpactoSection />
+        <CasosRealesSection />
         <CtaFinalSection />
       </main>
     </>
