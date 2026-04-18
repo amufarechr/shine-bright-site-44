@@ -22,7 +22,7 @@ export default function Hero({}: HeroProps) {
 
       {/* Content */}
       <div className="relative z-20 px-24 py-20 max-w-[640px]">
-        <p className="text-[11px] font-bold tracking-[0.14em] text-[#2ebd6b] uppercase mb-4">
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">
           Climatización Industrial
         </p>
         <h1 className="text-[44px] font-bold leading-[1.1] text-white mb-4">
