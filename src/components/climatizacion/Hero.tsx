@@ -3,6 +3,10 @@ import heroBg from "../../assets/climatizacion/hero.jpg";
 interface HeroProps {}
 
 export default function Hero({}: HeroProps) {
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="relative min-h-[560px] flex items-center overflow-hidden bg-[#0d1b2a] pt-[88px]">
       {/* Background image */}
@@ -32,7 +36,7 @@ export default function Hero({}: HeroProps) {
           Control térmico y ventilación que impactan directamente productividad,
           estabilidad y consumo energético.
         </p>
-        <button className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#2ebd6b] hover:bg-[#1a9e54] border-none rounded-md text-sm font-semibold text-white cursor-pointer transition-colors duration-200">
+        <button onClick={() => scrollTo("contacto")} className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-[#2ebd6b] hover:bg-[#1a9e54] border-none rounded-md text-sm font-semibold text-white cursor-pointer transition-colors duration-200">
           Evaluar desempeño de climatización →
         </button>
       </div>
