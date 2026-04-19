@@ -1,4 +1,6 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ContactSection from "@/components/ContactSection";
 import Hero from "./Hero";
 import DiagnosticoSection from "./DiagnosticoSection";
 import MetodologiaSection from "./MetodologiaSection";
@@ -19,7 +21,9 @@ export default function ClimatizacionPage() {
         <ImpactoSection />
         <CasosRealesSection />
         <CtaFinalSection />
+        <ContactSection />
       </main>
+      <Footer />
     </>
   );
 }
