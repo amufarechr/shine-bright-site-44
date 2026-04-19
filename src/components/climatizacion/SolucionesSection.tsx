@@ -66,7 +66,7 @@ export default function SolucionesSection({}: SolucionesSectionProps) {
     <section className="bg-[#f7f7f4] py-20">
       {/* Header */}
       <div className="text-center px-16 mb-14">
-        <p className="text-[11px] font-bold tracking-[0.14em] text-[#2ebd6b] uppercase mb-3.5">
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3.5">
           Soluciones
         </p>
         <h2 className="text-[32px] font-bold leading-[1.2] text-gray-900">

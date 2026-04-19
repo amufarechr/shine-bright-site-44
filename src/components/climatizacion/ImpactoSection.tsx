@@ -47,7 +47,7 @@ interface ImpactoSectionProps {}
 export default function ImpactoSection({}: ImpactoSectionProps) {
   return (
     <section className="bg-white py-20 px-16">
-      <p className="text-[11px] font-bold tracking-[0.14em] text-[#2ebd6b] uppercase mb-3.5 text-center">
+      <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3.5 text-center">
         Impacto
       </p>
       <h2 className="text-[32px] font-bold text-center leading-[1.2] text-gray-900 mb-12">

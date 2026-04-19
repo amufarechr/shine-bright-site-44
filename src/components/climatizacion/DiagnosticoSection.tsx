@@ -68,7 +68,7 @@ export default function DiagnosticoSection() {
     <section className="bg-white py-[88px] px-16">
       {/* Header */}
       <div className="text-center mb-16">
-        <p className="text-[11px] font-bold tracking-[0.14em] text-[#2ebd6b] uppercase mb-4">
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">
           Situación Sub-óptima
         </p>
         <h2 className="text-[28px] font-bold leading-[1.35] text-gray-900 max-w-[760px] mx-auto">

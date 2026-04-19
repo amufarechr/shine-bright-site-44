@@ -11,7 +11,7 @@ interface MetodologiaSectionProps {}
 export default function MetodologiaSection({}: MetodologiaSectionProps) {
   return (
     <section className="bg-[#0d1b2a] py-20 px-16">
-      <p className="text-[11px] font-bold tracking-[0.14em] text-[#2ebd6b] uppercase mb-3.5 text-center">
+      <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3.5 text-center">
         Metodología
       </p>
       <h2 className="text-[32px] font-bold text-center leading-[1.2] text-white mb-12">
