@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import evapImg from "../../assets/climatizacion/evaporativo.jpg";
 import fanImg from "../../assets/climatizacion/ventilacion.jpg";
 import heatImg from "../../assets/climatizacion/calefaccion.jpg";
@@ -21,6 +22,7 @@ interface Solucion {
   imageSrc: string;
   imageAlt: string;
   imageLeft: boolean;
+  href?: string;
 }
 
 const soluciones: Solucion[] = [
@@ -32,6 +34,7 @@ const soluciones: Solucion[] = [
     imageSrc: evapImg,
     imageAlt: "Enfriamiento evaporativo en planta industrial",
     imageLeft: true,
+    href: "/soluciones/climatizacion/evaporativo",
   },
   {
     title: "Ventilación industrial de gran volumen",
@@ -62,6 +65,7 @@ const soluciones: Solucion[] = [
 interface SolucionesSectionProps {}
 
 export default function SolucionesSection({}: SolucionesSectionProps) {
+  const navigate = useNavigate();
   return (
     <section className="bg-[#f7f7f4] py-20">
       {/* Header */}
@@ -104,6 +108,14 @@ export default function SolucionesSection({}: SolucionesSectionProps) {
                 <p className="text-[13px] leading-relaxed text-[#2ebd6b] font-medium mt-3.5 pt-3.5 border-t border-gray-200">
                   {sol.brand}
                 </p>
+              )}
+              {sol.href && (
+                <button
+                  onClick={() => navigate(sol.href!)}
+                  className="mt-4 text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
+                >
+                  Ver más sobre esta tecnología →
+                </button>
               )}
             </div>
           </div>
