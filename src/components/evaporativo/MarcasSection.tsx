@@ -12,6 +12,7 @@ const marcas = [
     descripcion:
       "Sistemas evaporativos de pared y de piso de alta eficiencia para naves industriales y almacenes. Diseñados para cubrir superficies superiores desde 200 m² con distribución de aire uniforme y bajo mantenimiento.",
     catalogo: "https://www.bigassfans.com/resources/",
+    logoSize: "max-h-16",
   },
   {
     nombre: "Portacool",
@@ -21,6 +22,7 @@ const marcas = [
     descripcion:
       "Unidades portátiles de enfriamiento evaporativo. Ideales para zonas de trabajo específicas, áreas de carga y descarga, o como complemento a un sistema central.",
     catalogo: "https://www.portacool.com/resources/",
+    logoSize: "max-h-12",
   },
   {
     nombre: "BioCool",
@@ -30,6 +32,7 @@ const marcas = [
     descripcion:
       "Soluciones evaporativas fijas en techos, de alta capacidad para instalaciones permanentes. Sistemas modulares ideales para espacios con difícil acceso lateral y distribución fragmentada (paredes).",
     catalogo: "https://biocool.info/",
+    logoSize: "max-h-12",
   },
 ];
 
@@ -74,7 +77,7 @@ export default function MarcasSection() {
                 <img
                   src={marca.logo}
                   alt={marca.nombre}
-                  className="max-h-12 max-w-full object-contain"
+                  className={`${marca.logoSize} max-w-full object-contain`}
                 />
               </a>
 
