@@ -59,14 +59,14 @@ const NuestraExperiencia = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            className="bg-card rounded-xl overflow-hidden"
+            className="bg-card rounded-xl overflow-hidden flex flex-col sm:flex-row"
           >
             <img
               src={s.img}
               alt={s.name}
-              className="w-full aspect-[3/4] object-cover object-top"
+              className="w-full sm:w-[45%] aspect-[3/4] sm:aspect-auto object-cover object-top"
             />
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-1">
               <h3 className="font-heading text-xl font-bold text-foreground">{s.name}</h3>
               <p className="text-primary text-sm font-semibold mb-4">{s.role}</p>
               {s.bio.split("\n\n").map((p, j) => (
