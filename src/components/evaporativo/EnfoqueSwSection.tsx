@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const pasos = [
-  { num: "01", label: "Diagnóstico térmico en campo — flujo de aire, cargas de calor, distribución del espacio" },
+  { num: "01", label: "Diagnóstico térmico en campo — flujo de aire, calor y distribución" },
   { num: "02", label: "Diseño del sistema en función de tu proceso productivo específico" },
   { num: "03", label: "Selección de equipos según requerimiento técnico, no por catálogo" },
   { num: "04", label: "Implementación sin obras mayores ni paradas de operación" },
