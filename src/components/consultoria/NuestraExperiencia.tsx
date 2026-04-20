@@ -59,12 +59,12 @@ const NuestraExperiencia = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            className="bg-card rounded-xl overflow-hidden flex flex-col sm:flex-row"
+            className="bg-card rounded-xl overflow-hidden flex flex-col"
           >
             <img
               src={s.img}
               alt={s.name}
-              className="w-full sm:w-[45%] aspect-[3/4] sm:aspect-auto object-cover object-top"
+              className="w-full aspect-[4/3] object-cover object-top"
             />
             <div className="p-6 flex flex-col flex-1">
               <h3 className="font-heading text-xl font-bold text-foreground">{s.name}</h3>
