@@ -1,17 +1,19 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import casoChincha from "@/assets/evaporativo/caso-chincha.jpg";
 
 const casos = [
   {
     id: "01",
-    sector: "Agroindustria · Perú",
-    titulo: "Reducción de temperatura operativa en planta de empaque",
-    antes: "Temperatura promedio de 34°C en planta. Alta tasa de rotación de personal y merma por calor en producto.",
-    intervencion: "Instalación de sistema de enfriamiento evaporativo Big Ass Fans con diseño de flujo direccionado por zonas críticas.",
+    sector: "Agroindustria · Chincha, Perú",
+    titulo: "Reducción de 9°C en planta de clasificación y empaque de huevos, implementada en solo 4 días",
+    antes: "Planta de 3,000 m² con alta temperatura por la tarde, que afectaba maquinaria de alta sensibilidad y generaba ausentismo.",
+    intervencion: "Diseño de sistema evaporativo Big Ass Fans y extractores de aire, con distribución inteligente que logró reducir la temperatura de operación por debajo de 25°C, sin mayor intervención de obras civiles ni paradas de operación.",
+    foto: casoChincha,
     resultados: [
-      { periodo: "Primeras 2 semanas", label: "Reducción de 8°C en zona de trabajo" },
-      { periodo: "Mes 1", label: "Caída de 40% en ausentismo por calor" },
-      { periodo: "Mes 3+", label: "Ahorro energético vs. solución de A/C convencional" },
+      { periodo: "Semana 1", label: "−9°C en zona de trabajo principal" },
+      { periodo: "Mes 1", label: "−50% en ausentismo por calor" },
+      { periodo: "Menores costos", label: "Inversión 80% menor que alternativa de refrigeración industrial, con 90% menos de consumo eléctrico" },
     ],
   },
   {
@@ -20,6 +22,7 @@ const casos = [
     titulo: "Climatización de nave industrial con ventilación deficiente",
     antes: "Nave de 3,000 m² sin ventilación cruzada. Acumulación de calor radiante en techo metálico. Operarios trabajando a más de 38°C.",
     intervencion: "Sistema de ventilación industrial con ventiladores HVLS Big Ass Fans y extractores estratégicos. Rediseño del flujo de aire.",
+    foto: null,
     resultados: [
       { periodo: "Instalación", label: "Temperatura percibida reducida en 10°C" },
       { periodo: "Mes 2", label: "Productividad recuperada en turnos de tarde" },
@@ -58,8 +61,18 @@ export default function CasosRealesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="border border-border rounded-xl p-8 md:p-10"
+              className="border border-border rounded-xl overflow-hidden"
             >
+              {caso.foto && (
+                <div className="aspect-[16/6] overflow-hidden">
+                  <img
+                    src={caso.foto}
+                    alt={caso.titulo}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+              )}
+              <div className="p-8 md:p-10">
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-xs font-semibold text-primary tracking-widest uppercase">
                   Caso {caso.id}
@@ -96,6 +109,7 @@ export default function CasosRealesSection() {
                     <div className="text-sm text-foreground">{r.label}</div>
                   </motion.div>
                 ))}
+              </div>
               </div>
             </motion.div>
           ))}
