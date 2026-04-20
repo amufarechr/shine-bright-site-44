@@ -11,7 +11,7 @@ const marcas = [
     url: "https://www.bigassfans.com",
     descripcion:
       "Sistemas evaporativos de pared y de piso de alta eficiencia para naves industriales y almacenes. Diseñados para cubrir superficies superiores desde 200 m² con distribución de aire uniforme y bajo mantenimiento.",
-    catalogo: "https://www.bigassfans.com/resources/",
+    catalogo: "/catalogos/bigassfans-evaporative.pdf",
     logoSize: "max-h-16",
   },
   {
@@ -21,7 +21,7 @@ const marcas = [
     url: "https://www.portacool.com",
     descripcion:
       "Unidades portátiles de enfriamiento evaporativo. Ideales para zonas de trabajo específicas, áreas de carga y descarga, o como complemento a un sistema central.",
-    catalogo: "https://www.portacool.com/resources/",
+    catalogo: "/catalogos/portacool-apex.pdf",
     logoSize: "max-h-12",
   },
   {
@@ -31,7 +31,7 @@ const marcas = [
     url: "https://biocool.info/",
     descripcion:
       "Soluciones evaporativas fijas en techos, de alta capacidad para instalaciones permanentes. Sistemas modulares ideales para espacios con difícil acceso lateral y distribución fragmentada (paredes).",
-    catalogo: "https://biocool.info/",
+    catalogo: "/catalogos/biocool-evaporative.pdf",
     logoSize: "max-h-12",
   },
 ];
@@ -90,6 +90,7 @@ export default function MarcasSection() {
                   href={marca.catalogo}
                   target="_blank"
                   rel="noopener noreferrer"
+                  download
                   className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   Ver catálogo →
