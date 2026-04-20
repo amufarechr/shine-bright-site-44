@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const timeline = [
   { period: "Semana 1–2", label: "Ajustes" },
@@ -8,9 +9,7 @@ const timeline = [
 ];
 
 const CasosReales = () => {
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
+  const navigate = useNavigate();
 
   return (
     <section className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16 bg-card">
@@ -72,7 +71,7 @@ const CasosReales = () => {
           className="mt-8"
         >
           <button
-            onClick={() => scrollTo("contacto")}
+            onClick={() => navigate("/casos")}
             className="text-primary font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
           >
             Ver más casos

@@ -12,7 +12,7 @@ const solucionesItems = [
 
 const navItems = [
   { label: "Consultoría", id: "consultoria", href: "/consultoria" },
-  { label: "Casos de éxito", id: "casos" },
+  { label: "Casos de éxito", id: "casos", href: "/casos" },
   { label: "Contacto", id: "contacto" },
 ];
 

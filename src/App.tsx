@@ -10,6 +10,7 @@ import Climatizacion from "./pages/Climatizacion.tsx";
 import Energia from "./pages/Energia.tsx";
 import Agua from "./pages/Agua.tsx";
 import Evaporativo from "./pages/Evaporativo.tsx";
+import Casos from "./pages/Casos.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/soluciones/climatizacion/evaporativo" element={<Evaporativo />} />
           <Route path="/soluciones/energia" element={<Energia />} />
           <Route path="/soluciones/agua" element={<Agua />} />
+          <Route path="/casos" element={<Casos />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

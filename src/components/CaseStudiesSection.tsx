@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import casoChincha from "@/assets/evaporativo/caso-chincha.jpg";
 import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
@@ -32,6 +33,7 @@ const cases = [
 ];
 
 const CaseStudiesSection = () => {
+  const navigate = useNavigate();
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -76,7 +78,7 @@ const CaseStudiesSection = () => {
                   <p className="text-primary font-semibold text-sm">{c.result}</p>
                 </div>
                 <button
-                  onClick={() => scrollTo("contacto")}
+                  onClick={() => navigate("/casos")}
                   className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all mt-4"
                 >
                   Ver caso completo
@@ -86,6 +88,22 @@ const CaseStudiesSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Ver todos */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center mt-10"
+        >
+          <button
+            onClick={() => navigate("/casos")}
+            className="text-primary font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
+          >
+            Ver todos los casos de éxito
+            <ArrowRight size={18} />
+          </button>
+        </motion.div>
       </div>
     </section>
   );
