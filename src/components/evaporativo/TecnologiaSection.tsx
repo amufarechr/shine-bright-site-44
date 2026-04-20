@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import almacenImg from "@/assets/evaporativo/almacen.jpeg";
 import funcionamientoImg from "@/assets/evaporativo/funcionamiento.jpeg";
 
 const metricas = [
@@ -64,15 +63,7 @@ export default function TecnologiaSection() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-4"
           >
-            <div className="rounded-xl overflow-hidden">
-              <img
-                src={almacenImg}
-                alt="Sistema evaporativo en nave industrial — reducción de 34°C a 25°C"
-                className="w-full object-cover"
-              />
-            </div>
             <div className="rounded-xl overflow-hidden bg-white p-4">
               <img
                 src={funcionamientoImg}
