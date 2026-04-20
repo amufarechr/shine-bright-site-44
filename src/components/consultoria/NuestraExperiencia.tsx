@@ -64,7 +64,7 @@ const NuestraExperiencia = () => (
             <img
               src={s.img}
               alt={s.name}
-              className="w-full aspect-[4/3] object-cover object-top"
+              className="w-full aspect-[3/4] object-cover object-top"
             />
             <div className="p-6 flex flex-col flex-1">
               <h3 className="font-heading text-xl font-bold text-foreground">{s.name}</h3>
