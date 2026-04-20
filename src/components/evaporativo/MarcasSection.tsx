@@ -10,7 +10,7 @@ const marcas = [
     bg: "bg-white",
     url: "https://www.bigassfans.com",
     descripcion:
-      "Sistemas evaporativos de techo de alta eficiencia para grandes naves industriales. Diseñados para cubrir superficies superiores a 500 m² con distribución de aire uniforme y bajo mantenimiento.",
+      "Sistemas evaporativos de pared y de piso de alta eficiencia para naves industriales y almacenes. Diseñados para cubrir superficies superiores desde 200 m² con distribución de aire uniforme y bajo mantenimiento.",
     catalogo: "https://www.bigassfans.com/resources/",
   },
   {
@@ -19,7 +19,7 @@ const marcas = [
     bg: "bg-white",
     url: "https://www.portacool.com",
     descripcion:
-      "Unidades portátiles de enfriamiento evaporativo de alta eficiencia. Ideales para zonas de trabajo específicas, áreas de carga y descarga, o como complemento a un sistema central. Rango de 60,000 a 230,000 BTU/h.",
+      "Unidades portátiles de enfriamiento evaporativo. Ideales para zonas de trabajo específicas, áreas de carga y descarga, o como complemento a un sistema central.",
     catalogo: "https://www.portacool.com/resources/",
   },
   {
@@ -28,7 +28,7 @@ const marcas = [
     bg: "bg-[#4a4a4a]",
     url: "https://biocool.info/",
     descripcion:
-      "Soluciones evaporativas fijas de alta capacidad para instalaciones permanentes. Sistemas modulares con paneles evaporativos de celulosa de alta eficiencia, diseñados para climas cálidos.",
+      "Soluciones evaporativas fijas en techos, de alta capacidad para instalaciones permanentes. Sistemas modulares ideales para espacios con difícil acceso lateral y distribución fragmentada (paredes).",
     catalogo: "https://biocool.info/",
   },
 ];
@@ -50,7 +50,7 @@ export default function MarcasSection() {
             Trabajamos con las marcas líderes globales
           </h2>
           <p className="text-muted-foreground max-w-2xl">
-            Somos representantes y distribuidores exclusivos en la región. Seleccionamos cada equipo en función del requerimiento específico de cada operación — no por disponibilidad de inventario.
+            Somos representantes y distribuidores exclusivos en la región. Seleccionamos cada equipo en función del requerimiento específico de cada operación.
           </p>
         </motion.div>
 
