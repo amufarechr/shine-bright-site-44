@@ -51,7 +51,6 @@ export default function CuandoAplicaSection() {
               transition={{ delay: i * 0.08 }}
               className="bg-card border border-border rounded-xl p-6 flex flex-col gap-3"
             >
-              <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-0.5" />
               <h3 className="font-heading font-semibold text-sm leading-snug">{c.titulo}</h3>
               <p className="text-muted-foreground text-xs leading-relaxed">{c.detalle}</p>
             </motion.div>
