@@ -31,7 +31,7 @@ const socios = [
 
 const NuestraExperiencia = () => (
   <section className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16 bg-background">
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-3xl mx-auto">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ const NuestraExperiencia = () => (
         Requieren experiencia real operando e implementando sistemas en planta.
       </motion.p>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-16">
         {socios.map((s, i) => (
           <motion.div
             key={s.name}
