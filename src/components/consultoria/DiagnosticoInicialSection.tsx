@@ -82,7 +82,8 @@ const DiagnosticoInicialSection = () => (
         className="dark-banner rounded-xl px-8 py-6 md:px-12 md:py-8"
       >
         <p className="font-heading text-lg md:text-xl font-semibold text-center max-w-2xl mx-auto">
-          Nuestro trabajo se enfoca en las tres partes de forma integral.{" "}
+          Nuestro trabajo se enfoca en las tres partes de forma integral.
+          <br />
           <span className="text-primary">
             La mejora real requiere un enfoque de sistema.
           </span>
