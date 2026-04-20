@@ -69,7 +69,7 @@ export default function DiagnosticoSection() {
       {/* Header */}
       <div className="text-center mb-16">
         <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">
-          Situación Sub-óptima
+          SITUACIÓN
         </p>
         <h2 className="text-[28px] font-bold leading-[1.35] text-gray-900 max-w-[760px] mx-auto">
           Un control térmico deficiente en entornos industriales deteriora la eficiencia
