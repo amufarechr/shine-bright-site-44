@@ -1,24 +1,33 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import casoChincha from "@/assets/evaporativo/caso-chincha.jpg";
+import casoIca from "@/assets/evaporativo/caso-ica.jpg";
+import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
 
 const cases = [
   {
-    client: "Planta Automotriz del Norte",
-    sector: "Manufactura",
-    result: "Reducción del 35% en consumo energético de HVAC",
-    description: "Rediseño completo del sistema de ventilación y enfriamiento de la planta de producción.",
-  },
-  {
-    client: "Granja Avícola San Pedro",
+    img: casoChincha,
     sector: "Avícola",
-    result: "Ahorro anual de $1.2M MXN en energía",
-    description: "Implementación de sistema de ventilación eficiente con control automatizado de temperatura.",
+    client: "Planta de clasificación y empaque de huevos",
+    location: "Chincha, Perú",
+    description: "Alta temperatura por las tardes afectaba maquinaria de alta sensibilidad y generaba ausentismo. Sistema evaporativo Big Ass Fans implementado en 4 días sin obras ni paradas.",
+    result: "−9°C · −50% ausentismo · inversión 80% menor que refrigeración convencional",
   },
   {
-    client: "Centro de Distribución LogiMax",
+    img: casoIca,
+    sector: "Agroindustria",
+    client: "Packing de uva de exportación",
+    location: "Ica, Perú",
+    description: "Empaque de más de 5,000 m² con deshidratación de fruta por altas temperaturas en verano. Flujo integral con enfriadores Portacool y extractores de aire caliente.",
+    result: "−35% deshidratación · HR >80% · +20% utilidad neta post-cosecha",
+  },
+  {
+    img: casoCallao,
     sector: "Logística",
-    result: "Mejora del 50% en confort térmico",
-    description: "Instalación de sistema integral de calefacción y ventilación para almacén de 15,000 m².",
+    client: "Centro de distribución farmacéutico",
+    location: "Callao, Perú",
+    description: "6,000 m² de almacén de productos farmacéuticos con cumplimiento regulatorio de temperatura. Enfriadores evaporativos de alto caudal con extractores eólicos de techo.",
+    result: "<27°C garantizados · instalación 85% más económica · solo 20 kW vs. +180 kW de alternativa",
   },
 ];
 
@@ -52,15 +61,16 @@ const CaseStudiesSection = () => {
               transition={{ delay: i * 0.15 }}
               className="bg-card border border-border rounded-lg overflow-hidden flex flex-col hover:border-primary/40 transition-all duration-300"
             >
-              {/* Image placeholder */}
-              <div className="aspect-video bg-muted flex items-center justify-center">
-                <span className="text-muted-foreground text-sm">Foto {c.sector.toLowerCase()}</span>
+              {/* Image */}
+              <div className="aspect-video overflow-hidden">
+                <img src={c.img} alt={c.client} className="w-full h-full object-cover" />
               </div>
               <div className="p-8 flex flex-col flex-1">
                 <span className="text-xs font-medium text-primary bg-primary/10 rounded-full px-3 py-1 w-fit mb-4">
                   {c.sector}
                 </span>
-                <h3 className="font-heading text-lg font-semibold mb-2">{c.client}</h3>
+                <h3 className="font-heading text-lg font-semibold mb-1">{c.client}</h3>
+                <p className="text-muted-foreground text-xs mb-3">{c.location}</p>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">{c.description}</p>
                 <div className="border-t border-border pt-4 mt-auto">
                   <p className="text-primary font-semibold text-sm">{c.result}</p>
