@@ -75,10 +75,8 @@ export default function CasosRealesSection() {
               <div className="p-8 md:p-10">
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-xs font-semibold text-primary tracking-widest uppercase">
-                  Caso {caso.id}
+                  {caso.sector}
                 </span>
-                <span className="text-xs text-muted-foreground">·</span>
-                <span className="text-xs text-muted-foreground font-medium">{caso.sector}</span>
               </div>
 
               <h3 className="font-heading text-lg font-semibold mb-6">{caso.titulo}</h3>
