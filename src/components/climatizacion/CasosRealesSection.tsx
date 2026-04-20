@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import casoChincha from "@/assets/evaporativo/caso-chincha.jpg";
 import casoIca from "@/assets/evaporativo/caso-ica.jpg";
+import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
 
 const casos = [
   {
@@ -32,15 +33,15 @@ const casos = [
   },
   {
     id: "03",
-    sector: "Manufactura · México",
-    titulo: "Climatización de nave industrial con ventilación deficiente",
-    antes: "Nave de 3,000 m² sin ventilación cruzada. Acumulación de calor radiante en techo metálico. Operarios trabajando a más de 38°C.",
-    intervencion: "Sistema de ventilación industrial con ventiladores HVLS Big Ass Fans y extractores estratégicos. Rediseño del flujo de aire.",
-    foto: null,
+    sector: "Logística · Callao, Perú",
+    titulo: "Almacén de 6,000 m² de productos farmacéuticos con temperatura controlada — 85% menos de inversión que la alternativa evaluada",
+    antes: "Centro de distribución de productos farmacéuticos en Callao requería implementación para cumplimiento regulatorio. La alternativa inicialmente evaluada de refrigeración industrial excedía el presupuesto considerado.",
+    intervencion: "Se identificó distribución óptima de flujo adaptada al diseño existente de pasillos, y se implementaron enfriadores evaporativos de alto caudal complementados por extractores eólicos de techo.",
+    foto: casoCallao,
     resultados: [
-      { periodo: "Instalación", label: "Temperatura percibida reducida en 10°C" },
-      { periodo: "Mes 2", label: "Productividad recuperada en turnos de tarde" },
-      { periodo: "Permanente", label: "Cero equipos de A/C — ahorro en OPEX energético" },
+      { periodo: "Cumplimiento", label: "Temperatura garantizada por debajo de los 27°C requeridos" },
+      { periodo: "Inversión", label: "Costo de instalación 85% menor a la alternativa originalmente evaluada" },
+      { periodo: "Energía", label: "Solo 20 kW de potencia consumida vs. +180 kW de sistema de refrigeración convencional" },
     ],
   },
 ];
