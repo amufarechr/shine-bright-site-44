@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import casoChincha from "@/assets/evaporativo/caso-chincha.jpg";
+import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 
 const casos = [
   {
@@ -18,6 +19,19 @@ const casos = [
   },
   {
     id: "02",
+    sector: "Agroindustria · Ica, Perú",
+    titulo: "Mejora de condiciones de packing de uva: −35% de deshidratación y mayor confort para 500 colaboradores",
+    antes: "Empaque de más de 5,000 m² con áreas de recepción, clasificación y empaque. Las altas temperaturas del verano generaban deshidratación de la fruta y reducción de vida de anaquel.",
+    intervencion: "Implementación de flujo integral de aire combinando enfriadores Portacool con salidas superiores de aire caliente.",
+    foto: casoIca,
+    resultados: [
+      { periodo: "Condiciones", label: "Humedad relativa >80% y temperatura de trabajo <25°C" },
+      { periodo: "Producto", label: "−35% en tasa de deshidratación de fruta (<0.1%/hr)" },
+      { periodo: "Rentabilidad", label: "+20% de incremento en utilidad neta por operación post-cosecha" },
+    ],
+  },
+  {
+    id: "03",
     sector: "Manufactura · México",
     titulo: "Climatización de nave industrial con ventilación deficiente",
     antes: "Nave de 3,000 m² sin ventilación cruzada. Acumulación de calor radiante en techo metálico. Operarios trabajando a más de 38°C.",
