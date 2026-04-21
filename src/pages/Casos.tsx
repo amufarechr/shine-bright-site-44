@@ -8,7 +8,7 @@ import casoChincha from "@/assets/evaporativo/caso-chincha.jpg";
 import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
 import casoTransporteIca from "@/assets/evaporativo/caso-transporte-ica.jpg";
-import casoTransporteIca2 from "@/assets/evaporativo/caso-transporte-ica-2.jpg";
+import casoTransporteIcaChart from "@/assets/evaporativo/caso-transporte-ica-chart.jpg";
 
 // ─── Tipos ───────────────────────────────────────────────────────────────────
 
@@ -26,7 +26,7 @@ interface Caso {
   description: string;
   result: string;
   img: string | null;
-  img2?: string | null;
+  imgChart?: string | null;
   proximamente: boolean;
   situacion?: string;
   intervencion?: string;
@@ -161,7 +161,7 @@ const casos: Caso[] = [
     description: "Lotes de producción a más de dos horas del centro de empaque requerían solución de bajo costo para transportar fruta en condiciones que redujeran la deshidratación.",
     result: "T<25°C y HR>80% en tránsito · −40% deshidratación · mejor condición tras 45 días de guarda",
     img: casoTransporteIca,
-    img2: casoTransporteIca2,
+    imgChart: casoTransporteIcaChart,
     proximamente: false,
     situacion: "Lotes de producción de uva ubicados a más de dos horas de distancia del centro de empaque requerían una solución de bajo costo para transportar la fruta en condiciones adecuadas y reducir la tasa de deshidratación durante el trayecto.",
     intervencion: "Se adaptaron unidades de enfriamiento evaporativo a la flota de camiones existente (sistema PreserveAir), a través de un modelo de servicio por renta de temporada que incluía la intervención de las unidades y su operación completa.",
@@ -216,11 +216,6 @@ function Modal({ caso, onClose }: { caso: Caso; onClose: () => void }) {
               <span className="text-muted-foreground text-xs tracking-widest uppercase">Foto próximamente</span>
             </div>
           ) : null}
-          {caso.img2 && (
-            <div className="aspect-[16/7] overflow-hidden">
-              <img src={caso.img2} alt={`${caso.client} — vista 2`} className="w-full h-full object-cover object-center" />
-            </div>
-          )}
 
           <div className="p-8">
             {/* Header */}
@@ -263,6 +258,20 @@ function Modal({ caso, onClose }: { caso: Caso; onClose: () => void }) {
                     <p className="text-sm text-foreground">{r.label}</p>
                   </div>
                 ))}
+              </div>
+            )}
+
+            {/* Chart */}
+            {caso.imgChart && (
+              <div className="mt-6">
+                <p className="text-xs font-semibold text-muted-foreground tracking-widest uppercase mb-3">Datos de campo</p>
+                <div className="rounded-xl overflow-hidden bg-white p-3">
+                  <img
+                    src={caso.imgChart}
+                    alt="Gráfico de resultados"
+                    className="w-full object-contain"
+                  />
+                </div>
               </div>
             )}
           </div>
