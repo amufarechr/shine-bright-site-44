@@ -3,6 +3,7 @@ import { ArrowLeft, Zap, Wind, Leaf, ThermometerSun, Factory, ArrowRight } from 
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SeoHead from "@/components/SeoHead";
 
 const secciones = [
   {
@@ -57,6 +58,12 @@ export default function ArticuloEnfriamientoEvaporativo() {
 
   return (
     <>
+      <SeoHead
+        title="Por qué usar enfriamiento evaporativo en entornos industriales"
+        description="Guía técnica sobre enfriadores evaporativos, hidroventiladores y enfriadores adiabáticos: cómo funcionan, cuánto ahorran y cuándo son la solución correcta para naves industriales."
+        keywords="enfriamiento evaporativo, enfriador evaporativo industrial, hidroventilador, swamp cooler, enfriador adiabático, cooler evaporativo, reducir calor nave industrial"
+        path="/articulos/enfriamiento-evaporativo"
+      />
       <Navbar activePage="soluciones" />
       <main className="min-h-screen">
         {/* Hero del artículo */}

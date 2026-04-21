@@ -11,6 +11,8 @@ import Energia from "./pages/Energia.tsx";
 import Agua from "./pages/Agua.tsx";
 import Evaporativo from "./pages/Evaporativo.tsx";
 import ArticuloEnfriamientoEvaporativo from "./pages/ArticuloEnfriamientoEvaporativo.tsx";
+import ArticuloAgroindustria from "./pages/ArticuloAgroindustria.tsx";
+import ArticuloAlmacenes from "./pages/ArticuloAlmacenes.tsx";
 import Casos from "./pages/Casos.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
@@ -32,6 +34,8 @@ const App = () => (
           <Route path="/soluciones/agua" element={<Agua />} />
           <Route path="/casos" element={<Casos />} />
           <Route path="/articulos/enfriamiento-evaporativo" element={<ArticuloEnfriamientoEvaporativo />} />
+          <Route path="/articulos/enfriamiento-evaporativo-agroindustria" element={<ArticuloAgroindustria />} />
+          <Route path="/articulos/enfriamiento-evaporativo-almacenes" element={<ArticuloAlmacenes />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

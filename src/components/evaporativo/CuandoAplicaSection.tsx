@@ -64,13 +64,27 @@ export default function CuandoAplicaSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-8"
+          className="mt-8 flex flex-wrap gap-x-8 gap-y-3"
         >
           <button
             onClick={() => navigate("/articulos/enfriamiento-evaporativo")}
             className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
           >
             Entender más sobre el enfriamiento evaporativo
+            <ArrowRight size={15} />
+          </button>
+          <button
+            onClick={() => navigate("/articulos/enfriamiento-evaporativo-agroindustria")}
+            className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
+          >
+            Aplicación en agroindustria y fruta fresca
+            <ArrowRight size={15} />
+          </button>
+          <button
+            onClick={() => navigate("/articulos/enfriamiento-evaporativo-almacenes")}
+            className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
+          >
+            Aplicación en naves industriales y almacenes
             <ArrowRight size={15} />
           </button>
         </motion.div>
