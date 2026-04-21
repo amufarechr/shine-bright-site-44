@@ -67,29 +67,13 @@ export default function TecnologiaSection() {
               transition={{ delay: 0.3 }}
               className="pt-2"
             >
-              <div className="flex flex-col gap-2">
-                <button
-                  onClick={() => navigate("/articulos/enfriamiento-evaporativo")}
-                  className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
-                >
-                  Entender más sobre el enfriamiento evaporativo
-                  <ArrowRight size={15} />
-                </button>
-                <button
-                  onClick={() => navigate("/articulos/enfriamiento-evaporativo-agroindustria")}
-                  className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
-                >
-                  Aplicación en agroindustria y fruta fresca
-                  <ArrowRight size={15} />
-                </button>
-                <button
-                  onClick={() => navigate("/articulos/enfriamiento-evaporativo-almacenes")}
-                  className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
-                >
-                  Aplicación en naves industriales y almacenes
-                  <ArrowRight size={15} />
-                </button>
-              </div>
+              <button
+                onClick={() => navigate("/articulos")}
+                className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
+              >
+                Entender más sobre el enfriamiento evaporativo
+                <ArrowRight size={15} />
+              </button>
             </motion.div>
           </motion.div>
 

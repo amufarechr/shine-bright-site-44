@@ -11,6 +11,7 @@ import Energia from "./pages/Energia.tsx";
 import Agua from "./pages/Agua.tsx";
 import Evaporativo from "./pages/Evaporativo.tsx";
 import ArticuloEnfriamientoEvaporativo from "./pages/ArticuloEnfriamientoEvaporativo.tsx";
+import Articulos from "./pages/Articulos.tsx";
 import ArticuloAgroindustria from "./pages/ArticuloAgroindustria.tsx";
 import ArticuloAlmacenes from "./pages/ArticuloAlmacenes.tsx";
 import Casos from "./pages/Casos.tsx";
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/soluciones/energia" element={<Energia />} />
           <Route path="/soluciones/agua" element={<Agua />} />
           <Route path="/casos" element={<Casos />} />
+          <Route path="/articulos" element={<Articulos />} />
           <Route path="/articulos/enfriamiento-evaporativo" element={<ArticuloEnfriamientoEvaporativo />} />
           <Route path="/articulos/enfriamiento-evaporativo-agroindustria" element={<ArticuloAgroindustria />} />
           <Route path="/articulos/enfriamiento-evaporativo-almacenes" element={<ArticuloAlmacenes />} />

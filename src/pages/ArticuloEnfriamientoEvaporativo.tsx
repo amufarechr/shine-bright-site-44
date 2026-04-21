@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, Zap, Wind, Leaf, ThermometerSun, Factory, ArrowRight, BookOpen } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
@@ -100,13 +100,10 @@ export default function ArticuloEnfriamientoEvaporativo() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <button
-              onClick={() => navigate("/soluciones/climatizacion/evaporativo")}
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
-            >
+            <Link to="/soluciones/climatizacion/evaporativo" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
               <ArrowLeft size={16} />
               Volver a Enfriadores Evaporativos
-            </button>
+            </Link>
 
             <div className="flex items-center gap-2 mb-4">
               <span className="text-primary text-sm font-semibold tracking-widest uppercase">

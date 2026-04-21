@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Zap, Users, ThermometerSun, BarChart3, HelpCircle } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
@@ -69,13 +69,10 @@ export default function ArticuloAlmacenes() {
         {/* Hero */}
         <section className="pt-32 pb-12 px-6 md:px-12 lg:px-24 max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-            <button
-              onClick={() => navigate("/soluciones/climatizacion/evaporativo")}
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
-            >
+            <Link to="/soluciones/climatizacion/evaporativo" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
               <ArrowLeft size={16} />
               Volver a Enfriadores Evaporativos
-            </button>
+            </Link>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-primary text-sm font-semibold tracking-widest uppercase">Artículo técnico · Almacenes e industria</span>
               <span className="text-muted-foreground text-sm">·</span>
