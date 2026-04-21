@@ -11,6 +11,7 @@ import casoTransporteIca from "@/assets/evaporativo/caso-transporte-ica.jpg";
 import casoTransporteIcaChart from "@/assets/evaporativo/caso-transporte-ica-chart.jpg";
 import casoViveroAte from "@/assets/evaporativo/caso-vivero-ate.jpg";
 import casoChao from "@/assets/evaporativo/caso-chao.jpg";
+import casoIquitos from "@/assets/evaporativo/caso-iquitos.jpg";
 import casoAutomotrizLima from "@/assets/evaporativo/caso-automotriz-lima.jpg";
 import casoAutomotrizLima2 from "@/assets/evaporativo/caso-automotriz-lima-2.jpg";
 
@@ -131,13 +132,20 @@ const casos: Caso[] = [
   {
     id: "iquitos",
     sector: "Retail",
-    solucion: "Ventilación Industrial",
-    client: "Tienda de retail de gran formato",
+    solucion: "Ventiladores Industriales + Enfriamiento Evaporativo",
+    client: "Food court de mall",
     location: "Iquitos, Perú",
-    description: "Próximamente",
-    result: "",
-    img: null,
-    proximamente: true,
+    description: "Food court de 1,000 m² en clima tropical húmedo. El área abierta hacía inviable la refrigeración convencional. Se combinaron ventiladores HVLS con enfriadores evaporativos.",
+    result: "1,000 m² climatizados · 6 equipos instalados · sin obras adicionales",
+    img: casoIquitos,
+    proximamente: false,
+    situacion: "El food court de un mall en Iquitos — ciudad con clima tropical húmedo durante todo el año — operaba con altas temperaturas que afectaban la experiencia de los visitantes. Al tratarse de un área abierta de 1,000 m², la refrigeración convencional no era técnica ni económicamente viable.",
+    intervencion: "Se instalaron 3 ventiladores industriales de techo de gran diámetro Big Ass Fans para eliminar bolsillos de calor y distribuir el aire uniformemente en el volumen del espacio, combinados con 3 enfriadores evaporativos CF-500 para reducir la temperatura del aire en las zonas de mayor afluencia. La combinación de ambos sistemas genera un efecto de confort térmico sostenido sin necesidad de cerramiento del espacio.",
+    resultados: [
+      { periodo: "Confort", label: "Reducción efectiva de temperatura percibida en el food court durante todo el año" },
+      { periodo: "Viabilidad", label: "Única solución técnicamente viable para un espacio abierto de 1,000 m² en clima tropical" },
+      { periodo: "Escala", label: "6 equipos instalados cubriendo la totalidad del área sin obras de infraestructura adicionales" },
+    ],
   },
   {
     id: "lurin",
