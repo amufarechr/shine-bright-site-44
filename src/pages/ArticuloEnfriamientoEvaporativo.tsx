@@ -1,9 +1,36 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Zap, Wind, Leaf, ThermometerSun, Factory, ArrowRight } from "lucide-react";
+import { ArrowLeft, Zap, Wind, Leaf, ThermometerSun, Factory, ArrowRight, BookOpen } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
+
+const nomenclatura = [
+  {
+    termino: "Enfriador evaporativo",
+    descripcion: "Término técnico estándar en español. Aplica tanto a equipos portátiles como a sistemas de techo (rooftop) de alta capacidad para uso industrial.",
+  },
+  {
+    termino: "Hidroventilador",
+    descripcion: "Nombre coloquial muy usado en México y Centroamérica. Se refiere al mismo tipo de equipo — un ventilador que enfría el aire mediante evaporación de agua. Algunos modelos incluyen aspersión directa de agua nebulizada.",
+  },
+  {
+    termino: "Swamp cooler",
+    descripcion: "Término en inglés de uso extendido, especialmente en el suroeste de Estados Unidos. Literalmente 'enfriador de pantano', por la humedad que genera. Equivalente funcional al enfriador evaporativo.",
+  },
+  {
+    termino: "Enfriador adiabático",
+    descripcion: "Término más técnico que describe el proceso termodinámico subyacente: el enfriamiento ocurre sin intercambio de calor con el exterior, solo por cambio de estado del agua. Se usa más en contextos de ingeniería de HVAC.",
+  },
+  {
+    termino: "Cooler evaporativo / evaporative cooler",
+    descripcion: "Variantes en inglés y spanglish de uso frecuente en búsquedas en línea, especialmente en mercados latinos de Estados Unidos y en profesionales del sector HVAC en Latinoamérica.",
+  },
+  {
+    termino: "Portacool / BioCool / Big Ass Fans",
+    descripcion: "Marcas líderes del mercado. Al igual que 'Scotch' para la cinta adhesiva, muchos usuarios buscan directamente el nombre de marca en lugar del nombre genérico del producto.",
+  },
+];
 
 const secciones = [
   {
@@ -106,6 +133,35 @@ export default function ArticuloEnfriamientoEvaporativo() {
         <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-24">
           <div className="border-t border-border" />
         </div>
+
+        {/* Nomenclatura — keywords SEO */}
+        <section className="px-6 md:px-12 lg:px-24 max-w-4xl mx-auto pt-12 pb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-primary/10 rounded-lg p-2.5 shrink-0">
+                <BookOpen size={20} className="text-primary" />
+              </div>
+              <h2 className="font-heading text-xl md:text-2xl font-bold">
+                Muchos nombres, la misma tecnología
+              </h2>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-6 md:pl-12">
+              El enfriamiento evaporativo tiene docenas de nombres según el país, el contexto y el tipo de equipo. Si llegaste buscando alguno de estos términos, estás en el lugar correcto:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 md:pl-12">
+              {nomenclatura.map((n) => (
+                <div key={n.termino} className="bg-card border border-border rounded-xl p-5">
+                  <p className="font-heading font-semibold text-sm text-primary mb-1">{n.termino}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{n.descripcion}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </section>
 
         {/* Cuerpo del artículo */}
         <section className="px-6 md:px-12 lg:px-24 max-w-4xl mx-auto py-12">

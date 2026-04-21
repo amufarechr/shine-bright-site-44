@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, Zap, Users, ThermometerSun, BarChart3 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Zap, Users, ThermometerSun, BarChart3, HelpCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -169,6 +169,53 @@ export default function ArticuloAlmacenes() {
               );
             })}
           </div>
+        </section>
+
+        {/* Preguntas frecuentes — keywords de problema */}
+        <section className="px-6 md:px-12 lg:px-24 max-w-4xl mx-auto pb-10">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-primary/10 rounded-lg p-2.5 shrink-0">
+                <HelpCircle size={20} className="text-primary" />
+              </div>
+              <h2 className="font-heading text-xl md:text-2xl font-bold">
+                Preguntas frecuentes
+              </h2>
+            </div>
+            <div className="space-y-6 md:pl-12">
+              {[
+                {
+                  q: "¿Cuánto cuesta enfriar una nave industrial de 1,000 m²?",
+                  a: "Con enfriamiento evaporativo, una nave de 1,000 m² requiere entre 2 y 4 equipos según la altura y carga térmica. El costo de inversión es entre 5 y 10 veces menor que un sistema de refrigeración convencional equivalente, y el consumo eléctrico mensual suele ser de 15–40 kW vs. 100–200 kW de un sistema de A/C tradicional.",
+                },
+                {
+                  q: "¿Funciona en naves con puertas abiertas o carga y descarga constante?",
+                  a: "Sí — al contrario del aire acondicionado convencional, el evaporativo no necesita espacio sellado. De hecho, funciona mejor con renovación de aire: el sistema introduce aire fresco desde el exterior, lo enfría y lo distribuye. Las puertas abiertas no reducen significativamente la eficiencia si el diseño de flujo es correcto.",
+                },
+                {
+                  q: "¿Qué temperatura se puede alcanzar en una nave con calor extremo?",
+                  a: "En condiciones climáticas típicas de la costa peruana o zonas áridas de México, un sistema bien dimensionado puede bajar la temperatura interior entre 8 y 12°C respecto al exterior. Si el exterior está a 36°C, el interior puede mantenerse entre 25 y 28°C — suficiente para condiciones de trabajo confortables.",
+                },
+                {
+                  q: "¿Qué mantenimiento requiere un sistema evaporativo industrial?",
+                  a: "El mantenimiento es mínimo comparado con sistemas de refrigeración: limpieza mensual de los medios evaporativos, revisión del nivel y calidad del agua, y limpieza del depósito para evitar acumulación de cal. No hay compresores, gases refrigerantes ni componentes de alta complejidad. La vida útil de los equipos industriales supera los 10 años con mantenimiento básico.",
+                },
+                {
+                  q: "¿Se puede instalar sin hacer obras civiles?",
+                  a: "En la mayoría de los casos, sí. Los equipos portátiles o de piso no requieren ninguna obra. Los equipos de techo (rooftop) requieren un anclaje simple y conexión de agua, sin ductos ni modificaciones estructurales. En instalaciones documentadas como el concesionario automotriz en Lima (1,000 m² entre showroom y taller), se logró cobertura completa sin ninguna obra de infraestructura.",
+                },
+              ].map((item) => (
+                <div key={item.q} className="border-l-2 border-primary/30 pl-5">
+                  <p className="font-semibold text-sm mb-2">{item.q}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </section>
 
         {/* CTA */}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, Droplets, TrendingDown, Thermometer, Package, Truck } from "lucide-react";
+import { ArrowLeft, ArrowRight, Droplets, TrendingDown, Thermometer, Package, Truck, HelpCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -208,6 +208,49 @@ export default function ArticuloAgroindustria() {
               <p className="text-muted-foreground leading-relaxed">
                 Este modelo demuestra que el control térmico en agroindustria no requiere infraestructura costosa ni permanente — requiere diseño correcto y selección adecuada de equipos.
               </p>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Preguntas frecuentes — keywords de problema */}
+        <section className="px-6 md:px-12 lg:px-24 max-w-4xl mx-auto pb-10">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-primary/10 rounded-lg p-2.5 shrink-0">
+                <HelpCircle size={20} className="text-primary" />
+              </div>
+              <h2 className="font-heading text-xl md:text-2xl font-bold">
+                Preguntas frecuentes
+              </h2>
+            </div>
+            <div className="space-y-6 md:pl-12">
+              {[
+                {
+                  q: "¿El enfriamiento evaporativo funciona en zonas costeras húmedas como Lima?",
+                  a: "Sí, aunque con matices. Lima tiene humedad relativa variable: más alta en invierno (junio–agosto) y más baja en verano (diciembre–marzo), que es precisamente cuando el calor es mayor. En las horas pico de verano, la humedad relativa en Lima suele bajar lo suficiente para que el sistema opere con buena eficiencia. En instalaciones reales en Lima, Callao y Chincha hemos obtenido reducciones de temperatura de 7–10°C.",
+                },
+                {
+                  q: "¿Cuánto se puede reducir la deshidratación de uva o arándano con este sistema?",
+                  a: "En proyectos documentados en Ica y Chao, la reducción en tasa de deshidratación fue de 35–40% respecto a operación sin control térmico, bajo las mismas condiciones climáticas. El factor clave es mantener la humedad relativa por encima del 75–80% en las zonas de proceso.",
+                },
+                {
+                  q: "¿Se puede usar en invernaderos con alta humedad?",
+                  a: "Depende del cultivo y del objetivo. En invernaderos donde el objetivo es enfriar sin perder humedad (como en viveros de plantines), el evaporativo es ideal: baja temperatura y sube humedad simultáneamente. Si el espacio ya tiene humedad muy alta (>85% constante), la eficiencia de enfriamiento se reduce y puede ser necesario evaluar otras soluciones.",
+                },
+                {
+                  q: "¿Qué pasa con el polvo y la suciedad en entornos de campo o packing?",
+                  a: "Los medios evaporativos actúan como filtros: el aire pasa a través de paneles húmedos que retienen partículas. En entornos de campo con polvo, esto es una ventaja — el aire que entra al espacio llega filtrado. Los medios deben limpiarse periódicamente según la carga de polvo del entorno.",
+                },
+              ].map((item) => (
+                <div key={item.q} className="border-l-2 border-primary/30 pl-5">
+                  <p className="font-semibold text-sm mb-2">{item.q}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
+                </div>
+              ))}
             </div>
           </motion.div>
         </section>
