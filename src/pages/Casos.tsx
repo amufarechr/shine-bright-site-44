@@ -88,6 +88,24 @@ const casos: Caso[] = [
     ],
   },
   {
+    id: "chao",
+    sector: "Agroindustria",
+    solucion: "Enfriamiento Evaporativo",
+    client: "Acopios de campo para cosecha de arándanos y palta",
+    location: "Chao, La Libertad, Perú",
+    description: "Operación agrícola de gran escala requería reducir la deshidratación de fruta durante la cosecha, antes de llegar al centro de empaque. Más de 800 hectáreas a cubrir.",
+    result: "+10 centros de acopio · T<25°C y HR>80% · 4 años de crecimiento acompañado",
+    img: null,
+    proximamente: false,
+    situacion: "Operación agrícola de gran escala en Chao, La Libertad, requería reducir la deshidratación de fruta durante el proceso de cosecha, antes de llegar al centro de empaque. Con más de 800 hectáreas a cubrir, la fruta cosechada acumulaba tiempo de espera en campo sin condiciones térmicas adecuadas.",
+    intervencion: "Se implementaron centros de acopio con enfriamiento evaporativo estratégicamente distribuidos en campo, para consolidar la cosecha al tamaño de carga de transporte. Estructuras simples con cobertura de malla raschel, sin material aislante, con bajo costo de implementación y fácil reubicación.",
+    resultados: [
+      { periodo: "Escala", label: "+10 centros de acopio implementados, acompañando el crecimiento de campo a lo largo de 4 años" },
+      { periodo: "Condiciones", label: "T<25°C y HR>80%, reduciendo drásticamente la tasa de deshidratación en campo" },
+      { periodo: "Operación", label: "Reducción de tiempos de espera desde el punto de cosecha, con total adaptación al ritmo y requerimientos de la operación" },
+    ],
+  },
+  {
     id: "iquitos",
     sector: "Retail",
     solucion: "Ventilación Industrial",
@@ -178,11 +196,15 @@ function Modal({ caso, onClose }: { caso: Caso; onClose: () => void }) {
           onClick={(e) => e.stopPropagation()}
         >
           {/* Photo */}
-          {caso.img && (
+          {caso.img ? (
             <div className="aspect-[16/7] overflow-hidden">
               <img src={caso.img} alt={caso.client} className="w-full h-full object-cover object-center" />
             </div>
-          )}
+          ) : caso.situacion ? (
+            <div className="aspect-[16/7] bg-muted flex items-center justify-center">
+              <span className="text-muted-foreground text-xs tracking-widest uppercase">Foto próximamente</span>
+            </div>
+          ) : null}
 
           <div className="p-8">
             {/* Header */}
