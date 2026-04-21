@@ -27,7 +27,7 @@ interface Resultado {
 interface Caso {
   id: string;
   sector: string;
-  solucion: string;
+  soluciones: string[];
   client: string;
   location: string;
   description: string;
@@ -46,7 +46,7 @@ const casos: Caso[] = [
   {
     id: "chincha",
     sector: "Avícola",
-    solucion: "Enfriamiento Evaporativo",
+    soluciones: ["Enfriamiento Evaporativo"],
     client: "Planta de clasificación y empaque de huevos",
     location: "Chincha, Perú",
     description: "Alta temperatura por las tardes afectaba maquinaria de alta sensibilidad y generaba ausentismo en una planta de 3,000 m².",
@@ -64,7 +64,7 @@ const casos: Caso[] = [
   {
     id: "ica-uva",
     sector: "Agroindustria",
-    solucion: "Enfriamiento Evaporativo",
+    soluciones: ["Enfriamiento Evaporativo"],
     client: "Packing de uva de exportación",
     location: "Ica, Perú",
     description: "Empaque de más de 5,000 m² con deshidratación de fruta por altas temperaturas en verano, afectando vida de anaquel.",
@@ -82,7 +82,7 @@ const casos: Caso[] = [
   {
     id: "callao",
     sector: "Logística",
-    solucion: "Enfriamiento Evaporativo",
+    soluciones: ["Enfriamiento Evaporativo"],
     client: "Centro de distribución farmacéutico",
     location: "Callao, Perú",
     description: "6,000 m² de almacén farmacéutico que requería temperatura controlada para cumplimiento regulatorio, con presupuesto acotado.",
@@ -100,7 +100,7 @@ const casos: Caso[] = [
   {
     id: "chao",
     sector: "Agroindustria",
-    solucion: "Enfriamiento Evaporativo",
+    soluciones: ["Enfriamiento Evaporativo"],
     client: "Acopios de campo para cosecha de arándanos y palta",
     location: "Chao, La Libertad, Perú",
     description: "Operación agrícola de gran escala requería reducir la deshidratación de fruta durante la cosecha, antes de llegar al centro de empaque. Más de 800 hectáreas a cubrir.",
@@ -118,7 +118,7 @@ const casos: Caso[] = [
   {
     id: "vivero-ate",
     sector: "Agroindustria",
-    solucion: "Enfriamiento Evaporativo + Calefacción Radiante",
+    soluciones: ["Enfriamiento Evaporativo", "Calefacción Radiante"],
     client: "Invernadero de semillas y plantines de hortalizas",
     location: "Ate, Lima, Perú",
     description: "Las condiciones ambientales variables de Lima dificultaban mantener T° y HR consistentes para germinación. Se requería una solución bidireccional — enfriar en verano y calentar en invierno.",
@@ -136,7 +136,7 @@ const casos: Caso[] = [
   {
     id: "iquitos",
     sector: "Retail",
-    solucion: "Ventiladores Industriales + Enfriamiento Evaporativo",
+    soluciones: ["Ventiladores Industriales", "Enfriamiento Evaporativo"],
     client: "Food court de mall",
     location: "Iquitos, Perú",
     description: "Food court de 1,000 m² en clima tropical húmedo. El área abierta hacía inviable la refrigeración convencional. Se combinaron ventiladores HVLS con enfriadores evaporativos.",
@@ -154,7 +154,7 @@ const casos: Caso[] = [
   {
     id: "lurin",
     sector: "Industrial",
-    solucion: "Consultoría de Eficiencia Operativa",
+    soluciones: ["Consultoría de Eficiencia Operativa"],
     client: "Panificadora industrial de gran escala",
     location: "Lurín, Lima, Perú",
     description: "A pesar del crecimiento sostenido de producción y ventas, el margen bruto se deterioraba. El incremento de volumen no generaba economías de escala — los costos directos crecían proporcionalmente.",
@@ -172,7 +172,7 @@ const casos: Caso[] = [
   {
     id: "pesca",
     sector: "Pesca",
-    solucion: "Consultoría de Eficiencia Operativa",
+    soluciones: ["Consultoría de Eficiencia Operativa"],
     client: "Empresa pesquera industrial de gran escala",
     location: "Litoral peruano",
     description: "Tasa de accidentabilidad concentrada en la faena de pesca, con impacto en personas y paradas no planificadas por daños a activos. Se implementó un programa integral SMS en dos fases.",
@@ -190,7 +190,7 @@ const casos: Caso[] = [
   {
     id: "automotriz",
     sector: "Automotriz",
-    solucion: "Enfriamiento Evaporativo",
+    soluciones: ["Enfriamiento Evaporativo"],
     client: "Concesionario de vehículos de alta gama",
     location: "Lima, Perú",
     description: "Showroom de atención al público de 600 m² y taller con 25 mecánicos en 400 m². El calor del verano generaba incomodidad en clientes y equipo técnico sin solución viable de A/C convencional.",
@@ -209,7 +209,7 @@ const casos: Caso[] = [
   {
     id: "transporte-ica",
     sector: "Transporte",
-    solucion: "Enfriamiento Evaporativo",
+    soluciones: ["Enfriamiento Evaporativo"],
     client: "Flota de camiones de cosecha de uva",
     location: "Ica, Perú",
     description: "Lotes de producción a más de dos horas del centro de empaque requerían solución de bajo costo para transportar fruta en condiciones que redujeran la deshidratación.",
@@ -229,7 +229,7 @@ const casos: Caso[] = [
 ];
 
 const sectores = ["Todos", ...Array.from(new Set(casos.map((c) => c.sector)))];
-const soluciones = ["Todas", ...Array.from(new Set(casos.map((c) => c.solucion)))];
+const soluciones = ["Todas", ...Array.from(new Set(casos.flatMap((c) => c.soluciones)))];
 
 // ─── Modal ────────────────────────────────────────────────────────────────────
 
@@ -272,7 +272,7 @@ function Modal({ caso, onClose }: { caso: Caso; onClose: () => void }) {
                   </span>
                 </div>
                 <h2 className="font-heading text-xl md:text-2xl font-bold">{caso.client}</h2>
-                <p className="text-primary text-sm font-semibold mt-1">{caso.solucion}</p>
+                <p className="text-primary text-sm font-semibold mt-1">{caso.soluciones.join(" + ")}</p>
               </div>
               <button
                 onClick={onClose}
@@ -335,7 +335,7 @@ export default function CasosPage() {
 
   const casosFiltrados = casos.filter((c) => {
     const porSector = filtroSector === "Todos" || c.sector === filtroSector;
-    const porSolucion = filtroSolucion === "Todas" || c.solucion === filtroSolucion;
+    const porSolucion = filtroSolucion === "Todas" || c.soluciones.includes(filtroSolucion);
     return porSector && porSolucion;
   });
 
@@ -427,7 +427,7 @@ export default function CasosPage() {
                       <span className="text-xs font-medium text-primary bg-primary/10 rounded-full px-3 py-1">
                         {caso.sector}
                       </span>
-                      <span className="text-xs text-muted-foreground">{caso.solucion}</span>
+                      <span className="text-xs text-muted-foreground">{caso.soluciones.join(" + ")}</span>
                     </div>
                     <h3 className="font-heading font-semibold mb-1">{caso.client}</h3>
                     <p className="text-muted-foreground text-xs mb-3">{caso.location}</p>
