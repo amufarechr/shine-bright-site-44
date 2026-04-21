@@ -229,6 +229,7 @@ const casos: Caso[] = [
 ];
 
 const sectores = ["Todos", ...Array.from(new Set(casos.map((c) => c.sector)))];
+const soluciones = ["Todas", ...Array.from(new Set(casos.map((c) => c.solucion)))];
 
 // ─── Modal ────────────────────────────────────────────────────────────────────
 
@@ -328,10 +329,15 @@ function Modal({ caso, onClose }: { caso: Caso; onClose: () => void }) {
 // ─── Página ───────────────────────────────────────────────────────────────────
 
 export default function CasosPage() {
-  const [filtro, setFiltro] = useState("Todos");
+  const [filtroSector, setFiltroSector] = useState("Todos");
+  const [filtroSolucion, setFiltroSolucion] = useState("Todas");
   const [casoActivo, setCasoActivo] = useState<Caso | null>(null);
 
-  const casosFiltrados = filtro === "Todos" ? casos : casos.filter((c) => c.sector === filtro);
+  const casosFiltrados = casos.filter((c) => {
+    const porSector = filtroSector === "Todos" || c.sector === filtroSector;
+    const porSolucion = filtroSolucion === "Todas" || c.solucion === filtroSolucion;
+    return porSector && porSolucion;
+  });
 
   return (
     <>
@@ -351,20 +357,39 @@ export default function CasosPage() {
 
         {/* Filtros */}
         <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto pb-8">
-          <div className="flex flex-wrap gap-2">
-            {sectores.map((s) => (
-              <button
-                key={s}
-                onClick={() => setFiltro(s)}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
-                  filtro === s
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/40"
-                }`}
+          <div className="flex flex-wrap gap-3 items-center">
+            <div className="relative">
+              <select
+                value={filtroSector}
+                onChange={(e) => setFiltroSector(e.target.value)}
+                className="appearance-none bg-card border border-border text-sm font-medium text-foreground rounded-lg px-4 py-2 pr-9 cursor-pointer hover:border-primary/40 focus:outline-none focus:border-primary transition-colors"
               >
-                {s}
+                {sectores.map((s) => (
+                  <option key={s} value={s}>{s === "Todos" ? "Sector: Todos" : s}</option>
+                ))}
+              </select>
+              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground text-xs">▾</span>
+            </div>
+            <div className="relative">
+              <select
+                value={filtroSolucion}
+                onChange={(e) => setFiltroSolucion(e.target.value)}
+                className="appearance-none bg-card border border-border text-sm font-medium text-foreground rounded-lg px-4 py-2 pr-9 cursor-pointer hover:border-primary/40 focus:outline-none focus:border-primary transition-colors"
+              >
+                {soluciones.map((s) => (
+                  <option key={s} value={s}>{s === "Todas" ? "Solución: Todas" : s}</option>
+                ))}
+              </select>
+              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground text-xs">▾</span>
+            </div>
+            {(filtroSector !== "Todos" || filtroSolucion !== "Todas") && (
+              <button
+                onClick={() => { setFiltroSector("Todos"); setFiltroSolucion("Todas"); }}
+                className="text-xs text-muted-foreground hover:text-foreground underline underline-offset-2 transition-colors"
+              >
+                Limpiar filtros
               </button>
-            ))}
+            )}
           </div>
         </section>
 
