@@ -27,8 +27,8 @@ const secciones = [
     icon: Zap,
     titulo: "Ahorro energético: la diferencia estructural entre evaporativo y refrigeración",
     contenido: [
-      "Un sistema de aire acondicionado convencional para una nave de 6,000 m² requeriría entre 150 y 250 kW de potencia instalada, con compresores trabajando de forma intensiva durante las horas de mayor calor. En un entorno donde la electricidad industrial tiene un costo significativo y el suministro puede ser limitado, ese consumo tiene un impacto directo en el P&L.",
-      "Un sistema evaporativo equivalente para el mismo espacio consume entre 15 y 25 kW — solo ventiladores y bombas de agua. En el caso de un centro de distribución farmacéutico de 6,000 m² en Callao, el sistema instalado opera con solo 20 kW de potencia total, versus los más de 180 kW que hubiera requerido la alternativa de refrigeración originalmente evaluada. El costo de instalación fue un 85% menor.",
+      "Un sistema de refrigeración convencional para una nave de 4,000 m² requeriría entre 150 y 250 kW de potencia instalada, con compresores trabajando de forma intensiva durante las horas de mayor calor. En un entorno donde la electricidad industrial tiene un costo significativo y el suministro puede ser limitado, ese consumo tiene un impacto directo en la utilidad.",
+      "Un sistema evaporativo equivalente para el mismo espacio consume entre 15 y 25 kW — solo ventiladores y bombas de agua. En el caso de un centro de distribución farmacéutico de 6,000 m² en Callao, el sistema instalado opera con solo 20 kW de potencia total, versus los más de 180 kW que hubiera requerido la alternativa de refrigeración originalmente evaluada. El costo de instalación fue un 85% menor. La diferencia es aún mayor en los casos en que se requiere instalación de paneles de aislamiento térmico.",
       "Esta diferencia en consumo eléctrico se traduce en ahorro mensual real desde el primer mes de operación, y mejora el retorno de inversión de forma sustancial. En muchas instalaciones industriales, el evaporativo se paga solo en menos de una temporada.",
     ],
   },
