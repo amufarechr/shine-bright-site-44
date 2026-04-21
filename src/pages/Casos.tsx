@@ -11,6 +11,8 @@ import casoTransporteIca from "@/assets/evaporativo/caso-transporte-ica.jpg";
 import casoTransporteIcaChart from "@/assets/evaporativo/caso-transporte-ica-chart.jpg";
 import casoViveroAte from "@/assets/evaporativo/caso-vivero-ate.jpg";
 import casoChao from "@/assets/evaporativo/caso-chao.jpg";
+import casoAutomotrizLima from "@/assets/evaporativo/caso-automotriz-lima.jpg";
+import casoAutomotrizLima2 from "@/assets/evaporativo/caso-automotriz-lima-2.jpg";
 
 // ─── Tipos ───────────────────────────────────────────────────────────────────
 
@@ -163,12 +165,20 @@ const casos: Caso[] = [
     id: "automotriz",
     sector: "Automotriz",
     solucion: "Enfriamiento Evaporativo",
-    client: "Concesionario automotriz",
+    client: "Concesionario de vehículos de alta gama",
     location: "Lima, Perú",
-    description: "Próximamente",
-    result: "",
-    img: null,
-    proximamente: true,
+    description: "Showroom de atención al público de 600 m² y taller con 25 mecánicos en 400 m². El calor del verano generaba incomodidad en clientes y equipo técnico sin solución viable de A/C convencional.",
+    result: "1,000 m² climatizados · instalación no invasiva · sin obras de infraestructura",
+    img: casoAutomotrizLima,
+    imgChart: casoAutomotrizLima2,
+    proximamente: false,
+    situacion: "Un concesionario de vehículos de alta gama en Lima operaba con un showroom de atención al público de 600 m² y un taller con 25 mecánicos en 400 m². El calor excesivo durante el verano generaba incomodidad tanto en clientes como en el equipo técnico, sin una solución viable de aire acondicionado convencional a esa escala y costo.",
+    intervencion: "Se instalaron enfriadores evaporativos Portacool en dos configuraciones distintas adaptadas a cada espacio: montaje elevado con soportes en el showroom para preservar la estética del espacio, e instalación a piso en el taller automotriz. El sistema se complementó con extractores estratégicos para garantizar renovación de aire continua en ambas zonas.",
+    resultados: [
+      { periodo: "Confort", label: "Reducción significativa de temperatura en ambas zonas durante los meses de verano" },
+      { periodo: "Instalación", label: "Sin obras de infraestructura ni modificaciones al espacio — solución no invasiva adaptada al diseño existente" },
+      { periodo: "Cobertura", label: "1,000 m² climatizados con una solución unificada para dos tipos de uso completamente distintos" },
+    ],
   },
   {
     id: "transporte-ica",
