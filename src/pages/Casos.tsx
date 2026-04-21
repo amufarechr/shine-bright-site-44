@@ -15,6 +15,7 @@ import casoIquitos from "@/assets/evaporativo/caso-iquitos.jpg";
 import casoLurin from "@/assets/evaporativo/caso-lurin.jpg";
 import casoAutomotrizLima from "@/assets/evaporativo/caso-automotriz-lima.jpg";
 import casoAutomotrizLima2 from "@/assets/evaporativo/caso-automotriz-lima-2.jpg";
+import casoPesca from "@/assets/evaporativo/caso-pesca.jpg";
 
 // ─── Tipos ───────────────────────────────────────────────────────────────────
 
@@ -169,13 +170,20 @@ const casos: Caso[] = [
   {
     id: "pesca",
     sector: "Pesca",
-    solucion: "Consultoría",
-    client: "Operación pesquera",
-    location: "Litoral peruano",
-    description: "Próximamente",
-    result: "",
-    img: null,
-    proximamente: true,
+    solucion: "Consultoría de Eficiencia Operativa",
+    client: "Empresa pesquera industrial de gran escala [confidencial]",
+    location: "Litoral peruano [confidencial]",
+    description: "Tasa de accidentabilidad concentrada en la faena de pesca, con impacto en personas y paradas no planificadas por daños a activos. Se implementó un programa integral SMS en dos fases.",
+    result: "Eliminación de accidentes graves · protección de tripulantes · costos evitados de múltiples millones de dólares",
+    img: casoPesca,
+    proximamente: false,
+    situacion: "Una empresa pesquera industrial de gran escala operaba con una tasa de accidentabilidad concentrada en la faena de pesca, con más del 90% de los accidentes de los últimos 5 años ocurriendo en esa etapa. Los incidentes generaban un doble impacto: en las personas, con accidentes graves que comprometían la seguridad y salud de los tripulantes; y en la operación, con paradas no planificadas y daños a activos que inutilizaban embarcaciones en momentos críticos de campaña.",
+    intervencion: "Se diseñó e implementó un programa integral basado en Safety Management System (SMS), estructurado en dos fases paralelas: diagnóstico con mapeo holístico de procesos e identificación y priorización de riesgos con sus causas raíz; seguido del diseño e implementación de acciones de mitigación en tres ejes — Procesos (SOPs, RAPIDs, KPIs), Personas (organización, incentivos, entrenamiento) y Tecnología (conectividad, visibilidad, mantenimiento de activos).",
+    resultados: [
+      { periodo: "Diagnóstico", label: "Mapeo holístico de macro-procesos y subprocesos de la operación, con matriz de riesgos priorizada por impacto y probabilidad" },
+      { periodo: "Mitigación", label: "Definición e implementación de SOPs, RAPIDs y estructura de accountability para los procesos de mayor riesgo, con política de seguridad top-down desde la Alta Dirección" },
+      { periodo: "Impacto", label: "Reducción total de accidentes graves y daños a activos en temporadas posteriores, evitando costos potenciales de múltiples millones de dólares y salvaguardando la seguridad de los tripulantes" },
+    ],
   },
   {
     id: "automotriz",
@@ -215,17 +223,7 @@ const casos: Caso[] = [
       { periodo: "Guarda", label: "Incremento notable en condición de fruta después de 45 días de período de guarda" },
     ],
   },
-  {
-    id: "canete",
-    sector: "Agroindustria",
-    solucion: "Enfriamiento Evaporativo",
-    client: "Operación agroindustrial",
-    location: "Cañete, Perú",
-    description: "Próximamente",
-    result: "",
-    img: null,
-    proximamente: true,
-  },
+
 ];
 
 const sectores = ["Todos", ...Array.from(new Set(casos.map((c) => c.sector)))];
