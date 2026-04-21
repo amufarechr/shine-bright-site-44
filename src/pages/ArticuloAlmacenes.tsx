@@ -187,7 +187,7 @@ export default function ArticuloAlmacenes() {
               {[
                 {
                   q: "¿Cuánto cuesta enfriar una nave industrial de 1,000 m²?",
-                  a: "Con enfriamiento evaporativo, una nave de 1,000 m² requiere entre 2 y 4 equipos según la altura y carga térmica. El costo de inversión es entre 5 y 10 veces menor que un sistema de refrigeración convencional equivalente, y el consumo eléctrico mensual suele ser de 15–40 kW vs. 100–200 kW de un sistema de A/C tradicional.",
+                  a: "Con enfriamiento evaporativo, una nave de 1,000 m² requiere entre 2 y 4 equipos según la altura y carga térmica. El costo de inversión es entre 5 y 10 veces menor que un sistema de refrigeración convencional equivalente, y la potencia eléctrica consumida suele ser entre 5 y 10 kW vs. 80–140 kW de un sistema de refrigeración tradicional. Esto sin mencionar el costo adicional de la instalación de paneles aislantes, típicamente necesario para la refrigeración tradicional. ",
                 },
                 {
                   q: "¿Funciona en naves con puertas abiertas o carga y descarga constante?",
@@ -203,7 +203,7 @@ export default function ArticuloAlmacenes() {
                 },
                 {
                   q: "¿Se puede instalar sin hacer obras civiles?",
-                  a: "En la mayoría de los casos, sí. Los equipos portátiles o de piso no requieren ninguna obra. Los equipos de techo (rooftop) requieren un anclaje simple y conexión de agua, sin ductos ni modificaciones estructurales. En instalaciones documentadas como el concesionario automotriz en Lima (1,000 m² entre showroom y taller), se logró cobertura completa sin ninguna obra de infraestructura.",
+                  a: "En la mayoría de los casos, sí. Los equipos portátiles o de piso no requieren ninguna obra. Los equipos de techo (rooftop) requieren un anclaje simple y conexión de agua, sin ductos ni modificaciones estructurales.",
                 },
               ].map((item) => (
                 <div key={item.q} className="border-l-2 border-primary/30 pl-5">
