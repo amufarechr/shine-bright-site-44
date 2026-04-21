@@ -19,7 +19,7 @@ const secciones = [
     icon: Droplets,
     titulo: "El problema: la deshidratación empieza antes de que la fruta llegue al packing",
     contenido: [
-      "En operaciones agroindustriales de exportación, la calidad del producto no se define solo en el empaque — se define en cada punto de la cadena desde la cosecha hasta el despacho. Y en esa cadena, la temperatura y la humedad relativa son las variables más críticas y las menos controladas.",
+      "En operaciones agroindustriales de exportación, la calidad del producto no se define solo en el empaque — se define en cada punto de la cadena desde la cosecha hasta el despacho. Y en esa cadena, la temperatura y la humedad relativa son las variables más críticas.",
       "Cuando la fruta recién cosechada queda expuesta a ambientes calurosos y secos — ya sea en campo, durante el transporte, o en las áreas de recepción y clasificación del packing — comienza a perder agua. Esa pérdida de peso, aunque sea de décimas de punto porcentual por hora, se acumula a lo largo de la jornada y se traduce en deshidratación visible, reducción de vida de anaquel y pérdida de valor comercial.",
       "Para variedades de exportación como uva de mesa, arándanos o palta, donde los compradores internacionales inspeccionan condición, turgencia y apariencia al momento de recepción, incluso una deshidratación leve puede significar rechazo de lote o descuento de precio.",
     ],
