@@ -94,7 +94,7 @@ export default function ArticuloEnfriamientoEvaporativo() {
       <Navbar activePage="soluciones" />
       <main className="min-h-screen">
         {/* Hero del artículo */}
-        <section className="pt-32 pb-12 px-6 md:px-12 lg:px-24 max-w-4xl mx-auto">
+        <section className="pt-44 pb-12 px-6 md:px-12 lg:px-24 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

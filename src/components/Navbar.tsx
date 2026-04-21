@@ -27,7 +27,7 @@ const Navbar = ({ activePage }: NavbarProps) => {
   const isHome = location.pathname === "/";
 
   // Pages with light/white background that need navbar to start in scrolled state
-  const lightBgPages = ["/casos", "/consultoria", "/soluciones/energia"];
+  const lightBgPages = ["/casos", "/consultoria", "/soluciones/energia", "/articulos", "/articulos/enfriamiento-evaporativo", "/articulos/enfriamiento-evaporativo-agroindustria", "/articulos/enfriamiento-evaporativo-almacenes"];
   const forceScrolled = lightBgPages.includes(location.pathname);
 
   const [scrolled, setScrolled] = useState(forceScrolled);
