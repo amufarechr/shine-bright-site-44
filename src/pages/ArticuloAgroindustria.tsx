@@ -197,10 +197,10 @@ export default function ArticuloAgroindustria() {
             </div>
             <div className="space-y-4 md:pl-12">
               <p className="text-muted-foreground leading-relaxed">
-                En operaciones de gran escala — con más de 800 hectáreas productivas — el acopio en campo es un cuello de botella térmico que ocurre antes del transporte. La fruta cosechada espera en puntos intermedios hasta completar la carga del camión, sin ningún control de temperatura ni humedad.
+                En operaciones de gran escala, el acopio en campo es un cuello de botella térmico que ocurre antes del transporte. La fruta cosechada espera en puntos intermedios hasta completar la carga del camión, sin ningún control de temperatura ni humedad.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                En un proyecto en Chao, La Libertad, se implementaron más de 10 centros de acopio temporales con enfriamiento evaporativo, distribuidos estratégicamente en campo. Las estructuras — simples, con cobertura de malla raschel y equipos portátiles — se reubican según el avance de la cosecha y no requieren obra civil. El resultado fue mantener T&lt;25°C y HR&gt;80% en cada punto de acopio, a lo largo de cuatro temporadas consecutivas de crecimiento acompañado.
+                En un proyecto en Chao, La Libertad, se implementaron más de 10 centros de acopio temporales con enfriamiento evaporativo, distribuidos estratégicamente en campo. Las estructuras — simples, con cobertura de malla raschel y equipos portátiles — se reubican según el avance de la cosecha y no requieren obra civil. El resultado fue mantener T&lt;25°C y HR&gt;80% en cada punto de acopio.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Este modelo demuestra que el control térmico en agroindustria no requiere infraestructura costosa ni permanente — requiere diseño correcto y selección adecuada de equipos.
@@ -228,7 +228,7 @@ export default function ArticuloAgroindustria() {
               {[
                 {
                   q: "¿El enfriamiento evaporativo funciona en zonas costeras húmedas como Lima?",
-                  a: "Sí, aunque con matices. Lima tiene humedad relativa variable: más alta en invierno (junio–agosto) y más baja en verano (diciembre–marzo), que es precisamente cuando el calor es mayor. En las horas pico de verano, la humedad relativa en Lima suele bajar lo suficiente para que el sistema opere con buena eficiencia. En instalaciones reales en Lima, Callao y Chincha hemos obtenido reducciones de temperatura de 7–10°C.",
+                  a: "Sí, aunque con matices. Lima tiene humedad relativa variable: más alta en invierno (junio–agosto) y más baja en verano (diciembre–marzo), que es precisamente cuando el calor es mayor. En las horas pico de verano, la humedad relativa en Lima suele bajar lo suficiente para que el sistema opere con buena eficiencia. En instalaciones reales en Lima y Callao, zonas donde típicamente se consideran de alta humedad, se obtienen reducciones de temperatura de 7–10°C.",
                 },
                 {
                   q: "¿Cuánto se puede reducir la deshidratación de uva o arándano con este sistema?",
