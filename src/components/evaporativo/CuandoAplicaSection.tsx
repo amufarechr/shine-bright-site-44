@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const contextos = [
   {
@@ -24,6 +26,7 @@ const contextos = [
 ];
 
 export default function CuandoAplicaSection() {
+  const navigate = useNavigate();
   return (
     <section className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16">
       <div className="max-w-7xl mx-auto">
@@ -56,6 +59,21 @@ export default function CuandoAplicaSection() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-8"
+        >
+          <button
+            onClick={() => navigate("/articulos/enfriamiento-evaporativo")}
+            className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
+          >
+            Entender más sobre el enfriamiento evaporativo
+            <ArrowRight size={15} />
+          </button>
+        </motion.div>
       </div>
     </section>
   );
