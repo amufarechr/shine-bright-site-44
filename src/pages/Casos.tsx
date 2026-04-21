@@ -9,6 +9,7 @@ import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
 import casoTransporteIca from "@/assets/evaporativo/caso-transporte-ica.jpg";
 import casoTransporteIcaChart from "@/assets/evaporativo/caso-transporte-ica-chart.jpg";
+import casoViveroAte from "@/assets/evaporativo/caso-vivero-ate.jpg";
 
 // ─── Tipos ───────────────────────────────────────────────────────────────────
 
@@ -106,6 +107,24 @@ const casos: Caso[] = [
       { periodo: "Escala", label: "+10 centros de acopio implementados, acompañando el crecimiento de campo a lo largo de 4 años" },
       { periodo: "Condiciones", label: "T<25°C y HR>80%, reduciendo drásticamente la tasa de deshidratación en campo" },
       { periodo: "Operación", label: "Reducción de tiempos de espera desde el punto de cosecha, con total adaptación al ritmo y requerimientos de la operación" },
+    ],
+  },
+  {
+    id: "vivero-ate",
+    sector: "Agroindustria",
+    solucion: "Enfriamiento Evaporativo + Calefacción Radiante",
+    client: "Invernadero de semillas y plantines de hortalizas",
+    location: "Ate, Lima, Perú",
+    description: "Las condiciones ambientales variables de Lima dificultaban mantener T° y HR consistentes para germinación. Se requería una solución bidireccional — enfriar en verano y calentar en invierno.",
+    result: "23°C–25°C y HR 60%–70% · control automático · menor mortandad de plantines",
+    img: casoViveroAte,
+    proximamente: false,
+    situacion: "Las semillas y plantines de hortalizas requieren condiciones ambientales muy precisas para su correcta germinación y desarrollo. El cambiante clima de Lima — con veranos cálidos e inviernos fríos y húmedos — dificultaba mantener las condiciones adecuadas de forma consistente sin intervención manual constante.",
+    intervencion: "Se diseñó un sistema de climatización bidireccional que combina enfriadores evaporativos de techo marca BioCool con calefactores radiantes, controlado por sensores y actuadores automáticos. En días de calor, los enfriadores reducen la temperatura; en invierno, los calefactores la elevan. El diseño de techo permite un flujo de aire indirecto que acondiciona el espacio sin impactar directamente las plantas en desarrollo.",
+    resultados: [
+      { periodo: "Condiciones", label: "Temperatura mantenida entre 23°C y 25°C, con HR entre 60% y 70%" },
+      { periodo: "Automatización", label: "Sistema de control automático elimina ajustes manuales, adaptándose en tiempo real a las condiciones exteriores" },
+      { periodo: "Productividad", label: "Reducción significativa en tasa de mortandad de plantines, con mayor consistencia en germinación y desarrollo" },
     ],
   },
   {
