@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import casoChincha from "@/assets/evaporativo/caso-chincha.jpg";
 
 const resultados = [
@@ -8,6 +9,7 @@ const resultados = [
 ];
 
 export default function CasoRealSection() {
+  const navigate = useNavigate();
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -91,13 +93,19 @@ export default function CasoRealSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-8"
+          className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-8"
         >
           <button
             onClick={() => scrollTo("contacto")}
             className="text-primary font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
           >
             Evaluar mi operación →
+          </button>
+          <button
+            onClick={() => navigate("/casos")}
+            className="text-muted-foreground font-semibold inline-flex items-center gap-2 hover:gap-3 hover:text-primary transition-all"
+          >
+            Ver todos los casos →
           </button>
         </motion.div>
       </div>

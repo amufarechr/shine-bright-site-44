@@ -2,10 +2,19 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const timeline = [
-  { period: "Semana 1–2", label: "Ajustes" },
-  { period: "Semana 3–6", label: "Estabilización" },
-  { period: "Mes 2+", label: "Mejora sostenida" },
+const casos = [
+  {
+    id: "lurin",
+    sector: "Industrial · Lurín, Perú",
+    titulo: "Optimización operativa en planta industrial",
+    proximamente: true,
+  },
+  {
+    id: "pesca",
+    sector: "Pesca · Litoral peruano",
+    titulo: "Mejora de eficiencia operativa en flota pesquera",
+    proximamente: true,
+  },
 ];
 
 const CasosReales = () => {
@@ -14,55 +23,53 @@ const CasosReales = () => {
   return (
     <section className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16 bg-card">
       <div className="max-w-4xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="font-heading text-2xl md:text-4xl font-bold mb-14"
-        >
-          Casos reales
-        </motion.h2>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="border border-border rounded-lg p-8 md:p-10"
+          className="mb-10"
         >
-          <span className="text-xs font-semibold text-primary tracking-widest uppercase">Caso 01</span>
-
-          <div className="mt-6 space-y-3 mb-10">
-            <p className="text-foreground">
-              <span className="font-semibold">Antes:</span>{" "}
-              <span className="text-muted-foreground">operación dentro de especificación</span>
-            </p>
-            <p className="text-foreground">
-              <span className="font-semibold">Problema:</span>{" "}
-              <span className="text-muted-foreground">desbalance y cuellos de botella</span>
-            </p>
-            <p className="text-foreground">
-              <span className="font-semibold">Intervención:</span>{" "}
-              <span className="text-muted-foreground">ajustes operativos y sistémicos</span>
-            </p>
-          </div>
-
-          {/* Timeline */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 sm:divide-x divide-border">
-            {timeline.map((t, i) => (
-              <motion.div
-                key={t.period}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="sm:flex-1 sm:px-6 first:sm:pl-0 last:sm:pr-0"
-              >
-                <div className="text-xs font-semibold text-primary mb-1">{t.period}</div>
-                <div className="text-sm text-foreground">{t.label}</div>
-              </motion.div>
-            ))}
-          </div>
+          <span className="text-primary text-sm font-semibold tracking-widest uppercase">
+            Casos reales
+          </span>
+          <h2 className="font-heading text-2xl md:text-4xl font-bold mt-3">
+            Resultados concretos en operaciones reales
+          </h2>
         </motion.div>
+
+        <div className="space-y-4">
+          {casos.map((caso, i) => (
+            <motion.div
+              key={caso.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              onClick={() => navigate("/casos")}
+              className="border border-border rounded-xl p-8 hover:border-primary/40 hover:glow-box transition-all duration-300 cursor-pointer group"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <span className="text-xs font-semibold text-primary tracking-widest uppercase">
+                    {caso.sector}
+                  </span>
+                  <h3 className="font-heading font-semibold text-base mt-2 mb-3">
+                    {caso.titulo}
+                  </h3>
+                  {caso.proximamente && (
+                    <span className="text-xs text-muted-foreground bg-muted px-3 py-1 rounded-full">
+                      Próximamente
+                    </span>
+                  )}
+                </div>
+                <ArrowRight
+                  size={18}
+                  className="text-primary shrink-0 mt-1 group-hover:translate-x-1 transition-transform"
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -74,7 +81,7 @@ const CasosReales = () => {
             onClick={() => navigate("/casos")}
             className="text-primary font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
           >
-            Ver más casos
+            Ver todos los casos de éxito
             <ArrowRight size={18} />
           </button>
         </motion.div>
