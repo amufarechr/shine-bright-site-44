@@ -5,15 +5,25 @@ import { useNavigate } from "react-router-dom";
 const casos = [
   {
     id: "lurin",
-    sector: "Industrial · Lurín, Perú",
-    titulo: "Optimización operativa en planta industrial",
-    proximamente: true,
+    sector: "Industrial · Lurín, Lima, Perú",
+    titulo: "Recuperación de margen bruto en panificadora industrial de gran escala",
+    descripcion: "A pesar del crecimiento sostenido de producción y ventas, el margen bruto se deterioraba. El incremento de volumen no generaba economías de escala — los costos directos crecían proporcionalmente.",
+    resultados: [
+      "+30% productividad horas-hombre",
+      "−21% consumo de insumos críticos",
+      "Recuperación de margen bruto",
+    ],
   },
   {
     id: "pesca",
     sector: "Pesca · Litoral peruano",
-    titulo: "Mejora de eficiencia operativa en flota pesquera",
-    proximamente: true,
+    titulo: "Implementación de sistema de operación segura en flota pesquera industrial",
+    descripcion: "Tasa de accidentabilidad concentrada en la faena de pesca, con más del 90% de los accidentes de los últimos 5 años en esa etapa. Doble impacto: en personas y en paradas no planificadas por daños a activos.",
+    resultados: [
+      "Eliminación de accidentes graves",
+      "Protección de tripulantes",
+      "Costos evitados de múltiples millones de dólares",
+    ],
   },
 ];
 
@@ -56,11 +66,19 @@ const CasosReales = () => {
                   <h3 className="font-heading font-semibold text-base mt-2 mb-3">
                     {caso.titulo}
                   </h3>
-                  {caso.proximamente && (
-                    <span className="text-xs text-muted-foreground bg-muted px-3 py-1 rounded-full">
-                      Próximamente
-                    </span>
-                  )}
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    {caso.descripcion}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {caso.resultados.map((r) => (
+                      <span
+                        key={r}
+                        className="text-xs font-semibold text-primary bg-primary/10 rounded-full px-3 py-1"
+                      >
+                        {r}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 <ArrowRight
                   size={18}
