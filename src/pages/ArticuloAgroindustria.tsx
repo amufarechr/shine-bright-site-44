@@ -73,7 +73,7 @@ export default function ArticuloAgroindustria() {
               <span className="text-gradient">cómo reducir la deshidratación de fruta fresca</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
-              En operaciones de uva, arándano y palta, la temperatura y la humedad relativa son las variables que más impactan la vida de anaquel y el valor comercial del producto. Esta guía explica cómo el enfriamiento evaporativo resuelve ese problema de forma económica y escalable.
+              En operaciones con cultivos frescos y susceptibles a la deshidratación (como la uva, el arándano, el espárrago, la palta), la temperatura y la humedad relativa al inicio de la postcosecha, son las variables que más impactan la vida de anaquel y el valor comercial del producto. Esta guía explica cómo el enfriamiento evaporativo resuelve ese problema de forma económica y escalable.
             </p>
           </motion.div>
         </section>
