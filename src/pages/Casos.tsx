@@ -7,6 +7,8 @@ import ContactSection from "@/components/ContactSection";
 import casoChincha from "@/assets/evaporativo/caso-chincha.jpg";
 import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
+import casoTransporteIca from "@/assets/evaporativo/caso-transporte-ica.jpg";
+import casoTransporteIca2 from "@/assets/evaporativo/caso-transporte-ica-2.jpg";
 
 // ─── Tipos ───────────────────────────────────────────────────────────────────
 
@@ -24,6 +26,7 @@ interface Caso {
   description: string;
   result: string;
   img: string | null;
+  img2?: string | null;
   proximamente: boolean;
   situacion?: string;
   intervencion?: string;
@@ -153,12 +156,20 @@ const casos: Caso[] = [
     id: "transporte-ica",
     sector: "Transporte",
     solucion: "Enfriamiento Evaporativo",
-    client: "Empresa de transporte",
+    client: "Flota de camiones de cosecha de uva",
     location: "Ica, Perú",
-    description: "Próximamente",
-    result: "",
-    img: null,
-    proximamente: true,
+    description: "Lotes de producción a más de dos horas del centro de empaque requerían solución de bajo costo para transportar fruta en condiciones que redujeran la deshidratación.",
+    result: "T<25°C y HR>80% en tránsito · −40% deshidratación · mejor condición tras 45 días de guarda",
+    img: casoTransporteIca,
+    img2: casoTransporteIca2,
+    proximamente: false,
+    situacion: "Lotes de producción de uva ubicados a más de dos horas de distancia del centro de empaque requerían una solución de bajo costo para transportar la fruta en condiciones adecuadas y reducir la tasa de deshidratación durante el trayecto.",
+    intervencion: "Se adaptaron unidades de enfriamiento evaporativo a la flota de camiones existente (sistema PreserveAir), a través de un modelo de servicio por renta de temporada que incluía la intervención de las unidades y su operación completa.",
+    resultados: [
+      { periodo: "Condiciones", label: "T<25°C y HR>80% mantenidos durante el transporte" },
+      { periodo: "Deshidratación", label: "Reducción promedio >40% en tasa de deshidratación vs. camión tradicional" },
+      { periodo: "Guarda", label: "Incremento notable en condición de fruta después de 45 días de período de guarda" },
+    ],
   },
   {
     id: "canete",
@@ -195,7 +206,7 @@ function Modal({ caso, onClose }: { caso: Caso; onClose: () => void }) {
           className="bg-background rounded-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Photo */}
+          {/* Photos */}
           {caso.img ? (
             <div className="aspect-[16/7] overflow-hidden">
               <img src={caso.img} alt={caso.client} className="w-full h-full object-cover object-center" />
@@ -205,6 +216,11 @@ function Modal({ caso, onClose }: { caso: Caso; onClose: () => void }) {
               <span className="text-muted-foreground text-xs tracking-widest uppercase">Foto próximamente</span>
             </div>
           ) : null}
+          {caso.img2 && (
+            <div className="aspect-[16/7] overflow-hidden">
+              <img src={caso.img2} alt={`${caso.client} — vista 2`} className="w-full h-full object-cover object-center" />
+            </div>
+          )}
 
           <div className="p-8">
             {/* Header */}
