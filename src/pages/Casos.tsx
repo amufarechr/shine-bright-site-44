@@ -12,6 +12,7 @@ import casoTransporteIcaChart from "@/assets/evaporativo/caso-transporte-ica-cha
 import casoViveroAte from "@/assets/evaporativo/caso-vivero-ate.jpg";
 import casoChao from "@/assets/evaporativo/caso-chao.jpg";
 import casoIquitos from "@/assets/evaporativo/caso-iquitos.jpg";
+import casoLurin from "@/assets/evaporativo/caso-lurin.jpg";
 import casoAutomotrizLima from "@/assets/evaporativo/caso-automotriz-lima.jpg";
 import casoAutomotrizLima2 from "@/assets/evaporativo/caso-automotriz-lima-2.jpg";
 
@@ -150,13 +151,20 @@ const casos: Caso[] = [
   {
     id: "lurin",
     sector: "Industrial",
-    solucion: "Consultoría",
-    client: "Planta industrial",
-    location: "Lurín, Perú",
-    description: "Próximamente",
-    result: "",
-    img: null,
-    proximamente: true,
+    solucion: "Consultoría de Eficiencia Operativa",
+    client: "Panificadora industrial de gran escala",
+    location: "Lurín, Lima, Perú",
+    description: "A pesar del crecimiento sostenido de producción y ventas, el margen bruto se deterioraba. El incremento de volumen no generaba economías de escala — los costos directos crecían proporcionalmente.",
+    result: "+30% productividad horas-hombre · −21% consumo de insumos críticos · recuperación de margen bruto",
+    img: casoLurin,
+    proximamente: false,
+    situacion: "Una empresa de panificación industrial de gran escala en Lurín enfrentaba un problema paradójico: a pesar del crecimiento sostenido de producción y ventas, el margen bruto se deterioraba. El incremento de volumen no se traducía en economías de escala — los costos directos de mano de obra, insumos y energía crecían proporcionalmente, sin señales de control.",
+    intervencion: "Se realizó un análisis detallado de las actividades productivas principales, identificando re-trabajos, movimientos innecesarios de materia prima y producto en proceso, y un alto porcentaje de actividades manuales en las etapas finales — rociado y empacado. Se implementó una solución integral que combinó el uso anticipado de información de demanda para mejorar el planeamiento de producción, con la automatización de los procesos que operaban como cuellos de botella.",
+    resultados: [
+      { periodo: "Productividad", label: "+30% de incremento en productividad de horas-hombre en el proceso productivo" },
+      { periodo: "Insumos", label: "−21% en consumo de insumos críticos y costosos (preservantes, alcohol, entre otros)" },
+      { periodo: "Estructura de costos", label: "Recuperación del margen bruto al capitalizar las economías de escala que el crecimiento de volumen no lograba generar por sí solo" },
+    ],
   },
   {
     id: "pesca",
