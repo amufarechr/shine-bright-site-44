@@ -155,7 +155,7 @@ const casos: Caso[] = [
     id: "lurin",
     sector: "Industrial",
     soluciones: ["Consultoría de Eficiencia Operativa"],
-    client: "Panificadora industrial de gran escala",
+    client: "Panificadora industrial",
     location: "Lurín, Lima, Perú",
     description: "A pesar del crecimiento sostenido de producción y ventas, el margen bruto se deterioraba. El incremento de volumen no generaba economías de escala — los costos directos crecían proporcionalmente.",
     result: "+30% productividad horas-hombre · −21% consumo de insumos críticos · recuperación de margen bruto",
