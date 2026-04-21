@@ -173,7 +173,7 @@ const casos: Caso[] = [
     id: "pesca",
     sector: "Pesca",
     soluciones: ["Consultoría de Eficiencia Operativa"],
-    client: "Empresa pesquera industrial de gran escala",
+    client: "Pesquera de gran escala",
     location: "Litoral peruano",
     description: "Tasa de accidentabilidad concentrada en la faena de pesca, con impacto en personas y paradas no planificadas por daños a activos. Se implementó un programa integral SMS en dos fases.",
     result: "Eliminación de accidentes graves · protección de tripulantes · costos evitados de múltiples millones de dólares",
