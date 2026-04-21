@@ -45,10 +45,10 @@ const secciones = [
     icon: Factory,
     titulo: "Cuándo es la solución correcta",
     contenido: [
-      "El enfriamiento evaporativo es más eficiente en climas cálidos y con humedad relativa moderada-baja — condiciones que caracterizan la mayor parte de la costa y sierra peruana, así como zonas áridas de México y el resto de Latinoamérica. A mayor diferencial de temperatura entre exterior e interior objetivo, mayor es el potencial de enfriamiento.",
-      "Es especialmente adecuado para espacios que no pueden cerrarse herméticamente: naves industriales con puertas de acceso frecuente, plantas de producción con renovación de aire obligatoria, espacios de carga y descarga, food courts en centros comerciales, e invernaderos agrícolas.",
-      "No es la solución correcta cuando se requiere control de temperatura de alta precisión (±1–2°C), en ambientes con humedad relativa ya elevada de forma permanente, o en recintos completamente sellados donde la introducción de aire exterior no es posible.",
-      "El dimensionamiento correcto es crítico: el caudal de aire necesario depende del volumen del espacio, la carga térmica interna (personas, maquinaria, iluminación), las condiciones climáticas exteriores y el diferencial de temperatura objetivo. Un sistema subdimensionado no logrará las condiciones deseadas; uno sobredimensionado generará corrientes incómodas y humedad excesiva.",
+      "El enfriamiento evaporativo es más eficiente en climas cálidos y con humedad relativa moderada-baja en las horas del día de mayor calor — condiciones que caracterizan la mayor parte de la costa y sierra peruana, así como otras zonas cálidas de México (Sinaloa, Sonora, Baja California, Jalisco, entre otros) y en el resto de Latinoamérica. ",
+      "Es especialmente adecuado para espacios que no pueden cerrarse herméticamente: naves industriales con puertas de acceso frecuente, plantas de producción con renovación de aire obligatoria, centros de proceso y empaque de productos frescos, espacios de carga y descarga, espacios grandes en centros comerciales (food courts, lobbies, pasajes de alto tránsito), invernaderos agrícolas, almacenes industriales, oficinas de gran tamaño, entre otros.",
+      "No es la solución correcta cuando se requiere control de temperatura de alta precisión (±1–2°C), en ambientes con humedad relativa muy elevada de forma permanente, o en recintos completamente sellados donde la introducción de aire exterior no es posible.",
+      "El dimensionamiento correcto es crítico: el caudal de aire necesario depende del volumen del espacio, la carga térmica interna (personas, maquinaria, iluminación), las condiciones climáticas exteriores y el diferencial de temperatura objetivo. Un sistema subdimensionado no logrará las condiciones deseadas; uno sobredimensionado generará corrientes de aire incómodas.",
     ],
   },
 ];
