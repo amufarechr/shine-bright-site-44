@@ -28,8 +28,8 @@ const secciones = [
     icon: Thermometer,
     titulo: "Por qué el enfriamiento evaporativo es la solución técnicamente correcta",
     contenido: [
-      "A diferencia del aire acondicionado convencional, que enfría reduciendo la humedad del aire, el enfriamiento evaporativo enfría añadiendo humedad. Este es un atributo especialmente valioso en contextos agroindustriales: el aire resultante, con mayor humedad relativa, genera un microambiente que reduce el gradiente de presión de vapor entre la fruta y el entorno — frenando directamente el mecanismo físico de la deshidratación.",
-      "Además, el sistema introduce aire fresco exterior de forma continua, lo que ayuda a evacuar el calor generado por la maquinaria de clasificación y empaque, y mantiene condiciones estables a lo largo de toda la jornada — no solo en las horas más frescas de la mañana.",
+      "A diferencia de la refrigeración convencional, que enfría reduciendo la humedad del aire, el enfriamiento evaporativo enfría añadiendo humedad. Este es un atributo especialmente valioso en contextos agroindustriales previos a los túneles de enfriamiento rápido: el aire resultante de los enfriadores evaporativos, con mayor humedad relativa, genera un microambiente que reduce el gradiente de presión de vapor entre la fruta y el entorno — frenando directamente el mecanismo físico de la deshidratación. Es por eso que estos se usan muchísimo en las zonas de recepción, clasificación y empaque, previos a los túneles y cámaras frías",
+      "Además, el sistema introduce aire fresco exterior de forma continua, lo que ayuda a evacuar el calor generado por las maquinarias, y mantiene condiciones estables a lo largo de toda la jornada — no solo en las horas más frescas de la mañana.",
       "El costo de implementación es entre 5 y 10 veces menor que el de un sistema de refrigeración convencional para el mismo espacio, y el consumo eléctrico puede ser hasta 90% menor. En operaciones donde los márgenes por kilo exportado son estrechos, esta diferencia de costo es determinante.",
     ],
   },
