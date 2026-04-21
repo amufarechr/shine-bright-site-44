@@ -38,7 +38,7 @@ const secciones = [
     titulo: "Resultados medidos en campo: packing de uva en Ica",
     contenido: [
       "En un packing de más de 5,000 m² en Ica — con áreas de recepción, clasificación y empaque — se implementó un sistema evaporativo con enfriadores Portacool y salidas superiores de extracción. El sistema mantuvo temperaturas por debajo de 25°C y humedad relativa superior al 80% durante las horas de mayor carga operativa.",
-      "La tasa de deshidratación de la fruta se redujo en un 35% respecto a la temporada anterior bajo las mismas condiciones climáticas. La utilidad neta de la operación post-cosecha mejoró en un 20%, capturando valor que antes se perdía en kilos de descarte y rechazo por condición.",
+      "La tasa de deshidratación de la fruta se redujo en un 35% respecto a la temporada anterior bajo las mismas condiciones climáticas. La utilidad neta de la operación post-cosecha mejoró en un 20%, capturando valor que antes se perdía en merma de peso, kilos de descarte y rechazo por condición.",
     ],
   },
 ];
@@ -158,7 +158,7 @@ export default function ArticuloAgroindustria() {
                 En operaciones con lotes de producción alejados del packing, la fruta cosechada acumula tiempo de espera en campo o en tránsito sin condiciones térmicas adecuadas. En uva de mesa, ese tiempo puede representar horas de exposición a temperaturas superiores a 30°C y humedad relativa inferior al 40% — condiciones que aceleran la deshidratación antes de que la fruta entre a la cadena de frío.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                En un proyecto en Ica, se adaptaron unidades de enfriamiento evaporativo a la flota de camiones de cosecha (sistema PreserveAir), manteniendo temperatura por debajo de 25°C y humedad relativa superior al 80% durante el trayecto. La reducción en tasa de deshidratación fue superior al 40% versus transporte convencional — con impacto medido en la condición de la fruta después de 45 días de guarda en destino.
+                En un proyecto en Ica, se adaptaron unidades de enfriamiento evaporativo a la flota de camiones de cosecha (sistema PreserveAir), manteniendo temperatura por debajo de 25°C y humedad relativa superior al 80% durante el trayecto. La reducción en tasa de deshidratación fue superior al 40% versus transporte convencional — con impacto medido en la condición de la fruta después de 45 días de guarda.
               </p>
             </div>
           </motion.div>
