@@ -50,7 +50,7 @@ export default function Articulos() {
       <Navbar activePage="soluciones" />
       <main className="min-h-screen">
         {/* Hero */}
-        <section className="pt-32 pb-12 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+        <section className="pt-44 pb-12 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-primary/10 rounded-lg p-2 shrink-0">
