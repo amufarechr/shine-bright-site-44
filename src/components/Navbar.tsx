@@ -22,16 +22,25 @@ interface NavbarProps {
 
 const Navbar = ({ activePage }: NavbarProps) => {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
 
+  // Pages with light/white background that need navbar to start in scrolled state
+  const lightBgPages = ["/casos", "/consultoria", "/soluciones/energia"];
+  const forceScrolled = lightBgPages.includes(location.pathname);
+
+  const [scrolled, setScrolled] = useState(forceScrolled);
+
   useEffect(() => {
+    if (forceScrolled) {
+      setScrolled(true);
+      return;
+    }
     const onScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [forceScrolled]);
 
   const handleLogoClick = () => {
     setOpen(false);
