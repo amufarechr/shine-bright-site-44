@@ -77,7 +77,7 @@ export default function SolucionesSection() {
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl">
               Somos representantes de fabricantes líderes en sistemas de ósmosis
-              inversa para desalinización. Agua pura desde fuentes salobres (agua de mar y otras fuentes)
+              inversa para desalinización. Agua pura desde fuentes salobres (agua de mar, pozos y otras fuentes)
               o de red, para cualquier escala de operación.
             </p>
           </motion.div>
