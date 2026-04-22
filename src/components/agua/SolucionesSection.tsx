@@ -47,9 +47,6 @@ export default function SolucionesSection() {
             viewport={{ once: true }}
             className="mb-10"
           >
-            <span className="text-primary text-sm font-semibold tracking-widest uppercase">
-              Solución 1
-            </span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-3">
               Desalinización por Ósmosis Inversa
             </h2>
@@ -131,9 +128,6 @@ export default function SolucionesSection() {
             viewport={{ once: true }}
             className="mb-10"
           >
-            <span className="text-primary text-sm font-semibold tracking-widest uppercase">
-              Solución 2
-            </span>
             <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-3">
               Agua desde el Aire — Tecnología Waha
             </h2>
