@@ -28,7 +28,7 @@ const segmentosOsmosis = [
   {
     nombre: "Industrial",
     descripcion:
-      "Agroindustria, manufactura y plantas que requieren agua de proceso con parámetros específicos. Diseñamos sistemas a medida según caudal, calidad requerida y tipo de fuente.",
+      "Agroindustria y manufactura. Diseñamos sistemas a medida según caudal, calidad y tipo de fuente (desde agua de mar hasta pozos de alta salinidad).",
   },
 ];
 
