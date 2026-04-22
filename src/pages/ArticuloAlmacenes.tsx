@@ -64,7 +64,7 @@ export default function ArticuloAlmacenes() {
         keywords="calor en nave industrial, alta temperatura almacén, enfriar planta industrial, enfriador evaporativo almacén, swamp cooler industrial, hidroventilador nave industrial, confort térmico trabajadores, ahorro energético enfriamiento"
         path="/articulos/enfriamiento-evaporativo-almacenes"
       />
-      <Navbar activePage="soluciones" />
+      <Navbar activePage="soluciones" darkHero={false} />
       <main className="min-h-screen">
         {/* Hero */}
         <section className="pt-44 pb-12 px-6 md:px-12 lg:px-24 max-w-4xl mx-auto">

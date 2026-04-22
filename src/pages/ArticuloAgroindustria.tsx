@@ -54,7 +54,7 @@ export default function ArticuloAgroindustria() {
         keywords="deshidratación fruta fresca, enfriamiento packing uva, temperatura packing agroindustria, enfriador evaporativo agroindustria, hidroventilador packing, control temperatura cosecha, calor en packing exportación"
         path="/articulos/enfriamiento-evaporativo-agroindustria"
       />
-      <Navbar activePage="soluciones" />
+      <Navbar activePage="soluciones" darkHero={false} />
       <main className="min-h-screen">
         {/* Hero */}
         <section className="pt-44 pb-12 px-6 md:px-12 lg:px-24 max-w-4xl mx-auto">

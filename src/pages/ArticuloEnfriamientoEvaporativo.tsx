@@ -91,7 +91,7 @@ export default function ArticuloEnfriamientoEvaporativo() {
         keywords="enfriamiento evaporativo, enfriador evaporativo industrial, hidroventilador, swamp cooler, enfriador adiabático, cooler evaporativo, reducir calor nave industrial"
         path="/articulos/enfriamiento-evaporativo"
       />
-      <Navbar activePage="soluciones" />
+      <Navbar activePage="soluciones" darkHero={false} />
       <main className="min-h-screen">
         {/* Hero del artículo */}
         <section className="pt-44 pb-12 px-6 md:px-12 lg:px-24 max-w-4xl mx-auto">

@@ -18,29 +18,28 @@ const navItems = [
 
 interface NavbarProps {
   activePage?: "home" | "soluciones" | "consultoria";
+  /**
+   * true  → hero has a dark/image background; transparent navbar uses white text
+   * false → hero has a light background; transparent navbar uses dark text
+   * Defaults to true.
+   */
+  darkHero?: boolean;
 }
 
-const Navbar = ({ activePage }: NavbarProps) => {
+const Navbar = ({ activePage, darkHero = true }: NavbarProps) => {
+  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
 
-  // Pages with light/white background that need navbar to start in scrolled state
-  const lightBgPages = ["/casos", "/consultoria", "/soluciones/energia", "/articulos", "/articulos/enfriamiento-evaporativo", "/articulos/enfriamiento-evaporativo-agroindustria", "/articulos/enfriamiento-evaporativo-almacenes"];
-  const forceScrolled = lightBgPages.includes(location.pathname);
-
-  const [scrolled, setScrolled] = useState(forceScrolled);
-
   useEffect(() => {
-    if (forceScrolled) {
-      setScrolled(true);
-      return;
-    }
-    const onScroll = () => setScrolled(window.scrollY > 80);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    // Set initial state
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [forceScrolled]);
+  }, []);
 
   const handleLogoClick = () => {
     setOpen(false);
@@ -53,16 +52,13 @@ const Navbar = ({ activePage }: NavbarProps) => {
 
   const handleNavClick = (item: { id: string; href?: string }) => {
     setOpen(false);
-    // Dedicated route (Consultoría)
     if (item.href) {
       navigate(item.href);
       return;
     }
-    // Scroll-to-section items
     if (isHome) {
       document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Navigate home, then scroll after page renders
       navigate("/");
       setTimeout(() => {
         document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
@@ -70,12 +66,17 @@ const Navbar = ({ activePage }: NavbarProps) => {
     }
   };
 
+  // Scrolled state: always opaque background
   const navBg = scrolled
     ? "bg-background/95 backdrop-blur-lg border-b border-border shadow-sm"
     : "bg-transparent border-b border-transparent";
 
-  const textColor = scrolled ? "text-foreground" : "text-white";
-  const mutedTextColor = scrolled ? "text-muted-foreground" : "text-white/70";
+  // Text color when transparent (top of page)
+  const transparentText = darkHero ? "text-white" : "text-foreground";
+  const transparentMuted = darkHero ? "text-white/70" : "text-muted-foreground";
+
+  const textColor = scrolled ? "text-foreground" : transparentText;
+  const mutedTextColor = scrolled ? "text-muted-foreground" : transparentMuted;
   const activeColor = "text-primary font-semibold";
 
   const isSolucionesActive = activePage === "soluciones";
@@ -99,17 +100,17 @@ const Navbar = ({ activePage }: NavbarProps) => {
               Soluciones técnicas <span className="text-[9px] opacity-60">▾</span>
             </button>
             <div className="absolute top-full left-0 hidden group-hover:block pt-2 z-50">
-            <div className="bg-white border border-gray-200 rounded-xl p-1.5 min-w-[210px] shadow-lg">
-              {solucionesItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => { navigate(item.href); setOpen(false); }}
-                  className="block w-full text-left px-3.5 py-2.5 text-[13px] font-medium text-gray-800 rounded-lg whitespace-nowrap hover:bg-gray-100 hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-1.5 min-w-[210px] shadow-lg">
+                {solucionesItems.map((item) => (
+                  <button
+                    key={item.href}
+                    onClick={() => { navigate(item.href); setOpen(false); }}
+                    className="block w-full text-left px-3.5 py-2.5 text-[13px] font-medium text-gray-800 rounded-lg whitespace-nowrap hover:bg-gray-100 hover:text-primary transition-colors"
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -153,7 +154,6 @@ const Navbar = ({ activePage }: NavbarProps) => {
             className="md:hidden overflow-hidden bg-background border-b border-border"
           >
             <div className="flex flex-col gap-4 p-6">
-              {/* Soluciones section */}
               <p className="text-xs font-bold tracking-widest text-primary uppercase">Soluciones técnicas</p>
               {solucionesItems.map((item) => (
                 <button
@@ -164,8 +164,6 @@ const Navbar = ({ activePage }: NavbarProps) => {
                   {item.label}
                 </button>
               ))}
-
-              {/* Other items */}
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -177,7 +175,6 @@ const Navbar = ({ activePage }: NavbarProps) => {
                   {item.label}
                 </button>
               ))}
-
               <button
                 onClick={() => handleNavClick({ id: "contacto" })}
                 className="bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold w-fit glow-box"

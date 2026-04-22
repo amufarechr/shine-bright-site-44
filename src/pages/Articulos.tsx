@@ -47,7 +47,7 @@ export default function Articulos() {
         keywords="enfriamiento evaporativo, hidroventilador, swamp cooler, enfriador adiabático, calor en nave industrial, deshidratación fruta fresca"
         path="/articulos"
       />
-      <Navbar activePage="soluciones" />
+      <Navbar activePage="soluciones" darkHero={false} />
       <main className="min-h-screen">
         {/* Hero */}
         <section className="pt-44 pb-12 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">

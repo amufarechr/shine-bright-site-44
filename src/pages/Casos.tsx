@@ -341,7 +341,7 @@ export default function CasosPage() {
 
   return (
     <>
-      <Navbar />
+      <Navbar darkHero={false} />
       <main>
         {/* Hero */}
         <section className="pt-32 pb-10 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
