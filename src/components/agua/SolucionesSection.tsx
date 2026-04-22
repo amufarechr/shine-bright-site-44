@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
+import logoAcuanovus from "@/assets/marcas/acuanovus.svg";
+import logoHarmony from "@/assets/marcas/harmony.svg";
 import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
 import wahaImg from "@/assets/climatizacion/waha.jpg";
 import logoWaha from "@/assets/marcas/waha.jpeg";
 
 const marcasOsmosis = [
-  { nombre: "Marca próximamente", logo: null, url: "#", bg: "bg-muted" },
-  { nombre: "Marca próximamente", logo: null, url: "#", bg: "bg-muted" },
+  { nombre: "Acuanovus", logo: logoAcuanovus, url: "https://acuanovus.com/", bg: "bg-white" },
+  { nombre: "Harmony Desalting", logo: logoHarmony, url: "https://www.harmonydesalting.com/", bg: "bg-white" },
 ];
 
 const marcasWaha = [
@@ -119,13 +121,17 @@ export default function SolucionesSection() {
                   Marcas que representamos
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  {marcasOsmosis.map((marca, i) => (
-                    <div
-                      key={i}
-                      className="bg-muted rounded-lg px-4 py-2 flex items-center justify-center h-14 w-32 border border-dashed border-border"
+                  {marcasOsmosis.map((marca) => (
+                    <a
+                      key={marca.nombre}
+                      href={marca.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={marca.nombre}
+                      className={`${marca.bg} rounded-lg px-4 py-2 flex items-center justify-center h-14 w-36 hover:opacity-80 transition-opacity border border-border`}
                     >
-                      <span className="text-muted-foreground text-xs text-center">Próximamente</span>
-                    </div>
+                      <img src={marca.logo} alt={marca.nombre} className="max-h-9 max-w-full object-contain" />
+                    </a>
                   ))}
                 </div>
               </div>
