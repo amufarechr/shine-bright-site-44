@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" width="220" height="60">
-  <rect width="220" height="60" fill="white" rx="4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect width="160" height="50" fill="white" rx="4"/>
   <!-- Wave motif -->
-  <path d="M10 35 Q25 20 40 35 Q55 50 70 35" fill="none" stroke="#2B7A8E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M6 30 Q18 16 30 30 Q42 44 54 30" fill="none" stroke="#2B7A8E" stroke-width="3" stroke-linecap="round"/>
   <!-- Text -->
-  <text x="80" y="28" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#1a3a4a" letter-spacing="1">harmony</text>
-  <text x="80" y="44" font-family="Georgia, serif" font-size="9" fill="#2B7A8E" letter-spacing="3">DESALTING</text>
+  <text x="62" y="26" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a3a4a" letter-spacing="0.5">harmony</text>
+  <text x="62" y="41" font-family="Georgia, serif" font-size="9.5" fill="#2B7A8E" letter-spacing="3">DESALTING</text>
 </svg>

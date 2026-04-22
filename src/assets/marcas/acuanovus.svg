@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
-  <rect width="200" height="60" fill="white" rx="4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 50" width="110" height="50">
+  <rect width="110" height="50" fill="white" rx="4"/>
   <!-- Water drop icon -->
-  <path d="M22 10 C22 10 12 22 12 30 C12 37 16.5 42 22 42 C27.5 42 32 37 32 30 C32 22 22 10 22 10Z" fill="#0077B6"/>
+  <path d="M18 4 C18 4 6 18 6 27 C6 35.5 11.5 42 18 42 C24.5 42 30 35.5 30 27 C30 18 18 4 18 4Z" fill="#0077B6"/>
   <!-- Text: acuanovus -->
-  <text x="38" y="26" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#0077B6" letter-spacing="0.5">acua</text>
-  <text x="38" y="42" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#00B4D8" letter-spacing="0.5">novus</text>
+  <text x="34" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#0077B6" letter-spacing="0.3">acua</text>
+  <text x="34" y="38" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#00B4D8" letter-spacing="0.3">novus</text>
 </svg>
