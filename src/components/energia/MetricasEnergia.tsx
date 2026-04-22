@@ -70,16 +70,10 @@ export default function MetricasEnergia() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3"
+          className="mt-10 flex justify-center"
         >
-          <button onClick={() => navigate("/articulos/reducir-factura-electrica-industrial")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
-            Cómo reducir la factura eléctrica industrial <ArrowRight size={15} />
-          </button>
-          <button onClick={() => navigate("/articulos/monitoreo-energetico-industrial")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
-            Monitoreo de consumo por carga <ArrowRight size={15} />
-          </button>
-          <button onClick={() => navigate("/articulos/energia-solar-industrial")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
-            Energía solar para industria <ArrowRight size={15} />
+          <button onClick={() => navigate("/articulos/energia")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
+            Artículos sobre gestión energética <ArrowRight size={15} />
           </button>
         </motion.div>
       </div>

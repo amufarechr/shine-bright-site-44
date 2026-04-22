@@ -4,85 +4,34 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
-import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
-import funcionamiento from "@/assets/evaporativo/funcionamiento.jpeg";
-import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
 import energiaImg from "@/assets/climatizacion/energia.jpeg";
-import controlImg from "@/assets/climatizacion/control.jpg";
+import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
 
-const articulos = [
+const hubs = [
   {
-    slug: "/articulos/enfriamiento-evaporativo",
-    categoria: "Guía técnica",
-    titulo: "Por qué usar enfriamiento evaporativo en entornos industriales",
-    resumen:
-      "El principio físico, las ventajas energéticas, el impacto ambiental y los criterios para saber cuándo es la solución correcta — o cuándo no lo es. Incluye glosario de términos: hidroventilador, swamp cooler, enfriador adiabático y más.",
-    img: funcionamiento,
-    keywords: ["Enfriador evaporativo", "Hidroventilador", "Swamp cooler", "Enfriador adiabático"],
-  },
-  {
-    slug: "/articulos/enfriamiento-evaporativo-agroindustria",
-    categoria: "Agroindustria",
-    titulo: "Control de temperatura en packing y cosecha: cómo reducir la deshidratación de fruta fresca",
-    resumen:
-      "Cómo el enfriamiento evaporativo mantiene humedad relativa sobre 80% en packing, transporte y acopio de campo — reduciendo la deshidratación de uva, arándano y palta hasta un 35% con datos medidos en campo.",
-    img: casoIca,
-    keywords: ["Deshidratación fruta", "Packing exportación", "Acopio en campo", "Transporte fruta fresca"],
-  },
-  {
-    slug: "/articulos/enfriamiento-evaporativo-almacenes",
-    categoria: "Almacenes e industria",
-    titulo: "Cómo reducir el calor en naves industriales y almacenes con un 85% menos de inversión",
-    resumen:
-      "El calor en plantas y centros de distribución afecta a las personas y los costos operativos. Esta guía explica cómo el evaporativo resuelve ese problema a una fracción del costo, con casos reales documentados.",
+    slug: "/articulos/climatizacion",
+    categoria: "Climatización Industrial",
+    titulo: "Enfriamiento evaporativo, ventilación y calefacción para espacios industriales",
+    resumen: "Guías técnicas sobre hidroventiladores, swamp coolers y enfriadores adiabáticos — con aplicaciones en agroindustria, naves industriales, almacenes y más.",
     img: casoCallao,
-    keywords: ["Calor en nave industrial", "Alta temperatura almacén", "Confort térmico trabajadores", "Ahorro energético"],
+    count: 3,
   },
   {
-    slug: "/articulos/osmosis-inversa",
-    categoria: "Agua · Agroindustria",
-    titulo: "Ósmosis inversa: cuándo y cómo mejorar la calidad del agua para riego e industria",
-    resumen:
-      "Desde pozos con alta salinidad para arándano y uva, hasta desalinización industrial y proyectos residenciales sin red. Guía técnica con parámetros agronómicos, costos y preguntas frecuentes.",
-    img: osmosisImg,
-    keywords: ["Ósmosis inversa", "Agua para riego arándano", "Salinidad agua uva", "Desalinización"],
-  },
-  {
-    slug: "/articulos/agua-sin-red-hidrica",
-    categoria: "Agua",
-    titulo: "Agua potable sin red hídrica: ósmosis inversa y generación desde el aire",
-    resumen:
-      "Para proyectos en zonas remotas, operaciones agrícolas sin acceso a red o desarrollos sin infraestructura hídrica — comparativa técnica entre ósmosis inversa y tecnología Waha de generación atmosférica.",
-    img: osmosisImg,
-    keywords: ["Agua sin red hídrica", "Generación atmosférica", "Proyectos remotos", "Waha"],
-  },
-  {
-    slug: "/articulos/reducir-factura-electrica-industrial",
-    categoria: "Energía",
-    titulo: "Cómo reducir la factura eléctrica de una planta industrial sin reducir producción",
-    resumen:
-      "El orden correcto de intervención: primero visibilidad, luego control inteligente, luego generación solar. Con datos reales sobre ahorro típico, payback y dónde se esconde el gasto evitable.",
+    slug: "/articulos/energia",
+    categoria: "Gestión Energética",
+    titulo: "Monitoreo, automatización y energía solar para reducir el gasto eléctrico industrial",
+    resumen: "Desde el diagnóstico de consumo por carga hasta el dimensionamiento correcto de un sistema solar — en orden lógico y con datos reales.",
     img: energiaImg,
-    keywords: ["Ahorro energético industrial", "Factura eléctrica planta", "Cargo por demanda", "Tarifa horaria"],
+    count: 3,
   },
   {
-    slug: "/articulos/monitoreo-energetico-industrial",
-    categoria: "Energía",
-    titulo: "Monitoreo de consumo energético por carga: qué es, cómo funciona y por qué va primero",
-    resumen:
-      "Cómo funciona la medición desagregada en plantas industriales, qué se puede ver con ella y qué decisiones habilita. Instalación sin parar producción, integración con ERP y casos de uso.",
-    img: controlImg,
-    keywords: ["Monitoreo energético", "Medición por carga", "Submedición eléctrica", "Dashboard consumo"],
-  },
-  {
-    slug: "/articulos/energia-solar-industrial",
-    categoria: "Energía",
-    titulo: "Energía solar para industria: cómo dimensionar bien un sistema fotovoltaico",
-    resumen:
-      "El error más caro es dimensionar sin perfil de consumo horario. Esta guía explica las variables clave, cómo calcular el retorno correctamente y cuándo tiene sentido incorporar baterías.",
-    img: energiaImg,
-    keywords: ["Solar fotovoltaico industrial", "Dimensionamiento solar", "TIR energía solar", "Autoconsumo"],
+    slug: "/articulos/agua",
+    categoria: "Gestión de Agua",
+    titulo: "Ósmosis inversa y generación atmosférica para proyectos con o sin red hídrica",
+    resumen: "Tratamiento de agua de pozos para cultivos sensibles a salinidad, desalinización industrial y soluciones para locaciones remotas sin infraestructura.",
+    img: osmosisImg,
+    count: 2,
   },
 ];
 
@@ -90,9 +39,9 @@ export default function Articulos() {
   return (
     <>
       <SeoHead
-        title="Artículos técnicos sobre enfriamiento evaporativo"
-        description="Guías técnicas sobre enfriadores evaporativos, hidroventiladores y swamp coolers para agroindustria, naves industriales y almacenes. Casos reales con datos de campo."
-        keywords="enfriamiento evaporativo, hidroventilador, swamp cooler, enfriador adiabático, calor en nave industrial, deshidratación fruta fresca"
+        title="Artículos técnicos — Climatización, Energía y Agua"
+        description="Guías técnicas sobre climatización industrial, gestión energética y gestión de agua. Escritas desde la práctica con datos reales de proyectos implementados en Perú y México."
+        keywords="artículos técnicos industriales, climatización industrial, gestión energética, ósmosis inversa, enfriamiento evaporativo"
         path="/articulos"
       />
       <Navbar activePage="soluciones" darkHero={false} />
@@ -109,65 +58,53 @@ export default function Articulos() {
               </span>
             </div>
             <h1 className="font-heading text-4xl md:text-6xl font-bold mt-2 mb-4">
-              Artículos sobre{" "}
-              <span className="text-gradient">enfriamiento evaporativo</span>
+              Artículos <span className="text-gradient">técnicos</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl">
-              Guías técnicas escritas desde la práctica — con datos reales de proyectos implementados en Perú y México.
+              Guías escritas desde la práctica — con datos reales de proyectos implementados en Perú y México.
             </p>
           </motion.div>
         </section>
 
-        {/* Grid de artículos */}
+        {/* Hub cards */}
         <section className="px-6 md:px-12 lg:px-24 max-w-7xl mx-auto pb-24">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {articulos.map((art, i) => (
+          <div className="grid md:grid-cols-3 gap-6">
+            {hubs.map((hub, i) => (
               <motion.div
-                key={art.slug}
+                key={hub.slug}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
               >
                 <Link
-                  to={art.slug}
+                  to={hub.slug}
                   className="group bg-card border border-border rounded-xl overflow-hidden flex flex-col h-full hover:border-primary/40 hover:glow-box transition-all duration-300"
                 >
-                  {/* Imagen */}
                   <div className="aspect-video overflow-hidden bg-muted">
                     <img
-                      src={art.img}
-                      alt={art.titulo}
+                      src={hub.img}
+                      alt={hub.categoria}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-
                   <div className="p-6 flex flex-col flex-1">
-                    <span className="text-xs font-semibold text-primary bg-primary/10 rounded-full px-3 py-1 w-fit mb-3">
-                      {art.categoria}
-                    </span>
-                    <h2 className="font-heading font-semibold text-base leading-snug mb-3 flex-1">
-                      {art.titulo}
-                    </h2>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                      {art.resumen}
-                    </p>
-
-                    {/* Keywords pills */}
-                    <div className="flex flex-wrap gap-1.5 mb-4">
-                      {art.keywords.map((kw) => (
-                        <span
-                          key={kw}
-                          className="text-xs text-muted-foreground bg-muted rounded-full px-2.5 py-0.5"
-                        >
-                          {kw}
-                        </span>
-                      ))}
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs font-semibold text-primary bg-primary/10 rounded-full px-3 py-1">
+                        {hub.categoria}
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        {hub.count} artículo{hub.count !== 1 ? "s" : ""}
+                      </span>
                     </div>
-
+                    <h2 className="font-heading font-semibold text-base leading-snug mb-3 flex-1">
+                      {hub.titulo}
+                    </h2>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+                      {hub.resumen}
+                    </p>
                     <span className="text-primary text-sm font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
-                      Leer artículo
-                      <ArrowRight size={15} />
+                      Ver artículos <ArrowRight size={15} />
                     </span>
                   </div>
                 </Link>

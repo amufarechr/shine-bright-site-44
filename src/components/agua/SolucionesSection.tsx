@@ -235,11 +235,8 @@ export default function SolucionesSection() {
           viewport={{ once: true }}
           className="mt-10 pt-6 border-t border-border flex flex-wrap gap-x-8 gap-y-3"
         >
-          <button onClick={() => navigate("/articulos/osmosis-inversa")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
-            Ósmosis inversa para agua agrícola e industrial <ArrowRight size={15} />
-          </button>
-          <button onClick={() => navigate("/articulos/agua-sin-red-hidrica")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
-            Agua potable sin red hídrica <ArrowRight size={15} />
+          <button onClick={() => navigate("/articulos/agua")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
+            Artículos sobre gestión de agua <ArrowRight size={15} />
           </button>
         </motion.div>
       </div>

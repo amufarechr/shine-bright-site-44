@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Activity, Cpu, Sun } from "lucide-react";
+import { Activity, Cpu, Sun, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import energiaImg from "@/assets/climatizacion/energia.jpeg";
 
 const soluciones = [
@@ -7,6 +8,8 @@ const soluciones = [
     icon: Activity,
     num: "01",
     titulo: "Monitoreo de consumo por carga",
+    articleSlug: "/articulos/monitoreo-energetico-industrial",
+    articleLabel: "Aprender más sobre monitoreo energético",
     subtitulo: "Visibilidad real, en tiempo real",
     descripcion:
       "Instalamos sistemas de medición desagregada que asignan consumo a cada carga principal de la planta — compresores, hornos, bombas, sistemas de climatización, líneas de producción. El resultado es un dashboard operativo que muestra, en tiempo real, qué consume qué y cuándo.",
@@ -21,6 +24,8 @@ const soluciones = [
     icon: Cpu,
     num: "02",
     titulo: "Automatización y control inteligente",
+    articleSlug: "/articulos/reducir-factura-electrica-industrial",
+    articleLabel: "Aprender más sobre automatización y ahorro",
     subtitulo: "Lógica de operación que reduce costo sin reducir producción",
     descripcion:
       "Implementamos controladores que gestionan el encendido y apagado de equipos con criterio — no por inercia operativa. La lógica incorpora variables de demanda real, simultaneidad de arranques, horarios tarifarios y estados de proceso para minimizar el costo de la factura sin afectar la operación.",
@@ -35,6 +40,8 @@ const soluciones = [
     icon: Sun,
     num: "03",
     titulo: "Energía renovable para auto-generación",
+    articleSlug: "/articulos/energia-solar-industrial",
+    articleLabel: "Aprender más sobre energía solar industrial",
     subtitulo: "Generación propia que reduce dependencia y costo de largo plazo",
     descripcion:
       "Con un perfil de consumo preciso como base, diseñamos e implementamos sistemas de auto-generación — principalmente solar fotovoltaico — correctamente dimensionados para la operación real. El objetivo es maximizar el autoconsumo y reducir la energía comprada a la red, con el retorno de inversión más corto posible.",
@@ -48,6 +55,7 @@ const soluciones = [
 ];
 
 export default function SolucionesEnergia() {
+  const navigate = useNavigate();
   return (
     <section id="soluciones" className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16 bg-card">
       <div className="max-w-7xl mx-auto">
@@ -120,6 +128,12 @@ export default function SolucionesEnergia() {
                       </div>
                     ))}
                   </div>
+                  <button
+                    onClick={() => navigate(sol.articleSlug)}
+                    className="mt-5 text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all border-t border-border pt-4 w-full"
+                  >
+                    {sol.articleLabel} <ArrowRight size={14} />
+                  </button>
                 </div>
               </motion.div>
             );

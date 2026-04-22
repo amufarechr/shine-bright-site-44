@@ -19,6 +19,9 @@ import ArticuloAguaSinRed from "./pages/ArticuloAguaSinRed.tsx";
 import ArticuloFacturaElectrica from "./pages/ArticuloFacturaElectrica.tsx";
 import ArticuloMonitoreoEnergetico from "./pages/ArticuloMonitoreoEnergetico.tsx";
 import ArticuloSolarIndustrial from "./pages/ArticuloSolarIndustrial.tsx";
+import ArticulosClimatizacion from "./pages/ArticulosClimatizacion.tsx";
+import ArticulosEnergia from "./pages/ArticulosEnergia.tsx";
+import ArticulosAgua from "./pages/ArticulosAgua.tsx";
 import Casos from "./pages/Casos.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
@@ -40,6 +43,9 @@ const App = () => (
           <Route path="/soluciones/agua" element={<Agua />} />
           <Route path="/casos" element={<Casos />} />
           <Route path="/articulos" element={<Articulos />} />
+          <Route path="/articulos/climatizacion" element={<ArticulosClimatizacion />} />
+          <Route path="/articulos/energia" element={<ArticulosEnergia />} />
+          <Route path="/articulos/agua" element={<ArticulosAgua />} />
           <Route path="/articulos/enfriamiento-evaporativo" element={<ArticuloEnfriamientoEvaporativo />} />
           <Route path="/articulos/enfriamiento-evaporativo-agroindustria" element={<ArticuloAgroindustria />} />
           <Route path="/articulos/enfriamiento-evaporativo-almacenes" element={<ArticuloAlmacenes />} />

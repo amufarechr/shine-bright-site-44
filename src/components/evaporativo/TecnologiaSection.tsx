@@ -68,7 +68,7 @@ export default function TecnologiaSection() {
               className="pt-2"
             >
               <button
-                onClick={() => navigate("/articulos")}
+                onClick={() => navigate("/articulos/climatizacion")}
                 className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
               >
                 Entender más sobre el enfriamiento evaporativo
