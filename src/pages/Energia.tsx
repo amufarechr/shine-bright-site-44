@@ -1,27 +1,28 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ContactSection from "@/components/ContactSection";
+import SeoHead from "@/components/SeoHead";
+import EnergiaHero from "@/components/energia/EnergiaHero";
+import ElProblema from "@/components/energia/ElProblema";
+import SolucionesEnergia from "@/components/energia/SolucionesEnergia";
+import EnfoqueSW from "@/components/energia/EnfoqueSW";
+import MetricasEnergia from "@/components/energia/MetricasEnergia";
 
 const Energia = () => (
-  <div className="min-h-screen bg-background flex flex-col">
+  <div className="min-h-screen bg-background">
+    <SeoHead
+      title="Gestión Energética Industrial — Monitoreo, Automatización y Energía Renovable"
+      description="Reducción del costo energético en operaciones industriales: monitoreo de consumo por carga, automatización inteligente de arranques y generación solar. Resultados medibles desde el primer mes."
+      keywords="gestión energética industrial, monitoreo consumo eléctrico planta, automatización energética, ahorro energético industria, energía solar industrial, eficiencia energética"
+      path="/soluciones/energia"
+    />
     <Navbar activePage="soluciones" />
-    <div className="flex-1 flex flex-col items-center justify-center text-center px-6 pt-32 pb-20">
-      <span className="text-primary text-sm font-semibold tracking-widest uppercase mb-4">
-        Soluciones técnicas
-      </span>
-      <h1 className="font-heading text-4xl md:text-6xl font-bold mb-6">
-        Gestión Energética
-      </h1>
-      <p className="text-muted-foreground text-lg max-w-xl mb-8">
-        Esta página está en construcción. Pronto encontrarás aquí toda la información
-        sobre nuestros sistemas de gestión y eficiencia energética.
-      </p>
-      <a
-        href="/"
-        className="bg-primary text-primary-foreground px-8 py-3 rounded-md font-semibold hover:brightness-110 transition"
-      >
-        Volver al inicio
-      </a>
-    </div>
+    <EnergiaHero />
+    <ElProblema />
+    <SolucionesEnergia />
+    <EnfoqueSW />
+    <MetricasEnergia />
+    <ContactSection />
     <Footer />
   </div>
 );
