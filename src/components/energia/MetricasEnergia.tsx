@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const metricas = [
   {
@@ -24,6 +26,7 @@ const metricas = [
 ];
 
 export default function MetricasEnergia() {
+  const navigate = useNavigate();
   return (
     <section className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16 bg-card">
       <div className="max-w-7xl mx-auto">
@@ -62,6 +65,23 @@ export default function MetricasEnergia() {
           Los rangos indicados corresponden a proyectos reales implementados en operaciones industriales de mediana y gran escala.
           Los resultados varían según el perfil de consumo, estructura tarifaria y tipo de operación de cada planta.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3"
+        >
+          <button onClick={() => navigate("/articulos/reducir-factura-electrica-industrial")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
+            Cómo reducir la factura eléctrica industrial <ArrowRight size={15} />
+          </button>
+          <button onClick={() => navigate("/articulos/monitoreo-energetico-industrial")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
+            Monitoreo de consumo por carga <ArrowRight size={15} />
+          </button>
+          <button onClick={() => navigate("/articulos/energia-solar-industrial")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
+            Energía solar para industria <ArrowRight size={15} />
+          </button>
+        </motion.div>
       </div>
     </section>
   );

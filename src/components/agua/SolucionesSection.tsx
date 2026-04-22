@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import logoAcuanovus from "@/assets/marcas/acuanovus.svg";
 import logoHarmony from "@/assets/marcas/harmony.svg";
 import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
@@ -56,6 +58,7 @@ const segmentosWaha = [
 ];
 
 export default function SolucionesSection() {
+  const navigate = useNavigate();
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -225,6 +228,20 @@ export default function SolucionesSection() {
           </div>
         </div>
 
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-10 pt-6 border-t border-border flex flex-wrap gap-x-8 gap-y-3"
+        >
+          <button onClick={() => navigate("/articulos/osmosis-inversa")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
+            Ósmosis inversa para agua agrícola e industrial <ArrowRight size={15} />
+          </button>
+          <button onClick={() => navigate("/articulos/agua-sin-red-hidrica")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
+            Agua potable sin red hídrica <ArrowRight size={15} />
+          </button>
+        </motion.div>
       </div>
     </section>
   );

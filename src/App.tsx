@@ -14,6 +14,11 @@ import ArticuloEnfriamientoEvaporativo from "./pages/ArticuloEnfriamientoEvapora
 import Articulos from "./pages/Articulos.tsx";
 import ArticuloAgroindustria from "./pages/ArticuloAgroindustria.tsx";
 import ArticuloAlmacenes from "./pages/ArticuloAlmacenes.tsx";
+import ArticuloOsmosis from "./pages/ArticuloOsmosis.tsx";
+import ArticuloAguaSinRed from "./pages/ArticuloAguaSinRed.tsx";
+import ArticuloFacturaElectrica from "./pages/ArticuloFacturaElectrica.tsx";
+import ArticuloMonitoreoEnergetico from "./pages/ArticuloMonitoreoEnergetico.tsx";
+import ArticuloSolarIndustrial from "./pages/ArticuloSolarIndustrial.tsx";
 import Casos from "./pages/Casos.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
@@ -38,6 +43,11 @@ const App = () => (
           <Route path="/articulos/enfriamiento-evaporativo" element={<ArticuloEnfriamientoEvaporativo />} />
           <Route path="/articulos/enfriamiento-evaporativo-agroindustria" element={<ArticuloAgroindustria />} />
           <Route path="/articulos/enfriamiento-evaporativo-almacenes" element={<ArticuloAlmacenes />} />
+          <Route path="/articulos/osmosis-inversa" element={<ArticuloOsmosis />} />
+          <Route path="/articulos/agua-sin-red-hidrica" element={<ArticuloAguaSinRed />} />
+          <Route path="/articulos/reducir-factura-electrica-industrial" element={<ArticuloFacturaElectrica />} />
+          <Route path="/articulos/monitoreo-energetico-industrial" element={<ArticuloMonitoreoEnergetico />} />
+          <Route path="/articulos/energia-solar-industrial" element={<ArticuloSolarIndustrial />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

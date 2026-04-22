@@ -7,6 +7,9 @@ import SeoHead from "@/components/SeoHead";
 import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
 import funcionamiento from "@/assets/evaporativo/funcionamiento.jpeg";
+import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
+import energiaImg from "@/assets/climatizacion/energia.jpeg";
+import controlImg from "@/assets/climatizacion/control.jpg";
 
 const articulos = [
   {
@@ -35,6 +38,51 @@ const articulos = [
       "El calor en plantas y centros de distribución afecta a las personas y los costos operativos. Esta guía explica cómo el evaporativo resuelve ese problema a una fracción del costo, con casos reales documentados.",
     img: casoCallao,
     keywords: ["Calor en nave industrial", "Alta temperatura almacén", "Confort térmico trabajadores", "Ahorro energético"],
+  },
+  {
+    slug: "/articulos/osmosis-inversa",
+    categoria: "Agua · Agroindustria",
+    titulo: "Ósmosis inversa: cuándo y cómo mejorar la calidad del agua para riego e industria",
+    resumen:
+      "Desde pozos con alta salinidad para arándano y uva, hasta desalinización industrial y proyectos residenciales sin red. Guía técnica con parámetros agronómicos, costos y preguntas frecuentes.",
+    img: osmosisImg,
+    keywords: ["Ósmosis inversa", "Agua para riego arándano", "Salinidad agua uva", "Desalinización"],
+  },
+  {
+    slug: "/articulos/agua-sin-red-hidrica",
+    categoria: "Agua",
+    titulo: "Agua potable sin red hídrica: ósmosis inversa y generación desde el aire",
+    resumen:
+      "Para proyectos en zonas remotas, operaciones agrícolas sin acceso a red o desarrollos sin infraestructura hídrica — comparativa técnica entre ósmosis inversa y tecnología Waha de generación atmosférica.",
+    img: osmosisImg,
+    keywords: ["Agua sin red hídrica", "Generación atmosférica", "Proyectos remotos", "Waha"],
+  },
+  {
+    slug: "/articulos/reducir-factura-electrica-industrial",
+    categoria: "Energía",
+    titulo: "Cómo reducir la factura eléctrica de una planta industrial sin reducir producción",
+    resumen:
+      "El orden correcto de intervención: primero visibilidad, luego control inteligente, luego generación solar. Con datos reales sobre ahorro típico, payback y dónde se esconde el gasto evitable.",
+    img: energiaImg,
+    keywords: ["Ahorro energético industrial", "Factura eléctrica planta", "Cargo por demanda", "Tarifa horaria"],
+  },
+  {
+    slug: "/articulos/monitoreo-energetico-industrial",
+    categoria: "Energía",
+    titulo: "Monitoreo de consumo energético por carga: qué es, cómo funciona y por qué va primero",
+    resumen:
+      "Cómo funciona la medición desagregada en plantas industriales, qué se puede ver con ella y qué decisiones habilita. Instalación sin parar producción, integración con ERP y casos de uso.",
+    img: controlImg,
+    keywords: ["Monitoreo energético", "Medición por carga", "Submedición eléctrica", "Dashboard consumo"],
+  },
+  {
+    slug: "/articulos/energia-solar-industrial",
+    categoria: "Energía",
+    titulo: "Energía solar para industria: cómo dimensionar bien un sistema fotovoltaico",
+    resumen:
+      "El error más caro es dimensionar sin perfil de consumo horario. Esta guía explica las variables clave, cómo calcular el retorno correctamente y cuándo tiene sentido incorporar baterías.",
+    img: energiaImg,
+    keywords: ["Solar fotovoltaico industrial", "Dimensionamiento solar", "TIR energía solar", "Autoconsumo"],
   },
 ];
 
