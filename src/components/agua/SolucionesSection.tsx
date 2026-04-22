@@ -151,7 +151,7 @@ export default function SolucionesSection() {
             className="mb-10"
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-3">
-              Agua desde el Aire — Tecnología Waha
+              Waha: Agua a partir del Aire
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl">
               Somos representantes de Waha, empresa pionera en generación
