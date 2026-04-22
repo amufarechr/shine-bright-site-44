@@ -11,10 +11,10 @@ export default function EnergiaHero() {
       <img
         src={heroBg}
         alt="Gestión energética industrial"
-        className="absolute inset-0 w-full h-full object-cover brightness-75 contrast-110"
+        className="absolute inset-0 w-full h-full object-cover brightness-105 contrast-115"
       />
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
+      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/35 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-24 w-full">
         <motion.div
