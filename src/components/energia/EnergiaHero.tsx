@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/consultoria_energia.jpeg";
 
@@ -7,50 +6,45 @@ export default function EnergiaHero() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section className="relative min-h-[85vh] flex items-center pt-24 overflow-hidden">
-      <img
-        src={heroBg}
-        alt="Gestión energética industrial"
-        className="absolute inset-0 w-full h-full object-cover brightness-105 contrast-115"
+    <section className="relative min-h-[560px] flex items-center overflow-hidden bg-[#0d1b2a] pt-[88px]">
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{ backgroundImage: `url(${heroBg})` }}
       />
-      <div className="absolute inset-0 bg-black/20" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/35 to-transparent" />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-24 w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="max-w-xl"
-        >
-          <span className="text-primary text-sm font-semibold tracking-widest uppercase">
-            Gestión Energética
-          </span>
-          <h1 className="font-heading text-3xl md:text-5xl lg:text-[3.4rem] font-bold leading-[1.1] text-foreground mt-4 mb-4">
-            No puedes controlar<br />
-            lo que no puedes<br />
-            medir
-          </h1>
-          <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-lg mb-8">
-            La mayoría de las plantas industriales operan sin visibilidad real de su consumo energético.
-            El resultado es gasto oculto, decisiones equivocadas y oportunidades de ahorro que nunca se capturan.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button
-              onClick={() => scrollTo("contacto")}
-              className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:brightness-110 transition inline-flex items-center gap-2 glow-box"
-            >
-              Evaluar operación energética
-              <ArrowRight size={18} />
-            </button>
-            <button
-              onClick={() => scrollTo("soluciones")}
-              className="border border-border text-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:bg-muted transition"
-            >
-              Ver soluciones
-            </button>
-          </div>
-        </motion.div>
+      <div
+        className="absolute inset-0 z-10"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(13,27,42,0.92) 0%, rgba(13,27,42,0.78) 35%, rgba(13,27,42,0.28) 62%, rgba(13,27,42,0) 100%)",
+        }}
+      />
+      <div className="relative z-20 px-8 md:px-24 py-20 max-w-[660px]">
+        <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">
+          Gestión Energética
+        </p>
+        <h1 className="text-[42px] font-bold leading-[1.1] text-white mb-5">
+          No puedes controlar<br />
+          lo que no puedes<br />
+          medir
+        </h1>
+        <p className="text-base leading-[1.7] text-white/75 mb-9 max-w-[440px]">
+          La mayoría de las plantas industriales operan sin visibilidad real de su consumo energético.
+          El resultado es gasto oculto, decisiones equivocadas y oportunidades de ahorro que nunca se capturan.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <button
+            onClick={() => scrollTo("contacto")}
+            className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-primary hover:brightness-110 border-none rounded-md text-sm font-semibold text-white cursor-pointer transition-colors duration-200"
+          >
+            Evaluar operación energética <ArrowRight size={16} />
+          </button>
+          <button
+            onClick={() => scrollTo("soluciones")}
+            className="inline-flex items-center gap-2.5 px-6 py-3.5 border border-white/30 rounded-md text-sm font-semibold text-white hover:bg-white/10 cursor-pointer transition-colors duration-200"
+          >
+            Ver soluciones
+          </button>
+        </div>
       </div>
     </section>
   );
