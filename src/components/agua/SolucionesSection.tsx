@@ -6,7 +6,7 @@ import wahaImg from "@/assets/climatizacion/waha.jpg";
 import logoWaha from "@/assets/marcas/waha.jpeg";
 
 const marcasOsmosis = [
-  { nombre: "Acuanovus", logo: logoAcuanovus, url: "https://acuanovus.com/", bg: "bg-white" },
+  { nombre: "Acuanovus", logo: logoAcuanovus, url: "https://acuanovus.com/lineas_de_productos/plantas-potabilizadoras-y-desaladoras/", bg: "bg-white" },
   { nombre: "Harmony Desalting", logo: logoHarmony, url: "https://www.harmonydesalting.com/", bg: "bg-white" },
 ];
 
