@@ -26,7 +26,30 @@ const segmentosOsmosis = [
   {
     nombre: "Industrial",
     descripcion:
-      "Agroindustria y manufactura que requieren agua para su operación. Diseñamos sistemas a medida según caudal, calidad requerida y tipo de fuente (desde pozos de alta salinidad, hasta agua marina).",
+      "Agroindustria, manufactura y plantas que requieren agua de proceso con parámetros específicos. Diseñamos sistemas a medida según caudal, calidad requerida y tipo de fuente.",
+  },
+];
+
+const segmentosWaha = [
+  {
+    nombre: "Tecnología basada en investigación Nobel",
+    descripcion:
+      "El WaHa Vaporator® usa desecantes sólidos (MOFs) — tecnología derivada del trabajo de Omar Yaghi, Premio Nobel de Química — para capturar humedad del aire con una eficiencia energética sin precedentes.",
+  },
+  {
+    nombre: "Opera en cualquier clima, sin infraestructura",
+    descripcion:
+      "Desde zonas costeras húmedas hasta desiertos con baja humedad relativa. Ideal para locaciones remotas: proyectos agrícolas, mineros, comunitarios o de emergencia donde no hay acceso a red hídrica.",
+  },
+  {
+    nombre: "Escalable desde residencial hasta industrial",
+    descripcion:
+      "El Oasis-20,000 genera hasta 20,000 litros/día para parques industriales o desarrollos residenciales grandes. Modelos menores cubren oficinas, comunidades o usos críticos.",
+  },
+  {
+    nombre: "Agua pura de punto de uso",
+    descripcion:
+      "Elimina redes de distribución, bombeo y tuberías. El agua se genera donde se consume, reduciendo costos de ciclo de vida y garantizando calidad en el punto de entrega.",
   },
 ];
 
@@ -47,16 +70,18 @@ export default function SolucionesSection() {
             viewport={{ once: true }}
             className="mb-10"
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-3">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-3">
               Desalinización por Ósmosis Inversa
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl">
-              Somos representantes e implementadores locales de fabricantes líderes en sistemas de ósmosis inversa para desalinización. Agua pura desde fuentes salobres, para cualquier escala de operación.
+              Somos representantes de fabricantes líderes en sistemas de ósmosis
+              inversa para desalinización. Agua pura desde fuentes salobres (agua de mar y otras fuentes)
+              o de red, para cualquier escala de operación.
             </p>
           </motion.div>
 
-          {/* Image + segmentos */}
           <div className="grid lg:grid-cols-2 gap-10 items-start">
+            {/* Imagen izquierda */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -70,24 +95,18 @@ export default function SolucionesSection() {
               />
             </motion.div>
 
+            {/* Cards numeradas derecha */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-5"
+              className="space-y-4"
             >
               {segmentosOsmosis.map((seg, i) => (
-                <div
-                  key={seg.nombre}
-                  className="bg-background border border-border rounded-xl p-6"
-                >
+                <div key={seg.nombre} className="bg-background border border-border rounded-xl p-6">
                   <div className="flex items-center gap-3 mb-2">
-                    <span className="text-primary font-bold text-sm">
-                      0{i + 1}
-                    </span>
-                    <h3 className="font-heading font-semibold text-base">
-                      {seg.nombre}
-                    </h3>
+                    <span className="text-primary font-bold text-sm">0{i + 1}</span>
+                    <h3 className="font-heading font-semibold text-base">{seg.nombre}</h3>
                   </div>
                   <p className="text-muted-foreground text-sm leading-relaxed pl-7">
                     {seg.descripcion}
@@ -95,8 +114,7 @@ export default function SolucionesSection() {
                 </div>
               ))}
 
-              {/* Marcas de ósmosis */}
-              <div>
+              <div className="pt-1">
                 <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
                   Marcas que representamos
                 </p>
@@ -118,7 +136,7 @@ export default function SolucionesSection() {
         {/* Divider */}
         <div className="border-t border-border" />
 
-        {/* — Bloque 2: Waha — */}
+        {/* — Bloque 2: Waha — imagen derecha para alternancia */}
         <div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -126,8 +144,8 @@ export default function SolucionesSection() {
             viewport={{ once: true }}
             className="mb-10"
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-3">
-              Waha: Agua obtenida del Aire
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-3">
+              Agua desde el Aire — Tecnología Waha
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl">
               Somos representantes de Waha, empresa pionera en generación
@@ -136,77 +154,56 @@ export default function SolucionesSection() {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Content left */}
+          <div className="grid lg:grid-cols-2 gap-10 items-start">
+            {/* Cards numeradas izquierda */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="space-y-4"
             >
-              {[
-                {
-                  titulo: "Tecnología basada en investigación Nobel",
-                  texto:
-                    "El WaHa Vaporator® usa desecantes sólidos (MOFs) — tecnología derivada del trabajo de Omar Yaghi, Premio Nobel de Química — para capturar humedad del aire con una eficiencia energética sin precedentes.",
-                },
-                {
-                  titulo: "Opera en cualquier clima, sin infraestructura",
-                  texto:
-                    "Desde zonas costeras húmedas hasta desiertos con baja humedad relativa. Ideal para locaciones remotas: proyectos agrícolas, mineros, comunitarios o de emergencia donde no hay acceso a red hídrica.",
-                },
-                {
-                  titulo: "Escalable desde residencial hasta industrial",
-                  texto:
-                    "El Oasis-20,000 genera hasta 20,000 litros/día para parques industriales o desarrollos residenciales grandes. Modelos menores cubren oficinas, comunidades o usos críticos.",
-                },
-                {
-                  titulo: "Agua pura de punto de uso",
-                  texto:
-                    "Elimina redes de distribución, bombeo y tuberías. El agua se genera donde se consume, reduciendo costos de ciclo de vida y garantizando calidad en el punto de entrega.",
-                },
-              ].map((item) => (
-                <div key={item.titulo} className="flex gap-4">
-                  <span className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
-                  <div>
-                    <h3 className="font-heading font-semibold mb-1">{item.titulo}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {item.texto}
-                    </p>
+              {segmentosWaha.map((seg, i) => (
+                <div key={seg.nombre} className="bg-background border border-border rounded-xl p-6">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-primary font-bold text-sm">0{i + 1}</span>
+                    <h3 className="font-heading font-semibold text-base">{seg.nombre}</h3>
                   </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed pl-7">
+                    {seg.descripcion}
+                  </p>
                 </div>
               ))}
 
-              <button
-                onClick={() => scrollTo("contacto")}
-                className="mt-4 inline-flex items-center gap-2 text-primary text-sm font-semibold hover:gap-3 transition-all"
-              >
-                Consultar disponibilidad de Waha →
-              </button>
-
-              {/* Logo Waha */}
-              <div className="mt-4">
-                <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
-                  Representantes exclusivos
-                </p>
-                <div className="flex gap-3">
-                  {marcasWaha.map((marca) => (
-                    <a
-                      key={marca.nombre}
-                      href={marca.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={marca.nombre}
-                      className={`${marca.bg} rounded-lg px-4 py-2 flex items-center justify-center h-14 w-32 hover:opacity-80 transition-opacity border border-border`}
-                    >
-                      <img src={marca.logo} alt={marca.nombre} className="max-h-9 max-w-full object-contain" />
-                    </a>
-                  ))}
+              <div className="pt-1 flex items-center justify-between gap-6 flex-wrap">
+                <button
+                  onClick={() => scrollTo("contacto")}
+                  className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:gap-3 transition-all"
+                >
+                  Consultar disponibilidad de Waha →
+                </button>
+                <div>
+                  <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
+                    Representantes exclusivos
+                  </p>
+                  <div className="flex gap-3">
+                    {marcasWaha.map((marca) => (
+                      <a
+                        key={marca.nombre}
+                        href={marca.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={marca.nombre}
+                        className={`${marca.bg} rounded-lg px-4 py-2 flex items-center justify-center h-14 w-32 hover:opacity-80 transition-opacity border border-border`}
+                      >
+                        <img src={marca.logo} alt={marca.nombre} className="max-h-9 max-w-full object-contain" />
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Waha image */}
+            {/* Imagen derecha */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -221,6 +218,7 @@ export default function SolucionesSection() {
             </motion.div>
           </div>
         </div>
+
       </div>
     </section>
   );
