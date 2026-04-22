@@ -11,7 +11,7 @@ import ConsultoriaCTA from "@/components/consultoria/ConsultoriaCTA";
 
 const Consultoria = () => (
   <div className="min-h-screen bg-background">
-    <Navbar activePage="consultoria" darkHero={false} />
+    <Navbar activePage="consultoria" />
     <ConsultoriaHero />
     <DiagnosticoInicialSection />
     <NuestraExperiencia />

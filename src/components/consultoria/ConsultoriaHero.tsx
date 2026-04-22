@@ -27,13 +27,13 @@ const ConsultoriaHero = () => {
           transition={{ duration: 0.7 }}
           className="max-w-xl"
         >
-          <h1 className="font-heading text-3xl md:text-5xl lg:text-[3.4rem] font-bold leading-[1.1] text-foreground my-[30px] mb-0">
+          <h1 className="font-heading text-3xl md:text-5xl lg:text-[3.4rem] font-bold leading-[1.1] text-white my-[30px] mb-0">
             Las ineficiencias<br />
             de operación<br />
             no se resuelven<br />
             con más gasto
           </h1>
-          <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-lg my-0 mb-[10px]">
+          <p className="text-white/75 text-lg md:text-xl leading-relaxed max-w-lg my-0 mb-[10px]">
             La solución es un sistema que integra y alinea personas, procesos e infraestructura.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -46,7 +46,7 @@ const ConsultoriaHero = () => {
             </button>
             <button
               onClick={() => scrollTo("como-intervenimos")}
-              className="border border-border text-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:bg-muted transition"
+              className="border border-white/30 text-white px-8 py-3.5 rounded-md font-semibold text-base hover:bg-muted transition"
             >
               Cómo trabajamos
             </button>
