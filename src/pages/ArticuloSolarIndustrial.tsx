@@ -85,6 +85,9 @@ export default function ArticuloSolarIndustrial() {
       <main className="min-h-screen">
         <section className="pt-44 pb-12 px-6 md:px-12 lg:px-24 max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+            <Link to="/articulos/energia" className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors mb-3">
+              ← Artículos de Energía
+            </Link>
             <Link to="/soluciones/energia" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
               <ArrowLeft size={16} />
               Volver a Gestión Energética

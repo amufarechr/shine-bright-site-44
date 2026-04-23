@@ -59,6 +59,9 @@ export default function ArticuloAgroindustria() {
         {/* Hero */}
         <section className="pt-44 pb-12 px-6 md:px-12 lg:px-24 max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+            <Link to="/articulos/climatizacion" className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors mb-3">
+              ← Artículos de Climatización
+            </Link>
             <Link to="/soluciones/climatizacion/evaporativo" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
               <ArrowLeft size={16} />
               Volver a Enfriadores Evaporativos
