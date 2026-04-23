@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, Droplets, TrendingDown, Thermometer, Package, Truck, HelpCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, Droplets, FileText, HelpCircle, Package, Thermometer, TrendingDown, Truck } from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -59,13 +59,18 @@ export default function ArticuloAgroindustria() {
         {/* Hero */}
         <section className="pt-44 pb-12 px-6 md:px-12 lg:px-24 max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-            <Link to="/articulos/climatizacion" className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors mb-3">
-              ← Artículos de Climatización
-            </Link>
-            <Link to="/soluciones/climatizacion/evaporativo" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
-              <ArrowLeft size={16} />
-              Volver a Enfriadores Evaporativos
-            </Link>
+                        <div className="flex items-center gap-3 mb-8">
+              <Link to="/articulos/climatizacion" className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground border border-border rounded-full px-3 py-1.5 hover:border-primary/40 transition-all">
+                <ArrowLeft size={13} />
+                <FileText size={13} />
+                Artículos de Climatización
+              </Link>
+              <Link to="/soluciones/climatizacion/evaporativo" className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground border border-border rounded-full px-3 py-1.5 hover:border-primary/40 transition-all">
+                <ArrowLeft size={13} />
+                <Thermometer size={13} />
+                Enfriadores Evaporativos
+              </Link>
+            </div>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-primary text-sm font-semibold tracking-widest uppercase">Artículo técnico · Agroindustria</span>
               <span className="text-muted-foreground text-sm">·</span>
