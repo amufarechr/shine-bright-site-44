@@ -4,6 +4,8 @@ import { useNavigate, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
+import evaporativoNew from "@/assets/articulos/evaporativo_new.jpg";
+import funcionamiento from "@/assets/evaporativo/funcionamiento.jpeg";
 
 const nomenclatura = [
   {
@@ -139,6 +141,13 @@ export default function ArticuloEnfriamientoEvaporativo() {
           <div className="border-t border-border" />
         </div>
 
+        {/* Foto apertura */}
+        <section className="px-6 md:px-12 lg:px-24 max-w-4xl mx-auto pb-10">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-xl overflow-hidden">
+            <img src={evaporativoNew} alt="Enfriadores evaporativos industriales Big Ass Fans en nave industrial" className="w-full object-cover max-h-80" />
+          </motion.div>
+        </section>
+
         {/* Nomenclatura — keywords SEO */}
         <section className="px-6 md:px-12 lg:px-24 max-w-4xl mx-auto pt-12 pb-6">
           <motion.div
@@ -193,6 +202,12 @@ export default function ArticuloEnfriamientoEvaporativo() {
                         {parrafo}
                       </p>
                     ))}
+                    {i === 0 && (
+                      <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-4 rounded-xl overflow-hidden bg-white p-4">
+                        <img src={funcionamiento} alt="Diagrama de funcionamiento del enfriamiento evaporativo" className="w-full object-contain max-h-64" />
+                        <p className="text-muted-foreground text-xs text-center mt-2">Diagrama del proceso de enfriamiento evaporativo</p>
+                      </motion.div>
+                    )}
                   </div>
                 </motion.div>
               );
