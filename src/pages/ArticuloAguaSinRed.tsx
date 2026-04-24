@@ -118,7 +118,7 @@ export default function ArticuloAguaSinRed() {
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="rounded-xl overflow-hidden bg-white p-4 flex items-center justify-center">
               <img src={wahaImg} alt="Waha — generación atmosférica de agua" className="w-full h-44 object-contain" />
-              <p className="text-muted-foreground text-xs mt-2 text-center sr-only">Waha — agua desde el aire</p>
+              <p className="text-muted-foreground text-xs mt-2 text-center">WaHa Vaporator® — agua potable extraída del aire, sin fuente hídrica</p>
             </motion.div>
           </div>
         </section>
