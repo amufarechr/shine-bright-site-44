@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
-import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
+import osmosisImg from "@/assets/articulos/drip_irrigation.jpg";
 
 const metricas = [
   { valor: "<0.5 dS/m", label: "CE máxima recomendada para arándano", fuente: "Umbral agronómico" },

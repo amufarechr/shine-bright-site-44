@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
-import controlImg from "@/assets/climatizacion/control.jpg";
+import controlImg from "@/assets/climatizacion/energia.jpeg";
 
 const secciones = [
   {

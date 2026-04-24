@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
-import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
-import energiaImg from "@/assets/climatizacion/energia.jpeg";
-import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
+import casoCallao from "@/assets/articulos/evaporativo_new.jpg";
+import energiaImg from "@/assets/articulos/transformer.jpg";
+import osmosisImg from "@/assets/articulos/drip_irrigation.jpg";
 
 const hubs = [
   {

@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
-import energiaImg from "@/assets/climatizacion/energia.jpeg";
-import controlImg from "@/assets/climatizacion/control.jpg";
+import energiaImg from "@/assets/articulos/transformer.jpg";
+import controlImg from "@/assets/climatizacion/energia.jpeg";
+import solarImg from "@/assets/articulos/paneles_techo.jpg";
 
 const articulos = [
   {
@@ -29,7 +30,7 @@ const articulos = [
     categoria: "Energía renovable",
     titulo: "Energía solar para industria: cómo dimensionar bien un sistema fotovoltaico",
     resumen: "El error más caro es dimensionar sin perfil de consumo horario. Esta guía explica las variables clave, cómo calcular el retorno correctamente y cuándo tiene sentido incorporar baterías.",
-    img: energiaImg,
+    img: solarImg,
     keywords: ["Solar fotovoltaico industrial", "Dimensionamiento solar", "TIR energía solar", "Autoconsumo"],
   },
 ];

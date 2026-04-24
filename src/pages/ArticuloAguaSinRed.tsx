@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
-import aguaImg from "@/assets/climatizacion/agua.jpeg";
+import aguaImg from "@/assets/articulos/galpones_desierto.jpg";
 import wahaImg from "@/assets/climatizacion/waha.jpg";
 import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
 

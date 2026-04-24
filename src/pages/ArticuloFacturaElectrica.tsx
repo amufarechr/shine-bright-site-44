@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
-import energiaImg from "@/assets/climatizacion/energia.jpeg";
+import energiaImg from "@/assets/articulos/transformer.jpg";
 
 const metricas = [
   { valor: "15–30%", label: "Reducción típica solo con monitoreo y automatización", fuente: "Sin renovables" },

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
 import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
-import funcionamiento from "@/assets/evaporativo/funcionamiento.jpeg";
+import funcionamiento from "@/assets/articulos/evaporativo_new.jpg";
 
 const articulos = [
   {

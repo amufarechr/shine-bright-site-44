@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
-import osmosisImg from "@/assets/climatizacion/osmosis.jpeg";
+import osmosisImg from "@/assets/articulos/drip_irrigation.jpg";
+import galponesImg from "@/assets/articulos/galpones_desierto.jpg";
 
 const articulos = [
   {
@@ -20,7 +21,7 @@ const articulos = [
     categoria: "Independencia hídrica",
     titulo: "Agua potable sin red hídrica: ósmosis inversa y generación desde el aire",
     resumen: "Para proyectos en zonas remotas, operaciones agrícolas sin acceso a red o desarrollos sin infraestructura hídrica — comparativa técnica entre ósmosis inversa y tecnología Waha de generación atmosférica.",
-    img: osmosisImg,
+    img: galponesImg,
     keywords: ["Agua sin red hídrica", "Generación atmosférica", "Proyectos remotos", "Waha"],
   },
 ];

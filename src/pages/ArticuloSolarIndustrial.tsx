@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoHead from "@/components/SeoHead";
-import energiaImg from "@/assets/climatizacion/energia.jpeg";
+import energiaImg from "@/assets/articulos/paneles_techo.jpg";
 
 const metricas = [
   { valor: "30–60%", label: "Fracción del consumo cubierta con solar bien dimensionado", fuente: "Operaciones con carga diurna" },
