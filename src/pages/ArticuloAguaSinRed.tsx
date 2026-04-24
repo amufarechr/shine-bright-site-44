@@ -109,18 +109,16 @@ export default function ArticuloAguaSinRed() {
           <div className="border-t border-border" />
         </div>
 
-        {/* Foto */}
+        {/* Foto apertura — galpones en desierto */}
         <section className="px-6 md:px-12 lg:px-24 max-w-4xl mx-auto py-10">
-          <div className="grid md:grid-cols-2 gap-6">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-xl overflow-hidden">
-              <img src={osmosisImg} alt="Sistema de ósmosis inversa" className="w-full h-52 object-cover" />
-              <p className="text-muted-foreground text-xs mt-2 text-center">Ósmosis inversa — agua desde fuente líquida</p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="rounded-xl overflow-hidden bg-white p-4 flex flex-col items-center justify-center">
-              <img src={wahaImg} alt="Waha — generación atmosférica de agua" className="w-full h-44 object-contain" />
-              <p className="text-muted-foreground text-xs mt-2 text-center">WaHa Vaporator® — agua potable extraída del aire, sin fuente hídrica</p>
-            </motion.div>
-          </div>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <div className="rounded-xl overflow-hidden">
+              <img src={aguaImg} alt="Galpones avícolas en desierto con paneles solares" className="w-full object-cover max-h-80" />
+            </div>
+            <p className="text-muted-foreground text-xs mt-3 text-center italic">
+              Galpones avícolas en pleno desierto — operaciones como esta pueden contar con agua potable de calidad sin depender de ninguna red hídrica externa
+            </p>
+          </motion.div>
         </section>
 
         {/* Cuerpo */}
@@ -138,6 +136,18 @@ export default function ArticuloAguaSinRed() {
                     {sec.contenido.map((p, j) => (
                       <p key={j} className="text-muted-foreground leading-relaxed">{p}</p>
                     ))}
+                    {i === 1 && (
+                      <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-6 rounded-xl overflow-hidden">
+                        <img src={osmosisImg} alt="Sistema de ósmosis inversa industrial" className="w-full object-cover max-h-64" />
+                        <p className="text-muted-foreground text-xs mt-2 text-center">Sistema de ósmosis inversa — agua tratada desde pozo, agua salobre o agua de mar</p>
+                      </motion.div>
+                    )}
+                    {i === 2 && (
+                      <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-6 rounded-xl overflow-hidden bg-white p-6 flex flex-col items-center">
+                        <img src={wahaImg} alt="WaHa Vaporator — generación atmosférica de agua" className="w-full max-h-64 object-contain" />
+                        <p className="text-muted-foreground text-xs mt-3 text-center">WaHa Vaporator® — agua potable extraída del aire, sin fuente hídrica</p>
+                      </motion.div>
+                    )}
                   </div>
                 </motion.div>
               );
