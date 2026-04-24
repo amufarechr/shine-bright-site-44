@@ -116,7 +116,7 @@ export default function ArticuloAguaSinRed() {
               <img src={osmosisImg} alt="Sistema de ósmosis inversa" className="w-full h-52 object-cover" />
               <p className="text-muted-foreground text-xs mt-2 text-center">Ósmosis inversa — agua desde fuente líquida</p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="rounded-xl overflow-hidden bg-white p-4 flex items-center justify-center">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="rounded-xl overflow-hidden bg-white p-4 flex flex-col items-center justify-center">
               <img src={wahaImg} alt="Waha — generación atmosférica de agua" className="w-full h-44 object-contain" />
               <p className="text-muted-foreground text-xs mt-2 text-center">WaHa Vaporator® — agua potable extraída del aire, sin fuente hídrica</p>
             </motion.div>
