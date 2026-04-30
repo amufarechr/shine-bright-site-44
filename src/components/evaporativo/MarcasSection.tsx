@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import logoBigAssFans from "@/assets/marcas/bigassfans.jpeg";
-import logoPortacool from "@/assets/marcas/portacool.jpeg";
+import logoPortacool from "@/assets/marcas/portacool.svg";
 import logoBiocool from "@/assets/marcas/biocool.jpeg";
 
 const marcas = [

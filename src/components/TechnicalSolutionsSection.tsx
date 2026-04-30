@@ -5,7 +5,7 @@ import climatizacionHero from "@/assets/climatizacion/hero.jpg";
 import energiaImg from "@/assets/climatizacion/energia.jpeg";
 import aguaImg from "@/assets/climatizacion/agua.jpeg";
 import logoBigAssFans from "@/assets/marcas/bigassfans.jpeg";
-import logoPortacool from "@/assets/marcas/portacool.jpeg";
+import logoPortacool from "@/assets/marcas/portacool.svg";
 import logoBiocool from "@/assets/marcas/biocool.jpeg";
 import logoSrp from "@/assets/marcas/srp.jpeg";
 import logoWaha from "@/assets/marcas/waha.jpeg";

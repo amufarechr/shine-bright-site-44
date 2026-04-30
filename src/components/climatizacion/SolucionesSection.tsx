@@ -4,7 +4,7 @@ import fanImg from "../../assets/climatizacion/ventilacion.jpg";
 import heatImg from "../../assets/climatizacion/calefaccion.jpg";
 import ctrlImg from "../../assets/climatizacion/control.jpg";
 import logoBigAssFans from "../../assets/marcas/bigassfans.jpeg";
-import logoPortacool from "../../assets/marcas/portacool.jpeg";
+import logoPortacool from "../../assets/marcas/portacool.svg";
 import logoBiocool from "../../assets/marcas/biocool.jpeg";
 import logoSrp from "../../assets/marcas/srp.jpeg";
 
