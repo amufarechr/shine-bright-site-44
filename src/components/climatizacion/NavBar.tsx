@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logoImg from "../../assets/logo.png";
+import logoImg from "../../assets/logo.svg";
 
 interface NavBarProps {
   activeSection?: "soluciones" | "consultoria" | "sectores" | "casos" | "contacto";

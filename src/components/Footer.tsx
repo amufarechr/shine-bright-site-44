@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
 
 const footerLinks = [
   { label: "Soluciones técnicas", id: "soluciones" },
