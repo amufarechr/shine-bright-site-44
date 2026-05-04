@@ -17,12 +17,10 @@ const Footer = () => {
     <footer className="dark-banner px-6 py-12 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
         <div>
-          <div className="flex items-center gap-4 mb-4">
-            <img src={logo} alt="SW Ingeniería" className="h-16 shrink-0" />
-            <p className="text-white/60 text-sm leading-snug max-w-[140px]">
-              Soluciones integrales en eficiencia operativa para la industria.
-            </p>
-          </div>
+          <img src={logo} alt="SW Ingeniería" className="h-16 mb-3" />
+          <p className="text-white/60 text-sm whitespace-nowrap">
+            Soluciones integrales en eficiencia operativa para la industria.
+          </p>
         </div>
 
         <div>
