@@ -10,6 +10,7 @@ import Climatizacion from "./pages/Climatizacion.tsx";
 import Energia from "./pages/Energia.tsx";
 import Agua from "./pages/Agua.tsx";
 import Evaporativo from "./pages/Evaporativo.tsx";
+import CalefaccionPage from "./components/calefaccion/CalefaccionPage.tsx";
 import ArticuloEnfriamientoEvaporativo from "./pages/ArticuloEnfriamientoEvaporativo.tsx";
 import Articulos from "./pages/Articulos.tsx";
 import ArticuloAgroindustria from "./pages/ArticuloAgroindustria.tsx";
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/consultoria" element={<Consultoria />} />
           <Route path="/soluciones/climatizacion" element={<Climatizacion />} />
           <Route path="/soluciones/climatizacion/evaporativo" element={<Evaporativo />} />
+          <Route path="/soluciones/climatizacion/calefaccion" element={<CalefaccionPage />} />
           <Route path="/soluciones/energia" element={<Energia />} />
           <Route path="/soluciones/agua" element={<Agua />} />
           <Route path="/casos" element={<Casos />} />
