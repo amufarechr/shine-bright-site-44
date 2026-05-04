@@ -38,11 +38,12 @@ const soluciones: Solucion[] = [
   },
   {
     title: "Ventilación industrial de gran volumen",
-    description: "Distribución de aire para estabilidad operativa en planta.",
+    description: "Distribución de aire eficiente para confort y productividad en naves industriales, almacenes y espacios comerciales de gran escala.",
     brand: "Representantes exclusivos de los ventiladores industriales Big Ass Fans.",
     imageSrc: fanImg,
     imageAlt: "Ventiladores industriales de techo en nave industrial",
     imageLeft: false,
+    href: "/soluciones/climatizacion/ventilacion",
   },
   {
     title: "Sistemas de calefacción radiante y eléctrica",
