@@ -85,21 +85,29 @@ const lineas = [
     marca: "Big Ass Fans",
     logo: logoBigAssFans,
     logoBg: "bg-white",
-    subtitulo: "Calefacción Eléctrica Infrarroja",
+    subtitulo: "Calefacción Infrarroja — Gas y Eléctrica",
     descripcion:
-      "Big Ass Fans extiende su línea de climatización industrial con calefactores eléctricos infrarrojos de alta eficiencia. Sin gas, sin ductos, sin ruido. Dos modelos complementarios según el espacio y el tipo de instalación.",
+      "Big Ass Fans complementa su línea de climatización industrial con calefactores infrarrojos de gas y eléctricos. Dos líneas diferenciadas: IRH para naves industriales de gran escala, y Obsidian® para espacios comerciales y terrazas.",
     url: "https://bigassfans.com/heaters/",
-    catalogos: [],
+    catalogos: [
+      { label: "Ficha técnica — IRH Infrared Heater (gas)", path: "/catalogos/baf-infrared-heater.pdf" },
+      { label: "Ficha técnica — Obsidian® (eléctrico)", path: "/catalogos/baf-obsidian.pdf" },
+    ],
     productos: [
       {
-        nombre: "Obsidian® — Infrarrojo Eléctrico Outdoor",
-        descripcion: "Elemento de fibra de carbono aeroespacial IP65. Calor en segundos. Diseñado para patios, garages y espacios comerciales que requieren calor exterior de alta potencia. Incluye control remoto.",
-        specs: ["1,500W / 3,000W / 6,000W", "IP65 — resistente a lluvia y polvo", "8,000 horas de vida del elemento · 120V / 240V"],
+        nombre: "IRH Infrared Heater — Gas Industrial",
+        descripcion: "Calefacción infrarroja de gas para naves industriales y comerciales de gran escala. Calienta personas y objetos directamente, no el aire. Compatible con HVLS fans para cubrir instalaciones completas. Diseños straight tube y U-tube para patrones de calor uniformes.",
+        specs: ["80,000 / 125,000 / 150,000 / 200,000 BTU/h", "Gas natural o propano LP · 120V 60Hz", "Garantía 3 años · Uso interior (ventilado o no ventilado)"],
       },
       {
-        nombre: "Vesper™ — Infrarrojo Indoor / Covered Outdoor",
-        descripcion: "Diseño minimalista — 8 pulgadas de ancho, aluminio sólido, flush a pared o techo. Sin brillo, sin ruido. Instalación tipo luminaria. Para interiores y exteriores cubiertos.",
-        specs: ["1,500W / 3,200W · 120V / 208V / 240V", "Indoor + covered outdoor · IP55", "Control por switch de pared o termostato"],
+        nombre: "Obsidian® — Eléctrico IP65 para Exteriores",
+        descripcion: "Calefactor eléctrico infrarrojo de baja luminosidad para terrazas, patios y espacios comerciales outdoor. Elemento de fibra de carbono aeroespacial. Calor instantáneo y direccional desde el encendido. Incluye control remoto.",
+        specs: ["1,500W / 3,000W / 6,000W · hasta 160 ft² (14.9 m²)", "IP65 — outdoor total · aluminio anodizado epoxi", "8,000 horas de vida del elemento · 120V / 240/208V"],
+      },
+      {
+        nombre: "Vesper™ — Eléctrico Indoor / Covered Outdoor",
+        descripcion: "Diseño minimalista flush — 8 pulgadas de ancho, aluminio sólido. Sin brillo, sin ruido, sin movimiento. Instalación tipo luminaria directamente al cableado. Para interiores refinados y exteriores cubiertos donde el diseño importa.",
+        specs: ["1,500W / 3,200W · 120V / 208V / 240V", "Indoor + covered outdoor · Sin plug, hardwired", "Control por switch de pared o termostato"],
       },
     ],
   },

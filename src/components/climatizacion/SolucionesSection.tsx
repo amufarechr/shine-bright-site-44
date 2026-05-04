@@ -45,13 +45,14 @@ const soluciones: Solucion[] = [
     imageLeft: false,
   },
   {
-    title: "Sistemas de calefacción radiante",
-    description: "Control térmico eficiente en ambientes industriales de baja temperatura.",
+    title: "Sistemas de calefacción radiante y eléctrica",
+    description: "Calefacción eficiente en ambientes industriales, agrícolas y comerciales.",
     brand:
       "Distribuidores regionales de sistemas de calefacción industrial Superior Radiant Products (SRP) y Big Ass Fans.",
     imageSrc: heatImg,
     imageAlt: "Sistemas de calefacción radiante infrarroja en nave industrial",
     imageLeft: true,
+    href: "/soluciones/climatizacion/calefaccion",
   },
   {
     title: "Control ambiental y automatización",
@@ -86,12 +87,16 @@ export default function SolucionesSection({}: SolucionesSectionProps) {
             className="w-3/4 grid grid-cols-2 rounded-xl overflow-hidden border border-gray-200 shadow-sm"
             style={{ direction: sol.imageLeft ? "ltr" : "rtl" }}
           >
-            {/* Imagen */}
-            <div className="relative min-h-[280px] overflow-hidden" style={{ direction: "ltr" }}>
+            {/* Imagen — clickeable si hay href */}
+            <div
+              className={`relative min-h-[280px] overflow-hidden group${sol.href ? " cursor-pointer" : ""}`}
+              style={{ direction: "ltr" }}
+              onClick={() => sol.href && navigate(sol.href)}
+            >
               <img
                 src={sol.imageSrc}
                 alt={sol.imageAlt}
-                className="w-full h-full object-cover absolute inset-0"
+                className={`w-full h-full object-cover absolute inset-0 transition-transform duration-500${sol.href ? " group-hover:scale-105" : ""}`}
               />
             </div>
 
@@ -100,7 +105,10 @@ export default function SolucionesSection({}: SolucionesSectionProps) {
               className="bg-white flex flex-col justify-center px-12 py-11"
               style={{ direction: "ltr" }}
             >
-              <h3 className="text-[28px] font-bold text-gray-900 leading-[1.2] mb-4">
+              <h3
+                className={`text-[28px] font-bold text-gray-900 leading-[1.2] mb-4${sol.href ? " cursor-pointer hover:text-primary transition-colors" : ""}`}
+                onClick={() => sol.href && navigate(sol.href)}
+              >
                 {sol.title}
               </h3>
               <p className="text-base leading-[1.7] text-gray-500">{sol.description}</p>
