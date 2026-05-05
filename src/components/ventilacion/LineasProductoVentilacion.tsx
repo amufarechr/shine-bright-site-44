@@ -19,7 +19,7 @@ const lineas = [
       {
         nombre: "Powerfoil® D — Direct Drive silencioso",
         descripcion:
-          "Motor de imán permanente de accionamiento directo — sin gearbox, sin aceite, sin ruido. IP66 para entornos con polvo, humedad y vapores. Temperatura máxima de operación: 55°C. Ideal para talleres, fundiciones y espacios con condiciones extremas.",
+          "Motor de imán permanente de accionamiento directo — sin caja reductora, sin aceite, sin ruido. IP66 para entornos con polvo, humedad y vapores. Temperatura máxima de operación: 55°C. Ideal para talleres, fundiciones y espacios con condiciones extremas.",
         specs: ["Diámetro 2.4–7.3 m · Motor direct-drive IP66", "Integración BACnet y Modbus para building automation", "Garantía hasta 10 años mecánica + 10 años eléctrica"],
         url: "https://bigassfans.com/powerfoil-d",
       },
