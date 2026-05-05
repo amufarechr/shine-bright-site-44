@@ -10,9 +10,9 @@ const razones = [
   },
   {
     icon: Thermometer,
-    titulo: "Hasta 10°C de sensación de frescor en verano",
+    titulo: "Mejora la distribución de temperatura eliminando bolsillos de calor",
     texto:
-      "El movimiento de aire sobre la piel genera evaporación del sudor, lo que crea una sensación de temperatura hasta 6°C (10°F) menor que la temperatura ambiente real. En naves a 35°C, los trabajadores sienten 28°C. No se cambia la temperatura del aire — se cambia la experiencia térmica de las personas.",
+      "Un Powerfoil X3.0 de 7 metros opera con un motor de 1.5 kW. A tarifas industriales típicas, son menos de 2 USD por turno de 8 horas para cubrir más de 1,200 m² con flujo de aire uniforme. La comparación con sistemas de A/C convencional equivalentes — que requieren 15–25 kW para el mismo espacio — no tiene punto de comparación.",
   },
   {
     icon: Thermometer,
