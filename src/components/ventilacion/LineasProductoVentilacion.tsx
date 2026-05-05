@@ -13,7 +13,7 @@ const lineas = [
         nombre: "Powerfoil® X3.0 — El fan más vendido del mundo",
         descripcion:
           "El ventilador industrial de referencia global. Sistema NitroSeal™ sellado herméticamente, 8 airfoils anodizados con AirFence® y winglets, mayor área de cobertura que cualquier otro fan Big Ass. Diseñado para las condiciones más exigentes.",
-        specs: ["Diámetro 3.7–7.3 m · Motor NitroSeal Drive", "Garantía hasta 15 años mecánica + 15 años eléctrica", "Score Total Fan Value: 100/100"],
+        specs: ["Diámetro 3.7–7.3 m · Motor NitroSeal Drive", "Garantía de fábrica, extendida", "Score Total Fan Value: 100/100"],
         url: "https://bigassfans.com/powerfoil-x30",
       },
       {
@@ -26,7 +26,7 @@ const lineas = [
       {
         nombre: "Powerfoil® 8 — Performance premium",
         descripcion:
-          "El punto de entrada a la línea Powerfoil. Motor industrial IP56 con gearbox doble lip-sealed. Opción Plus Hybrid Airfoil para direccionar el flujo sobre obstrucciones. Variable speed con touch controller resistivo.",
+          "El punto de entrada a la línea Powerfoil. Motor industrial IP56 con caja de transmisión de doble lip-seal. Opción Plus Hybrid Airfoil para direccionar el flujo sobre obstrucciones. Velocidad variable con controller táctil resistivo.",
         specs: ["Diámetro 2.4–7.3 m · Motor IP56 industrial grade", "Opción Hybrid Airfoil para espacios con obstáculos", "Garantía hasta 7 años mecánica + 3 años eléctrica"],
         url: "https://bigassfans.com/powerfoil-8",
       },
