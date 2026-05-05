@@ -23,8 +23,9 @@ export default function VentilacionHero() {
           Ventilación Industrial de Gran Volumen
         </p>
         <h1 className="text-[42px] font-bold leading-[1.1] text-white mb-5">
-          Mover aire a escala industrial<br />
-          con una fracción del costo de un sistema convencional
+          <span>Mover aire a escala industrial</span>
+          <br />
+          <span>con una fracción del costo de un sistema convencional</span>
         </h1>
         <p className="text-base leading-[1.7] text-white/75 mb-9 max-w-[440px]">
           Los ventiladores HVLS (High Volume, Low Speed) de Big Ass Fans mueven
