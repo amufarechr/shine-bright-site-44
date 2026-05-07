@@ -1,0 +1,31 @@
+# SW Ingeniería
+
+> Soluciones integrales en eficiencia operativa para la agroindustria y la industria en general. Con sede en Lima, Perú, y operaciones en México.
+
+SW Ingeniería diseña e implementa sistemas de climatización industrial (enfriamiento evaporativo, calefacción radiante, ventilación HVLS), gestión energética (monitoreo, eficiencia, solar fotovoltaico) y gestión de agua (ósmosis inversa, generación atmosférica). Representantes de Big Ass Fans, Superior Radiant Products (SRP), Portacool, BioCool y WaHa en Perú y México.
+
+## Soluciones
+
+- [Climatización Industrial](https://swingenieria.com/soluciones/climatizacion)
+- [Enfriadores Evaporativos](https://swingenieria.com/soluciones/climatizacion/evaporativo)
+- [Calefacción Radiante](https://swingenieria.com/soluciones/climatizacion/calefaccion)
+- [Ventilación Industrial HVLS](https://swingenieria.com/soluciones/climatizacion/ventilacion)
+- [Gestión Energética](https://swingenieria.com/soluciones/energia)
+- [Gestión de Agua](https://swingenieria.com/soluciones/agua)
+- [Consultoría de Eficiencia Operativa](https://swingenieria.com/consultoria)
+
+## Artículos técnicos
+
+- [Por qué usar enfriamiento evaporativo](https://swingenieria.com/articulos/enfriamiento-evaporativo)
+- [Enfriamiento evaporativo en agroindustria](https://swingenieria.com/articulos/enfriamiento-evaporativo-agroindustria)
+- [Reducir factura eléctrica industrial](https://swingenieria.com/articulos/reducir-factura-electrica)
+- [Monitoreo de consumo energético](https://swingenieria.com/articulos/monitoreo-energetico)
+- [Energía solar para industria](https://swingenieria.com/articulos/energia-solar)
+- [Ósmosis inversa industrial](https://swingenieria.com/articulos/osmosis-inversa)
+- [Agua potable sin red hídrica](https://swingenieria.com/articulos/agua-sin-red-hidrica)
+
+## Contacto
+
+- Email: aplicaciones@swingenieria.com
+- Teléfono: +51 922330784
+- Oficina: Calle Alcanfores 1245, Miraflores, Lima, Perú
