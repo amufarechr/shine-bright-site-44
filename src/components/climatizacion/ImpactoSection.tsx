@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, TrendingUp, ShieldOff, Zap, ThermometerSun, Activity } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, Zap, ThermometerSun, Activity } from "lucide-react";
 
 const items = [
   { icon: TrendingUp,  kpi: "15 a 25%",        label: "Mejora de productividad por mejores condiciones térmicas" },
-  { icon: ShieldOff,   kpi: "−80%",            label: "Paradas no programadas por condiciones ambientales" },
+  { icon: Users,       kpi: "−80%",            label: "Paradas no programadas por condiciones ambientales" },
   { icon: Zap,        kpi: "−75–90%",         label: "Consumo energético vs. A/C convencional" },
   { icon: ThermometerSun, kpi: "+10°F",       label: "Sensación de frescor percibida por trabajadores" },
   { icon: Activity,   kpi: "12 meses",        label: "Operación estable todo el año" },
