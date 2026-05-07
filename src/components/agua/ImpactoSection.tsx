@@ -44,7 +44,7 @@ export default function ImpactoSection() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {impactos.map((item, i) => (
             <motion.div
               key={item.label}
