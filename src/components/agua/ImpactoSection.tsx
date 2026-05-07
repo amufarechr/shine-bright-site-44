@@ -23,11 +23,6 @@ const impactos = [
     valor: "3 segmentos",
     label: "Residencial · Comercial · Industrial",
   },
-  {
-    icon:,
-    valor: "0 plástico",
-    label: "Eliminación de agua embotellada en operaciones",
-  },
 ];
 
 export default function ImpactoSection() {
