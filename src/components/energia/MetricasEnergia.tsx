@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const metricas = [
   {
-    valor: "15–30%",
+    valor: "<1.5 años",
     label: "Reducción típica en factura eléctrica",
     detalle: "Solo con monitoreo y automatización, antes de renovables",
   },
@@ -36,7 +36,7 @@ export default function MetricasEnergia() {
           viewport={{ once: true }}
           className="font-heading text-2xl md:text-4xl font-bold text-center mb-14"
         >
-          Órdenes de magnitud esperados
+          Resultados tangibles de gran impacto
         </motion.h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
