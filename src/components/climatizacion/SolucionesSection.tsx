@@ -39,7 +39,6 @@ const soluciones: Solucion[] = [
   {
     title: "Ventilación industrial de gran volumen",
     description: "Distribución de aire eficiente para confort y productividad en naves industriales, almacenes y espacios comerciales de gran escala.",
-    brand: "Representantes exclusivos de los ventiladores industriales Big Ass Fans.",
     imageSrc: fanImg,
     imageAlt: "Ventiladores industriales de techo en nave industrial",
     imageLeft: false,
@@ -113,11 +112,7 @@ export default function SolucionesSection({}: SolucionesSectionProps) {
                 {sol.title}
               </h3>
               <p className="text-base leading-[1.7] text-gray-500">{sol.description}</p>
-              {sol.brand && (
-                <p className="text-[13px] leading-relaxed text-[#2ebd6b] font-medium mt-3.5 pt-3.5 border-t border-gray-200">
-                  {sol.brand}
-                </p>
-              )}
+
               {sol.href && (
                 <button
                   onClick={() => navigate(sol.href!)}

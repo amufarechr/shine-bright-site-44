@@ -46,7 +46,7 @@ const Footer = () => {
             {[
               { icon: Mail, text: "aplicaciones@swingenieria.com" },
               { icon: Phone, text: "+51 922330784" },
-              { icon: MapPin, text: "Perú" },
+              { icon: MapPin, text: "Oficina Central: Calle Alcanfores 1245 Miraflores, Lima, Perú" },
             ].map((item) => (
               <div key={item.text} className="flex items-center gap-3">
                 <item.icon className="text-primary shrink-0" size={16} />

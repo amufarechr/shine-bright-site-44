@@ -30,14 +30,19 @@ export default function MetricasEnergia() {
   return (
     <section className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16 bg-card">
       <div className="max-w-7xl mx-auto">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-heading text-2xl md:text-4xl font-bold text-center mb-14"
+          className="text-center mb-12"
         >
-          Resultados tangibles de gran impacto
-        </motion.h2>
+          <span className="text-primary text-sm font-semibold tracking-widest uppercase">
+            Impacto
+          </span>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mt-3">
+            Resultados tangibles de gran impacto
+          </h2>
+        </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {metricas.map((m, i) => (

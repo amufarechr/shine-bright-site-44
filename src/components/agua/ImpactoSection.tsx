@@ -1,5 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Droplets, Zap, MapPin, Building2, Leaf } from "lucide-react";
+import { Droplets, Zap, MapPin, Building2, Leaf, ArrowRight } from "lucide-react";
 
 const impactos = [
   {
@@ -30,6 +31,7 @@ const impactos = [
 ];
 
 export default function ImpactoSection() {
+  const navigate = useNavigate();
   return (
     <section id="impacto" className="section-padding pt-10 lg:pt-16 pb-10 lg:pb-16">
       <div className="max-w-7xl mx-auto">
@@ -63,6 +65,16 @@ export default function ImpactoSection() {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-10"
+        >
+          <button onClick={() => navigate("/articulos/agua")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
+            Artículos sobre gestión de agua <ArrowRight size={15} />
+          </button>
+        </motion.div>
       </div>
     </section>
   );

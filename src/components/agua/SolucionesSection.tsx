@@ -142,6 +142,20 @@ export default function SolucionesSection() {
           </div>
         </div>
 
+              <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="pt-2"
+            >
+              <button
+                onClick={() => navigate("/articulos/osmosis-inversa")}
+                className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
+              >
+                Aprende más sobre ósmosis inversa para agua agrícola e industrial <ArrowRight size={15} />
+              </button>
+            </motion.div>
+
         {/* Divider */}
         <div className="border-t border-border" />
 
@@ -184,12 +198,6 @@ export default function SolucionesSection() {
               ))}
 
               <div className="pt-1 flex items-center justify-between gap-6 flex-wrap">
-                <button
-                  onClick={() => scrollTo("contacto")}
-                  className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:gap-3 transition-all"
-                >
-                  Consultar disponibilidad de Waha →
-                </button>
                 <div>
                   <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
                     Representantes exclusivos
@@ -227,18 +235,20 @@ export default function SolucionesSection() {
             </motion.div>
           </div>
         </div>
+              <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="pt-2"
+            >
+              <button
+                onClick={() => navigate("/articulos/agua-sin-red-hidrica")}
+                className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all"
+              >
+                Aprende más sobre agua potable sin red hídrica <ArrowRight size={15} />
+              </button>
+            </motion.div>
 
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mt-10 pt-6 border-t border-border flex flex-wrap gap-x-8 gap-y-3"
-        >
-          <button onClick={() => navigate("/articulos/agua")} className="text-primary text-sm font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
-            Artículos sobre gestión de agua <ArrowRight size={15} />
-          </button>
-        </motion.div>
       </div>
     </section>
   );
