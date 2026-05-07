@@ -10,7 +10,6 @@ const ContactSection = () => {
     setStatus("sending");
     const form = e.currentTarget;
     const data = new FormData(form);
-    data.append("_cc", "aplicaciones@swingenieria.com");
 
     try {
       const res = await fetch("https://formspree.io/f/xkoyvjka", {
