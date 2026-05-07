@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Droplets, Zap, MapPin, Building2, Leaf, ArrowRight } from "lucide-react";
+import { Droplets, Zap, MapPin, Building2, ArrowRight } from "lucide-react";
 
 const impactos = [
   {
@@ -24,7 +24,7 @@ const impactos = [
     label: "Residencial · Comercial · Industrial",
   },
   {
-    icon: Leaf,
+    icon:,
     valor: "0 plástico",
     label: "Eliminación de agua embotellada en operaciones",
   },
