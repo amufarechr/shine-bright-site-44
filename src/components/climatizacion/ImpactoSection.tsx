@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, TrendingUp, ShieldOff, Zap, Users, Activity } from "lucide-react";
 
 const items = [
-  { icon: TrendingUp,  kpi: "+15–25%",        label: "Productividad de operaciones" },
+  { icon: TrendingUp,  kpi: "365 días",        label: "Control térmico durante todo el año (Invierno y Verano)" },
   { icon: ShieldOff,   kpi: "−80%",            label: "Paradas no programadas por condiciones ambientales" },
   { icon: Zap,        kpi: "−75–90%",         label: "Consumo energético vs. A/C convencional" },
   { icon: Users,      kpi: "+10°F",           label: "Sensación de frescor percibida por trabajadores" },
