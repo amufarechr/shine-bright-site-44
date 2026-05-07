@@ -26,6 +26,7 @@ import ArticulosEnergia from "./pages/ArticulosEnergia.tsx";
 import ArticulosAgua from "./pages/ArticulosAgua.tsx";
 import Casos from "./pages/Casos.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
+import WhatsAppButton from "./components/WhatsAppButton.tsx";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <WhatsAppButton />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/consultoria" element={<Consultoria />} />
