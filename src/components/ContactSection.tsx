@@ -10,6 +10,7 @@ const ContactSection = () => {
     setStatus("sending");
     const form = e.currentTarget;
     const data = new FormData(form);
+    data.append("_cc", "aplicaciones@swingenieria.com");
 
     try {
       const res = await fetch("https://formspree.io/f/xkoyvjka", {
@@ -60,15 +61,19 @@ const ContactSection = () => {
 
             <div className="space-y-5">
               {[
-                { icon: Mail, text: "aplicaciones@swingenieria.com" },
-                { icon: Phone, text: "+51 922330784" },
-                { icon: MapPin, text: "Oficina Central: Calle Alcanfores 1245 Miraflores, Lima, Perú" },
+                { icon: Mail, text: "aplicaciones@swingenieria.com", href: "mailto:aplicaciones@swingenieria.com" },
+                { icon: Phone, text: "+51 922330784", href: "https://wa.me/51922330784?text=Hola%2C%20visit%C3%A9%20swingenieria.com%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20soluciones." },
+                { icon: MapPin, text: "Oficina Central: Calle Alcanfores 1245 Miraflores, Lima, Perú", href: undefined },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
                     <item.icon className="text-primary" size={18} />
                   </div>
-                  <span className="text-muted-foreground text-sm">{item.text}</span>
+                  {item.href ? (
+                    <a href={item.href} target={item.href.startsWith("mailto") ? undefined : "_blank"} rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary transition-colors">{item.text}</a>
+                  ) : (
+                    <span className="text-muted-foreground text-sm">{item.text}</span>
+                  )}
                 </div>
               ))}
             </div>
@@ -81,7 +86,6 @@ const ContactSection = () => {
             onSubmit={handleSubmit}
             className="lg:col-span-3 bg-background border border-border rounded-lg p-8 space-y-5"
           >
-            <input type="hidden" name="_cc" value="aplicaciones@swingenieria.com" />
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">
