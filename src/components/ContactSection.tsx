@@ -44,7 +44,7 @@ const ContactSection = () => {
               {[
                 { icon: Mail, label: "aplicaciones@swingenieria.com" },
                 { icon: Phone, label: "+51 922330784" },
-                { icon: MapPin, label: "Perú" },
+                { icon: MapPin, label: "Oficina Central: Calle Alcanfores 1245 Miraflores, Lima, Perú" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center">
