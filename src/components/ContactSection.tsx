@@ -81,6 +81,7 @@ const ContactSection = () => {
             onSubmit={handleSubmit}
             className="lg:col-span-3 bg-background border border-border rounded-lg p-8 space-y-5"
           >
+            <input type="hidden" name="_cc" value="aplicaciones@swingenieria.com" />
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">
