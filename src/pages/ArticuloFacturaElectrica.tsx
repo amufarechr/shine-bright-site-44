@@ -7,7 +7,7 @@ import SeoHead from "@/components/SeoHead";
 import energiaImg from "@/assets/articulos/transformer.jpg";
 
 const metricas = [
-  { valor: "15–30%", label: "Reducción típica solo con monitoreo y automatización", fuente: "Sin renovables" },
+  { valor: "<1.5 años", label: "Reducción típica solo con monitoreo y automatización", fuente: "Sin renovables" },
   { valor: "2do–3er", label: "Posición del gasto energético en estructura de costos industrial", fuente: "Promedio sectorial" },
   { valor: "<18 meses", label: "Payback típico del sistema de monitoreo base", fuente: "Proyectos implementados" },
 ];
