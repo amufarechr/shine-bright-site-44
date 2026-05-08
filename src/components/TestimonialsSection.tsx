@@ -19,10 +19,10 @@ const TestimonialsSection = () => (
       <div className="grid lg:grid-cols-2 gap-8 mb-16">
         {[
           {
-            quote: "SW Ingeniería transformó nuestra planta. Redujimos costos energéticos y mejoramos las condiciones para nuestros colaboradores.",
-            author: "Carlos Mendoza",
-            role: "Director de Operaciones",
-            company: "Grupo Industrial del Norte",
+quote: "SW Ingeniería llegó a entender nuestra planta. Rediseñaron una parte del proceso productivo, eliminaron tiempos muertos que habíamos normalizado e implementaron soluciones a medida, de bajo costo. El resultado fue una transformación operativa real, considerando los retos de la industria alimentaria donde mantener los estándares sanitarios es crucial",
+            author: "Aránzazu Vega",
+            role: "Gerente General",
+            company: "El Cedro",
           },
           {
             quote: "Su equipo de consultoría identificó oportunidades que no habíamos considerado. El ROI superó nuestras expectativas en el primer año.",
