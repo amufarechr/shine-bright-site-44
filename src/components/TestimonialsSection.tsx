@@ -25,10 +25,10 @@ quote: "SW Ingeniería llegó a entender nuestra planta. Rediseñaron una parte 
             company: "El Cedro",
           },
           {
-            quote: "Su equipo de consultoría identificó oportunidades que no habíamos considerado. El ROI superó nuestras expectativas en el primer año.",
-            author: "Ana Sofía Ramírez",
-            role: "Gerente de Planta",
-            company: "Avícola San Pedro",
+quote: "Instalamos ventilación evaporativa en nuestra sala de selección automatizada. El resultado fue doble: mejor conservación del huevo en proceso y mayor vida útil de los brazos robóticos de empaque. Una solución de bajo costo con impacto directo en calidad y productividad.",
+            author: "Jorge Luis Chapoñan",
+            role: "Jefe de Mantenimiento",
+            company: "La Calera",
           },
         ].map((t, i) => (
           <motion.div
