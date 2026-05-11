@@ -11,7 +11,7 @@ import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 const metricas = [
   { valor: "−35%", label: "Tasa de deshidratación en packing de uva", fuente: "Caso Ica" },
   { valor: ">80%", label: "Humedad relativa mantenida en zonas de proceso", fuente: "Casos Ica y Chao" },
-  { valor: "+20%", label: "Incremento en utilidad neta por operación post-cosecha", fuente: "Caso Ica" },
+  { valor: "+500", label: "Trabajadores con confort térmico durante cosecha", fuente: "Caso Ica" },
 ];
 
 const secciones = [

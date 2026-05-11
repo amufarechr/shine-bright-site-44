@@ -12,7 +12,7 @@ const cases = [
     client: "Planta de clasificación y empaque de huevos",
     location: "Chincha, Perú",
     description: "Alta temperatura por las tardes afectaba maquinaria de alta sensibilidad y generaba ausentismo. Sistema evaporativo Big Ass Fans implementado en 4 días sin obras ni paradas.",
-    result: "−9°C · −50% ausentismo · inversión 80% menor que refrigeración convencional",
+    result: "Reducción de 9°C · −50% ausentismo · inversión 80% menor que refrigeración convencional",
   },
   {
     img: casoIca,
@@ -20,7 +20,7 @@ const cases = [
     client: "Packing de uva de exportación",
     location: "Ica, Perú",
     description: "Empaque de más de 5,000 m² con deshidratación de fruta por altas temperaturas en verano. Flujo integral con enfriadores Portacool y extractores de aire caliente.",
-    result: "−35% deshidratación · HR >80% · +20% utilidad neta post-cosecha",
+    result: "−35% deshidratación · HR >80% · +500 trabajadores en confort térmico",
   },
   {
     img: casoCallao,

@@ -14,7 +14,7 @@ const casos = [
     intervencion: "Diseño de sistema evaporativo Big Ass Fans y extractores de aire, con distribución inteligente que logró reducir la temperatura de operación por debajo de 25°C, sin mayor intervención de obras civiles ni paradas de operación.",
     foto: casoChincha,
     resultados: [
-      { periodo: "Semana 1", label: "−9°C en zona de trabajo principal" },
+      { periodo: "Semana 1", label: "Reducción de 9°C en zona de trabajo principal" },
       { periodo: "Mes 1", label: "−50% en ausentismo por calor" },
       { periodo: "Menores costos", label: "Inversión 80% menor que alternativa de refrigeración industrial, con 90% menos de consumo eléctrico" },
     ],
@@ -29,7 +29,7 @@ const casos = [
     resultados: [
       { periodo: "Condiciones", label: "Humedad relativa >80% y temperatura de trabajo <25°C" },
       { periodo: "Producto", label: "−35% en tasa de deshidratación de fruta (<0.1%/hr)" },
-      { periodo: "Rentabilidad", label: "+20% de incremento en utilidad neta por operación post-cosecha" },
+      { periodo: "Personas", label: "Confort térmico para más de 500 trabajadores durante los meses de verano" },
     ],
   },
   {
