@@ -75,7 +75,7 @@ export default function ArticuloFacturaElectrica() {
 
   return (
     <>
-      <SeoHead
+      <SeoHead ogType="article"
         title="Cómo reducir la factura eléctrica de una planta industrial sin reducir producción"
         description="Guía técnica sobre reducción de gasto energético industrial: monitoreo por carga, automatización de arranques, aprovechamiento de tarifas horarias y energía solar. Con datos reales de proyectos implementados."
         keywords="reducir factura eléctrica industria, ahorro energético planta industrial, monitoreo consumo eléctrico, cargo por demanda máxima, tarifa horaria industrial, eficiencia energética"

@@ -60,7 +60,7 @@ export default function ArticuloMonitoreoEnergetico() {
 
   return (
     <>
-      <SeoHead
+      <SeoHead ogType="article"
         title="Monitoreo de consumo energético por carga: qué es y por qué es el primer paso"
         description="Cómo funciona la medición desagregada de energía en plantas industriales, qué decisiones habilita y cómo se instala sin parar la producción. Guía técnica con casos de uso reales."
         keywords="monitoreo consumo energético industrial, medición energética por carga, submedición eléctrica, sistema gestión energética, dashboard consumo eléctrico planta, medidores energía industrial"

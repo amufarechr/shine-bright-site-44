@@ -1,3 +1,4 @@
+import SeoHead from "@/components/SeoHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -11,6 +12,11 @@ import ConsultoriaCTA from "@/components/consultoria/ConsultoriaCTA";
 
 const Consultoria = () => (
   <div className="min-h-screen bg-background">
+    <SeoHead
+      title="Consultoría en Eficiencia Operativa para Agroindustria e Industria"
+      description="Diagnóstico, diseño e implementación de soluciones de climatización, energía y agua para plantas industriales en Perú y México. Metodología comprobada en más de 80 proyectos."
+      path="/consultoria"
+    />
     <Navbar activePage="consultoria" />
     <ConsultoriaHero />
     <DiagnosticoInicialSection />

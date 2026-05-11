@@ -1,3 +1,4 @@
+import SeoHead from "@/components/SeoHead";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ConsultingSection from "@/components/ConsultingSection";
@@ -12,6 +13,11 @@ import Footer from "@/components/Footer";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
+    <SeoHead
+      title="Soluciones Industriales en Climatización, Energía y Agua"
+      description="Optimizamos la eficiencia operativa de plantas agroindustriales e industrias en Perú y México. Climatización, gestión energética y tratamiento de agua. Más de 80 implementaciones."
+      path="/"
+    />
     <Navbar activePage="home" />
     <HeroSection />
     <TechnicalSolutionsSection />

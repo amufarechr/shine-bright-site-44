@@ -1,3 +1,4 @@
+import SeoHead from "@/components/SeoHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -12,6 +13,11 @@ import CtaFinalSection from "./CtaFinalSection";
 export default function ClimatizacionPage() {
   return (
     <>
+      <SeoHead
+        title="Climatización Industrial — Enfriamiento, Calefacción y Ventilación"
+        description="Sistemas de climatización industrial para plantas agroindustriales, almacenes y espacios de trabajo en Perú y México. Enfriamiento evaporativo, calefacción radiante y ventilación HVLS."
+        path="/soluciones/climatizacion"
+      />
       <Navbar activePage="soluciones" />
       <main>
         <Hero />

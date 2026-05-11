@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import SeoHead from "@/components/SeoHead";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
@@ -341,6 +342,11 @@ export default function CasosPage() {
 
   return (
     <>
+      <SeoHead
+        title="Casos de Éxito — Resultados Reales en Agroindustria e Industria"
+        description="Más de 80 implementaciones en plantas agroindustriales, almacenes, centros de distribución y retail en Perú. Datos reales: reducción de temperatura, ahorro energético y mejora de productividad."
+        path="/casos"
+      />
       <Navbar darkHero={false} />
       <main>
         {/* Hero */}

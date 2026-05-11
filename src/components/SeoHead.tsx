@@ -5,13 +5,14 @@ interface SeoHeadProps {
   description: string;
   keywords?: string;
   path?: string;
+  ogType?: "website" | "article";
 }
 
 /**
  * Updates <title> and meta tags for the current page.
  * Works in SPAs (no SSR needed) — sufficient for Googlebot which executes JS.
  */
-export default function SeoHead({ title, description, keywords, path }: SeoHeadProps) {
+export default function SeoHead({ title, description, keywords, path, ogType = "website" }: SeoHeadProps) {
   useEffect(() => {
     const BASE_URL = "https://swingenieria.com"; // update when domain is live
     const fullTitle = `${title} | SW Ingeniería`;
@@ -39,7 +40,7 @@ export default function SeoHead({ title, description, keywords, path }: SeoHeadP
     setMeta('meta[property="og:title"]', 'property=og:title', fullTitle);
     setMeta('meta[property="og:description"]', 'property=og:description', description);
     setMeta('meta[property="og:url"]', 'property=og:url', canonicalUrl);
-    setMeta('meta[property="og:type"]', 'property=og:type', "article");
+    setMeta('meta[property="og:type"]', 'property=og:type', ogType);
 
     // Canonical link
     let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');

@@ -38,7 +38,7 @@ const articulos = [
 export default function ArticulosClimatizacion() {
   return (
     <>
-      <SeoHead
+      <SeoHead ogType="article" ogType="article"
         title="Artículos técnicos sobre climatización industrial"
         description="Guías técnicas sobre enfriadores evaporativos, hidroventiladores y climatización para agroindustria, naves industriales y almacenes. Casos reales con datos de campo."
         keywords="climatización industrial, enfriamiento evaporativo, hidroventilador, swamp cooler, calor nave industrial, deshidratación fruta fresca"

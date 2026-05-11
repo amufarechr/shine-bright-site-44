@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Bloquear residuos de instalación WordPress anterior
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-*.php
+Disallow: /index.php/
+
 Sitemap: https://swingenieria.com/sitemap.xml
