@@ -58,14 +58,14 @@ const casos: Caso[] = [
     situacion: "Planta de 3,000 m² con alta temperatura por la tarde, que afectaba maquinaria de alta sensibilidad y generaba ausentismo.",
     intervencion: "Diseño de sistema evaporativo Big Ass Fans y extractores de aire, con distribución inteligente que logró reducir la temperatura por debajo de 25°C, sin obras civiles ni paradas de operación.",
     resultados: [
-      { periodo: "Semana 1", label: "−9°C en zona de trabajo principal" },
+      { periodo: "Semana 1", label: "Reducción de 9°C en zona de trabajo principal" },
       { periodo: "Mes 1", label: "−50% en ausentismo por calor" },
       { periodo: "Menores costos", label: "Inversión 80% menor que alternativa de refrigeración industrial, con 90% menos de consumo eléctrico" },
     ],
     quote: {
       text: "Instalamos ventilación evaporativa en nuestra sala de selección automatizada. El resultado fue doble: mejor conservación del huevo en proceso y mayor vida útil de los brazos robóticos de empaque. Una solución de bajo costo con impacto directo en calidad y productividad.",
-      author: "Pedro José de Zavala de Romaña",
-      role: "Gerente General",
+      author: "Jorge Luis Chapoñan",
+      role: "Jefe de Mantenimiento",
     },
   },
   {
@@ -83,7 +83,7 @@ const casos: Caso[] = [
     resultados: [
       { periodo: "Condiciones", label: "Humedad relativa >80% y temperatura de trabajo <25°C" },
       { periodo: "Producto", label: "−35% en tasa de deshidratación de fruta (<0.1%/hr)" },
-      { periodo: "Rentabilidad", label: "+20% de incremento en utilidad neta por operación post-cosecha" },
+      { periodo: "Personas", label: "Confort térmico para más de 500 trabajadores durante los meses de verano, con condiciones de trabajo sostenibles en jornadas de alta demanda" },
     ],
     quote: {
       text: "La implementación de enfriadores evaporativos en nuestras plantas tuvo dos impactos muy claros. En las personas: bajar la temperatura en packing durante los meses de cosecha marcó una diferencia real para más de 500 trabajadores. En la fruta: atacamos la deshidratación en las zonas más críticas (recepción y espera de materia prima) y en el proceso. El control de temperatura y humedad relativa ahí logra extender la vida de anaquel. Y todo esto con una inversión muy pequeña, sin necesidad de refrigeración convencional ni aislamiento térmico.",

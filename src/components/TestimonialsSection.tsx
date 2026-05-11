@@ -20,8 +20,8 @@ const testimonials = [
   {
     quote:
       "Instalamos ventilación evaporativa en nuestra sala de selección automatizada. El resultado fue doble: mejor conservación del huevo en proceso y mayor vida útil de los brazos robóticos de empaque. Una solución de bajo costo con impacto directo en calidad y productividad.",
-    author: "Pedro José de Zavala de Romaña",
-    role: "Gerente General",
+    author: "Jorge Luis Chapoñan",
+    role: "Jefe de Mantenimiento",
     company: "La Calera",
   },
 ];
