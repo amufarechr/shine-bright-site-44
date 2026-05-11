@@ -39,6 +39,7 @@ interface Caso {
   situacion?: string;
   intervencion?: string;
   resultados?: Resultado[];
+  quote?: { text: string; author: string; role: string };
 }
 
 // ─── Datos ────────────────────────────────────────────────────────────────────
@@ -61,6 +62,11 @@ const casos: Caso[] = [
       { periodo: "Mes 1", label: "−50% en ausentismo por calor" },
       { periodo: "Menores costos", label: "Inversión 80% menor que alternativa de refrigeración industrial, con 90% menos de consumo eléctrico" },
     ],
+    quote: {
+      text: "Instalamos ventilación evaporativa en nuestra sala de selección automatizada. El resultado fue doble: mejor conservación del huevo en proceso y mayor vida útil de los brazos robóticos de empaque. Una solución de bajo costo con impacto directo en calidad y productividad.",
+      author: "Pedro José de Zavala de Romaña",
+      role: "Gerente General",
+    },
   },
   {
     id: "ica-uva",
@@ -79,6 +85,11 @@ const casos: Caso[] = [
       { periodo: "Producto", label: "−35% en tasa de deshidratación de fruta (<0.1%/hr)" },
       { periodo: "Rentabilidad", label: "+20% de incremento en utilidad neta por operación post-cosecha" },
     ],
+    quote: {
+      text: "La implementación de enfriadores evaporativos en nuestras plantas tuvo dos impactos muy claros. En las personas: bajar la temperatura en packing durante los meses de cosecha marcó una diferencia real para más de 500 trabajadores. En la fruta: atacamos la deshidratación en las zonas más críticas (recepción y espera de materia prima) y en el proceso. El control de temperatura y humedad relativa ahí logra extender la vida de anaquel. Y todo esto con una inversión muy pequeña, sin necesidad de refrigeración convencional ni aislamiento térmico.",
+      author: "Juan Pedro Illescas",
+      role: "Gerente de Planta",
+    },
   },
   {
     id: "callao",
@@ -169,6 +180,11 @@ const casos: Caso[] = [
       { periodo: "Insumos", label: "−21% en consumo de insumos críticos y costosos (preservantes, alcohol, entre otros)" },
       { periodo: "Estructura de costos", label: "Recuperación del margen bruto al capitalizar las economías de escala que el crecimiento de volumen no lograba generar por sí solo" },
     ],
+    quote: {
+      text: "SW Ingeniería llegó a entender nuestra planta. Rediseñaron una parte del proceso productivo, eliminaron tiempos muertos que habíamos normalizado e implementaron soluciones a medida, de bajo costo. El resultado fue una transformación operativa real, considerando los retos de la industria alimentaria donde mantener los estándares sanitarios es crucial.",
+      author: "Aránzazu Vega",
+      role: "Gerente General",
+    },
   },
   {
     id: "pesca",
@@ -304,6 +320,15 @@ function Modal({ caso, onClose }: { caso: Caso; onClose: () => void }) {
                     <p className="text-sm text-foreground">{r.label}</p>
                   </div>
                 ))}
+              </div>
+            )}
+
+            {/* Quote */}
+            {caso.quote && (
+              <div className="mt-6 border-l-2 border-primary/40 pl-5 py-1">
+                <p className="text-foreground text-sm leading-relaxed italic mb-3">"{caso.quote.text}"</p>
+                <p className="text-sm font-semibold">{caso.quote.author}</p>
+                <p className="text-muted-foreground text-xs">{caso.quote.role}</p>
               </div>
             )}
 
