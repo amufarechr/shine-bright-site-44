@@ -147,18 +147,19 @@ export const casosChao = {
   sectorLabel: "Agroindustria · Chao, La Libertad, Perú",
   client: "Acopios de campo para cosecha de arándanos y palta",
   location: "Chao, La Libertad, Perú",
-  resultCard: "+10 centros de acopio · T<25°C y HR>80% · 4 años de crecimiento acompañado",
-  description:
-    "Operación agrícola de gran escala requería reducir la deshidratación de fruta durante la cosecha, antes de llegar al centro de empaque. Más de 800 hectáreas a cubrir.",
-  situacion:
-    "Operación agrícola de gran escala en Chao, La Libertad, requería reducir la deshidratación de fruta durante el proceso de cosecha, antes de llegar al centro de empaque. Con más de 800 hectáreas a cubrir, la fruta cosechada acumulaba tiempo de espera en campo sin condiciones térmicas adecuadas.",
+  hectareas: "más de 800",
+  centrosAcopio: "+10",
+  anosAcompanamiento: "4 años",
+  get resultCard() { return `${this.centrosAcopio} centros de acopio · T<25°C y HR>80% · ${this.anosAcompanamiento} de crecimiento acompañado`; },
+  get description() { return `Operación agrícola de gran escala requería reducir la deshidratación de fruta durante la cosecha, antes de llegar al centro de empaque. ${this.hectareas.charAt(0).toUpperCase() + this.hectareas.slice(1)} hectáreas a cubrir.`; },
+  get situacion() { return `Operación agrícola de gran escala en Chao, La Libertad, requería reducir la deshidratación de fruta durante el proceso de cosecha, antes de llegar al centro de empaque. Con ${this.hectareas} hectáreas a cubrir, la fruta cosechada acumulaba tiempo de espera en campo sin condiciones térmicas adecuadas.`; },
   intervencion:
     "Se implementaron centros de acopio con enfriamiento evaporativo estratégicamente distribuidos en campo, para consolidar la cosecha al tamaño de carga de transporte. Estructuras simples con cobertura de malla raschel, sin material aislante, con bajo costo de implementación y fácil reubicación.",
-  resultados: [
-    { periodo: "Escala", label: "+10 centros de acopio implementados, acompañando el crecimiento de campo a lo largo de 4 años" },
+  get resultados() { return [
+    { periodo: "Escala", label: `${this.centrosAcopio} centros de acopio implementados, acompañando el crecimiento de campo a lo largo de ${this.anosAcompanamiento}` },
     { periodo: "Condiciones", label: "T<25°C y HR>80%, reduciendo drásticamente la tasa de deshidratación en campo" },
     { periodo: "Operación", label: "Reducción de tiempos de espera desde el punto de cosecha, con total adaptación al ritmo y requerimientos de la operación" },
-  ],
+  ]; },
 };
 
 export const casosViveroAte = {
@@ -166,18 +167,20 @@ export const casosViveroAte = {
   sectorLabel: "Agroindustria · Ate, Lima, Perú",
   client: "Invernadero de semillas y plantines de hortalizas",
   location: "Ate, Lima, Perú",
-  resultCard: "23°C–25°C y HR 60%–70% · control automático · menor mortandad de plantines",
+  tempRango: "23°C–25°C",
+  hrRango: "60%–70%",
+  get resultCard() { return `${this.tempRango} y HR ${this.hrRango} · control automático · menor mortandad de plantines`; },
   description:
     "Las condiciones ambientales variables de Lima dificultaban mantener T° y HR consistentes para germinación. Se requería una solución bidireccional — enfriar en verano y calentar en invierno.",
   situacion:
     "Las semillas y plantines de hortalizas requieren condiciones ambientales muy precisas para su correcta germinación y desarrollo. El cambiante clima de Lima — con veranos cálidos e inviernos fríos y húmedos — dificultaba mantener las condiciones adecuadas de forma consistente sin intervención manual constante.",
   intervencion:
     "Se diseñó un sistema de climatización bidireccional que combina enfriadores evaporativos de techo marca BioCool con calefactores radiantes, controlado por sensores y actuadores automáticos. En días de calor, los enfriadores reducen la temperatura; en invierno, los calefactores la elevan. El diseño de techo permite un flujo de aire indirecto que acondiciona el espacio sin impactar directamente las plantas en desarrollo.",
-  resultados: [
-    { periodo: "Condiciones", label: "Temperatura mantenida entre 23°C y 25°C, con HR entre 60% y 70%" },
+  get resultados() { return [
+    { periodo: "Condiciones", label: `Temperatura mantenida entre ${this.tempRango}, con HR entre ${this.hrRango}` },
     { periodo: "Automatización", label: "Sistema de control automático elimina ajustes manuales, adaptándose en tiempo real a las condiciones exteriores" },
     { periodo: "Productividad", label: "Reducción significativa en tasa de mortandad de plantines, con mayor consistencia en germinación y desarrollo" },
-  ],
+  ]; },
 };
 
 export const casosIquitos = {
@@ -186,18 +189,17 @@ export const casosIquitos = {
   client: "Food court de mall",
   location: "Iquitos, Perú",
   superficie: "1,000 m²",
-  resultCard: "1,000 m² climatizados · 6 equipos instalados · sin obras adicionales",
-  description:
-    "Food court de 1,000 m² en clima tropical húmedo. El área abierta hacía inviable la refrigeración convencional. Se combinaron ventiladores HVLS con enfriadores evaporativos.",
-  situacion:
-    "El food court de un mall en Iquitos — ciudad con clima tropical húmedo durante todo el año — operaba con altas temperaturas que afectaban la experiencia de los visitantes. Al tratarse de un área abierta de 1,000 m², la refrigeración convencional no era técnica ni económicamente viable.",
+  equipos: "6",
+  get resultCard() { return `${this.superficie} climatizados · ${this.equipos} equipos instalados · sin obras adicionales`; },
+  get description() { return `Food court de ${this.superficie} en clima tropical húmedo. El área abierta hacía inviable la refrigeración convencional. Se combinaron ventiladores HVLS con enfriadores evaporativos.`; },
+  get situacion() { return `El food court de un mall en Iquitos — ciudad con clima tropical húmedo durante todo el año — operaba con altas temperaturas que afectaban la experiencia de los visitantes. Al tratarse de un área abierta de ${this.superficie}, la refrigeración convencional no era técnica ni económicamente viable.`; },
   intervencion:
     "Se instalaron 3 ventiladores industriales de techo de gran diámetro Big Ass Fans para eliminar bolsillos de calor y distribuir el aire uniformemente en el volumen del espacio, combinados con 3 enfriadores evaporativos CF-500 para reducir la temperatura del aire en las zonas de mayor afluencia. La combinación de ambos sistemas genera un efecto de confort térmico sostenido sin necesidad de cerramiento del espacio.",
-  resultados: [
+  get resultados() { return [
     { periodo: "Confort", label: "Reducción efectiva de temperatura percibida en el food court durante todo el año" },
-    { periodo: "Viabilidad", label: "Única solución técnicamente viable para un espacio abierto de 1,000 m² en clima tropical" },
-    { periodo: "Escala", label: "6 equipos instalados cubriendo la totalidad del área sin obras de infraestructura adicionales" },
-  ],
+    { periodo: "Viabilidad", label: `Única solución técnicamente viable para un espacio abierto de ${this.superficie} en clima tropical` },
+    { periodo: "Escala", label: `${this.equipos} equipos instalados cubriendo la totalidad del área sin obras de infraestructura adicionales` },
+  ]; },
 };
 
 export const casosLurin = {
@@ -205,18 +207,20 @@ export const casosLurin = {
   sectorLabel: "Industrial · Lurín, Lima, Perú",
   client: "Panificadora industrial",
   location: "Lurín, Lima, Perú",
-  resultCard: "+30% productividad horas-hombre · −21% consumo de insumos críticos · recuperación de margen bruto",
+  aumentoProductividad: "+30%",
+  reduccionInsumos: "−21%",
+  get resultCard() { return `${this.aumentoProductividad} productividad horas-hombre · ${this.reduccionInsumos} consumo de insumos críticos · recuperación de margen bruto`; },
   description:
     "A pesar del crecimiento sostenido de producción y ventas, el margen bruto se deterioraba. El incremento de volumen no generaba economías de escala — los costos directos crecían proporcionalmente.",
   situacion:
     "Una empresa de panificación industrial de gran escala en Lurín enfrentaba un problema paradójico: a pesar del crecimiento sostenido de producción y ventas, el margen bruto se deterioraba. El incremento de volumen no se traducía en economías de escala — los costos directos de mano de obra, insumos y energía crecían proporcionalmente, sin señales de control.",
   intervencion:
     "Se realizó un análisis detallado de las actividades productivas principales, identificando re-trabajos, movimientos innecesarios de materia prima y producto en proceso, y un alto porcentaje de actividades manuales en las etapas finales — rociado y empacado. Se implementó una solución integral que combinó el uso anticipado de información de demanda para mejorar el planeamiento de producción, con la automatización de los procesos que operaban como cuellos de botella.",
-  resultados: [
-    { periodo: "Productividad", label: "+30% de incremento en productividad de horas-hombre en el proceso productivo" },
-    { periodo: "Insumos", label: "−21% en consumo de insumos críticos y costosos (preservantes, alcohol, entre otros)" },
+  get resultados() { return [
+    { periodo: "Productividad", label: `${this.aumentoProductividad} de incremento en productividad de horas-hombre en el proceso productivo` },
+    { periodo: "Insumos", label: `${this.reduccionInsumos} en consumo de insumos críticos y costosos (preservantes, alcohol, entre otros)` },
     { periodo: "Estructura de costos", label: "Recuperación del margen bruto al capitalizar las economías de escala que el crecimiento de volumen no lograba generar por sí solo" },
-  ],
+  ]; },
   quote: quotes.cedro,
 };
 
@@ -225,11 +229,11 @@ export const casosPesca = {
   sectorLabel: "Pesca · Litoral peruano",
   client: "Pesquera de gran escala",
   location: "Litoral peruano",
+  pctAccidentesFaena: "más del 90%",
   resultCard: "Eliminación de accidentes graves · protección de tripulantes · costos evitados de múltiples millones de dólares",
   description:
     "Tasa de accidentabilidad concentrada en la faena de pesca, con impacto en personas y paradas no planificadas por daños a activos. Se implementó un programa integral SMS en dos fases.",
-  situacion:
-    "Una empresa pesquera industrial de gran escala operaba con una tasa de accidentabilidad concentrada en la faena de pesca, con más del 90% de los accidentes de los últimos 5 años ocurriendo en esa etapa. Los incidentes generaban un doble impacto: en las personas, con accidentes graves que comprometían la seguridad y salud de los tripulantes; y en la operación, con paradas no planificadas y daños a activos que inutilizaban embarcaciones en momentos críticos de campaña.",
+  get situacion() { return `Una empresa pesquera industrial de gran escala operaba con una tasa de accidentabilidad concentrada en la faena de pesca, con ${this.pctAccidentesFaena} de los accidentes de los últimos 5 años ocurriendo en esa etapa. Los incidentes generaban un doble impacto: en las personas, con accidentes graves que comprometían la seguridad y salud de los tripulantes; y en la operación, con paradas no planificadas y daños a activos que inutilizaban embarcaciones en momentos críticos de campaña.`; },
   intervencion:
     "Se diseñó e implementó un programa integral basado en Safety Management System (SMS), estructurado en dos fases paralelas: diagnóstico con mapeo holístico de procesos e identificación y priorización de riesgos con sus causas raíz; seguido del diseño e implementación de acciones de mitigación en tres ejes — Procesos (SOPs, RAPIDs, KPIs), Personas (organización, incentivos, entrenamiento) y Tecnología (conectividad, visibilidad, mantenimiento de activos).",
   resultados: [
@@ -244,19 +248,20 @@ export const casosAutomotriz = {
   sectorLabel: "Automotriz · Lima, Perú",
   client: "Concesionario de vehículos de alta gama",
   location: "Lima, Perú",
-  superficie: "1,000 m²",
-  resultCard: "1,000 m² climatizados · instalación no invasiva · sin obras de infraestructura",
-  description:
-    "Showroom de atención al público de 600 m² y taller con 25 mecánicos en 400 m². El calor del verano generaba incomodidad en clientes y equipo técnico sin solución viable de A/C convencional.",
-  situacion:
-    "Un concesionario de vehículos de alta gama en Lima operaba con un showroom de atención al público de 600 m² y un taller con 25 mecánicos en 400 m². El calor excesivo durante el verano generaba incomodidad tanto en clientes como en el equipo técnico, sin una solución viable de aire acondicionado convencional a esa escala y costo.",
+  superficieShowroom: "600 m²",
+  superficieTaller: "400 m²",
+  mecanicos: "25",
+  get superficie() { return "1,000 m²"; },
+  get resultCard() { return `${this.superficie} climatizados · instalación no invasiva · sin obras de infraestructura`; },
+  get description() { return `Showroom de atención al público de ${this.superficieShowroom} y taller con ${this.mecanicos} mecánicos en ${this.superficieTaller}. El calor del verano generaba incomodidad en clientes y equipo técnico sin solución viable de A/C convencional.`; },
+  get situacion() { return `Un concesionario de vehículos de alta gama en Lima operaba con un showroom de atención al público de ${this.superficieShowroom} y un taller con ${this.mecanicos} mecánicos en ${this.superficieTaller}. El calor excesivo durante el verano generaba incomodidad tanto en clientes como en el equipo técnico, sin una solución viable de aire acondicionado convencional a esa escala y costo.`; },
   intervencion:
     "Se instalaron enfriadores evaporativos Portacool en dos configuraciones distintas adaptadas a cada espacio: montaje elevado con soportes en el showroom para preservar la estética del espacio, e instalación a piso en el taller automotriz. El sistema se complementó con extractores estratégicos para garantizar renovación de aire continua en ambas zonas.",
-  resultados: [
+  get resultados() { return [
     { periodo: "Confort", label: "Reducción significativa de temperatura en ambas zonas durante los meses de verano" },
     { periodo: "Instalación", label: "Sin obras de infraestructura ni modificaciones al espacio — solución no invasiva adaptada al diseño existente" },
-    { periodo: "Cobertura", label: "1,000 m² climatizados con una solución unificada para dos tipos de uso completamente distintos" },
-  ],
+    { periodo: "Cobertura", label: `${this.superficie} climatizados con una solución unificada para dos tipos de uso completamente distintos` },
+  ]; },
 };
 
 export const casosTransporteIca = {
@@ -264,16 +269,18 @@ export const casosTransporteIca = {
   sectorLabel: "Transporte · Ica, Perú",
   client: "Flota de camiones de cosecha de uva",
   location: "Ica, Perú",
-  resultCard: "T<25°C y HR>80% en tránsito · −40% deshidratación · mejor condición tras 45 días de guarda",
+  reduccionDeshidratacion: ">40%",
+  diasGuarda: "45",
+  get resultCard() { return `T<25°C y HR>80% en tránsito · −${this.reduccionDeshidratacion} deshidratación · mejor condición tras ${this.diasGuarda} días de guarda`; },
   description:
     "Lotes de producción a más de dos horas del centro de empaque requerían solución de bajo costo para transportar fruta en condiciones que redujeran la deshidratación.",
   situacion:
     "Lotes de producción de uva ubicados a más de dos horas de distancia del centro de empaque requerían una solución de bajo costo para transportar la fruta en condiciones adecuadas y reducir la tasa de deshidratación durante el trayecto.",
   intervencion:
     "Se adaptaron unidades de enfriamiento evaporativo a la flota de camiones existente (sistema PreserveAir), a través de un modelo de servicio por renta de temporada que incluía la intervención de las unidades y su operación completa.",
-  resultados: [
+  get resultados() { return [
     { periodo: "Condiciones", label: "T<25°C y HR>80% mantenidos durante el transporte" },
-    { periodo: "Deshidratación", label: "Reducción promedio >40% en tasa de deshidratación vs. camión tradicional" },
-    { periodo: "Guarda", label: "Incremento notable en condición de fruta después de 45 días de período de guarda" },
-  ],
+    { periodo: "Deshidratación", label: `Reducción promedio ${this.reduccionDeshidratacion} en tasa de deshidratación vs. camión tradicional` },
+    { periodo: "Guarda", label: `Incremento notable en condición de fruta después de ${this.diasGuarda} días de período de guarda` },
+  ]; },
 };
