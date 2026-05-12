@@ -7,11 +7,9 @@ import SeoHead from "@/components/SeoHead";
 import almacenImg from "@/assets/evaporativo/almacen.jpeg";
 import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
 
-const metricas = [
-  { valor: "−85%", label: "Menor inversión vs. refrigeración convencional", fuente: "Caso Callao" },
-  { valor: "20 kW", label: "Consumo eléctrico para 6,000 m²", fuente: "vs. +180 kW convencional" },
-  { valor: "−50%", label: "Ausentismo por calor en zona de trabajo", fuente: "Caso Chincha" },
-];
+import { metricasAlmacenes } from "@/data/siteData";
+
+const metricas = metricasAlmacenes;
 
 const secciones = [
   {

@@ -1,12 +1,9 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import casoChincha from "@/assets/evaporativo/caso-chincha.jpg";
+import { casosChincha } from "@/data/siteData";
 
-const resultados = [
-  { periodo: "Semana 1", label: "Reducción de 9°C en zona de trabajo principal" },
-  { periodo: "Mes 1", label: "−50% en ausentismo por calor" },
-  { periodo: "Menores costos", label: "Inversión en solución 80% menor que alternativa de refrigeración industrial, con 90% menos de consumo eléctrico" },
-];
+const resultados = casosChincha.resultados;
 
 export default function CasoRealSection() {
   const navigate = useNavigate();

@@ -8,11 +8,9 @@ import chartImg from "@/assets/evaporativo/caso-transporte-ica-chart.jpg";
 import casoTransporteIca from "@/assets/evaporativo/caso-transporte-ica.jpg";
 import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 
-const metricas = [
-  { valor: "−35%", label: "Tasa de deshidratación en packing de uva", fuente: "Caso Ica" },
-  { valor: ">80%", label: "Humedad relativa mantenida en zonas de proceso", fuente: "Casos Ica y Chao" },
-  { valor: "+500", label: "Trabajadores con confort térmico durante cosecha", fuente: "Caso Ica" },
-];
+import { metricasAgroindustria } from "@/data/siteData";
+
+const metricas = metricasAgroindustria;
 
 const secciones = [
   {

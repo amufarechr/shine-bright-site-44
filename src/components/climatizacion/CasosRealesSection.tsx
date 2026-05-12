@@ -4,46 +4,35 @@ import { useNavigate } from "react-router-dom";
 import casoChincha from "@/assets/evaporativo/caso-chincha.jpg";
 import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
+import { casosChincha, casosIca, casosCallao } from "@/data/siteData";
 
 const casos = [
   {
     id: "01",
-    sector: "Agroindustria · Chincha, Perú",
-    titulo: "Reducción de 9°C en planta de clasificación y empaque de huevos, implementada en solo 4 días",
-    antes: "Planta de 3,000 m² con alta temperatura por la tarde, que afectaba maquinaria de alta sensibilidad y generaba ausentismo.",
-    intervencion: "Diseño de sistema evaporativo Big Ass Fans y extractores de aire, con distribución inteligente que logró reducir la temperatura de operación por debajo de 25°C, sin mayor intervención de obras civiles ni paradas de operación.",
+    sector: casosChincha.sectorLabel,
+    titulo: `${casosChincha.reduccionTemp} en planta de clasificación y empaque de huevos, implementada en solo 4 días`,
+    antes: casosChincha.situacion,
+    intervencion: casosChincha.intervencion,
     foto: casoChincha,
-    resultados: [
-      { periodo: "Semana 1", label: "Reducción de 9°C en zona de trabajo principal" },
-      { periodo: "Mes 1", label: "−50% en ausentismo por calor" },
-      { periodo: "Menores costos", label: "Inversión 80% menor que alternativa de refrigeración industrial, con 90% menos de consumo eléctrico" },
-    ],
+    resultados: casosChincha.resultados,
   },
   {
     id: "02",
-    sector: "Agroindustria · Ica, Perú",
-    titulo: "Mejora de condiciones de packing de uva: −35% de deshidratación y mayor confort para 500 colaboradores",
-    antes: "Empaque de más de 5,000 m² con áreas de recepción, clasificación y empaque. Las altas temperaturas del verano generaban deshidratación de la fruta y reducción de vida de anaquel.",
-    intervencion: "Implementación de flujo integral de aire combinando enfriadores Portacool con salidas superiores de aire caliente.",
+    sector: casosIca.sectorLabel,
+    titulo: `Mejora de condiciones de packing de uva: ${casosIca.reduccionDeshidratacion} de deshidratación y mayor confort para ${casosIca.trabajadores} colaboradores`,
+    antes: casosIca.situacion,
+    intervencion: casosIca.intervencion,
     foto: casoIca,
-    resultados: [
-      { periodo: "Condiciones", label: "Humedad relativa >80% y temperatura de trabajo <25°C" },
-      { periodo: "Producto", label: "−35% en tasa de deshidratación de fruta (<0.1%/hr)" },
-      { periodo: "Personas", label: "Confort térmico para más de 500 trabajadores durante los meses de verano" },
-    ],
+    resultados: casosIca.resultados,
   },
   {
     id: "03",
-    sector: "Logística · Callao, Perú",
-    titulo: "Almacén de 6,000 m² de productos farmacéuticos con temperatura controlada — 85% menos de inversión que la alternativa evaluada",
-    antes: "Centro de distribución de productos farmacéuticos en Callao requería implementación para cumplimiento regulatorio. La alternativa inicialmente evaluada de refrigeración industrial excedía el presupuesto considerado.",
-    intervencion: "Se identificó distribución óptima de flujo adaptada al diseño existente de pasillos, y se implementaron enfriadores evaporativos de alto caudal complementados por extractores eólicos de techo.",
+    sector: casosCallao.sectorLabel,
+    titulo: `Almacén de ${casosCallao.superficie} de productos farmacéuticos con temperatura controlada — ${casosCallao.ahorroInversion} que la alternativa evaluada`,
+    antes: casosCallao.situacion,
+    intervencion: casosCallao.intervencion,
     foto: casoCallao,
-    resultados: [
-      { periodo: "Cumplimiento", label: "Temperatura garantizada por debajo de los 27°C requeridos" },
-      { periodo: "Inversión", label: "Costo de instalación 85% menor a la alternativa originalmente evaluada" },
-      { periodo: "Energía", label: "Solo 20 kW de potencia consumida vs. +180 kW de sistema de refrigeración convencional" },
-    ],
+    resultados: casosCallao.resultados,
   },
 ];
 

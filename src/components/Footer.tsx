@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/logo-foco.svg";
+import { empresa } from "@/data/siteData";
 
 const footerLinks = [
   { label: "Soluciones técnicas", id: "soluciones" },
@@ -45,8 +46,8 @@ const Footer = () => {
           <div className="space-y-3">
             {[
               { icon: Mail, text: "aplicaciones@swingenieria.com", href: "mailto:aplicaciones@swingenieria.com" },
-              { icon: Phone, text: "+51 922330784", href: "https://wa.me/51922330784?text=Hola%2C%20visit%C3%A9%20swingenieria.com%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20soluciones." },
-              { icon: MapPin, text: "Oficina Central: Calle Alcanfores 1245 Miraflores, Lima, Perú", href: undefined },
+              { icon: Phone, text: empresa.telefono, href: empresa.whatsappHref },
+              { icon: MapPin, text: empresa.direccion, href: undefined },
             ].map((item) => (
               <div key={item.text} className="flex items-center gap-3">
                 <item.icon className="text-primary shrink-0" size={16} />

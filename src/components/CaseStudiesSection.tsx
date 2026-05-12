@@ -4,31 +4,32 @@ import { useNavigate } from "react-router-dom";
 import casoChincha from "@/assets/evaporativo/caso-chincha.jpg";
 import casoIca from "@/assets/evaporativo/caso-ica.jpg";
 import casoCallao from "@/assets/evaporativo/caso-callao.jpg";
+import { casosChincha, casosIca, casosCallao } from "@/data/siteData";
 
 const cases = [
   {
     img: casoChincha,
-    sector: "Avícola",
-    client: "Planta de clasificación y empaque de huevos",
-    location: "Chincha, Perú",
-    description: "Alta temperatura por las tardes afectaba maquinaria de alta sensibilidad y generaba ausentismo. Sistema evaporativo Big Ass Fans implementado en 4 días sin obras ni paradas.",
-    result: "Reducción de 9°C · −50% ausentismo · inversión 80% menor que refrigeración convencional",
+    sector: casosChincha.sector,
+    client: casosChincha.client,
+    location: casosChincha.location,
+    description: casosChincha.description,
+    result: casosChincha.resultCard,
   },
   {
     img: casoIca,
-    sector: "Agroindustria",
-    client: "Packing de uva de exportación",
-    location: "Ica, Perú",
-    description: "Empaque de más de 5,000 m² con deshidratación de fruta por altas temperaturas en verano. Flujo integral con enfriadores Portacool y extractores de aire caliente.",
-    result: "−35% deshidratación · HR >80% · +500 trabajadores en confort térmico",
+    sector: casosIca.sector,
+    client: casosIca.client,
+    location: casosIca.location,
+    description: casosIca.description,
+    result: casosIca.resultCard,
   },
   {
     img: casoCallao,
-    sector: "Logística",
-    client: "Centro de distribución farmacéutico",
-    location: "Callao, Perú",
-    description: "6,000 m² de almacén de productos farmacéuticos con cumplimiento regulatorio de temperatura. Enfriadores evaporativos de alto caudal con extractores eólicos de techo.",
-    result: "<27°C garantizados · instalación 85% más económica · solo 20 kW vs. +180 kW de alternativa",
+    sector: casosCallao.sector,
+    client: casosCallao.client,
+    location: casosCallao.location,
+    description: casosCallao.description,
+    result: casosCallao.resultCard,
   },
 ];
 
