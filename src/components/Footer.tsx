@@ -47,7 +47,6 @@ const Footer = () => {
             {[
               { icon: Mail, text: "aplicaciones@swingenieria.com", href: "mailto:aplicaciones@swingenieria.com" },
               { icon: Phone, text: empresa.telefono, href: empresa.whatsappHref },
-              { icon: MapPin, text: empresa.direccion, href: undefined },
             ].map((item) => (
               <div key={item.text} className="flex items-center gap-3">
                 <item.icon className="text-primary shrink-0" size={16} />
@@ -58,6 +57,19 @@ const Footer = () => {
                 )}
               </div>
             ))}
+            <div className="flex items-start gap-3">
+              <MapPin className="text-primary shrink-0 mt-0.5" size={16} />
+              <div className="space-y-1.5">
+                <div className="flex items-start gap-1.5">
+                  <span className="text-sm leading-none mt-px">🇵🇪</span>
+                  <span className="text-white/60 text-sm">{empresa.direccionPeru}</span>
+                </div>
+                <div className="flex items-start gap-1.5">
+                  <span className="text-sm leading-none mt-px">🇲🇽</span>
+                  <span className="text-white/60 text-sm">{empresa.direccionMexico}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

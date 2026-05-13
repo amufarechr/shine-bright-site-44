@@ -24,7 +24,6 @@ export default function ContactSection() {
 
   const contactInfo = [
     { icon: Phone, text: empresa.telefono, href: empresa.whatsappHref },
-    { icon: MapPin, text: empresa.direccion, href: undefined },
   ];
 
   return (
@@ -72,6 +71,21 @@ export default function ContactSection() {
                   )}
                 </div>
               ))}
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                  <MapPin className="text-primary" size={18} />
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-start gap-2">
+                    <span className="text-base leading-none mt-0.5">🇵🇪</span>
+                    <span className="text-foreground text-sm">{empresa.direccionPeru}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-base leading-none mt-0.5">🇲🇽</span>
+                    <span className="text-foreground text-sm">{empresa.direccionMexico}</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
 

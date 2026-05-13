@@ -11,7 +11,8 @@ export const empresa = {
   telefono: "+51 922330784",
   whatsappHref:
     "https://wa.me/51922330784?text=Hola%2C%20visit%C3%A9%20swingenieria.com%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20soluciones.",
-  direccion: "Oficina Central: Calle Alcanfores 1245 Miraflores, Lima, Perú",
+  direccionPeru: "Calle Alcanfores 1245, Miraflores, Lima, Perú",
+  direccionMexico: "Calle Atlixco 54 Piso 5, Condesa, Del. Cuauhtémoc, CP 06140, CDMX, México",
   implementaciones: "más de 80",
   paises: "Perú y México",
 };
