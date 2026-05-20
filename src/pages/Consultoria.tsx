@@ -13,8 +13,8 @@ import ConsultoriaCTA from "@/components/consultoria/ConsultoriaCTA";
 const Consultoria = () => (
   <div className="min-h-screen bg-background">
     <SeoHead
-      title="Consultoría en Eficiencia Operativa para Agroindustria e Industria"
-      description="Diagnóstico, diseño e implementación de soluciones de climatización, energía y agua para plantas industriales en Perú y México. Metodología comprobada en más de 80 proyectos."
+      title="Consultoría en Eficiencia Operativa Industrial en Perú y México | SW Ingeniería"
+      description="Consultoría en eficiencia operativa para plantas industriales y agroindustriales en Perú y México. Diagnóstico energético, climatización y agua. Más de 80 proyectos implementados en Lima y principales regiones."
       path="/consultoria"
     />
     <Navbar activePage="consultoria" />

@@ -13,8 +13,8 @@ export default function EvaporativoPage() {
   return (
     <>
       <SeoHead
-        title="Enfriamiento Evaporativo Industrial — Sistemas Portacool, BioCool y Big Ass Fans"
-        description="Soluciones de enfriamiento evaporativo para agroindustria, plantas de empaque y almacenes en Perú y México. Hasta −12°C con 90% menos consumo eléctrico que refrigeración convencional."
+        title="Enfriamiento Evaporativo Industrial en Perú — Portacool, BioCool y Big Ass Fans"
+        description="Enfriamiento evaporativo industrial para agroindustria, plantas de empaque y almacenes en Perú y México. Implementaciones en Ica, Piura, Trujillo y Lima. Hasta −12°C con 90% menos consumo eléctrico."
         path="/soluciones/climatizacion/evaporativo"
       />
       <Navbar activePage="soluciones" />

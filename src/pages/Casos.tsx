@@ -317,8 +317,8 @@ export default function CasosPage() {
   return (
     <>
       <SeoHead
-        title="Casos de Éxito — Resultados Reales en Agroindustria e Industria"
-        description="Más de 80 implementaciones en plantas agroindustriales, almacenes, centros de distribución y retail en Perú. Datos reales: reducción de temperatura, ahorro energético y mejora de productividad."
+        title="Casos de Éxito en Agroindustria e Industria — Perú y México | SW Ingeniería"
+        description="Más de 80 implementaciones en plantas agroindustriales, almacenes y retail en Perú. Proyectos en Lima, Ica, Piura, Trujillo y Callao. Datos reales de reducción de temperatura y ahorro energético."
         path="/casos"
       />
       <Navbar darkHero={false} />

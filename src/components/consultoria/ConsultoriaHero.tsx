@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import consultoriaImg from "@/assets/consultoria.png";
+import consultoriaImg from "@/assets/consultoria.jpg";
 
 const ConsultoriaHero = () => {
   const scrollTo = (id: string) =>

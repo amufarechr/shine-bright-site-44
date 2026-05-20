@@ -14,8 +14,8 @@ import Footer from "@/components/Footer";
 const Index = () => (
   <div className="min-h-screen bg-background">
     <SeoHead
-      title="Soluciones Industriales en Climatización, Energía y Agua"
-      description="Optimizamos la eficiencia operativa de plantas agroindustriales e industrias en Perú y México. Climatización, gestión energética y tratamiento de agua. Más de 80 implementaciones."
+      title="Climatización y Eficiencia Industrial en Perú y México | SW Ingeniería"
+      description="Soluciones de climatización industrial, gestión energética y tratamiento de agua para agroindustria e industria en Perú y México. Más de 80 implementaciones en Lima y principales regiones agroindustriales."
       path="/"
     />
     <Navbar activePage="home" />

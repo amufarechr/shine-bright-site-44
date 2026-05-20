@@ -12,8 +12,8 @@ export default function AguaPage() {
   return (
     <>
       <SeoHead
-        title="Gestión de Agua Industrial — Tratamiento, Osmosis y Eficiencia Hídrica"
-        description="Soluciones de gestión y tratamiento de agua para agroindustria e industria en Perú y México. Sistemas de osmosis inversa, captación y eficiencia hídrica para plantas sin red hidráulica."
+        title="Gestión de Agua Industrial en Perú — Tratamiento, Osmosis y Eficiencia Hídrica"
+        description="Gestión y tratamiento de agua para agroindustria e industria en Perú y México. Osmosis inversa, captación y eficiencia hídrica para plantas en zonas sin red hídrica como desiertos costeros y sierra."
         path="/soluciones/agua"
       />
       <Navbar activePage="soluciones" />

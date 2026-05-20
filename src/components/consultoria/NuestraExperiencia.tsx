@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import alvaroImg from "@/assets/alvaro.png";
-import franzImg from "@/assets/franz.png";
+import alvaroImg from "@/assets/alvaro.jpg";
+import franzImg from "@/assets/franz.jpg";
 
 const socios = [
   {

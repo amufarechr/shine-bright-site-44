@@ -14,8 +14,8 @@ export default function ClimatizacionPage() {
   return (
     <>
       <SeoHead
-        title="Climatización Industrial — Enfriamiento, Calefacción y Ventilación"
-        description="Sistemas de climatización industrial para plantas agroindustriales, almacenes y espacios de trabajo en Perú y México. Enfriamiento evaporativo, calefacción radiante y ventilación HVLS."
+        title="Climatización Industrial en Perú y México — Enfriamiento, Calefacción y Ventilación"
+        description="Sistemas de climatización industrial para agroindustria, plantas de empaque y almacenes en Perú y México. Enfriamiento evaporativo, calefacción radiante y ventilación HVLS en Lima, Ica, Piura y regiones agroindustriales."
         path="/soluciones/climatizacion"
       />
       <Navbar activePage="soluciones" />
