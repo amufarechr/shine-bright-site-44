@@ -38,7 +38,7 @@ const hubs = [
 export default function Articulos() {
   return (
     <>
-      <SeoHead ogType="article" ogType="article"
+      <SeoHead ogType="article"
         title="Artículos técnicos — Climatización, Energía y Agua"
         description="Guías técnicas sobre climatización industrial, gestión energética y gestión de agua. Escritas desde la práctica con datos reales de proyectos implementados en Perú y México."
         keywords="artículos técnicos industriales, climatización industrial, gestión energética, ósmosis inversa, enfriamiento evaporativo"

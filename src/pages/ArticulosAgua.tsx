@@ -29,7 +29,7 @@ const articulos = [
 export default function ArticulosAgua() {
   return (
     <>
-      <SeoHead ogType="article" ogType="article"
+      <SeoHead ogType="article"
         title="Artículos técnicos sobre gestión de agua industrial y agrícola"
         description="Guías técnicas sobre ósmosis inversa, desalinización y generación atmosférica de agua para riego agrícola, industria y proyectos sin red hídrica."
         keywords="ósmosis inversa agrícola, desalinización industrial, agua sin red hídrica, generación agua atmosférica, agua para riego arándano, tratamiento agua pozos"

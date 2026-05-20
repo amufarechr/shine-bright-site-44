@@ -38,7 +38,7 @@ const articulos = [
 export default function ArticulosEnergia() {
   return (
     <>
-      <SeoHead ogType="article" ogType="article"
+      <SeoHead ogType="article"
         title="Artículos técnicos sobre gestión energética industrial"
         description="Guías técnicas sobre reducción de gasto energético, monitoreo de consumo por carga y energía solar para plantas industriales. Con datos reales de proyectos implementados."
         keywords="gestión energética industrial, ahorro energético planta, monitoreo consumo eléctrico, energía solar industrial, eficiencia energética"
