@@ -1,12 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.swingenieria.com" }],
-      "destination": "https://swingenieria.com/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     { "source": "/((?!assets|catalogos|favicon|robots|sitemap|llms|og-image|apple-touch).*)", "destination": "/index.html" }
   ]
