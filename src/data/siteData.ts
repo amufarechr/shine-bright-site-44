@@ -113,8 +113,8 @@ export const casosCallao = {
   consumoKw: "20 kW",
   consumoKwAlternativa: "+180 kW",
   ahorroInversion: "85% menos inversión",
-  tempGarantizada: "<27°C",
-  resultCard: "<27°C garantizados · 85% menos inversión · solo 20 kW",
+  tempGarantizada: "<25°C",
+  resultCard: "<25°C garantizados · 85% menos inversión · solo 20 kW",
   description:
     "6,000 m² de almacén farmacéutico que requería temperatura controlada para cumplimiento regulatorio, con presupuesto acotado.",
   situacion:
