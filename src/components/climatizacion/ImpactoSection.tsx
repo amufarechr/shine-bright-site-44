@@ -6,7 +6,7 @@ const items = [
   { icon: TrendingUp,  kpi: "15 a 25%",        label: "Mejora de productividad por mejores condiciones térmicas" },
   { icon: Users,       kpi: "−80%",            label: "Paradas no programadas por condiciones ambientales" },
   { icon: Zap,        kpi: "−75–90%",         label: "Consumo energético vs. A/C convencional" },
-  { icon: ThermometerSun, kpi: "+10°F",       label: "Sensación de frescor percibida por trabajadores" },
+  { icon: ThermometerSun, kpi: "-8°C a -10°C",       label: "Reducción de temperatura percibida por trabajadores" },
   { icon: Activity,   kpi: "12 meses",        label: "Operación estable todo el año" },
 ];
 
