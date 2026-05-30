@@ -56,7 +56,7 @@ export default function ArticulosEnergia() {
               Gestión <span className="text-gradient">Energética</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl">
-              Monitoreo de consumo, automatización y energía solar — guías técnicas para reducir el gasto energético industrial con datos y metodología correcta.
+              La factura eléctrica es uno de los costos más controlables en una planta industrial — si se tiene visibilidad y se actúa con metodología. Estas guías abordan monitoreo energético por carga, identificación de desperdicios, automatización e integración de energía solar en contextos industriales y agroindustriales en Perú, con criterios aplicables desde medianas hasta grandes operaciones.
             </p>
           </motion.div>
         </section>

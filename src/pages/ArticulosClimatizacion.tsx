@@ -56,7 +56,7 @@ export default function ArticulosClimatizacion() {
               Climatización <span className="text-gradient">Industrial</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl">
-              Enfriamiento evaporativo, ventilación industrial y calefacción — guías técnicas escritas desde la práctica con datos reales de proyectos implementados.
+              En plantas de empaque, almacenes y naves industriales del Perú, el calor no es solo un problema de confort — afecta la calidad del producto, la productividad del personal y el consumo eléctrico. Estas guías cubren enfriamiento evaporativo, ventilación industrial y calefacción desde la práctica: con datos medidos en campo, criterios de selección reales y casos documentados en Ica, Piura, Trujillo y Lima.
             </p>
           </motion.div>
         </section>

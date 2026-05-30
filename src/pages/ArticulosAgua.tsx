@@ -47,7 +47,7 @@ export default function ArticulosAgua() {
               Gestión de <span className="text-gradient">Agua</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl">
-              Ósmosis inversa y generación atmosférica — guías técnicas para proyectos que necesitan agua de calidad controlada, con o sin acceso a red hídrica.
+              En zonas costeras y desiertos del Perú, el acceso a agua de calidad es un factor limitante para la operación industrial y agrícola. Estas guías cubren ósmosis inversa, desalinización y generación de agua atmosférica — tecnologías que permiten operar con agua controlada en proyectos sin red hídrica en la costa norte, sur y valles interandinos.
             </p>
           </motion.div>
         </section>
