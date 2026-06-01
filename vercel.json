@@ -1,4 +1,5 @@
 {
+  "buildCommand": "npx puppeteer browsers install chrome && npm run build",
   "redirects": [
     { "source": "/index.php/enfriadores-evaporativos-de-techo-bio-cool/:path*", "destination": "/soluciones/climatizacion/evaporativo", "permanent": true },
     { "source": "/index.php/enfriadores-evaporativos-de-pared-cool-space/:path*", "destination": "/soluciones/climatizacion/evaporativo", "permanent": true },
