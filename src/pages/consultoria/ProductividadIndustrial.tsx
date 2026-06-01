@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowRight, Gauge } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useNavigateToContact } from "@/hooks/useNavigateToContact";
 import { motion } from "framer-motion";
 import SeoHead from "@/components/SeoHead";
 import Navbar from "@/components/Navbar";
@@ -31,7 +32,7 @@ const metricas = [
 ];
 
 const ProductividadIndustrial = () => {
-  const navigate = useNavigate();
+  const navigateToContact = useNavigateToContact();
 
   return (
     <div className="min-h-screen bg-background">
@@ -42,7 +43,7 @@ const ProductividadIndustrial = () => {
         path="/consultoria/productividad-industrial"
         schema={schema}
       />
-      <Navbar activePage="consultoria" />
+      <Navbar activePage="consultoria" darkHero={false} />
 
       {/* Hero */}
       <section className="pt-[120px] pb-16 px-8 md:px-24 max-w-4xl mx-auto">
@@ -65,7 +66,7 @@ const ProductividadIndustrial = () => {
             utilizando la capacidad instalada que ya tiene — sin necesidad de ampliar activos.
           </p>
           <button
-            onClick={() => navigate("/consultoria#contacto")}
+            onClick={navigateToContact}
             className="inline-flex items-center gap-2 px-6 py-3.5 bg-primary hover:brightness-110 rounded-md text-sm font-semibold text-white transition-all"
           >
             Solicitar diagnóstico <ArrowRight size={16} />
@@ -80,11 +81,11 @@ const ProductividadIndustrial = () => {
             El problema de la capacidad oculta
           </h2>
           <p>
-            En la mayoría de plantas industriales y agroindustriales en Perú, hay más capacidad
-            productiva de la que se está usando. No porque los equipos estén subutilizados de
-            manera obvia, sino porque las pérdidas operativas — paradas no planificadas,
-            cambios lentos, operaciones fuera de estándar, merma — consumen silenciosamente una
-            fracción significativa de la capacidad disponible.
+            En la mayoría de plantas industriales y agroindustriales donde hemos trabajado, hay
+            más capacidad productiva de la que se está usando. No porque los equipos estén
+            subutilizados de manera obvia, sino porque las pérdidas operativas — paradas no
+            planificadas, cambios lentos, operaciones fuera de estándar, merma — consumen
+            silenciosamente una fracción significativa de la capacidad disponible.
           </p>
           <p>
             La <strong className="text-foreground">mejora de productividad industrial</strong> en
@@ -167,7 +168,7 @@ const ProductividadIndustrial = () => {
           </p>
           <div className="flex gap-3 flex-wrap">
             <button
-              onClick={() => navigate("/consultoria#contacto")}
+              onClick={navigateToContact}
               className="inline-flex items-center gap-2 px-5 py-3 bg-primary hover:brightness-110 rounded-md text-sm font-semibold text-white transition-all"
             >
               Conversar con el equipo <ArrowRight size={15} />

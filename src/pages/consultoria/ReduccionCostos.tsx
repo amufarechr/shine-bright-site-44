@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowRight, TrendingDown } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useNavigateToContact } from "@/hooks/useNavigateToContact";
 import { motion } from "framer-motion";
 import SeoHead from "@/components/SeoHead";
 import Navbar from "@/components/Navbar";
@@ -31,7 +32,7 @@ const rubros = [
 ];
 
 const ReduccionCostos = () => {
-  const navigate = useNavigate();
+  const navigateToContact = useNavigateToContact();
 
   return (
     <div className="min-h-screen bg-background">
@@ -42,7 +43,7 @@ const ReduccionCostos = () => {
         path="/consultoria/reduccion-costos-operativos"
         schema={schema}
       />
-      <Navbar activePage="consultoria" />
+      <Navbar activePage="consultoria" darkHero={false} />
 
       {/* Hero */}
       <section className="pt-[120px] pb-16 px-8 md:px-24 max-w-4xl mx-auto">
@@ -66,7 +67,7 @@ const ReduccionCostos = () => {
             en margen.
           </p>
           <button
-            onClick={() => navigate("/consultoria#contacto")}
+            onClick={navigateToContact}
             className="inline-flex items-center gap-2 px-6 py-3.5 bg-primary hover:brightness-110 rounded-md text-sm font-semibold text-white transition-all"
           >
             Solicitar diagnóstico <ArrowRight size={16} />
@@ -140,20 +141,14 @@ const ReduccionCostos = () => {
           </p>
 
           <h2 className="font-heading text-2xl font-bold text-foreground mt-8">
-            Experiencia en agroindustria e industria peruana
+            Experiencia en agroindustria e industria
           </h2>
           <p>
             Hemos ejecutado proyectos de reducción de costos operativos en packing de exportación
             (uva, arándanos, palta), manufactura de alimentos en Lima, operaciones logísticas en
-            Callao, y procesamiento industrial en Ica y Trujillo. En cada caso, el diagnóstico
-            reveló oportunidades que no eran evidentes desde la gerencia y que el equipo operativo
-            había dejado de ver por familiaridad.
-          </p>
-          <p>
-            A diferencia de un análisis financiero externo, trabajamos desde adentro de la
-            operación: los socios del proyecto tienen experiencia directa en planta y en
-            implementación, no solo en diagnóstico. Eso hace la diferencia entre identificar el
-            problema y resolverlo.
+            Callao, y procesamiento industrial en Ica y Trujillo. También hemos trabajado en México,
+            donde uno de los socios operó como consultor de transformación operativa en Bain &
+            Company. Para proyectos en otros países de la región, evaluamos según el alcance.
           </p>
         </div>
 
@@ -172,7 +167,7 @@ const ReduccionCostos = () => {
           </p>
           <div className="flex gap-3 flex-wrap">
             <button
-              onClick={() => navigate("/consultoria#contacto")}
+              onClick={navigateToContact}
               className="inline-flex items-center gap-2 px-5 py-3 bg-primary hover:brightness-110 rounded-md text-sm font-semibold text-white transition-all"
             >
               Conversar con el equipo <ArrowRight size={15} />

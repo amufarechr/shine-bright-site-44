@@ -14,7 +14,7 @@ const ConsultoriaEditorial = () => (
           Consultoría operativa
         </span>
         <h2 className="font-heading text-2xl md:text-4xl font-bold mt-3 mb-6">
-          Eficiencia operativa industrial en Perú y México
+          Eficiencia operativa en agroindustria e industria
         </h2>
 
         <div className="prose prose-lg prose-invert max-w-none space-y-5 text-muted-foreground leading-relaxed">
@@ -32,6 +32,8 @@ const ConsultoriaEditorial = () => (
             como propósito identificar exactamente dónde está la brecha entre la operación actual
             y su potencial real — y luego cerrarla. No a través de recomendaciones genéricas, sino
             mediante intervenciones concretas en procesos, equipos, flujos y sistemas de gestión.
+            El diagnóstico precede siempre a la propuesta: cuantificamos el potencial de mejora
+            antes de recomendar ninguna acción.
           </p>
 
           <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-3">
@@ -45,16 +47,16 @@ const ConsultoriaEditorial = () => (
             es un problema de diseño del sistema operativo.
           </p>
           <p>
-            En SW Ingeniería diagnosticamos los flujos de valor completos — desde la recepción de
-            materia prima hasta el despacho — y diseñamos las intervenciones de mayor impacto. En
-            una panificadora industrial en Lurín, esto significó rediseñar la secuencia de
-            producción y los estándares de consumo: el resultado fue un aumento de 30% en{" "}
+            Diagnosticamos los flujos de valor completos — desde la recepción de materia prima
+            hasta el despacho — y diseñamos las intervenciones de mayor impacto. En una
+            panificadora industrial en Lurín (Lima), el rediseño de la secuencia de producción y
+            los estándares de consumo generó un aumento del 30% en{" "}
             <strong className="text-foreground">productividad industrial</strong> y una reducción
             del 21% en consumo de insumos críticos, sin inversión significativa en activos.
           </p>
 
           <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-3">
-            Reducción de costos operativos en industria
+            Reducción de costos operativos
           </h3>
           <p>
             La <strong className="text-foreground">reducción de costos operativos</strong> sostenible
@@ -64,39 +66,34 @@ const ConsultoriaEditorial = () => (
             producción.
           </p>
           <p>
-            Nuestro proceso de diagnóstico cuantifica esa brecha con precisión: definimos el
-            potencial de ahorro real antes de proponer ninguna intervención. Esto permite priorizar
-            las acciones por ROI y construir un caso de negocio sólido internamente. En operaciones
-            de agroindustria en Perú — uva de mesa en Ica, arándanos y palta en Chao, packing en
-            el Callao — hemos identificado oportunidades de{" "}
-            <strong className="text-foreground">reducción de costos operativos</strong> de entre
-            15% y 35% en las áreas intervenidas.
+            El diagnóstico cuantifica esa brecha con precisión antes de proponer ninguna
+            intervención. En operaciones agroindustriales donde hemos trabajado — packing de uva
+            en Ica, arándanos y palta en Chao, logística en Callao — las oportunidades de{" "}
+            <strong className="text-foreground">reducción de costos operativos</strong> identificadas
+            han oscilado entre el 15% y el 35% en las áreas intervenidas.
           </p>
 
           <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-3">
-            Sectores de actuación: agroindustria y manufactura en Perú
+            Dónde trabajamos
           </h3>
           <p>
-            Trabajamos principalmente con operaciones de{" "}
-            <strong className="text-foreground">agroindustria</strong> —packing de exportación,
-            almacenamiento refrigerado, procesamiento primario — y con plantas de{" "}
-            <strong className="text-foreground">manufactura</strong> que buscan mejorar su
-            competitividad en mercados exigentes. Nuestras intervenciones se han ejecutado en Lima
-            (Lurín, Callao, Ate), Ica, Chao, Trujillo, Piura y, en escenarios específicos, en
-            México.
+            Nuestra base de proyectos ejecutados está en Perú: Lima (Lurín, Callao, Ate), Ica,
+            Chao, Trujillo y Piura concentran la mayoría de los casos. También hemos trabajado
+            en México, donde uno de los socios operó como consultor de transformación operativa
+            en Bain & Company. Para proyectos en otros países de la región, evaluamos caso a caso.
           </p>
           <p>
-            A diferencia de consultoras que entregan un informe y se retiran, nosotros
-            acompañamos la implementación. Los socios del proyecto — ambos ingenieros con MBA por
-            MIT y experiencia directa en planta — trabajan junto al equipo operativo hasta
-            verificar los resultados en los números reales de la operación.
+            A diferencia de consultoras que entregan un informe y se retiran, acompañamos la
+            implementación. Los socios — ingenieros con MBA por MIT y experiencia directa en
+            planta — trabajan junto al equipo operativo hasta verificar los resultados en los
+            números reales de la operación.
           </p>
 
           <h3 className="font-heading text-xl font-bold text-foreground mt-8 mb-3">
             Tres líneas de intervención
           </h3>
           <p>
-            Nuestra práctica de consultoría opera en tres ejes complementarios:
+            La práctica de consultoría opera en tres ejes complementarios:
           </p>
           <ul className="space-y-2 text-muted-foreground list-none pl-0">
             {[

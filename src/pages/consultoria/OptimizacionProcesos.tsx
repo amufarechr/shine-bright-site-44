@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useNavigateToContact } from "@/hooks/useNavigateToContact";
 import { motion } from "framer-motion";
 import SeoHead from "@/components/SeoHead";
 import Navbar from "@/components/Navbar";
@@ -32,7 +33,7 @@ const puntos = [
 ];
 
 const OptimizacionProcesos = () => {
-  const navigate = useNavigate();
+  const navigateToContact = useNavigateToContact();
 
   return (
     <div className="min-h-screen bg-background">
@@ -43,7 +44,7 @@ const OptimizacionProcesos = () => {
         path="/consultoria/optimizacion-procesos-industriales"
         schema={schema}
       />
-      <Navbar activePage="consultoria" />
+      <Navbar activePage="consultoria" darkHero={false} />
 
       {/* Hero */}
       <section className="pt-[120px] pb-16 px-8 md:px-24 max-w-4xl mx-auto">
@@ -67,7 +68,7 @@ const OptimizacionProcesos = () => {
             campo y un plan de intervención priorizado por impacto económico.
           </p>
           <button
-            onClick={() => navigate("/consultoria#contacto")}
+            onClick={navigateToContact}
             className="inline-flex items-center gap-2 px-6 py-3.5 bg-primary hover:brightness-110 rounded-md text-sm font-semibold text-white transition-all"
           >
             Solicitar diagnóstico <ArrowRight size={16} />
@@ -130,7 +131,9 @@ const OptimizacionProcesos = () => {
             Hemos ejecutado proyectos de optimización de procesos en packing de uva de mesa y
             arándanos en Ica y Chao, en plantas de manufactura en Lima (Lurín, Ate), en
             operaciones logísticas en Callao, y en agroindustria de palta en el norte peruano.
-            Nuestro radio de acción principal es Perú, con proyectos específicos en México.
+            También hemos trabajado en México, donde uno de los socios operó como consultor de
+            transformación operativa en Bain & Company. Para proyectos en otros países de la
+            región latinoamericana, evaluamos según el alcance y el tipo de operación.
           </p>
         </div>
 
@@ -150,7 +153,7 @@ const OptimizacionProcesos = () => {
           </p>
           <div className="flex gap-3 flex-wrap">
             <button
-              onClick={() => navigate("/consultoria#contacto")}
+              onClick={navigateToContact}
               className="inline-flex items-center gap-2 px-5 py-3 bg-primary hover:brightness-110 rounded-md text-sm font-semibold text-white transition-all"
             >
               Conversar con el equipo <ArrowRight size={15} />

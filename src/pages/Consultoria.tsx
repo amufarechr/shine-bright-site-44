@@ -11,6 +11,7 @@ import CasosReales from "@/components/consultoria/CasosReales";
 import ConsultoriaCTA from "@/components/consultoria/ConsultoriaCTA";
 import ConsultoriaEditorial from "@/components/consultoria/ConsultoriaEditorial";
 import ConsultoriaFAQ from "@/components/consultoria/ConsultoriaFAQ";
+import ConsultoriaArticulos from "@/components/consultoria/ConsultoriaArticulos";
 
 const consultoriaSchema = {
   "@context": "https://schema.org",
@@ -49,6 +50,7 @@ const Consultoria = () => (
     <ComoIntervenimos />
     <ResultadosOperativos />
     <ConsultoriaEditorial />
+    <ConsultoriaArticulos />
     <CasosReales />
     <ConsultoriaFAQ />
     <ConsultoriaCTA />

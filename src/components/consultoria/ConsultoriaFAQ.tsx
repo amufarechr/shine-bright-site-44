@@ -5,22 +5,31 @@ import { useEffect } from "react";
 
 const faqs = [
   {
-    q: "¿Qué es una consultoría de eficiencia operativa industrial?",
-    a: "Es un proceso estructurado de diagnóstico e intervención que identifica dónde y por qué una operación industrial pierde productividad, consume más recursos de los necesarios, o no alcanza su potencial de rentabilidad. A diferencia de la consultoría estratégica, trabaja directamente sobre los procesos, equipos y sistemas de gestión en planta. El resultado es un conjunto de acciones concretas — priorizadas por impacto económico — que el equipo operativo puede ejecutar con o sin inversión en activos nuevos.",
+    q: "¿En qué se diferencia SW Ingeniería de una consultora de gestión tradicional?",
+    a: "La diferencia principal está en la ejecución. Una consultora de gestión entrega un diagnóstico y recomendaciones; nosotros acompañamos la implementación hasta verificar que los resultados se reflejan en los números de la operación. Ambos socios tienen experiencia directa en planta — no solo en análisis — lo que cambia el tipo de intervención que es posible. Además, trabajamos con datos reales de la operación desde el primer día: tiempos de ciclo, consumos, rendimientos, historial de mantenimiento. No proyecciones.",
   },
   {
-    q: "¿Cuándo una planta industrial necesita una evaluación de eficiencia operativa?",
-    a: "Las señales más frecuentes son: márgenes que no mejoran aunque las ventas crezcan, costos de producción que aumentan más rápido que el volumen, productividad por horas-hombre o por turno estancada, exceso de merma o reproceso sin causa clara, paradas no planificadas frecuentes, o dificultad para cumplir estándares de entrega a tiempo. También es recomendable una evaluación cuando se planea ampliar capacidad — muchas veces la capacidad real ya existe, solo no está siendo aprovechada.",
+    q: "¿Cuánto tiempo toma ver resultados?",
+    a: "Depende del tipo de intervención. Mejoras en estándares operativos, secuencias de trabajo y controles visuales generan resultados medibles en 4 a 8 semanas. Intervenciones más estructurales — rediseño de flujos, cambios en sistemas de mantenimiento — típicamente muestran impacto verificable en 2 a 4 meses. En todos los casos, el diagnóstico inicial (que toma entre 1 y 3 semanas según el tamaño de la operación) define con precisión qué puede moverse rápido y qué requiere más tiempo.",
   },
   {
-    q: "¿Cómo identifica SW Ingeniería las oportunidades de mejora?",
-    a: "Trabajamos en campo, no desde el escritorio. El diagnóstico combina observación directa de los procesos con análisis de los datos operativos de la planta — consumos, tiempos de ciclo, rendimientos, indicadores de mantenimiento. Cuantificamos el gap entre la operación actual y el benchmark alcanzable para cada proceso. Esto nos permite presentar un mapa de oportunidades con el potencial de ahorro o mejora de cada una, antes de recomendar ninguna intervención.",
+    q: "¿Hay inversión en equipos o infraestructura?",
+    a: "En la mayoría de los proyectos que ejecutamos, la mayor parte del potencial de mejora no requiere inversión en activos nuevos. Está en el rediseño de cómo se usan los recursos existentes. Cuando sí identificamos oportunidades que requieren inversión — un sistema de monitoreo energético, un ajuste en equipos de proceso — lo presentamos con el análisis de retorno completo antes de recomendar nada. Nunca proponemos gasto sin cuantificar primero el beneficio.",
   },
   {
-    q: "¿Qué resultados son esperables en un proyecto de eficiencia operativa?",
-    a: "Depende del punto de partida, pero en operaciones de agroindustria y manufactura donde hemos trabajado, los rangos típicos son: reducción de costos operativos de 15% a 35% en las áreas intervenidas, mejoras de productividad por horas-hombre de 20% a 40%, y reducciones de consumo energético de 10% a 25%. Estos resultados son siempre estimados y validados con datos reales durante el diagnóstico — no son cifras genéricas de marketing. El payback de las intervenciones varía, pero en la mayoría de los proyectos que ejecutamos sin inversión significativa en activos, el retorno se verifica en el primer semestre.",
+    q: "¿Trabajan con plantas pequeñas o solo con grandes operaciones?",
+    a: "Trabajamos con operaciones medianas y grandes — plantas con al menos 30 a 40 personas en operación directa, o con una factura energética o de insumos significativa. Por debajo de ese umbral, el costo del diagnóstico raramente se justifica frente al potencial de ahorro. Si su operación está en ese límite, la primera conversación nos permite evaluar si tiene sentido avanzar.",
+  },
+  {
+    q: "¿Cómo es el proceso de diagnóstico inicial?",
+    a: "El diagnóstico comienza con una conversación de 30 a 60 minutos donde entendemos el contexto: sector, tamaño, principales desafíos y lo que ya se ha intentado. Si hay potencial claro, proponemos una visita a planta de 2 a 5 días según la complejidad, donde observamos los procesos directamente y analizamos los datos operativos disponibles. Al final entregamos un mapa de oportunidades con la cuantificación de cada brecha y la priorización por impacto. Esa primera conversación no tiene costo.",
+  },
+  {
+    q: "¿Pueden trabajar en nuestra planta sin interrumpir la operación?",
+    a: "Sí. El diagnóstico se hace en paralelo a la operación normal — observamos los procesos en curso, revisamos registros históricos, y entrevistamos al equipo operativo en horarios que no interfieren con la producción. Para las intervenciones, diseñamos el plan de implementación considerando los turnos, las temporadas de mayor carga, y los ciclos de mantenimiento. En operaciones agroindustriales con temporadas críticas de exportación, esto es particularmente importante y lo planificamos explícitamente.",
   },
 ];
+
 
 const ConsultoriaFAQ = () => {
   const [open, setOpen] = useState<number | null>(null);
@@ -62,7 +71,7 @@ const ConsultoriaFAQ = () => {
             Preguntas frecuentes
           </span>
           <h2 className="font-heading text-2xl md:text-3xl font-bold mt-3">
-            Lo que más nos preguntan sobre consultoría operativa
+            Preguntas frecuentes sobre consultoría operativa
           </h2>
         </motion.div>
 
