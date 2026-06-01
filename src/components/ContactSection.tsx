@@ -16,7 +16,13 @@ export default function ContactSection() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(formData),
       });
-      setFormState(res.ok ? "success" : "error");
+      if (res.ok) {
+        setFormState("success");
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        (window as any).dataLayer.push({ event: "form_submit_contacto" });
+      } else {
+        setFormState("error");
+      }
     } catch {
       setFormState("error");
     }
