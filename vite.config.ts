@@ -51,7 +51,19 @@ export default defineConfig(({ mode }) => {
           renderAfterDocumentEvent: "render-complete",
           renderAfterTime: 2500,
           headless: true,
-          args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
+          // Forzar el Chrome descargado por Puppeteer v25 (ignora el Chrome antiguo
+          // bundleado en @prerenderer/renderer-puppeteer que no funciona en Vercel)
+          executablePath: process.env.PUPPETEER_EXECUTABLE_PATH ||
+            "/vercel/.cache/puppeteer/chrome/linux-149.0.7827.22/chrome-linux64/chrome",
+          args: [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-dev-shm-usage",
+            "--disable-gpu",
+            "--no-first-run",
+            "--no-zygote",
+            "--single-process",
+          ],
         }),
       }),
     ].filter(Boolean),
