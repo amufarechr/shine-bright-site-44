@@ -6,13 +6,14 @@ interface SeoHeadProps {
   keywords?: string;
   path?: string;
   ogType?: "website" | "article";
+  schema?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 /**
  * Updates <title> and meta tags for the current page.
  * Works in SPAs (no SSR needed) — sufficient for Googlebot which executes JS.
  */
-export default function SeoHead({ title, description, keywords, path, ogType = "website" }: SeoHeadProps) {
+export default function SeoHead({ title, description, keywords, path, ogType = "website", schema }: SeoHeadProps) {
   useEffect(() => {
     const BASE_URL = "https://swingenieria.com"; // update when domain is live
     const fullTitle = `${title} | SW Ingeniería`;
@@ -51,11 +52,26 @@ export default function SeoHead({ title, description, keywords, path, ogType = "
     }
     canonical.setAttribute("href", canonicalUrl);
 
+    // JSON-LD Schema.org
+    const existingSchemas = document.querySelectorAll('script[data-swi-schema]');
+    existingSchemas.forEach(el => el.remove());
+    if (schema) {
+      const schemas = Array.isArray(schema) ? schema : [schema];
+      schemas.forEach((s) => {
+        const scriptEl = document.createElement("script");
+        scriptEl.setAttribute("type", "application/ld+json");
+        scriptEl.setAttribute("data-swi-schema", "true");
+        scriptEl.textContent = JSON.stringify(s);
+        document.head.appendChild(scriptEl);
+      });
+    }
+
     // Cleanup: restore defaults when component unmounts
     return () => {
       document.title = "SW Ingeniería | Soluciones Industriales";
+      document.querySelectorAll('script[data-swi-schema]').forEach(el => el.remove());
     };
-  }, [title, description, keywords, path]);
+  }, [title, description, keywords, path, schema]);
 
   return null;
 }

@@ -76,6 +76,7 @@ export default function ArticuloSolarIndustrial() {
   return (
     <>
       <SeoHead ogType="article"
+        schema={{"@context": "https://schema.org", "@type": "Article", "headline": "Energía solar para industria: cómo dimensionar bien un sistema fotovoltaico", "author": {"@type": "Organization", "name": "SW Ingeniería", "@id": "https://swingenieria.com/#organization"}, "publisher": {"@type": "Organization", "name": "SW Ingeniería", "url": "https://swingenieria.com"}, "url": "https://swingenieria.com/articulos/energia-solar-industrial", "about": {"@type": "Thing", "name": "Energía Solar Fotovoltaica Industrial"}, "inLanguage": "es"}}
         title="Energía solar para industria: cómo dimensionar bien un sistema fotovoltaico"
         description="Guía técnica sobre energía solar fotovoltaica para plantas industriales: dimensionamiento correcto, variables clave, análisis de retorno y comparativa de modalidades de conexión."
         keywords="energía solar industrial, paneles solares planta industrial, autoconsumo fotovoltaico, dimensionar sistema solar industrial, solar fotovoltaico México, solar fotovoltaico Perú, TIR energía solar"

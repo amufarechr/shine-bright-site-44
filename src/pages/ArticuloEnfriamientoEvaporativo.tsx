@@ -88,6 +88,7 @@ export default function ArticuloEnfriamientoEvaporativo() {
   return (
     <>
       <SeoHead ogType="article"
+        schema={{"@context": "https://schema.org", "@type": "Article", "headline": "Por qué usar enfriamiento evaporativo en entornos industriales", "author": {"@type": "Organization", "name": "SW Ingeniería", "@id": "https://swingenieria.com/#organization"}, "publisher": {"@type": "Organization", "name": "SW Ingeniería", "url": "https://swingenieria.com"}, "url": "https://swingenieria.com/articulos/enfriamiento-evaporativo", "about": {"@type": "Thing", "name": "Enfriamiento Evaporativo Industrial"}, "inLanguage": "es"}}
         title="Por qué usar enfriamiento evaporativo en entornos industriales"
         description="Guía técnica sobre enfriadores evaporativos, hidroventiladores y enfriadores adiabáticos: cómo funcionan, cuánto ahorran y cuándo son la solución correcta para naves industriales."
         keywords="enfriamiento evaporativo, enfriador evaporativo industrial, hidroventilador, swamp cooler, enfriador adiabático, cooler evaporativo, reducir calor nave industrial"

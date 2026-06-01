@@ -76,6 +76,7 @@ export default function ArticuloFacturaElectrica() {
   return (
     <>
       <SeoHead ogType="article"
+        schema={{"@context": "https://schema.org", "@type": "Article", "headline": "Cómo reducir la factura eléctrica de una planta industrial sin reducir producción", "author": {"@type": "Organization", "name": "SW Ingeniería", "@id": "https://swingenieria.com/#organization"}, "publisher": {"@type": "Organization", "name": "SW Ingeniería", "url": "https://swingenieria.com"}, "url": "https://swingenieria.com/articulos/reducir-factura-electrica-industrial", "about": {"@type": "Thing", "name": "Reducción de Costos Energéticos Industriales"}, "inLanguage": "es"}}
         title="Cómo reducir la factura eléctrica de una planta industrial sin reducir producción"
         description="Guía técnica sobre reducción de gasto energético industrial: monitoreo por carga, automatización de arranques, aprovechamiento de tarifas horarias y energía solar. Con datos reales de proyectos implementados."
         keywords="reducir factura eléctrica industria, ahorro energético planta industrial, monitoreo consumo eléctrico, cargo por demanda máxima, tarifa horaria industrial, eficiencia energética"

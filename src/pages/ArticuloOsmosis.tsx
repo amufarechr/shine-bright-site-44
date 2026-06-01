@@ -69,6 +69,7 @@ export default function ArticuloOsmosis() {
   return (
     <>
       <SeoHead ogType="article"
+        schema={{"@context": "https://schema.org", "@type": "Article", "headline": "Ósmosis inversa para agua agrícola e industrial: cuándo y cómo usarla", "author": {"@type": "Organization", "name": "SW Ingeniería", "@id": "https://swingenieria.com/#organization"}, "publisher": {"@type": "Organization", "name": "SW Ingeniería", "url": "https://swingenieria.com"}, "url": "https://swingenieria.com/articulos/osmosis-inversa", "about": {"@type": "Thing", "name": "Ósmosis Inversa Industrial y Agrícola"}, "inLanguage": "es"}}
         title="Ósmosis inversa para agua agrícola e industrial: cuándo y cómo usarla"
         description="Guía técnica sobre ósmosis inversa para mejorar calidad de agua de pozos en cultivos de arándano y uva, desalinización industrial y proyectos residenciales de gran escala."
         keywords="ósmosis inversa agrícola, agua para riego arándano, salinidad agua riego uva, conductividad agua riego, tratamiento agua pozos, desalinización industrial, calidad agua riego exportación"

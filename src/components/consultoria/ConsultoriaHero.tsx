@@ -22,12 +22,14 @@ const ConsultoriaHero = () => {
         <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">
           Consultoría de Eficiencia Operativa
         </p>
-        <h1 className="text-[42px] font-bold leading-[1.1] text-white mb-5">
-          Las ineficiencias<br />
-          de operación<br />
-          no se resuelven<br />
-          con más gasto
+        <h1 className="text-[42px] font-bold leading-[1.1] text-white mb-3">
+          Consultoría en Eficiencia<br />
+          Operativa Industrial
         </h1>
+        <p className="text-xl font-medium text-white/85 mb-4 leading-snug">
+          Las ineficiencias de operación<br />
+          no se resuelven con más gasto
+        </p>
         <p className="text-base leading-[1.7] text-white/75 mb-9 max-w-[440px]">
           La solución es un sistema que integra y alinea personas, procesos e infraestructura.
         </p>

@@ -25,6 +25,9 @@ import ArticulosClimatizacion from "./pages/ArticulosClimatizacion.tsx";
 import ArticulosEnergia from "./pages/ArticulosEnergia.tsx";
 import ArticulosAgua from "./pages/ArticulosAgua.tsx";
 import Casos from "./pages/Casos.tsx";
+import OptimizacionProcesos from "./pages/consultoria/OptimizacionProcesos.tsx";
+import ReduccionCostos from "./pages/consultoria/ReduccionCostos.tsx";
+import ProductividadIndustrial from "./pages/consultoria/ProductividadIndustrial.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 import WhatsAppButton from "./components/WhatsAppButton.tsx";
 
@@ -48,6 +51,9 @@ const App = () => (
           <Route path="/soluciones/energia" element={<Energia />} />
           <Route path="/soluciones/agua" element={<Agua />} />
           <Route path="/casos" element={<Casos />} />
+          <Route path="/consultoria/optimizacion-procesos-industriales" element={<OptimizacionProcesos />} />
+          <Route path="/consultoria/reduccion-costos-operativos" element={<ReduccionCostos />} />
+          <Route path="/consultoria/productividad-industrial" element={<ProductividadIndustrial />} />
           <Route path="/articulos" element={<Articulos />} />
           <Route path="/articulos/climatizacion" element={<ArticulosClimatizacion />} />
           <Route path="/articulos/energia" element={<ArticulosEnergia />} />

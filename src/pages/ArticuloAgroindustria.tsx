@@ -47,6 +47,7 @@ export default function ArticuloAgroindustria() {
   return (
     <>
       <SeoHead ogType="article"
+        schema={{"@context": "https://schema.org", "@type": "Article", "headline": "Control de temperatura en packing y cosecha: cómo reducir la deshidratación de fruta fresca", "author": {"@type": "Organization", "name": "SW Ingeniería", "@id": "https://swingenieria.com/#organization"}, "publisher": {"@type": "Organization", "name": "SW Ingeniería", "url": "https://swingenieria.com"}, "url": "https://swingenieria.com/articulos/enfriamiento-evaporativo-agroindustria", "about": {"@type": "Thing", "name": "Enfriamiento Evaporativo en Agroindustria"}, "inLanguage": "es"}}
         title="Control de temperatura en packing y cosecha: cómo reducir la deshidratación de fruta fresca"
         description="Cómo el enfriamiento evaporativo reduce la deshidratación de uva, arándano y palta en packing, transporte y acopio de campo. Resultados medidos: −35% deshidratación, +20% utilidad neta."
         keywords="deshidratación fruta fresca, enfriamiento packing uva, temperatura packing agroindustria, enfriador evaporativo agroindustria, hidroventilador packing, control temperatura cosecha, calor en packing exportación"

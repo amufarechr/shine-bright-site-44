@@ -69,6 +69,7 @@ export default function ArticuloAguaSinRed() {
   return (
     <>
       <SeoHead ogType="article"
+        schema={{"@context": "https://schema.org", "@type": "Article", "headline": "Agua potable sin red hídrica: ósmosis inversa y generación atmosférica", "author": {"@type": "Organization", "name": "SW Ingeniería", "@id": "https://swingenieria.com/#organization"}, "publisher": {"@type": "Organization", "name": "SW Ingeniería", "url": "https://swingenieria.com"}, "url": "https://swingenieria.com/articulos/agua-sin-red-hidrica", "about": {"@type": "Thing", "name": "Gestión de Agua en Zonas Remotas"}, "inLanguage": "es"}}
         title="Agua potable sin red hídrica: ósmosis inversa y generación atmosférica"
         description="Cómo generar agua potable sin depender de red municipal — ósmosis inversa para agua salobre y de mar, y tecnología Waha para extracción desde el aire. Comparativa técnica y casos de uso."
         keywords="agua sin red hídrica, independencia hídrica, generación agua atmosférica, agua potable zonas remotas, desalinización sin infraestructura, agua para proyectos remotos"

@@ -57,6 +57,7 @@ export default function ArticuloAlmacenes() {
   return (
     <>
       <SeoHead ogType="article"
+        schema={{"@context": "https://schema.org", "@type": "Article", "headline": "Cómo reducir el calor en naves industriales y almacenes con 85% menos de inversión", "author": {"@type": "Organization", "name": "SW Ingeniería", "@id": "https://swingenieria.com/#organization"}, "publisher": {"@type": "Organization", "name": "SW Ingeniería", "url": "https://swingenieria.com"}, "url": "https://swingenieria.com/articulos/enfriamiento-evaporativo-almacenes", "about": {"@type": "Thing", "name": "Enfriamiento Evaporativo en Naves Industriales"}, "inLanguage": "es"}}
         title="Cómo reducir el calor en naves industriales y almacenes con 85% menos de inversión"
         description="Guía técnica sobre enfriamiento evaporativo para naves industriales, almacenes y centros de distribución. Ahorro energético, confort de trabajadores y casos reales con datos de campo."
         keywords="calor en nave industrial, alta temperatura almacén, enfriar planta industrial, enfriador evaporativo almacén, swamp cooler industrial, hidroventilador nave industrial, confort térmico trabajadores, ahorro energético enfriamiento"
