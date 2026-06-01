@@ -11,7 +11,7 @@ export default function ContactSection() {
     e.preventDefault();
     setFormState("sending");
     try {
-      const res = await fetch("https://formspree.io/f/xdkodvvk", {
+      const res = await fetch("https://formspree.io/f/xkoyvjka", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(formData),
