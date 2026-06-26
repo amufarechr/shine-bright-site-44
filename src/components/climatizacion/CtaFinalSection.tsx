@@ -6,7 +6,7 @@ export default function CtaFinalSection({}: CtaFinalSectionProps) {
   };
 
   return (
-    <section className="bg-white text-center py-[88px] px-16 border-t border-gray-200">
+    <section className="bg-white text-center py-16 md:py-[88px] px-4 sm:px-8 md:px-16 border-t border-gray-200">
       <h2 className="text-[34px] font-bold text-gray-900 leading-[1.2] mb-8">
         Evaluar climatización
         <br />

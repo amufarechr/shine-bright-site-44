@@ -65,7 +65,7 @@ function InfItem({ icon, title, description, reverse = false }: InfItemProps) {
 
 export default function DiagnosticoSection() {
   return (
-    <section className="bg-white py-[88px] px-16">
+    <section className="bg-white py-16 md:py-[88px] px-4 sm:px-8 md:px-16">
       {/* Header */}
       <div className="text-center mb-16">
         <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-4">
@@ -77,52 +77,65 @@ export default function DiagnosticoSection() {
         </h2>
       </div>
 
-      {/* Infografía: 3 columnas */}
-      <div className="grid grid-cols-[1fr_auto_1fr] max-w-[960px] mx-auto items-center">
-        {/* Izquierda */}
-        <div className="flex flex-col gap-8 pr-12">
-          <InfItem
-            icon={<TrendingDown className="w-6 h-6 text-[#2ebd6b]" />}
-            title="Caídas de productividad"
-            description="Throughput reducido por condiciones térmicas inadecuadas"
-          />
-          <InfItem
-            icon={<Activity className="w-6 h-6 text-[#2ebd6b]" />}
-            title="Variabilidad en procesos"
-            description="Control ambiental inestable afecta la consistencia productiva"
-          />
-          <InfItem
-            icon={<Zap className="w-6 h-6 text-[#2ebd6b]" />}
-            title="Consumo energético elevado"
-            description="Sistemas mal dimensionados operan con ineficiencia energética crónica"
-          />
+      {/* Infografía: 3 columnas en desktop, 1 columna en móvil */}
+      <div className="max-w-[960px] mx-auto">
+        {/* Desktop: 3 columnas */}
+        <div className="hidden md:grid grid-cols-[1fr_auto_1fr] items-center">
+          {/* Izquierda */}
+          <div className="flex flex-col gap-8 pr-12">
+            <InfItem
+              icon={<TrendingDown className="w-6 h-6 text-[#2ebd6b]" />}
+              title="Caídas de productividad"
+              description="Throughput reducido por condiciones térmicas inadecuadas"
+            />
+            <InfItem
+              icon={<Activity className="w-6 h-6 text-[#2ebd6b]" />}
+              title="Variabilidad en procesos"
+              description="Control ambiental inestable afecta la consistencia productiva"
+            />
+            <InfItem
+              icon={<Zap className="w-6 h-6 text-[#2ebd6b]" />}
+              title="Consumo energético elevado"
+              description="Sistemas mal dimensionados operan con ineficiencia energética crónica"
+            />
+          </div>
+
+          {/* Centro — planta SVG */}
+          <div className="px-2">
+            <PlantaSVG />
+          </div>
+
+          {/* Derecha */}
+          <div className="flex flex-col gap-8 pl-12">
+            <InfItem
+              reverse
+              icon={<ThermometerSnowflake className="w-6 h-6 text-[#2ebd6b]" />}
+              title="Pérdida de calidad de producto"
+              description="Frescos y perecederos afectados por temperatura no controlada"
+            />
+            <InfItem
+              reverse
+              icon={<Wind className="w-6 h-6 text-[#2ebd6b]" />}
+              title="Distribución ineficiente de aire"
+              description="Bolsillos térmicos que crean zonas con temperatura desigual"
+            />
+            <InfItem
+              reverse
+              icon={<Unplug className="w-6 h-6 text-[#2ebd6b]" />}
+              title="Desalineación con el proceso"
+              description="La climatización no está integrada al sistema productivo"
+            />
+          </div>
         </div>
 
-        {/* Centro — planta SVG */}
-        <div className="px-2">
-          <PlantaSVG />
-        </div>
-
-        {/* Derecha */}
-        <div className="flex flex-col gap-8 pl-12">
-          <InfItem
-            reverse
-            icon={<ThermometerSnowflake className="w-6 h-6 text-[#2ebd6b]" />}
-            title="Pérdida de calidad de producto"
-            description="Frescos y perecederos afectados por temperatura no controlada"
-          />
-          <InfItem
-            reverse
-            icon={<Wind className="w-6 h-6 text-[#2ebd6b]" />}
-            title="Distribución ineficiente de aire"
-            description="Bolsillos térmicos que crean zonas con temperatura desigual"
-          />
-          <InfItem
-            reverse
-            icon={<Unplug className="w-6 h-6 text-[#2ebd6b]" />}
-            title="Desalineación con el proceso"
-            description="La climatización no está integrada al sistema productivo"
-          />
+        {/* Móvil: lista vertical simple */}
+        <div className="md:hidden grid grid-cols-1 gap-5">
+          <InfItem icon={<TrendingDown className="w-6 h-6 text-[#2ebd6b]" />} title="Caídas de productividad" description="Throughput reducido por condiciones térmicas inadecuadas" />
+          <InfItem icon={<Activity className="w-6 h-6 text-[#2ebd6b]" />} title="Variabilidad en procesos" description="Control ambiental inestable afecta la consistencia productiva" />
+          <InfItem icon={<Zap className="w-6 h-6 text-[#2ebd6b]" />} title="Consumo energético elevado" description="Sistemas mal dimensionados operan con ineficiencia energética crónica" />
+          <InfItem icon={<ThermometerSnowflake className="w-6 h-6 text-[#2ebd6b]" />} title="Pérdida de calidad de producto" description="Frescos y perecederos afectados por temperatura no controlada" />
+          <InfItem icon={<Wind className="w-6 h-6 text-[#2ebd6b]" />} title="Distribución ineficiente de aire" description="Bolsillos térmicos que crean zonas con temperatura desigual" />
+          <InfItem icon={<Unplug className="w-6 h-6 text-[#2ebd6b]" />} title="Desalineación con el proceso" description="La climatización no está integrada al sistema productivo" />
         </div>
       </div>
     </section>

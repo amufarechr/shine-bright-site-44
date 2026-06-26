@@ -70,7 +70,7 @@ export default function SolucionesSection({}: SolucionesSectionProps) {
   return (
     <section className="bg-[#f7f7f4] py-20">
       {/* Header */}
-      <div className="text-center px-16 mb-14">
+      <div className="text-center px-4 sm:px-8 md:px-16 mb-14">
         <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-3.5">
           Soluciones
         </p>
@@ -79,18 +79,16 @@ export default function SolucionesSection({}: SolucionesSectionProps) {
         </h2>
       </div>
 
-      {/* Cards al 75%, centradas */}
-      <div className="flex flex-col gap-5 items-center px-16">
+      {/* Cards */}
+      <div className="flex flex-col gap-5 items-center px-4 sm:px-8 md:px-16">
         {soluciones.map((sol) => (
           <div
             key={sol.title}
-            className="w-3/4 grid grid-cols-2 rounded-xl overflow-hidden border border-gray-200 shadow-sm"
-            style={{ direction: sol.imageLeft ? "ltr" : "rtl" }}
+            className="w-full md:w-3/4 rounded-xl overflow-hidden border border-gray-200 shadow-sm flex flex-col md:grid md:grid-cols-2"
           >
-            {/* Imagen — clickeable si hay href */}
+            {/* Imagen — orden: arriba en móvil, izq/der en desktop según imageLeft */}
             <div
-              className={`relative min-h-[280px] overflow-hidden group${sol.href ? " cursor-pointer" : ""}`}
-              style={{ direction: "ltr" }}
+              className={`relative min-h-[200px] md:min-h-[280px] overflow-hidden group${sol.href ? " cursor-pointer" : ""}${!sol.imageLeft ? " md:order-last" : ""}`}
               onClick={() => sol.href && navigate(sol.href)}
             >
               <img
@@ -101,12 +99,9 @@ export default function SolucionesSection({}: SolucionesSectionProps) {
             </div>
 
             {/* Texto */}
-            <div
-              className="bg-white flex flex-col justify-center px-12 py-11"
-              style={{ direction: "ltr" }}
-            >
+            <div className="bg-white flex flex-col justify-center px-6 py-8 md:px-12 md:py-11">
               <h3
-                className={`text-[28px] font-bold text-gray-900 leading-[1.2] mb-4${sol.href ? " cursor-pointer hover:text-primary transition-colors" : ""}`}
+                className={`text-[22px] md:text-[28px] font-bold text-gray-900 leading-[1.2] mb-4${sol.href ? " cursor-pointer hover:text-primary transition-colors" : ""}`}
                 onClick={() => sol.href && navigate(sol.href)}
               >
                 {sol.title}
@@ -127,7 +122,7 @@ export default function SolucionesSection({}: SolucionesSectionProps) {
       </div>
 
       {/* Marcas estratégicas */}
-      <div className="text-center mt-20 px-16">
+      <div className="text-center mt-20 px-4 sm:px-8 md:px-16">
         <p className="text-lg font-semibold text-gray-700 mb-8">
           Somos distribuidores estratégicos de reconocidas marcas de climatización industrial
         </p>
