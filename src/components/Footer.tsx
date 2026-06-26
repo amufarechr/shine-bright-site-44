@@ -1,17 +1,34 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/logo-foco.svg";
 import { empresa } from "@/data/siteData";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const footerLinks = [
-  { label: "Soluciones técnicas", id: "soluciones" },
-  { label: "Consultoría", id: "consultoria" },
-  { label: "Casos de éxito", id: "casos" },
-  { label: "Contacto", id: "contacto" },
+// href = ruta propia con landing | anchor = sección del Home (sin landing)
+const footerLinks: { label: string; href?: string; anchor?: string }[] = [
+  { label: "Soluciones técnicas", anchor: "soluciones" },
+  { label: "Consultoría",         href: "/consultoria" },
+  { label: "Casos de éxito",      href: "/casos" },
+  { label: "Contacto",            anchor: "contacto" },
 ];
 
 const Footer = () => {
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLink = (link: typeof footerLinks[number]) => {
+    if (link.href) {
+      navigate(link.href);
+      return;
+    }
+    if (link.anchor) {
+      if (location.pathname === "/") {
+        // Ya estamos en el Home: scroll directo
+        document.getElementById(link.anchor)?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // Navegamos al Home y dejamos que el hash haga el scroll
+        navigate(`/#${link.anchor}`);
+      }
+    }
   };
 
   return (
@@ -31,8 +48,8 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             {footerLinks.map((link) => (
               <button
-                key={link.id}
-                onClick={() => scrollTo(link.id)}
+                key={link.label}
+                onClick={() => handleLink(link)}
                 className="text-white/60 text-sm hover:text-primary transition-colors text-left"
               >
                 {link.label}

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import SeoHead from "@/components/SeoHead";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -37,7 +39,22 @@ const organizationSchema = {
   }
 };
 
-const Index = () => (
+const Index = () => {
+  const location = useLocation();
+
+  // Scroll to anchor when navigating from another page via /#section
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      // Small delay lets the page render before scrolling
+      const timer = setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 80);
+      return () => clearTimeout(timer);
+    }
+  }, [location.hash]);
+
+  return (
   <div className="min-h-screen bg-background">
     <SeoHead
       title="Climatización y Eficiencia Industrial en Perú y México | SW Ingeniería"
@@ -57,6 +74,7 @@ const Index = () => (
     <ContactSection />
     <Footer />
   </div>
-);
+  );
+};
 
 export default Index;
