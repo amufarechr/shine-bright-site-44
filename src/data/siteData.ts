@@ -272,7 +272,7 @@ export const casosTransporteIca = {
   location: "Ica, Perú",
   reduccionDeshidratacion: ">40%",
   diasGuarda: "45",
-  get resultCard() { return `T<25°C y HR>80% en tránsito · −${this.reduccionDeshidratacion} deshidratación · mejor condición tras ${this.diasGuarda} días de guarda`; },
+  get resultCard() { return `T<25°C y HR>80% en tránsito · reducción de ${this.reduccionDeshidratacion} en deshidratación · mejor condición tras ${this.diasGuarda} días de guarda`; },
   description:
     "Lotes de producción a más de dos horas del centro de empaque requerían solución de bajo costo para transportar fruta en condiciones que redujeran la deshidratación.",
   situacion:
